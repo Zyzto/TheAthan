@@ -1,0 +1,35 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">TheAthan</string>
+
+    <!-- Prayer Names -->
+    <string id="fajr">Fajr</string>
+    <string id="dhuhr">Dhuhr</string>
+    <string id="asr">Asr</string>
+    <string id="maghrib">Maghrib</string>
+    <string id="isha">Isha</string>
+    
+    <!-- UI Text -->
+    <string id="next_prayer">Next Prayer</string>
+    <string id="time_remaining">Time Remaining</string>
+    <string id="hours">h</string>
+    <string id="minutes">m</string>
+    <string id="seconds">s</string>
+    <string id="updating_location">Updating Location...</string>
+    <string id="prayer_times">Prayer Times</string>
+    <string id="qibla_finder">Qibla Finder</string>
+    <string id="qibla_direction">Qibla Direction</string>
+    <string id="degrees">°</string>
+    
+    <!-- Menu Items -->
+    <string id="menu_label_1">Prayer Times</string>
+    <string id="menu_label_2">Qibla Finder</string>
+    <string id="menu_settings">Settings</string>
+    <string id="menu_update_location">Update Location</string>
+    
+    <!-- Notifications -->
+    <string id="prayer_time_notification">Prayer Time</string>
+    <string id="time_for_prayer">Time for</string>
+    
+    <!-- Original strings (kept for compatibility) -->
+    <string id="prompt">Next Prayer</string>
+</strings>

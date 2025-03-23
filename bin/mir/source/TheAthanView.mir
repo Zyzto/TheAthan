@@ -1,0 +1,384 @@
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+import Toybox.System;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Application,5,14,25]; ]
+import Toybox.Application;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 7; @symbol_classdef = [TheAthanView,7,6,18]; @symbol_extends<0> = [WatchUi,7,27,34]; @symbol_extends<1> = [View,7,35,39]; ]
+class TheAthanView extends WatchUi.View {
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 7; ]
+    <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 9 16 ]
+        symbol [ TheAthanConstants %tmp.2 9 29 46 ];
+        %tmp.2 = getv ? :TheAthanConstants;
+        symbol [ VIEW_NEXT_PRAYER %tmp.3 9 47 63 ];
+        %tmp.3 = getv %tmp.2 :VIEW_NEXT_PRAYER;
+        putv self :_viewState %tmp.3;
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 9; @position = 16; @symbol_vardef = [_viewState,9,16,26]; ]
+    private
+    var _viewState;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 11; @position = 16; @symbol_vardef = [_nextPrayerView,11,16,31]; ]
+    private
+    var _nextPrayerView;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 12; @position = 16; @symbol_vardef = [_prayerTimesView,12,16,32]; ]
+    private
+    var _prayerTimesView;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 13; @position = 16; @symbol_vardef = [_qiblaView,13,16,26]; ]
+    private
+    var _qiblaView;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 14; @position = 16; @symbol_vardef = [_locationView,14,16,29]; ]
+    private
+    var _locationView;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 16; @symbol_functiondef = [initialize,16,13,23]; ]
+    function initialize() as Void {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_16_26_28_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 17 8 ]
+        symbol [ System %tmp.1 17 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 17 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "DEBUG: MainView initialize";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 18 8 ]
+        symbol [ View %tmp.5 18 8 12 ];
+        %tmp.5 = getv ? :View;
+        symbol [ initialize %tmp.6 18 13 23 ];
+        %tmp.6 = getv function %tmp.5 :initialize;
+        invoke %tmp.5 %tmp.6();
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 21 8 ]
+        symbol [ TheAthanNextPrayerView %tmp.10 21 30 52 ];
+        %tmp.10 = getv ? :TheAthanNextPrayerView;
+        %tmp.7 = newc %tmp.10 ();
+        symbol [ _nextPrayerView ? 21 8 23 ];
+        putv self :_nextPrayerView %tmp.7;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 22 8 ]
+        symbol [ TheAthanPrayerTimesView %tmp.14 22 31 54 ];
+        %tmp.14 = getv ? :TheAthanPrayerTimesView;
+        %tmp.11 = newc %tmp.14 ();
+        symbol [ _prayerTimesView ? 22 8 24 ];
+        putv self :_prayerTimesView %tmp.11;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 23 8 ]
+        symbol [ TheAthanQiblaView %tmp.18 23 25 42 ];
+        %tmp.18 = getv ? :TheAthanQiblaView;
+        %tmp.15 = newc %tmp.18 ();
+        symbol [ _qiblaView ? 23 8 18 ];
+        putv self :_qiblaView %tmp.15;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 24 8 ]
+        symbol [ TheAthanLocationView %tmp.22 24 28 48 ];
+        %tmp.22 = getv ? :TheAthanLocationView;
+        %tmp.19 = newc %tmp.22 ();
+        symbol [ _locationView ? 24 8 21 ];
+        putv self :_locationView %tmp.19;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 27 8 ]
+        symbol [ TheAthanConstants %tmp.24 27 8 25 ];
+        %tmp.24 = getv ? :TheAthanConstants;
+        symbol [ addToHistory %tmp.25 27 26 38 ];
+        %tmp.25 = getv function %tmp.24 :addToHistory;
+        symbol [ TheAthanConstants %tmp.27 27 39 56 ];
+        %tmp.27 = getv ? :TheAthanConstants;
+        symbol [ VIEW_NEXT_PRAYER %tmp.28 27 57 73 ];
+        %tmp.28 = getv %tmp.27 :VIEW_NEXT_PRAYER;
+        invoke %tmp.24 %tmp.25(%tmp.28);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_16_26_28_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 31; @symbol_functiondef = [onLayout,31,13,21]; @symbol_param<0> = [dc,31,22,24]; @symbol_param<0>_type<0> = [Dc,31,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_31_40_39_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 32 8 ]
+        symbol [ System %tmp.1 32 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 32 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "DEBUG: MainView onLayout";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 35 8 ]
+        symbol [ _nextPrayerView %tmp.5 35 8 23 ];
+        %tmp.5 = getv ? :_nextPrayerView;
+        symbol [ onLayout %tmp.6 35 24 32 ];
+        %tmp.6 = getv function %tmp.5 :onLayout;
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 35 33 35 ];
+        invoke %tmp.5 %tmp.6(%tmp.7);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 36 8 ]
+        symbol [ _prayerTimesView %tmp.9 36 8 24 ];
+        %tmp.9 = getv ? :_prayerTimesView;
+        symbol [ onLayout %tmp.10 36 25 33 ];
+        %tmp.10 = getv function %tmp.9 :onLayout;
+        %tmp.11 = lgetv %dc;
+        symbol [ dc %tmp.11 36 34 36 ];
+        invoke %tmp.9 %tmp.10(%tmp.11);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 37 8 ]
+        symbol [ _qiblaView %tmp.13 37 8 18 ];
+        %tmp.13 = getv ? :_qiblaView;
+        symbol [ onLayout %tmp.14 37 19 27 ];
+        %tmp.14 = getv function %tmp.13 :onLayout;
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 37 28 30 ];
+        invoke %tmp.13 %tmp.14(%tmp.15);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 38 8 ]
+        symbol [ _locationView %tmp.17 38 8 21 ];
+        %tmp.17 = getv ? :_locationView;
+        symbol [ onLayout %tmp.18 38 22 30 ];
+        %tmp.18 = getv function %tmp.17 :onLayout;
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 38 31 33 ];
+        invoke %tmp.17 %tmp.18(%tmp.19);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_31_40_39_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 42; @symbol_functiondef = [onShow,42,13,19]; ]
+    function onShow() as Void {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_42_30_47_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 43 8 ]
+        symbol [ System %tmp.1 43 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 43 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "DEBUG: MainView onShow";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 46 8 ]
+        %tmp.4 = self;
+        symbol [ getCurrentSubView %tmp.5 46 8 25 ];
+        %tmp.5 = getv function %tmp.4 :getCurrentSubView;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        symbol [ onShow %tmp.7 46 28 34 ];
+        %tmp.7 = getv function %tmp.6 :onShow;
+        invoke %tmp.6 %tmp.7();
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_42_30_47_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 50; @symbol_functiondef = [onUpdate,50,13,21]; @symbol_param<0> = [dc,50,22,24]; @symbol_param<0>_type<0> = [Dc,50,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_50_40_55_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 51 8 ]
+        symbol [ System %tmp.1 51 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 51 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "DEBUG: MainView onUpdate - state: ";
+        symbol [ _viewState %tmp.5 51 62 72 ];
+        %tmp.5 = getv ? :_viewState;
+        %tmp.6 = add %tmp.3 %tmp.5;
+        invoke %tmp.1 %tmp.2(%tmp.6);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 54 8 ]
+        %tmp.7 = self;
+        symbol [ getCurrentSubView %tmp.8 54 8 25 ];
+        %tmp.8 = getv function %tmp.7 :getCurrentSubView;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        symbol [ onUpdate %tmp.10 54 28 36 ];
+        %tmp.10 = getv function %tmp.9 :onUpdate;
+        %tmp.11 = lgetv %dc;
+        symbol [ dc %tmp.11 54 37 39 ];
+        invoke %tmp.9 %tmp.10(%tmp.11);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_50_40_55_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 58; @symbol_functiondef = [setViewState,58,13,25]; @symbol_param<0> = [state,58,26,31]; ]
+    function setViewState(state) {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_58_33_74_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 59 8 ]
+        symbol [ System %tmp.1 59 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 59 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "DEBUG: MainView setViewState: ";
+        %tmp.4 = lgetv %state;
+        symbol [ state %tmp.4 59 58 63 ];
+        %tmp.5 = add %tmp.3 %tmp.4;
+        %tmp.6 = " (current: ";
+        %tmp.7 = add %tmp.5 %tmp.6;
+        symbol [ _viewState %tmp.9 59 82 92 ];
+        %tmp.9 = getv ? :_viewState;
+        %tmp.10 = add %tmp.7 %tmp.9;
+        %tmp.11 = ")";
+        %tmp.12 = add %tmp.10 %tmp.11;
+        invoke %tmp.1 %tmp.2(%tmp.12);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 62 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_62_8_73_8_if_stmt:
+        symbol [ _viewState %tmp.14 62 12 22 ];
+        %tmp.14 = getv ? :_viewState;
+        %tmp.15 = lgetv %state;
+        symbol [ state %tmp.15 62 26 31 ];
+        %tmp.16 = ne %tmp.14 %tmp.15;
+        bf %tmp.16 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_62_8_73_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_62_8_73_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_62_33_73_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 63 12 ]
+        %tmp.17 = lgetv %state;
+        symbol [ state %tmp.17 63 25 30 ];
+        symbol [ _viewState ? 63 12 22 ];
+        putv self :_viewState %tmp.17;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 66 12 ]
+        symbol [ TheAthanConstants %tmp.19 66 12 29 ];
+        %tmp.19 = getv ? :TheAthanConstants;
+        symbol [ addToHistory %tmp.20 66 30 42 ];
+        %tmp.20 = getv function %tmp.19 :addToHistory;
+        %tmp.21 = lgetv %state;
+        symbol [ state %tmp.21 66 43 48 ];
+        invoke %tmp.19 %tmp.20(%tmp.21);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 69 12 ]
+        %tmp.22 = self;
+        symbol [ getCurrentSubView %tmp.23 69 12 29 ];
+        %tmp.23 = getv function %tmp.22 :getCurrentSubView;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        symbol [ onShow %tmp.25 69 32 38 ];
+        %tmp.25 = getv function %tmp.24 :onShow;
+        invoke %tmp.24 %tmp.25();
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 72 12 ]
+        symbol [ WatchUi %tmp.26 72 12 19 ];
+        %tmp.26 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.27 72 20 33 ];
+        %tmp.27 = getv function %tmp.26 :requestUpdate;
+        invoke %tmp.26 %tmp.27();
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_62_33_73_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_62_8_73_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_62_8_73_8_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_58_33_74_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 77; @symbol_functiondef = [getViewState,77,13,25]; ]
+    function getViewState() {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_77_28_79_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 78 8 ]
+        symbol [ _viewState %tmp.2 78 15 25 ];
+        %tmp.2 = getv ? :_viewState;
+        ret %tmp.2;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_77_28_79_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 82; @symbol_functiondef = [getCurrentSubView,82,13,30]; ]
+    function getCurrentSubView() {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_82_33_95_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 83 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_83_8_91_8_if_stmt:
+        symbol [ _viewState %tmp.2 83 12 22 ];
+        %tmp.2 = getv ? :_viewState;
+        symbol [ TheAthanConstants %tmp.4 83 26 43 ];
+        %tmp.4 = getv ? :TheAthanConstants;
+        symbol [ VIEW_NEXT_PRAYER %tmp.5 83 44 60 ];
+        %tmp.5 = getv %tmp.4 :VIEW_NEXT_PRAYER;
+        %tmp.6 = eq %tmp.2 %tmp.5;
+        bf %tmp.6 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_83_8_91_8_if_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_83_8_91_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_83_62_85_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 84 12 ]
+        symbol [ _nextPrayerView %tmp.8 84 19 34 ];
+        %tmp.8 = getv ? :_nextPrayerView;
+        ret %tmp.8;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_83_62_85_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_83_8_91_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_83_8_91_8_if_false:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 85 15 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_85_15_91_8_if_stmt:
+        symbol [ _viewState %tmp.10 85 19 29 ];
+        %tmp.10 = getv ? :_viewState;
+        symbol [ TheAthanConstants %tmp.12 85 33 50 ];
+        %tmp.12 = getv ? :TheAthanConstants;
+        symbol [ VIEW_ALL_PRAYERS %tmp.13 85 51 67 ];
+        %tmp.13 = getv %tmp.12 :VIEW_ALL_PRAYERS;
+        %tmp.14 = eq %tmp.10 %tmp.13;
+        bf %tmp.14 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_85_15_91_8_if_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_85_15_91_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_85_69_87_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 86 12 ]
+        symbol [ _prayerTimesView %tmp.16 86 19 35 ];
+        %tmp.16 = getv ? :_prayerTimesView;
+        ret %tmp.16;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_85_69_87_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_85_15_91_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_85_15_91_8_if_false:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 87 15 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_87_15_91_8_if_stmt:
+        symbol [ _viewState %tmp.18 87 19 29 ];
+        %tmp.18 = getv ? :_viewState;
+        symbol [ TheAthanConstants %tmp.20 87 33 50 ];
+        %tmp.20 = getv ? :TheAthanConstants;
+        symbol [ VIEW_QIBLA %tmp.21 87 51 61 ];
+        %tmp.21 = getv %tmp.20 :VIEW_QIBLA;
+        %tmp.22 = eq %tmp.18 %tmp.21;
+        bf %tmp.22 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_87_15_91_8_if_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_87_15_91_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_87_63_89_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 88 12 ]
+        symbol [ _qiblaView %tmp.24 88 19 29 ];
+        %tmp.24 = getv ? :_qiblaView;
+        ret %tmp.24;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_87_63_89_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_87_15_91_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_87_15_91_8_if_false:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 89 15 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_89_15_91_8_if_stmt:
+        symbol [ _viewState %tmp.26 89 19 29 ];
+        %tmp.26 = getv ? :_viewState;
+        symbol [ TheAthanConstants %tmp.28 89 33 50 ];
+        %tmp.28 = getv ? :TheAthanConstants;
+        symbol [ VIEW_LOCATION %tmp.29 89 51 64 ];
+        %tmp.29 = getv %tmp.28 :VIEW_LOCATION;
+        %tmp.30 = eq %tmp.26 %tmp.29;
+        bf %tmp.30 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_89_15_91_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_89_15_91_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_89_66_91_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 90 12 ]
+        symbol [ _locationView %tmp.32 90 19 32 ];
+        %tmp.32 = getv ? :_locationView;
+        ret %tmp.32;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_89_66_91_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_89_15_91_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_89_15_91_8_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_87_15_91_8_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_85_15_91_8_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_83_8_91_8_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 94 8 ]
+        symbol [ _nextPrayerView %tmp.34 94 15 30 ];
+        %tmp.34 = getv ? :_nextPrayerView;
+        ret %tmp.34;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_82_33_95_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 98; @symbol_functiondef = [goBack,98,13,19]; ]
+    function goBack() {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_98_22_103_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 99 8 ]
+        symbol [ System %tmp.1 99 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 99 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "DEBUG: MainView goBack";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 100 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_98_22_103_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_98_22_103_4_stop" ]
+        %previousState.1 = local;
+        symbol [ previousState %previousState.1 100 12 25 ];
+        symbol [ TheAthanConstants %tmp.5 100 28 45 ];
+        %tmp.5 = getv ? :TheAthanConstants;
+        symbol [ getPreviousView %tmp.6 100 46 61 ];
+        %tmp.6 = getv function %tmp.5 :getPreviousView;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %previousState.1 %tmp.7;
+        symbol [ previousState %previousState.1 100 12 25 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 101 8 ]
+        symbol [ System %tmp.8 101 8 14 ];
+        %tmp.8 = getm $.Toybox.System;
+        symbol [ println %tmp.9 101 15 22 ];
+        %tmp.9 = getv function %tmp.8 :println;
+        %tmp.10 = "DEBUG: Previous state: ";
+        %tmp.11 = lgetv %previousState.1;
+        symbol [ previousState %tmp.11 101 51 64 ];
+        %tmp.12 = add %tmp.10 %tmp.11;
+        invoke %tmp.8 %tmp.9(%tmp.12);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc" 102 8 ]
+        %tmp.13 = self;
+        symbol [ setViewState %tmp.14 102 8 20 ];
+        %tmp.14 = getv function %tmp.13 :setViewState;
+        %tmp.15 = lgetv %previousState.1;
+        symbol [ previousState %tmp.15 102 21 34 ];
+        invoke %tmp.13 %tmp.14(%tmp.15);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanView_mc_98_22_103_4_stop:
+    }
+}
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanView.mc"; @line = 1; ]
+<init> {
+}

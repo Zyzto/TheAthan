@@ -1,0 +1,362 @@
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Math,2,14,18]; ]
+import Toybox.Math;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 5; @symbol_classdef = [TheAthanQiblaCalculator,5,6,29]; ]
+class TheAthanQiblaCalculator {
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 7; @position = 16; @symbol_vardef = [_meccaLat,7,16,25]; ]
+    private
+    var _meccaLat = 21.4225;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 8; @position = 16; @symbol_vardef = [_meccaLong,8,16,26]; ]
+    private
+    var _meccaLong = 39.8262;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 10; @symbol_functiondef = [initialize,10,13,23]; ]
+    function initialize() as Void {
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 15; @symbol_functiondef = [calculateQiblaDirection,15,13,36]; @symbol_param<0> = [latitude,15,37,45]; @symbol_param<1> = [longitude,15,47,56]; ]
+    function calculateQiblaDirection(latitude, longitude) {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_15_58_57_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 16 8 ]
+        symbol [ System %tmp.1 16 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 16 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "DEBUG: calculateQiblaDirection";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 17 8 ]
+        symbol [ System %tmp.4 17 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 17 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "DEBUG: User location - Lat: ";
+        %tmp.7 = lgetv %latitude;
+        symbol [ latitude %tmp.7 17 56 64 ];
+        %tmp.8 = add %tmp.6 %tmp.7;
+        %tmp.9 = ", Long: ";
+        %tmp.10 = add %tmp.8 %tmp.9;
+        %tmp.11 = lgetv %longitude;
+        symbol [ longitude %tmp.11 17 80 89 ];
+        %tmp.12 = add %tmp.10 %tmp.11;
+        invoke %tmp.4 %tmp.5(%tmp.12);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 18 8 ]
+        symbol [ System %tmp.13 18 8 14 ];
+        %tmp.13 = getm $.Toybox.System;
+        symbol [ println %tmp.14 18 15 22 ];
+        %tmp.14 = getv function %tmp.13 :println;
+        %tmp.15 = "DEBUG: Mecca location - Lat: ";
+        symbol [ _meccaLat %tmp.17 18 57 66 ];
+        %tmp.17 = getv ? :_meccaLat;
+        %tmp.18 = add %tmp.15 %tmp.17;
+        %tmp.19 = ", Long: ";
+        %tmp.20 = add %tmp.18 %tmp.19;
+        symbol [ _meccaLong %tmp.22 18 82 92 ];
+        %tmp.22 = getv ? :_meccaLong;
+        %tmp.23 = add %tmp.20 %tmp.22;
+        invoke %tmp.13 %tmp.14(%tmp.23);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 20 8 ]
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 22 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %lat1.1 = local;
+        symbol [ lat1 %lat1.1 22 16 20 ];
+        %tmp.24 = lgetv %latitude;
+        symbol [ latitude %tmp.24 22 23 31 ];
+        symbol [ Math %tmp.25 22 34 38 ];
+        %tmp.25 = getm $.Toybox.Math;
+        symbol [ PI %tmp.26 22 39 41 ];
+        %tmp.26 = getv %tmp.25 :PI;
+        %tmp.27 = mul %tmp.24 %tmp.26;
+        %tmp.28 = 180.0;
+        %tmp.29 = div %tmp.27 %tmp.28;
+        lputv %lat1.1 %tmp.29;
+        symbol [ lat1 %lat1.1 22 16 20 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 23 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %lon1.2 = local;
+        symbol [ lon1 %lon1.2 23 16 20 ];
+        %tmp.30 = lgetv %longitude;
+        symbol [ longitude %tmp.30 23 23 32 ];
+        symbol [ Math %tmp.31 23 35 39 ];
+        %tmp.31 = getm $.Toybox.Math;
+        symbol [ PI %tmp.32 23 40 42 ];
+        %tmp.32 = getv %tmp.31 :PI;
+        %tmp.33 = mul %tmp.30 %tmp.32;
+        %tmp.34 = 180.0;
+        %tmp.35 = div %tmp.33 %tmp.34;
+        lputv %lon1.2 %tmp.35;
+        symbol [ lon1 %lon1.2 23 16 20 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 24 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %lat2.3 = local;
+        symbol [ lat2 %lat2.3 24 16 20 ];
+        symbol [ _meccaLat %tmp.37 24 23 32 ];
+        %tmp.37 = getv ? :_meccaLat;
+        symbol [ Math %tmp.38 24 35 39 ];
+        %tmp.38 = getm $.Toybox.Math;
+        symbol [ PI %tmp.39 24 40 42 ];
+        %tmp.39 = getv %tmp.38 :PI;
+        %tmp.40 = mul %tmp.37 %tmp.39;
+        %tmp.41 = 180.0;
+        %tmp.42 = div %tmp.40 %tmp.41;
+        lputv %lat2.3 %tmp.42;
+        symbol [ lat2 %lat2.3 24 16 20 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 25 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %lon2.4 = local;
+        symbol [ lon2 %lon2.4 25 16 20 ];
+        symbol [ _meccaLong %tmp.44 25 23 33 ];
+        %tmp.44 = getv ? :_meccaLong;
+        symbol [ Math %tmp.45 25 36 40 ];
+        %tmp.45 = getm $.Toybox.Math;
+        symbol [ PI %tmp.46 25 41 43 ];
+        %tmp.46 = getv %tmp.45 :PI;
+        %tmp.47 = mul %tmp.44 %tmp.46;
+        %tmp.48 = 180.0;
+        %tmp.49 = div %tmp.47 %tmp.48;
+        lputv %lon2.4 %tmp.49;
+        symbol [ lon2 %lon2.4 25 16 20 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 27 12 ]
+        symbol [ System %tmp.50 27 12 18 ];
+        %tmp.50 = getm $.Toybox.System;
+        symbol [ println %tmp.51 27 19 26 ];
+        %tmp.51 = getv function %tmp.50 :println;
+        %tmp.52 = "DEBUG: Radians - lat1: ";
+        %tmp.53 = lgetv %lat1.1;
+        symbol [ lat1 %tmp.53 27 55 59 ];
+        %tmp.54 = add %tmp.52 %tmp.53;
+        %tmp.55 = ", lon1: ";
+        %tmp.56 = add %tmp.54 %tmp.55;
+        %tmp.57 = lgetv %lon1.2;
+        symbol [ lon1 %tmp.57 27 75 79 ];
+        %tmp.58 = add %tmp.56 %tmp.57;
+        %tmp.59 = ", lat2: ";
+        %tmp.60 = add %tmp.58 %tmp.59;
+        %tmp.61 = lgetv %lat2.3;
+        symbol [ lat2 %tmp.61 27 95 99 ];
+        %tmp.62 = add %tmp.60 %tmp.61;
+        %tmp.63 = ", lon2: ";
+        %tmp.64 = add %tmp.62 %tmp.63;
+        %tmp.65 = lgetv %lon2.4;
+        symbol [ lon2 %tmp.65 27 115 119 ];
+        %tmp.66 = add %tmp.64 %tmp.65;
+        invoke %tmp.50 %tmp.51(%tmp.66);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 30 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %y.5 = local;
+        symbol [ y %y.5 30 16 17 ];
+        symbol [ Math %tmp.67 30 20 24 ];
+        %tmp.67 = getm $.Toybox.Math;
+        symbol [ sin %tmp.68 30 25 28 ];
+        %tmp.68 = getv function %tmp.67 :sin;
+        %tmp.69 = lgetv %lon2.4;
+        symbol [ lon2 %tmp.69 30 29 33 ];
+        %tmp.70 = lgetv %lon1.2;
+        symbol [ lon1 %tmp.70 30 36 40 ];
+        %tmp.71 = sub %tmp.69 %tmp.70;
+        %tmp.72 = invoke %tmp.67 %tmp.68(%tmp.71);
+        lputv %y.5 %tmp.72;
+        symbol [ y %y.5 30 16 17 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 31 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %x.6 = local;
+        symbol [ x %x.6 31 16 17 ];
+        symbol [ Math %tmp.73 31 20 24 ];
+        %tmp.73 = getm $.Toybox.Math;
+        symbol [ cos %tmp.74 31 25 28 ];
+        %tmp.74 = getv function %tmp.73 :cos;
+        %tmp.75 = lgetv %lat1.1;
+        symbol [ lat1 %tmp.75 31 29 33 ];
+        %tmp.76 = invoke %tmp.73 %tmp.74(%tmp.75);
+        symbol [ Math %tmp.77 31 37 41 ];
+        %tmp.77 = getm $.Toybox.Math;
+        symbol [ tan %tmp.78 31 42 45 ];
+        %tmp.78 = getv function %tmp.77 :tan;
+        %tmp.79 = lgetv %lat2.3;
+        symbol [ lat2 %tmp.79 31 46 50 ];
+        %tmp.80 = invoke %tmp.77 %tmp.78(%tmp.79);
+        %tmp.81 = mul %tmp.76 %tmp.80;
+        symbol [ Math %tmp.82 31 54 58 ];
+        %tmp.82 = getm $.Toybox.Math;
+        symbol [ sin %tmp.83 31 59 62 ];
+        %tmp.83 = getv function %tmp.82 :sin;
+        %tmp.84 = lgetv %lat1.1;
+        symbol [ lat1 %tmp.84 31 63 67 ];
+        %tmp.85 = invoke %tmp.82 %tmp.83(%tmp.84);
+        symbol [ Math %tmp.86 31 71 75 ];
+        %tmp.86 = getm $.Toybox.Math;
+        symbol [ cos %tmp.87 31 76 79 ];
+        %tmp.87 = getv function %tmp.86 :cos;
+        %tmp.88 = lgetv %lon2.4;
+        symbol [ lon2 %tmp.88 31 80 84 ];
+        %tmp.89 = lgetv %lon1.2;
+        symbol [ lon1 %tmp.89 31 87 91 ];
+        %tmp.90 = sub %tmp.88 %tmp.89;
+        %tmp.91 = invoke %tmp.86 %tmp.87(%tmp.90);
+        %tmp.92 = mul %tmp.85 %tmp.91;
+        %tmp.93 = sub %tmp.81 %tmp.92;
+        lputv %x.6 %tmp.93;
+        symbol [ x %x.6 31 16 17 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 33 12 ]
+        symbol [ System %tmp.94 33 12 18 ];
+        %tmp.94 = getm $.Toybox.System;
+        symbol [ println %tmp.95 33 19 26 ];
+        %tmp.95 = getv function %tmp.94 :println;
+        %tmp.96 = "DEBUG: Calculation - y: ";
+        %tmp.97 = lgetv %y.5;
+        symbol [ y %tmp.97 33 56 57 ];
+        %tmp.98 = add %tmp.96 %tmp.97;
+        %tmp.99 = ", x: ";
+        %tmp.100 = add %tmp.98 %tmp.99;
+        %tmp.101 = lgetv %x.6;
+        symbol [ x %tmp.101 33 70 71 ];
+        %tmp.102 = add %tmp.100 %tmp.101;
+        invoke %tmp.94 %tmp.95(%tmp.102);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 36 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %qiblaRadians.7 = local;
+        symbol [ qiblaRadians %qiblaRadians.7 36 16 28 ];
+        symbol [ Math %tmp.103 36 31 35 ];
+        %tmp.103 = getm $.Toybox.Math;
+        symbol [ atan2 %tmp.104 36 36 41 ];
+        %tmp.104 = getv function %tmp.103 :atan2;
+        %tmp.105 = lgetv %y.5;
+        symbol [ y %tmp.105 36 42 43 ];
+        %tmp.106 = lgetv %x.6;
+        symbol [ x %tmp.106 36 45 46 ];
+        %tmp.107 = invoke %tmp.103 %tmp.104(%tmp.105, %tmp.106);
+        lputv %qiblaRadians.7 %tmp.107;
+        symbol [ qiblaRadians %qiblaRadians.7 36 16 28 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 37 12 ]
+        symbol [ System %tmp.108 37 12 18 ];
+        %tmp.108 = getm $.Toybox.System;
+        symbol [ println %tmp.109 37 19 26 ];
+        %tmp.109 = getv function %tmp.108 :println;
+        %tmp.110 = "DEBUG: Qibla radians: ";
+        %tmp.111 = lgetv %qiblaRadians.7;
+        symbol [ qiblaRadians %tmp.111 37 54 66 ];
+        %tmp.112 = add %tmp.110 %tmp.111;
+        invoke %tmp.108 %tmp.109(%tmp.112);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 40 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %qiblaDegrees.8 = local;
+        symbol [ qiblaDegrees %qiblaDegrees.8 40 16 28 ];
+        %tmp.113 = lgetv %qiblaRadians.7;
+        symbol [ qiblaRadians %tmp.113 40 31 43 ];
+        %tmp.114 = 180.0;
+        %tmp.115 = mul %tmp.113 %tmp.114;
+        symbol [ Math %tmp.116 40 54 58 ];
+        %tmp.116 = getm $.Toybox.Math;
+        symbol [ PI %tmp.117 40 59 61 ];
+        %tmp.117 = getv %tmp.116 :PI;
+        %tmp.118 = div %tmp.115 %tmp.117;
+        lputv %qiblaDegrees.8 %tmp.118;
+        symbol [ qiblaDegrees %qiblaDegrees.8 40 16 28 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 41 12 ]
+        symbol [ System %tmp.119 41 12 18 ];
+        %tmp.119 = getm $.Toybox.System;
+        symbol [ println %tmp.120 41 19 26 ];
+        %tmp.120 = getv function %tmp.119 :println;
+        %tmp.121 = "DEBUG: Qibla degrees (before normalization): ";
+        %tmp.122 = lgetv %qiblaDegrees.8;
+        symbol [ qiblaDegrees %tmp.122 41 77 89 ];
+        %tmp.123 = add %tmp.121 %tmp.122;
+        invoke %tmp.119 %tmp.120(%tmp.123);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 44 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %qiblaDegNum.9 = local;
+        symbol [ qiblaDegNum %qiblaDegNum.9 44 16 27 ];
+        %tmp.124 = lgetv %qiblaDegrees.8;
+        symbol [ qiblaDegrees %tmp.124 44 30 42 ];
+        symbol [ toNumber %tmp.125 44 43 51 ];
+        %tmp.125 = getv function %tmp.124 :toNumber;
+        %tmp.126 = invoke %tmp.124 %tmp.125();
+        lputv %qiblaDegNum.9 %tmp.126;
+        symbol [ qiblaDegNum %qiblaDegNum.9 44 16 27 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 47 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop" ]
+        %qiblaDirection.10 = local;
+        symbol [ qiblaDirection %qiblaDirection.10 47 16 30 ];
+        %tmp.127 = lgetv %qiblaDegNum.9;
+        symbol [ qiblaDegNum %tmp.127 47 34 45 ];
+        %tmp.128 = 360;
+        %tmp.129 = add %tmp.127 %tmp.128;
+        %tmp.130 = 360;
+        %tmp.131 = mod %tmp.129 %tmp.130;
+        lputv %qiblaDirection.10 %tmp.131;
+        symbol [ qiblaDirection %qiblaDirection.10 47 16 30 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 49 12 ]
+        symbol [ System %tmp.132 49 12 18 ];
+        %tmp.132 = getm $.Toybox.System;
+        symbol [ println %tmp.133 49 19 26 ];
+        %tmp.133 = getv function %tmp.132 :println;
+        %tmp.134 = "DEBUG: Final Qibla direction: ";
+        %tmp.135 = lgetv %qiblaDirection.10;
+        symbol [ qiblaDirection %tmp.135 49 62 76 ];
+        %tmp.136 = add %tmp.134 %tmp.135;
+        invoke %tmp.132 %tmp.133(%tmp.136);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 51 12 ]
+        %tmp.137 = lgetv %qiblaDirection.10;
+        symbol [ qiblaDirection %tmp.137 51 19 33 ];
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_finally;
+        ret %tmp.137;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_12_52_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_catch:
+        %tmp.138 = exception;
+        push %tmp.138;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 52 10 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_52_10_56_8_end" ]
+        %e.11 = local;
+        symbol [ e %e.11 52 17 18 ];
+        %tmp.139 = dup %tmp.138;
+        lputv %e.11 %tmp.139;
+        symbol [ e %e.11 52 17 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_52_20_56_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 53 12 ]
+        symbol [ System %tmp.140 53 12 18 ];
+        %tmp.140 = getm $.Toybox.System;
+        symbol [ println %tmp.141 53 19 26 ];
+        %tmp.141 = getv function %tmp.140 :println;
+        %tmp.142 = "DEBUG: Exception in calculateQiblaDirection: ";
+        %tmp.143 = lgetv %e.11;
+        symbol [ e %tmp.143 53 77 78 ];
+        symbol [ getErrorMessage %tmp.144 53 79 94 ];
+        %tmp.144 = getv function %tmp.143 :getErrorMessage;
+        %tmp.145 = invoke %tmp.143 %tmp.144();
+        %tmp.146 = add %tmp.142 %tmp.145;
+        invoke %tmp.140 %tmp.141(%tmp.146);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc" 55 12 ]
+        pop;
+        %tmp.147 = 137;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_finally;
+        ret %tmp.147;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_52_20_56_8_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_finally;
+        pop;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_52_10_56_8_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_52_10_56_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_52_10_56_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_finally;
+        throw %tmp.138;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_finally:
+        jsrret;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_20_8_56_8_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaCalculator_mc_15_58_57_4_stop:
+    }
+}
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaCalculator.mc"; @line = 1; ]
+<init> {
+}

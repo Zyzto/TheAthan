@@ -1,0 +1,328 @@
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 5; @symbol_moduledef = [TheAthanConstants,5,7,24]; ]
+module TheAthanConstants {
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 5; ]
+    <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 14 8 ]
+        %tmp.1 = newa 1;
+        symbol [ VIEW_NEXT_PRAYER %tmp.3 14 29 45 ];
+        %tmp.3 = getv ? :VIEW_NEXT_PRAYER;
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        putv self :navigationHistory %tmp.5;
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 6; ]
+    enum {
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 7; @position = 8; @symbol_enumdec = [VIEW_NEXT_PRAYER,7,8,24]; ]
+        VIEW_NEXT_PRAYER = 0,
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 8; @position = 8; @symbol_enumdec = [VIEW_ALL_PRAYERS,8,8,24]; ]
+        VIEW_ALL_PRAYERS = 1,
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 9; @position = 8; @symbol_enumdec = [VIEW_QIBLA,9,8,18]; ]
+        VIEW_QIBLA = 2,
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 10; @position = 8; @symbol_enumdec = [VIEW_LOCATION,10,8,21]; ]
+        VIEW_LOCATION = 3
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 14; @position = 8; @symbol_vardef = [navigationHistory,14,8,25]; ]
+    var navigationHistory;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 17; @symbol_functiondef = [addToHistory,17,13,25]; @symbol_param<0> = [viewState,17,26,35]; ]
+    function addToHistory(viewState) {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_17_37_35_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 19 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_8_34_8_if_stmt:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_12_19_96_begin:
+        symbol [ navigationHistory %tmp.2 19 12 29 ];
+        %tmp.2 = getv ? :navigationHistory;
+        symbol [ size %tmp.3 19 30 34 ];
+        %tmp.3 = getv function %tmp.2 :size;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = 0;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bt %tmp.6 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_8_34_8_if_true;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_45_19_96_false:
+        symbol [ navigationHistory %tmp.8 19 45 62 ];
+        %tmp.8 = getv ? :navigationHistory;
+        symbol [ navigationHistory %tmp.10 19 63 80 ];
+        %tmp.10 = getv ? :navigationHistory;
+        symbol [ size %tmp.11 19 81 85 ];
+        %tmp.11 = getv function %tmp.10 :size;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = 1;
+        %tmp.14 = sub %tmp.12 %tmp.13;
+        %tmp.15 = agetv %tmp.8 %tmp.14;
+        %tmp.16 = lgetv %viewState;
+        symbol [ viewState %tmp.16 19 96 105 ];
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        push %tmp.17;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_45_19_96_end:
+        %tmp.18 = phi [%tmp.6 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_12_19_96_begin] [%tmp.17 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_45_19_96_false] [%tmp.18 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_45_19_96_end];
+        bf %tmp.18 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_8_34_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_8_34_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_107_34_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 20 12 ]
+        symbol [ System %tmp.19 20 12 18 ];
+        %tmp.19 = getm $.Toybox.System;
+        symbol [ println %tmp.20 20 19 26 ];
+        %tmp.20 = getv function %tmp.19 :println;
+        %tmp.21 = "DEBUG: Adding to history: ";
+        %tmp.22 = lgetv %viewState;
+        symbol [ viewState %tmp.22 20 58 67 ];
+        %tmp.23 = add %tmp.21 %tmp.22;
+        invoke %tmp.19 %tmp.20(%tmp.23);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 21 12 ]
+        symbol [ navigationHistory %tmp.25 21 12 29 ];
+        %tmp.25 = getv ? :navigationHistory;
+        symbol [ add %tmp.26 21 30 33 ];
+        %tmp.26 = getv function %tmp.25 :add;
+        %tmp.27 = lgetv %viewState;
+        symbol [ viewState %tmp.27 21 34 43 ];
+        invoke %tmp.25 %tmp.26(%tmp.27);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 24 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_107_34_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_107_34_8_stop" ]
+        %historyStr.1 = local;
+        symbol [ historyStr %historyStr.1 24 16 26 ];
+        %tmp.28 = "History: ";
+        lputv %historyStr.1 %tmp.28;
+        symbol [ historyStr %historyStr.1 24 16 26 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 25 12 ]
+        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_init:
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 25 21 22 ];
+        %tmp.29 = 0;
+        lputv %i.2 %tmp.29;
+        symbol [ i %i.2 25 21 22 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_test:
+        %tmp.30 = lgetv %i.2;
+        symbol [ i %tmp.30 25 28 29 ];
+        symbol [ navigationHistory %tmp.32 25 32 49 ];
+        %tmp.32 = getv ? :navigationHistory;
+        symbol [ size %tmp.33 25 50 54 ];
+        %tmp.33 = getv function %tmp.32 :size;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        %tmp.35 = lt %tmp.30 %tmp.34;
+        bf %tmp.35 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_begin:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_63_27_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 26 16 ]
+        %tmp.36 = lgetv %historyStr.1;
+        symbol [ historyStr %tmp.36 26 16 26 ];
+        symbol [ navigationHistory %tmp.38 26 30 47 ];
+        %tmp.38 = getv ? :navigationHistory;
+        %tmp.39 = lgetv %i.2;
+        symbol [ i %tmp.39 26 48 49 ];
+        %tmp.40 = agetv %tmp.38 %tmp.39;
+        %tmp.41 = " ";
+        %tmp.42 = add %tmp.40 %tmp.41;
+        %tmp.43 = add %tmp.36 %tmp.42;
+        lputv %historyStr.1 %tmp.43;
+        symbol [ historyStr %historyStr.1 26 16 26 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_63_27_12_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_incr:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 25 ]
+        %tmp.46 = lgetv %i.2;
+        symbol [ i %tmp.46 25 58 59 ];
+        %tmp.47 = add %tmp.46 1;
+        lputv %i.2 %tmp.47;
+        symbol [ i %i.2 25 58 59 ];
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_test;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_25_12_27_12_for_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 28 12 ]
+        symbol [ System %tmp.48 28 12 18 ];
+        %tmp.48 = getm $.Toybox.System;
+        symbol [ println %tmp.49 28 19 26 ];
+        %tmp.49 = getv function %tmp.48 :println;
+        %tmp.50 = "DEBUG: ";
+        %tmp.51 = lgetv %historyStr.1;
+        symbol [ historyStr %tmp.51 28 39 49 ];
+        %tmp.52 = add %tmp.50 %tmp.51;
+        invoke %tmp.48 %tmp.49(%tmp.52);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 30 12 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_30_12_33_12_if_stmt:
+        symbol [ navigationHistory %tmp.54 30 16 33 ];
+        %tmp.54 = getv ? :navigationHistory;
+        symbol [ size %tmp.55 30 34 38 ];
+        %tmp.55 = getv function %tmp.54 :size;
+        %tmp.56 = invoke %tmp.54 %tmp.55();
+        %tmp.57 = 10;
+        %tmp.58 = gt %tmp.56 %tmp.57;
+        bf %tmp.58 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_30_12_33_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_30_12_33_12_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_30_47_33_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 32 16 ]
+        symbol [ navigationHistory %tmp.60 32 36 53 ];
+        %tmp.60 = getv ? :navigationHistory;
+        symbol [ slice %tmp.61 32 54 59 ];
+        %tmp.61 = getv function %tmp.60 :slice;
+        symbol [ navigationHistory %tmp.63 32 60 77 ];
+        %tmp.63 = getv ? :navigationHistory;
+        symbol [ size %tmp.64 32 78 82 ];
+        %tmp.64 = getv function %tmp.63 :size;
+        %tmp.65 = invoke %tmp.63 %tmp.64();
+        %tmp.66 = 10;
+        %tmp.67 = sub %tmp.65 %tmp.66;
+        symbol [ navigationHistory %tmp.69 32 91 108 ];
+        %tmp.69 = getv ? :navigationHistory;
+        symbol [ size %tmp.70 32 109 113 ];
+        %tmp.70 = getv function %tmp.69 :size;
+        %tmp.71 = invoke %tmp.69 %tmp.70();
+        %tmp.72 = invoke %tmp.60 %tmp.61(%tmp.67, %tmp.71);
+        symbol [ navigationHistory ? 32 16 33 ];
+        putv self :navigationHistory %tmp.72;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_30_47_33_12_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_30_12_33_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_30_12_33_12_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_107_34_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_8_34_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_19_8_34_8_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_17_37_35_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 38; @symbol_functiondef = [getPreviousView,38,13,28]; ]
+    function getPreviousView() {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_38_31_61_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 39 8 ]
+        symbol [ System %tmp.1 39 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 39 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "DEBUG: Getting previous view";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 42 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_38_31_61_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_38_31_61_4_stop" ]
+        %historyStr.1 = local;
+        symbol [ historyStr %historyStr.1 42 12 22 ];
+        %tmp.4 = "History: ";
+        lputv %historyStr.1 %tmp.4;
+        symbol [ historyStr %historyStr.1 42 12 22 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 43 8 ]
+        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_init:
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 43 17 18 ];
+        %tmp.5 = 0;
+        lputv %i.2 %tmp.5;
+        symbol [ i %i.2 43 17 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_test:
+        %tmp.6 = lgetv %i.2;
+        symbol [ i %tmp.6 43 24 25 ];
+        symbol [ navigationHistory %tmp.8 43 28 45 ];
+        %tmp.8 = getv ? :navigationHistory;
+        symbol [ size %tmp.9 43 46 50 ];
+        %tmp.9 = getv function %tmp.8 :size;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = lt %tmp.6 %tmp.10;
+        bf %tmp.11 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_begin:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_59_45_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 44 12 ]
+        %tmp.12 = lgetv %historyStr.1;
+        symbol [ historyStr %tmp.12 44 12 22 ];
+        symbol [ navigationHistory %tmp.14 44 26 43 ];
+        %tmp.14 = getv ? :navigationHistory;
+        %tmp.15 = lgetv %i.2;
+        symbol [ i %tmp.15 44 44 45 ];
+        %tmp.16 = agetv %tmp.14 %tmp.15;
+        %tmp.17 = " ";
+        %tmp.18 = add %tmp.16 %tmp.17;
+        %tmp.19 = add %tmp.12 %tmp.18;
+        lputv %historyStr.1 %tmp.19;
+        symbol [ historyStr %historyStr.1 44 12 22 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_59_45_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_incr:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 43 ]
+        %tmp.22 = lgetv %i.2;
+        symbol [ i %tmp.22 43 54 55 ];
+        %tmp.23 = add %tmp.22 1;
+        lputv %i.2 %tmp.23;
+        symbol [ i %i.2 43 54 55 ];
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_test;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_43_8_45_8_for_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 46 8 ]
+        symbol [ System %tmp.24 46 8 14 ];
+        %tmp.24 = getm $.Toybox.System;
+        symbol [ println %tmp.25 46 15 22 ];
+        %tmp.25 = getv function %tmp.24 :println;
+        %tmp.26 = "DEBUG: ";
+        %tmp.27 = lgetv %historyStr.1;
+        symbol [ historyStr %tmp.27 46 35 45 ];
+        %tmp.28 = add %tmp.26 %tmp.27;
+        invoke %tmp.24 %tmp.25(%tmp.28);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 48 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_48_8_56_8_if_stmt:
+        symbol [ navigationHistory %tmp.30 48 12 29 ];
+        %tmp.30 = getv ? :navigationHistory;
+        symbol [ size %tmp.31 48 30 34 ];
+        %tmp.31 = getv function %tmp.30 :size;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = 1;
+        %tmp.34 = gt %tmp.32 %tmp.33;
+        bf %tmp.34 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_48_8_56_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_48_8_56_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_48_42_56_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 50 12 ]
+        symbol [ navigationHistory %tmp.36 50 12 29 ];
+        %tmp.36 = getv ? :navigationHistory;
+        symbol [ remove %tmp.37 50 30 36 ];
+        %tmp.37 = getv function %tmp.36 :remove;
+        symbol [ navigationHistory %tmp.39 50 37 54 ];
+        %tmp.39 = getv ? :navigationHistory;
+        symbol [ size %tmp.40 50 55 59 ];
+        %tmp.40 = getv function %tmp.39 :size;
+        %tmp.41 = invoke %tmp.39 %tmp.40();
+        %tmp.42 = 1;
+        %tmp.43 = sub %tmp.41 %tmp.42;
+        invoke %tmp.36 %tmp.37(%tmp.43);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 53 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_48_42_56_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_48_42_56_8_stop" ]
+        %previousView.3 = local;
+        symbol [ previousView %previousView.3 53 16 28 ];
+        symbol [ navigationHistory %tmp.45 53 31 48 ];
+        %tmp.45 = getv ? :navigationHistory;
+        symbol [ navigationHistory %tmp.47 53 49 66 ];
+        %tmp.47 = getv ? :navigationHistory;
+        symbol [ size %tmp.48 53 67 71 ];
+        %tmp.48 = getv function %tmp.47 :size;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        %tmp.50 = 1;
+        %tmp.51 = sub %tmp.49 %tmp.50;
+        %tmp.52 = agetv %tmp.45 %tmp.51;
+        lputv %previousView.3 %tmp.52;
+        symbol [ previousView %previousView.3 53 16 28 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 54 12 ]
+        symbol [ System %tmp.53 54 12 18 ];
+        %tmp.53 = getm $.Toybox.System;
+        symbol [ println %tmp.54 54 19 26 ];
+        %tmp.54 = getv function %tmp.53 :println;
+        %tmp.55 = "DEBUG: Previous view: ";
+        %tmp.56 = lgetv %previousView.3;
+        symbol [ previousView %tmp.56 54 54 66 ];
+        %tmp.57 = add %tmp.55 %tmp.56;
+        invoke %tmp.53 %tmp.54(%tmp.57);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 55 12 ]
+        %tmp.58 = lgetv %previousView.3;
+        symbol [ previousView %tmp.58 55 19 31 ];
+        ret %tmp.58;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_48_42_56_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_48_8_56_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_48_8_56_8_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 59 8 ]
+        symbol [ System %tmp.59 59 8 14 ];
+        %tmp.59 = getm $.Toybox.System;
+        symbol [ println %tmp.60 59 15 22 ];
+        %tmp.60 = getv function %tmp.59 :println;
+        %tmp.61 = "DEBUG: No previous view, returning default";
+        invoke %tmp.59 %tmp.60(%tmp.61);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc" 60 8 ]
+        symbol [ VIEW_NEXT_PRAYER %tmp.63 60 15 31 ];
+        %tmp.63 = getv ? :VIEW_NEXT_PRAYER;
+        ret %tmp.63;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanConstants_mc_38_31_61_4_stop:
+    }
+}
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanConstants.mc"; @line = 1; ]
+<init> {
+}

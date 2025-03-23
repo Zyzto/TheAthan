@@ -1,0 +1,38 @@
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Time,2,14,18]; ]
+import Toybox.Time;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc"; @line = 5; @symbol_classdef = [TheAthanPrayerTime,5,6,24]; ]
+class TheAthanPrayerTime {
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc"; @line = 6; @position = 8; @symbol_vardef = [name,6,8,12]; ]
+    var name;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc"; @line = 7; @position = 8; @symbol_vardef = [time,7,8,12]; ]
+    var time;
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; @symbol_param<0> = [name,9,24,28]; @symbol_param<1> = [time,9,30,34]; ]
+    function initialize(name, time) as Void {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanPrayerTime_mc_9_36_12_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc" 10 8 ]
+        symbol [ self %self 10 8 12 ];
+        %tmp.1 = lgetv %name;
+        symbol [ name %tmp.1 10 20 24 ];
+        symbol [ name ? 10 13 17 ];
+        putv self :name %tmp.1;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc" 11 8 ]
+        symbol [ self %self 11 8 12 ];
+        %tmp.2 = lgetv %time;
+        symbol [ time %tmp.2 11 20 24 ];
+        symbol [ time ? 11 13 17 ];
+        putv self :time %tmp.2;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanPrayerTime_mc_9_36_12_4_stop:
+    }
+}
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanPrayerTime.mc"; @line = 1; ]
+<init> {
+}

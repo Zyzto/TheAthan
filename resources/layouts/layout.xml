@@ -1,0 +1,13 @@
+<layout id="MainLayout" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <!-- Title - moved up slightly -->
+    <label id="titleLabel" x="center" y="10" text="@Strings.next_prayer" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_XTINY" />
+    
+    <!-- Prayer Name - increased spacing -->
+    <label id="prayerNameLabel" x="center" y="30" text="" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SMALL" />
+    
+    <!-- Prayer Time - increased spacing -->
+    <label id="prayerTimeLabel" x="center" y="50" text="" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_XTINY" />
+    
+    <!-- Countdown Timer (will be drawn in code) -->
+    <!-- We'll draw a circle and the time remaining in the onUpdate method -->
+</layout>

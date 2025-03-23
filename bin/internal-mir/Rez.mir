@@ -1,0 +1,1947 @@
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 12; @symbol_moduledef = [Layouts,12,11,18]; ]
+    module Layouts {
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 13; @symbol_functiondef = [MainLayout,13,17,27]; @symbol_param<0> = [dc,13,28,30]; @symbol_param<0>_type<0> = [Graphics,13,34,42]; @symbol_param<0>_type<1> = [Dc,13,43,45]; @symbol_return<0> = [Array,13,50,55]; @symbol_return<1> = [WatchUi,13,56,63]; @symbol_return<2> = [Drawable,13,64,72]; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_13_74_21_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 14 12 ]
+            [ "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_13_74_21_8_start" "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_13_74_21_8_stop" ]
+            %rez_cmp_local_text_titleLabel.1 = local;
+            symbol [ rez_cmp_local_text_titleLabel %rez_cmp_local_text_titleLabel.1 14 16 45 ];
+            symbol [ WatchUi %tmp.3 14 52 59 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 14 60 64 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 7;
+            %tmp.7 = const :identifier;
+            symbol [ identifier %tmp.7 14 67 77 const ];
+            %tmp.8 = "titleLabel";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :color;
+            symbol [ color %tmp.12 14 94 99 const ];
+            symbol [ Graphics %tmp.13 14 101 109 ];
+            %tmp.13 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.14 14 110 121 ];
+            %tmp.14 = getv %tmp.13 :COLOR_WHITE;
+            %tmp.15 = dup %tmp.10;
+            %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+            %tmp.18 = const :locX;
+            symbol [ locX %tmp.18 14 124 128 const ];
+            %tmp.19 = 320;
+            %tmp.20 = 0.5;
+            %tmp.21 = mul %tmp.19 %tmp.20;
+            %tmp.22 = dup %tmp.16;
+            %tmp.23 = aputv %tmp.22 %tmp.18 %tmp.21;
+            %tmp.25 = const :locY;
+            symbol [ locY %tmp.25 14 144 148 const ];
+            %tmp.26 = 10;
+            %tmp.27 = dup %tmp.23;
+            %tmp.28 = aputv %tmp.27 %tmp.25 %tmp.26;
+            %tmp.30 = const :text;
+            symbol [ text %tmp.30 14 155 159 const ];
+            symbol [ $ %tmp.31 14 161 162 ];
+            %tmp.31 = getm $;
+            symbol [ Rez %tmp.32 14 163 166 ];
+            %tmp.32 = getv %tmp.31 :Rez;
+            symbol [ Strings %tmp.33 14 167 174 ];
+            %tmp.33 = getv %tmp.32 :Strings;
+            symbol [ next_prayer %tmp.34 14 175 186 ];
+            %tmp.34 = getv %tmp.33 :next_prayer;
+            %tmp.35 = dup %tmp.28;
+            %tmp.36 = aputv %tmp.35 %tmp.30 %tmp.34;
+            %tmp.38 = const :justification;
+            symbol [ justification %tmp.38 14 189 202 const ];
+            symbol [ Graphics %tmp.39 14 204 212 ];
+            %tmp.39 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.40 14 213 232 ];
+            %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+            %tmp.41 = dup %tmp.36;
+            %tmp.42 = aputv %tmp.41 %tmp.38 %tmp.40;
+            %tmp.44 = const :font;
+            symbol [ font %tmp.44 14 235 239 const ];
+            symbol [ Graphics %tmp.45 14 241 249 ];
+            %tmp.45 = getm $.Toybox.Graphics;
+            symbol [ FONT_XTINY %tmp.46 14 250 260 ];
+            %tmp.46 = getv %tmp.45 :FONT_XTINY;
+            %tmp.47 = dup %tmp.42;
+            %tmp.48 = aputv %tmp.47 %tmp.44 %tmp.46;
+            %tmp.1 = newc %tmp.4 (%tmp.48);
+            lputv %rez_cmp_local_text_titleLabel.1 %tmp.1;
+            symbol [ rez_cmp_local_text_titleLabel %rez_cmp_local_text_titleLabel.1 14 16 45 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 16 12 ]
+            [ "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_13_74_21_8_start" "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_13_74_21_8_stop" ]
+            %rez_cmp_local_text_prayerNameLabel.2 = local;
+            symbol [ rez_cmp_local_text_prayerNameLabel %rez_cmp_local_text_prayerNameLabel.2 16 16 50 ];
+            symbol [ WatchUi %tmp.51 16 57 64 ];
+            %tmp.51 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.52 16 65 69 ];
+            %tmp.52 = getv function ? %tmp.51 :Text;
+            %tmp.53 = newd 6;
+            %tmp.55 = const :identifier;
+            symbol [ identifier %tmp.55 16 72 82 const ];
+            %tmp.56 = "prayerNameLabel";
+            %tmp.57 = dup %tmp.53;
+            %tmp.58 = aputv %tmp.57 %tmp.55 %tmp.56;
+            %tmp.60 = const :color;
+            symbol [ color %tmp.60 16 104 109 const ];
+            symbol [ Graphics %tmp.61 16 111 119 ];
+            %tmp.61 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.62 16 120 131 ];
+            %tmp.62 = getv %tmp.61 :COLOR_WHITE;
+            %tmp.63 = dup %tmp.58;
+            %tmp.64 = aputv %tmp.63 %tmp.60 %tmp.62;
+            %tmp.66 = const :locX;
+            symbol [ locX %tmp.66 16 134 138 const ];
+            %tmp.67 = 320;
+            %tmp.68 = 0.5;
+            %tmp.69 = mul %tmp.67 %tmp.68;
+            %tmp.70 = dup %tmp.64;
+            %tmp.71 = aputv %tmp.70 %tmp.66 %tmp.69;
+            %tmp.73 = const :locY;
+            symbol [ locY %tmp.73 16 154 158 const ];
+            %tmp.74 = 30;
+            %tmp.75 = dup %tmp.71;
+            %tmp.76 = aputv %tmp.75 %tmp.73 %tmp.74;
+            %tmp.78 = const :justification;
+            symbol [ justification %tmp.78 16 165 178 const ];
+            symbol [ Graphics %tmp.79 16 180 188 ];
+            %tmp.79 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.80 16 189 208 ];
+            %tmp.80 = getv %tmp.79 :TEXT_JUSTIFY_CENTER;
+            %tmp.81 = dup %tmp.76;
+            %tmp.82 = aputv %tmp.81 %tmp.78 %tmp.80;
+            %tmp.84 = const :font;
+            symbol [ font %tmp.84 16 211 215 const ];
+            symbol [ Graphics %tmp.85 16 217 225 ];
+            %tmp.85 = getm $.Toybox.Graphics;
+            symbol [ FONT_SMALL %tmp.86 16 226 236 ];
+            %tmp.86 = getv %tmp.85 :FONT_SMALL;
+            %tmp.87 = dup %tmp.82;
+            %tmp.88 = aputv %tmp.87 %tmp.84 %tmp.86;
+            %tmp.49 = newc %tmp.52 (%tmp.88);
+            lputv %rez_cmp_local_text_prayerNameLabel.2 %tmp.49;
+            symbol [ rez_cmp_local_text_prayerNameLabel %rez_cmp_local_text_prayerNameLabel.2 16 16 50 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 18 12 ]
+            [ "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_13_74_21_8_start" "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_13_74_21_8_stop" ]
+            %rez_cmp_local_text_prayerTimeLabel.3 = local;
+            symbol [ rez_cmp_local_text_prayerTimeLabel %rez_cmp_local_text_prayerTimeLabel.3 18 16 50 ];
+            symbol [ WatchUi %tmp.91 18 57 64 ];
+            %tmp.91 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.92 18 65 69 ];
+            %tmp.92 = getv function ? %tmp.91 :Text;
+            %tmp.93 = newd 6;
+            %tmp.95 = const :identifier;
+            symbol [ identifier %tmp.95 18 72 82 const ];
+            %tmp.96 = "prayerTimeLabel";
+            %tmp.97 = dup %tmp.93;
+            %tmp.98 = aputv %tmp.97 %tmp.95 %tmp.96;
+            %tmp.100 = const :color;
+            symbol [ color %tmp.100 18 104 109 const ];
+            symbol [ Graphics %tmp.101 18 111 119 ];
+            %tmp.101 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.102 18 120 131 ];
+            %tmp.102 = getv %tmp.101 :COLOR_WHITE;
+            %tmp.103 = dup %tmp.98;
+            %tmp.104 = aputv %tmp.103 %tmp.100 %tmp.102;
+            %tmp.106 = const :locX;
+            symbol [ locX %tmp.106 18 134 138 const ];
+            %tmp.107 = 320;
+            %tmp.108 = 0.5;
+            %tmp.109 = mul %tmp.107 %tmp.108;
+            %tmp.110 = dup %tmp.104;
+            %tmp.111 = aputv %tmp.110 %tmp.106 %tmp.109;
+            %tmp.113 = const :locY;
+            symbol [ locY %tmp.113 18 154 158 const ];
+            %tmp.114 = 50;
+            %tmp.115 = dup %tmp.111;
+            %tmp.116 = aputv %tmp.115 %tmp.113 %tmp.114;
+            %tmp.118 = const :justification;
+            symbol [ justification %tmp.118 18 165 178 const ];
+            symbol [ Graphics %tmp.119 18 180 188 ];
+            %tmp.119 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.120 18 189 208 ];
+            %tmp.120 = getv %tmp.119 :TEXT_JUSTIFY_CENTER;
+            %tmp.121 = dup %tmp.116;
+            %tmp.122 = aputv %tmp.121 %tmp.118 %tmp.120;
+            %tmp.124 = const :font;
+            symbol [ font %tmp.124 18 211 215 const ];
+            symbol [ Graphics %tmp.125 18 217 225 ];
+            %tmp.125 = getm $.Toybox.Graphics;
+            symbol [ FONT_XTINY %tmp.126 18 226 236 ];
+            %tmp.126 = getv %tmp.125 :FONT_XTINY;
+            %tmp.127 = dup %tmp.122;
+            %tmp.128 = aputv %tmp.127 %tmp.124 %tmp.126;
+            %tmp.89 = newc %tmp.92 (%tmp.128);
+            lputv %rez_cmp_local_text_prayerTimeLabel.3 %tmp.89;
+            symbol [ rez_cmp_local_text_prayerTimeLabel %rez_cmp_local_text_prayerTimeLabel.3 18 16 50 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 20 12 ]
+            %tmp.129 = newa 3 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.129 20 126 131 ];
+            symbol [ WatchUi %tmp.129 20 132 139 ];
+            symbol [ Drawable %tmp.129 20 140 148 ];
+            %tmp.130 = lgetv %rez_cmp_local_text_titleLabel.1;
+            symbol [ rez_cmp_local_text_titleLabel %tmp.130 20 20 49 ];
+            %tmp.131 = dup %tmp.129;
+            %tmp.132 = aputv %tmp.131 0 %tmp.130;
+            %tmp.133 = lgetv %rez_cmp_local_text_prayerNameLabel.2;
+            symbol [ rez_cmp_local_text_prayerNameLabel %tmp.133 20 51 85 ];
+            %tmp.134 = dup %tmp.132;
+            %tmp.135 = aputv %tmp.134 1 %tmp.133;
+            %tmp.136 = lgetv %rez_cmp_local_text_prayerTimeLabel.3;
+            symbol [ rez_cmp_local_text_prayerTimeLabel %tmp.136 20 87 121 ];
+            %tmp.137 = dup %tmp.135;
+            %tmp.138 = aputv %tmp.137 2 %tmp.136;
+            ret %tmp.138;
+_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_13_74_21_8_stop:
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 23; @symbol_functiondef = [PrayerTimesLayout,23,17,34]; @symbol_param<0> = [dc,23,35,37]; @symbol_param<0>_type<0> = [Graphics,23,41,49]; @symbol_param<0>_type<1> = [Dc,23,50,52]; @symbol_return<0> = [Array,23,57,62]; @symbol_return<1> = [WatchUi,23,63,70]; @symbol_return<2> = [Drawable,23,71,79]; ]
+        function PrayerTimesLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_23_81_27_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 24 12 ]
+            [ "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_23_81_27_8_start" "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_23_81_27_8_stop" ]
+            %rez_cmp_local_text_prayerTimesTitle.1 = local;
+            symbol [ rez_cmp_local_text_prayerTimesTitle %rez_cmp_local_text_prayerTimesTitle.1 24 16 51 ];
+            symbol [ WatchUi %tmp.3 24 58 65 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 24 66 70 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 7;
+            %tmp.7 = const :identifier;
+            symbol [ identifier %tmp.7 24 73 83 const ];
+            %tmp.8 = "prayerTimesTitle";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :color;
+            symbol [ color %tmp.12 24 106 111 const ];
+            symbol [ Graphics %tmp.13 24 113 121 ];
+            %tmp.13 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.14 24 122 133 ];
+            %tmp.14 = getv %tmp.13 :COLOR_WHITE;
+            %tmp.15 = dup %tmp.10;
+            %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+            %tmp.18 = const :locX;
+            symbol [ locX %tmp.18 24 136 140 const ];
+            %tmp.19 = 320;
+            %tmp.20 = 0.5;
+            %tmp.21 = mul %tmp.19 %tmp.20;
+            %tmp.22 = dup %tmp.16;
+            %tmp.23 = aputv %tmp.22 %tmp.18 %tmp.21;
+            %tmp.25 = const :locY;
+            symbol [ locY %tmp.25 24 156 160 const ];
+            %tmp.26 = 15;
+            %tmp.27 = dup %tmp.23;
+            %tmp.28 = aputv %tmp.27 %tmp.25 %tmp.26;
+            %tmp.30 = const :text;
+            symbol [ text %tmp.30 24 167 171 const ];
+            symbol [ $ %tmp.31 24 173 174 ];
+            %tmp.31 = getm $;
+            symbol [ Rez %tmp.32 24 175 178 ];
+            %tmp.32 = getv %tmp.31 :Rez;
+            symbol [ Strings %tmp.33 24 179 186 ];
+            %tmp.33 = getv %tmp.32 :Strings;
+            symbol [ prayer_times %tmp.34 24 187 199 ];
+            %tmp.34 = getv %tmp.33 :prayer_times;
+            %tmp.35 = dup %tmp.28;
+            %tmp.36 = aputv %tmp.35 %tmp.30 %tmp.34;
+            %tmp.38 = const :justification;
+            symbol [ justification %tmp.38 24 202 215 const ];
+            symbol [ Graphics %tmp.39 24 217 225 ];
+            %tmp.39 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.40 24 226 245 ];
+            %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+            %tmp.41 = dup %tmp.36;
+            %tmp.42 = aputv %tmp.41 %tmp.38 %tmp.40;
+            %tmp.44 = const :font;
+            symbol [ font %tmp.44 24 248 252 const ];
+            symbol [ Graphics %tmp.45 24 254 262 ];
+            %tmp.45 = getm $.Toybox.Graphics;
+            symbol [ FONT_SMALL %tmp.46 24 263 273 ];
+            %tmp.46 = getv %tmp.45 :FONT_SMALL;
+            %tmp.47 = dup %tmp.42;
+            %tmp.48 = aputv %tmp.47 %tmp.44 %tmp.46;
+            %tmp.1 = newc %tmp.4 (%tmp.48);
+            lputv %rez_cmp_local_text_prayerTimesTitle.1 %tmp.1;
+            symbol [ rez_cmp_local_text_prayerTimesTitle %rez_cmp_local_text_prayerTimesTitle.1 24 16 51 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 26 12 ]
+            %tmp.49 = newa 1 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.49 26 60 65 ];
+            symbol [ WatchUi %tmp.49 26 66 73 ];
+            symbol [ Drawable %tmp.49 26 74 82 ];
+            %tmp.50 = lgetv %rez_cmp_local_text_prayerTimesTitle.1;
+            symbol [ rez_cmp_local_text_prayerTimesTitle %tmp.50 26 20 55 ];
+            %tmp.51 = dup %tmp.49;
+            %tmp.52 = aputv %tmp.51 0 %tmp.50;
+            ret %tmp.52;
+_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_23_81_27_8_stop:
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 29; @symbol_functiondef = [QiblaLayout,29,17,28]; @symbol_param<0> = [dc,29,29,31]; @symbol_param<0>_type<0> = [Graphics,29,35,43]; @symbol_param<0>_type<1> = [Dc,29,44,46]; @symbol_return<0> = [Array,29,51,56]; @symbol_return<1> = [WatchUi,29,57,64]; @symbol_return<2> = [Drawable,29,65,73]; ]
+        function QiblaLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_29_75_33_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 30 12 ]
+            [ "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_29_75_33_8_start" "_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_29_75_33_8_stop" ]
+            %rez_cmp_local_text_qiblaTitle.1 = local;
+            symbol [ rez_cmp_local_text_qiblaTitle %rez_cmp_local_text_qiblaTitle.1 30 16 45 ];
+            symbol [ WatchUi %tmp.3 30 52 59 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 30 60 64 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 7;
+            %tmp.7 = const :identifier;
+            symbol [ identifier %tmp.7 30 67 77 const ];
+            %tmp.8 = "qiblaTitle";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :color;
+            symbol [ color %tmp.12 30 94 99 const ];
+            symbol [ Graphics %tmp.13 30 101 109 ];
+            %tmp.13 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.14 30 110 121 ];
+            %tmp.14 = getv %tmp.13 :COLOR_WHITE;
+            %tmp.15 = dup %tmp.10;
+            %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+            %tmp.18 = const :locX;
+            symbol [ locX %tmp.18 30 124 128 const ];
+            %tmp.19 = 320;
+            %tmp.20 = 0.5;
+            %tmp.21 = mul %tmp.19 %tmp.20;
+            %tmp.22 = dup %tmp.16;
+            %tmp.23 = aputv %tmp.22 %tmp.18 %tmp.21;
+            %tmp.25 = const :locY;
+            symbol [ locY %tmp.25 30 144 148 const ];
+            %tmp.26 = 15;
+            %tmp.27 = dup %tmp.23;
+            %tmp.28 = aputv %tmp.27 %tmp.25 %tmp.26;
+            %tmp.30 = const :text;
+            symbol [ text %tmp.30 30 155 159 const ];
+            symbol [ $ %tmp.31 30 161 162 ];
+            %tmp.31 = getm $;
+            symbol [ Rez %tmp.32 30 163 166 ];
+            %tmp.32 = getv %tmp.31 :Rez;
+            symbol [ Strings %tmp.33 30 167 174 ];
+            %tmp.33 = getv %tmp.32 :Strings;
+            symbol [ qibla_finder %tmp.34 30 175 187 ];
+            %tmp.34 = getv %tmp.33 :qibla_finder;
+            %tmp.35 = dup %tmp.28;
+            %tmp.36 = aputv %tmp.35 %tmp.30 %tmp.34;
+            %tmp.38 = const :justification;
+            symbol [ justification %tmp.38 30 190 203 const ];
+            symbol [ Graphics %tmp.39 30 205 213 ];
+            %tmp.39 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.40 30 214 233 ];
+            %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+            %tmp.41 = dup %tmp.36;
+            %tmp.42 = aputv %tmp.41 %tmp.38 %tmp.40;
+            %tmp.44 = const :font;
+            symbol [ font %tmp.44 30 236 240 const ];
+            symbol [ Graphics %tmp.45 30 242 250 ];
+            %tmp.45 = getm $.Toybox.Graphics;
+            symbol [ FONT_SMALL %tmp.46 30 251 261 ];
+            %tmp.46 = getv %tmp.45 :FONT_SMALL;
+            %tmp.47 = dup %tmp.42;
+            %tmp.48 = aputv %tmp.47 %tmp.44 %tmp.46;
+            %tmp.1 = newc %tmp.4 (%tmp.48);
+            lputv %rez_cmp_local_text_qiblaTitle.1 %tmp.1;
+            symbol [ rez_cmp_local_text_qiblaTitle %rez_cmp_local_text_qiblaTitle.1 30 16 45 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 32 12 ]
+            %tmp.49 = newa 1 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.49 32 54 59 ];
+            symbol [ WatchUi %tmp.49 32 60 67 ];
+            symbol [ Drawable %tmp.49 32 68 76 ];
+            %tmp.50 = lgetv %rez_cmp_local_text_qiblaTitle.1;
+            symbol [ rez_cmp_local_text_qiblaTitle %tmp.50 32 20 49 ];
+            %tmp.51 = dup %tmp.49;
+            %tmp.52 = aputv %tmp.51 0 %tmp.50;
+            ret %tmp.52;
+_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_29_75_33_8_stop:
+        }
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 36; @symbol_moduledef = [Menus,36,11,16]; ]
+    module Menus {
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 36; ]
+        <init> {
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 37; @symbol_classdef = [MainMenu,37,14,22]; @symbol_extends<0> = [WatchUi,37,31,38]; @symbol_extends<1> = [Menu,37,39,43]; ]
+        class MainMenu extends WatchUi.Menu {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 37; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 37; ]
+            static
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 38; @symbol_functiondef = [initialize,38,21,31]; ]
+            function initialize() as Void {
+_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_38_34_43_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 39 16 ]
+                symbol [ Menu %tmp.2 39 16 20 ];
+                %tmp.2 = getv ? :Menu;
+                symbol [ initialize %tmp.3 39 21 31 ];
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 40 16 ]
+                %tmp.4 = self;
+                symbol [ addItem %tmp.5 40 16 23 ];
+                %tmp.5 = getv function %tmp.4 :addItem;
+                symbol [ WatchUi %tmp.6 40 25 32 ];
+                %tmp.6 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.7 40 33 45 ];
+                %tmp.7 = getv function %tmp.6 :loadResource;
+                symbol [ $ %tmp.8 40 46 47 ];
+                %tmp.8 = getm $;
+                symbol [ Rez %tmp.9 40 48 51 ];
+                %tmp.9 = getv %tmp.8 :Rez;
+                symbol [ Strings %tmp.10 40 52 59 ];
+                %tmp.10 = getv %tmp.9 :Strings;
+                symbol [ menu_label_1 %tmp.11 40 60 72 ];
+                %tmp.11 = getv %tmp.10 :menu_label_1;
+                %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.11);
+                %tmp.13 = as %tmp.12 String;
+                symbol [ String %tmp.13 40 77 83 ];
+                %tmp.15 = const :prayer_times;
+                symbol [ prayer_times %tmp.15 40 87 99 const ];
+                invoke %tmp.4 %tmp.5(%tmp.13, %tmp.15);
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 41 16 ]
+                %tmp.16 = self;
+                symbol [ addItem %tmp.17 41 16 23 ];
+                %tmp.17 = getv function %tmp.16 :addItem;
+                symbol [ WatchUi %tmp.18 41 25 32 ];
+                %tmp.18 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.19 41 33 45 ];
+                %tmp.19 = getv function %tmp.18 :loadResource;
+                symbol [ $ %tmp.20 41 46 47 ];
+                %tmp.20 = getm $;
+                symbol [ Rez %tmp.21 41 48 51 ];
+                %tmp.21 = getv %tmp.20 :Rez;
+                symbol [ Strings %tmp.22 41 52 59 ];
+                %tmp.22 = getv %tmp.21 :Strings;
+                symbol [ menu_label_2 %tmp.23 41 60 72 ];
+                %tmp.23 = getv %tmp.22 :menu_label_2;
+                %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.23);
+                %tmp.25 = as %tmp.24 String;
+                symbol [ String %tmp.25 41 77 83 ];
+                %tmp.27 = const :qibla_finder;
+                symbol [ qibla_finder %tmp.27 41 87 99 const ];
+                invoke %tmp.16 %tmp.17(%tmp.25, %tmp.27);
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 42 16 ]
+                %tmp.28 = self;
+                symbol [ addItem %tmp.29 42 16 23 ];
+                %tmp.29 = getv function %tmp.28 :addItem;
+                symbol [ WatchUi %tmp.30 42 25 32 ];
+                %tmp.30 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.31 42 33 45 ];
+                %tmp.31 = getv function %tmp.30 :loadResource;
+                symbol [ $ %tmp.32 42 46 47 ];
+                %tmp.32 = getm $;
+                symbol [ Rez %tmp.33 42 48 51 ];
+                %tmp.33 = getv %tmp.32 :Rez;
+                symbol [ Strings %tmp.34 42 52 59 ];
+                %tmp.34 = getv %tmp.33 :Strings;
+                symbol [ menu_update_location %tmp.35 42 60 80 ];
+                %tmp.35 = getv %tmp.34 :menu_update_location;
+                %tmp.36 = invoke %tmp.30 %tmp.31(%tmp.35);
+                %tmp.37 = as %tmp.36 String;
+                symbol [ String %tmp.37 42 85 91 ];
+                %tmp.39 = const :update_location;
+                symbol [ update_location %tmp.39 42 95 110 const ];
+                invoke %tmp.28 %tmp.29(%tmp.37, %tmp.39);
+_home_zyzto_Code_Gathan_TheAthan_bin_gen_006_B4115_00_source_Rez_mcgen_38_34_43_12_stop:
+            }
+        }
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 47; @symbol_moduledef = [Strings,47,11,18]; ]
+    module Strings {
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 47; ]
+        <init> {
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 48; @position = 27; initialized = true; @symbol_vardef = [asr,48,27,30]; @symbol_type<0> = [ResourceId,48,34,44]; ]
+        var asr as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 49; @position = 27; initialized = true; @symbol_vardef = [hours,49,27,32]; @symbol_type<0> = [ResourceId,49,36,46]; ]
+        var hours as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 50; @position = 27; initialized = true; @symbol_vardef = [minutes,50,27,34]; @symbol_type<0> = [ResourceId,50,38,48]; ]
+        var minutes as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 51; @position = 27; initialized = true; @symbol_vardef = [prayer_times,51,27,39]; @symbol_type<0> = [ResourceId,51,43,53]; ]
+        var prayer_times as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 52; @position = 27; initialized = true; @symbol_vardef = [dhuhr,52,27,32]; @symbol_type<0> = [ResourceId,52,36,46]; ]
+        var dhuhr as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 53; @position = 27; initialized = true; @symbol_vardef = [qibla_direction,53,27,42]; @symbol_type<0> = [ResourceId,53,46,56]; ]
+        var qibla_direction as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 54; @position = 27; initialized = true; @symbol_vardef = [fajr,54,27,31]; @symbol_type<0> = [ResourceId,54,35,45]; ]
+        var fajr as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 55; @position = 27; initialized = true; @symbol_vardef = [next_prayer,55,27,38]; @symbol_type<0> = [ResourceId,55,42,52]; ]
+        var next_prayer as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 56; @position = 27; initialized = true; @symbol_vardef = [degrees,56,27,34]; @symbol_type<0> = [ResourceId,56,38,48]; ]
+        var degrees as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 57; @position = 27; initialized = true; @symbol_vardef = [prayer_time_notification,57,27,51]; @symbol_type<0> = [ResourceId,57,55,65]; ]
+        var prayer_time_notification as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 58; @position = 27; initialized = true; @symbol_vardef = [AppName,58,27,34]; @symbol_type<0> = [ResourceId,58,38,48]; ]
+        var AppName as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 59; @position = 27; initialized = true; @symbol_vardef = [time_remaining,59,27,41]; @symbol_type<0> = [ResourceId,59,45,55]; ]
+        var time_remaining as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 60; @position = 27; initialized = true; @symbol_vardef = [isha,60,27,31]; @symbol_type<0> = [ResourceId,60,35,45]; ]
+        var isha as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 61; @position = 27; initialized = true; @symbol_vardef = [seconds,61,27,34]; @symbol_type<0> = [ResourceId,61,38,48]; ]
+        var seconds as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 62; @position = 27; initialized = true; @symbol_vardef = [time_for_prayer,62,27,42]; @symbol_type<0> = [ResourceId,62,46,56]; ]
+        var time_for_prayer as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 63; @position = 27; initialized = true; @symbol_vardef = [qibla_finder,63,27,39]; @symbol_type<0> = [ResourceId,63,43,53]; ]
+        var qibla_finder as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 64; @position = 27; initialized = true; @symbol_vardef = [menu_label_1,64,27,39]; @symbol_type<0> = [ResourceId,64,43,53]; ]
+        var menu_label_1 as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 65; @position = 27; initialized = true; @symbol_vardef = [menu_label_2,65,27,39]; @symbol_type<0> = [ResourceId,65,43,53]; ]
+        var menu_label_2 as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 66; @position = 27; initialized = true; @symbol_vardef = [updating_location,66,27,44]; @symbol_type<0> = [ResourceId,66,48,58]; ]
+        var updating_location as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 67; @position = 27; initialized = true; @symbol_vardef = [menu_update_location,67,27,47]; @symbol_type<0> = [ResourceId,67,51,61]; ]
+        var menu_update_location as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 68; @position = 27; initialized = true; @symbol_vardef = [prompt,68,27,33]; @symbol_type<0> = [ResourceId,68,37,47]; ]
+        var prompt as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 69; @position = 27; initialized = true; @symbol_vardef = [menu_settings,69,27,40]; @symbol_type<0> = [ResourceId,69,44,54]; ]
+        var menu_settings as ResourceId;
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 70; @position = 27; initialized = true; @symbol_vardef = [maghrib,70,27,34]; @symbol_type<0> = [ResourceId,70,38,48]; ]
+        var maghrib as ResourceId;
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 73; @symbol_moduledef = [Styles,73,11,17]; ]
+    module Styles {
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 73; ]
+        <init> {
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 74; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,74,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 75; @position = 18; @symbol_constdef = [exclude,75,18,25]; @symbol_type<0> = [Boolean,75,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 78; @symbol_moduledef = [system_size__menu_header,78,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 78; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [width,79,18,23]; @symbol_type<0> = [Number,79,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 80; @position = 18; @symbol_constdef = [height,80,18,24]; @symbol_type<0> = [Number,80,28,34]; ]
+            const height as Number = 68;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 83; @symbol_moduledef = [system_loc__hint_button_left_bottom,83,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 83; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [exclude,84,18,25]; @symbol_type<0> = [Boolean,84,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 87; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,87,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 87; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [exclude,88,18,25]; @symbol_type<0> = [Boolean,88,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 91; @symbol_moduledef = [prompt_loc__body_no_title,91,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 91; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 92; @position = 18; @symbol_constdef = [x,92,18,19]; @symbol_type<0> = [Number,92,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [y,93,18,19]; @symbol_type<0> = [Number,93,23,29]; ]
+            const y as Number = 65;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 96; @symbol_moduledef = [system_icon_dark__about,96,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 96; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 97; @position = 18; @symbol_constdef = [filename,97,18,26]; @symbol_type<0> = [String,97,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__about.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 98; @position = 18; @symbol_constdef = [compress,98,18,26]; @symbol_type<0> = [String,98,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 99; @position = 18; @symbol_constdef = [dithering,99,18,27]; @symbol_type<0> = [String,99,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [automaticPalette,100,18,34]; @symbol_type<0> = [String,100,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 103; @symbol_moduledef = [system_icon_light__question,103,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 103; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 104; @position = 18; @symbol_constdef = [filename,104,18,26]; @symbol_type<0> = [String,104,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__question.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 105; @position = 18; @symbol_constdef = [compress,105,18,26]; @symbol_type<0> = [String,105,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 106; @position = 18; @symbol_constdef = [dithering,106,18,27]; @symbol_type<0> = [String,106,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 107; @position = 18; @symbol_constdef = [automaticPalette,107,18,34]; @symbol_type<0> = [String,107,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 110; @symbol_moduledef = [system_loc__hint_button_left_top,110,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 110; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 111; @position = 18; @symbol_constdef = [exclude,111,18,25]; @symbol_type<0> = [Boolean,111,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 114; @symbol_moduledef = [prompt_font__title,114,15,33]; ]
+        module prompt_font__title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 114; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 115 18 ]
+                symbol [ Graphics %tmp.40 115 34 42 ];
+                %tmp.40 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.41 115 43 62 ];
+                %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.42 115 63 71 ];
+                %tmp.42 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.43 115 72 92 ];
+                %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_VCENTER;
+                %tmp.44 = bitor %tmp.41 %tmp.43;
+                putv self :justification %tmp.44;
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 116 18 ]
+                symbol [ Graphics %tmp.45 116 25 33 ];
+                %tmp.45 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.46 116 34 44 ];
+                %tmp.46 = getv %tmp.45 :FONT_SMALL;
+                putv self :font %tmp.46;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 115; @position = 18; @symbol_constdef = [justification,115,18,31]; ]
+            const justification;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [font,116,18,22]; ]
+            const font;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 119; @symbol_moduledef = [system_icon_dark__discard,119,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 119; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 120; @position = 18; @symbol_constdef = [filename,120,18,26]; @symbol_type<0> = [String,120,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__discard.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 121; @position = 18; @symbol_constdef = [compress,121,18,26]; @symbol_type<0> = [String,121,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 122; @position = 18; @symbol_constdef = [dithering,122,18,27]; @symbol_type<0> = [String,122,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 123; @position = 18; @symbol_constdef = [automaticPalette,123,18,34]; @symbol_type<0> = [String,123,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 126; @symbol_moduledef = [system_size__menu_item,126,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 126; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 127; @position = 18; @symbol_constdef = [width,127,18,23]; @symbol_type<0> = [Number,127,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 128; @position = 18; @symbol_constdef = [height,128,18,24]; @symbol_type<0> = [Number,128,28,34]; ]
+            const height as Number = 98;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 131; @symbol_moduledef = [system_color_dark__text,131,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 131; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 133 18 ]
+                symbol [ Graphics %tmp.47 133 31 39 ];
+                %tmp.47 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.48 133 40 57 ];
+                %tmp.48 = getv %tmp.47 :COLOR_TRANSPARENT;
+                putv self :background %tmp.48;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 132; @position = 18; @symbol_constdef = [color,132,18,23]; @symbol_type<0> = [Number,132,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 133; @position = 18; @symbol_constdef = [background,133,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 136; @symbol_moduledef = [system_icon_destructive__discard,136,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 136; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 137; @position = 18; @symbol_constdef = [filename,137,18,26]; @symbol_type<0> = [String,137,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__discard.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 138; @position = 18; @symbol_constdef = [dithering,138,18,27]; @symbol_type<0> = [String,138,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 141; @symbol_moduledef = [system_icon_dark__hint_action_menu,141,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 141; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 142; @position = 18; @symbol_constdef = [filename,142,18,26]; @symbol_type<0> = [String,142,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__hint_action_menu.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [dithering,143,18,27]; @symbol_type<0> = [String,143,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 146; @symbol_moduledef = [prompt_size__title,146,15,33]; ]
+        module prompt_size__title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [width,147,18,23]; @symbol_type<0> = [Number,147,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 148; @position = 18; @symbol_constdef = [height,148,18,24]; @symbol_type<0> = [Number,148,28,34]; ]
+            const height as Number = 54;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 151; @symbol_moduledef = [confirmation_font__body,151,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 151; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 152 18 ]
+                symbol [ Graphics %tmp.49 152 34 42 ];
+                %tmp.49 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.50 152 43 62 ];
+                %tmp.50 = getv %tmp.49 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.51 152 63 71 ];
+                %tmp.51 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.52 152 72 92 ];
+                %tmp.52 = getv %tmp.51 :TEXT_JUSTIFY_VCENTER;
+                %tmp.53 = bitor %tmp.50 %tmp.52;
+                putv self :justification %tmp.53;
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 153 18 ]
+                symbol [ Graphics %tmp.54 153 25 33 ];
+                %tmp.54 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.55 153 34 43 ];
+                %tmp.55 = getv %tmp.54 :FONT_TINY;
+                putv self :font %tmp.55;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 152; @position = 18; @symbol_constdef = [justification,152,18,31]; ]
+            const justification;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 153; @position = 18; @symbol_constdef = [font,153,18,22]; ]
+            const font;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 156; @symbol_moduledef = [system_color_dark__background,156,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 156; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 157; @position = 18; @symbol_constdef = [color,157,18,23]; @symbol_type<0> = [Number,157,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [background,158,18,28]; @symbol_type<0> = [Number,158,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 161; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,161,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 161; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 162; @position = 18; @symbol_constdef = [exclude,162,18,25]; @symbol_type<0> = [Boolean,162,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 165; @symbol_moduledef = [system_size__launch_icon,165,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 165; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 166; @position = 18; @symbol_constdef = [scaleX,166,18,24]; @symbol_type<0> = [Number,166,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 167; @position = 18; @symbol_constdef = [scaleY,167,18,24]; @symbol_type<0> = [Number,167,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [scaleRelativeTo,168,18,33]; @symbol_type<0> = [String,168,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 171; @symbol_moduledef = [confirmation_input__confirm,171,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 171; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 172; @position = 18; @symbol_constdef = [y1,172,18,20]; @symbol_type<0> = [Number,172,24,30]; ]
+            const y1 as Number = 300;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 173; @position = 18; @symbol_constdef = [x1,173,18,20]; @symbol_type<0> = [Number,173,24,30]; ]
+            const x1 as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 174; @position = 18; @symbol_constdef = [y2,174,18,20]; @symbol_type<0> = [Number,174,24,30]; ]
+            const y2 as Number = 360;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 175; @position = 18; @symbol_constdef = [x2,175,18,20]; @symbol_type<0> = [Number,175,24,30]; ]
+            const x2 as Number = 320;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 178; @symbol_moduledef = [prompt_font__body_with_title,178,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 178; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 179 18 ]
+                symbol [ Graphics %tmp.56 179 34 42 ];
+                %tmp.56 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.57 179 43 62 ];
+                %tmp.57 = getv %tmp.56 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.57;
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 180 18 ]
+                symbol [ Graphics %tmp.58 180 25 33 ];
+                %tmp.58 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.59 180 34 43 ];
+                %tmp.59 = getv %tmp.58 :FONT_TINY;
+                putv self :font %tmp.59;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 179; @position = 18; @symbol_constdef = [justification,179,18,31]; ]
+            const justification;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 180; @position = 18; @symbol_constdef = [font,180,18,22]; ]
+            const font;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 183; @symbol_moduledef = [confirmation_loc__body,183,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 183; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 184; @position = 18; @symbol_constdef = [x,184,18,19]; @symbol_type<0> = [Number,184,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 185; @position = 18; @symbol_constdef = [y,185,18,19]; @symbol_type<0> = [Number,185,23,29]; ]
+            const y as Number = 65;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 188; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,188,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 188; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 189; @position = 18; @symbol_constdef = [exclude,189,18,25]; @symbol_type<0> = [Boolean,189,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 192; @symbol_moduledef = [prompt_color_dark__background,192,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 192; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 193; @position = 18; @symbol_constdef = [color,193,18,23]; @symbol_type<0> = [Number,193,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 194; @position = 18; @symbol_constdef = [background,194,18,28]; @symbol_type<0> = [Number,194,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 197; @symbol_moduledef = [system_icon_destructive__hint_action_menu,197,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 197; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 198; @position = 18; @symbol_constdef = [filename,198,18,26]; @symbol_type<0> = [String,198,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__hint_action_menu.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 199; @position = 18; @symbol_constdef = [dithering,199,18,27]; @symbol_type<0> = [String,199,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 202; @symbol_moduledef = [system_loc__hint_action_menu,202,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 202; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 203; @position = 18; @symbol_constdef = [x,203,18,19]; @symbol_type<0> = [Number,203,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 204; @position = 18; @symbol_constdef = [y,204,18,19]; @symbol_type<0> = [Number,204,23,29]; ]
+            const y as Number = 306;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 207; @symbol_moduledef = [confirmation_icon__hint_confirm,207,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 207; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 208; @position = 18; @symbol_constdef = [filename,208,18,26]; @symbol_type<0> = [String,208,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_completion.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 209; @position = 18; @symbol_constdef = [dithering,209,18,27]; @symbol_type<0> = [String,209,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 212; @symbol_moduledef = [system_loc__hint_button_left_middle,212,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 212; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 213; @position = 18; @symbol_constdef = [exclude,213,18,25]; @symbol_type<0> = [Boolean,213,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 216; @symbol_moduledef = [prompt_size__body_no_title,216,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 216; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 217; @position = 18; @symbol_constdef = [width,217,18,23]; @symbol_type<0> = [Number,217,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 218; @position = 18; @symbol_constdef = [height,218,18,24]; @symbol_type<0> = [Number,218,28,34]; ]
+            const height as Number = 252;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 221; @symbol_moduledef = [system_icon_light__hint_button_left_top,221,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 221; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 222; @position = 18; @symbol_constdef = [exclude,222,18,25]; @symbol_type<0> = [Boolean,222,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 225; @symbol_moduledef = [prompt_color_light__background,225,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 225; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [color,226,18,23]; @symbol_type<0> = [Number,226,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [background,227,18,28]; @symbol_type<0> = [Number,227,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 230; @symbol_moduledef = [confirmation_input__delete,230,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 230; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 231 18 ]
+                symbol [ WatchUi %tmp.60 231 27 34 ];
+                %tmp.60 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.61 231 35 44 ];
+                %tmp.61 = getv %tmp.60 :KEY_ENTER;
+                putv self :button %tmp.61;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 231; @position = 18; @symbol_constdef = [button,231,18,24]; ]
+            const button;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 234; @symbol_moduledef = [system_icon_dark__hint_button_left_top,234,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 234; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 235; @position = 18; @symbol_constdef = [exclude,235,18,25]; @symbol_type<0> = [Boolean,235,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 238; @symbol_moduledef = [system_input__action_menu,238,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 238; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 239; @position = 18; @symbol_constdef = [y1,239,18,20]; @symbol_type<0> = [Number,239,24,30]; ]
+            const y1 as Number = 305;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 240; @position = 18; @symbol_constdef = [x1,240,18,20]; @symbol_type<0> = [Number,240,24,30]; ]
+            const x1 as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 241; @position = 18; @symbol_constdef = [y2,241,18,20]; @symbol_type<0> = [Number,241,24,30]; ]
+            const y2 as Number = 360;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 242; @position = 18; @symbol_constdef = [x2,242,18,20]; @symbol_type<0> = [Number,242,24,30]; ]
+            const x2 as Number = 320;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 245; @symbol_moduledef = [system_icon_light__save,245,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 245; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 246; @position = 18; @symbol_constdef = [filename,246,18,26]; @symbol_type<0> = [String,246,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__save.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 247; @position = 18; @symbol_constdef = [compress,247,18,26]; @symbol_type<0> = [String,247,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 248; @position = 18; @symbol_constdef = [dithering,248,18,27]; @symbol_type<0> = [String,248,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 249; @position = 18; @symbol_constdef = [automaticPalette,249,18,34]; @symbol_type<0> = [String,249,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 252; @symbol_moduledef = [prompt_color_light__body,252,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 252; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 254 18 ]
+                symbol [ Graphics %tmp.62 254 31 39 ];
+                %tmp.62 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.63 254 40 57 ];
+                %tmp.63 = getv %tmp.62 :COLOR_TRANSPARENT;
+                putv self :background %tmp.63;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 253; @position = 18; @symbol_constdef = [color,253,18,23]; @symbol_type<0> = [Number,253,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 254; @position = 18; @symbol_constdef = [background,254,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 257; @symbol_moduledef = [system_loc__subwindow,257,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 257; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 258; @position = 18; @symbol_constdef = [exclude,258,18,25]; @symbol_type<0> = [Boolean,258,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 261; @symbol_moduledef = [system_icon_light__warning,261,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 261; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 262; @position = 18; @symbol_constdef = [filename,262,18,26]; @symbol_type<0> = [String,262,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__warning.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 263; @position = 18; @symbol_constdef = [compress,263,18,26]; @symbol_type<0> = [String,263,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 264; @position = 18; @symbol_constdef = [dithering,264,18,27]; @symbol_type<0> = [String,264,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 265; @position = 18; @symbol_constdef = [automaticPalette,265,18,34]; @symbol_type<0> = [String,265,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 268; @symbol_moduledef = [confirmation_color_light__body,268,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 268; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 270 18 ]
+                symbol [ Graphics %tmp.64 270 31 39 ];
+                %tmp.64 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.65 270 40 57 ];
+                %tmp.65 = getv %tmp.64 :COLOR_TRANSPARENT;
+                putv self :background %tmp.65;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 269; @position = 18; @symbol_constdef = [color,269,18,23]; @symbol_type<0> = [Number,269,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 270; @position = 18; @symbol_constdef = [background,270,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 273; @symbol_moduledef = [confirmation_icon_light__hint_keep,273,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 273; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 274; @position = 18; @symbol_constdef = [filename,274,18,26]; @symbol_type<0> = [String,274,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_keep.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [dithering,275,18,27]; @symbol_type<0> = [String,275,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 278; @symbol_moduledef = [activity_color_light__background,278,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 278; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 279; @position = 18; @symbol_constdef = [color,279,18,23]; @symbol_type<0> = [Number,279,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 280; @position = 18; @symbol_constdef = [background,280,18,28]; @symbol_type<0> = [Number,280,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 283; @symbol_moduledef = [system_icon_positive__hint_button_right_top,283,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 283; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 284; @position = 18; @symbol_constdef = [filename,284,18,26]; @symbol_type<0> = [String,284,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_positive__hint_button_right_top.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 285; @position = 18; @symbol_constdef = [dithering,285,18,27]; @symbol_type<0> = [String,285,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 288; @symbol_moduledef = [system_size__screen,288,15,34]; ]
+        module system_size__screen {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 288; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 289; @position = 18; @symbol_constdef = [width,289,18,23]; @symbol_type<0> = [Number,289,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 290; @position = 18; @symbol_constdef = [height,290,18,24]; @symbol_type<0> = [Number,290,28,34]; ]
+            const height as Number = 360;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 293; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,293,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 293; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 294; @position = 18; @symbol_constdef = [filename,294,18,26]; @symbol_type<0> = [String,294,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 295; @position = 18; @symbol_constdef = [dithering,295,18,27]; @symbol_type<0> = [String,295,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 298; @symbol_moduledef = [system_color_light__background,298,15,45]; ]
+        module system_color_light__background {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 298; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [color,299,18,23]; @symbol_type<0> = [Number,299,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 300; @position = 18; @symbol_constdef = [background,300,18,28]; @symbol_type<0> = [Number,300,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 303; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,303,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 303; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 304; @position = 18; @symbol_constdef = [filename,304,18,26]; @symbol_type<0> = [String,304,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 305; @position = 18; @symbol_constdef = [dithering,305,18,27]; @symbol_type<0> = [String,305,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 308; @symbol_moduledef = [confirmation_loc__hint_confirm,308,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 308; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 309; @position = 18; @symbol_constdef = [x,309,18,19]; @symbol_type<0> = [Number,309,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 310; @position = 18; @symbol_constdef = [y,310,18,19]; @symbol_type<0> = [Number,310,23,29]; ]
+            const y as Number = 299;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 313; @symbol_moduledef = [activity_color_dark__text,313,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 313; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 315 18 ]
+                symbol [ Graphics %tmp.66 315 31 39 ];
+                %tmp.66 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.67 315 40 57 ];
+                %tmp.67 = getv %tmp.66 :COLOR_TRANSPARENT;
+                putv self :background %tmp.67;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 314; @position = 18; @symbol_constdef = [color,314,18,23]; @symbol_type<0> = [Number,314,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 315; @position = 18; @symbol_constdef = [background,315,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 318; @symbol_moduledef = [confirmation_input__keep,318,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 318; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 319 18 ]
+                symbol [ WatchUi %tmp.68 319 27 34 ];
+                %tmp.68 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ESC %tmp.69 319 35 42 ];
+                %tmp.69 = getv %tmp.68 :KEY_ESC;
+                putv self :button %tmp.69;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 319; @position = 18; @symbol_constdef = [button,319,18,24]; ]
+            const button;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 322; @symbol_moduledef = [prompt_loc__body_with_title,322,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 322; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 323; @position = 18; @symbol_constdef = [x,323,18,19]; @symbol_type<0> = [Number,323,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 324; @position = 18; @symbol_constdef = [y,324,18,19]; @symbol_type<0> = [Number,324,23,29]; ]
+            const y as Number = 90;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 327; @symbol_moduledef = [system_icon_dark__search,327,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 327; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 328; @position = 18; @symbol_constdef = [filename,328,18,26]; @symbol_type<0> = [String,328,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__search.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [compress,329,18,26]; @symbol_type<0> = [String,329,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 330; @position = 18; @symbol_constdef = [dithering,330,18,27]; @symbol_type<0> = [String,330,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 331; @position = 18; @symbol_constdef = [automaticPalette,331,18,34]; @symbol_type<0> = [String,331,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 334; @symbol_moduledef = [activity_color_light__text,334,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 334; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 336 18 ]
+                symbol [ Graphics %tmp.70 336 31 39 ];
+                %tmp.70 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.71 336 40 57 ];
+                %tmp.71 = getv %tmp.70 :COLOR_TRANSPARENT;
+                putv self :background %tmp.71;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 335; @position = 18; @symbol_constdef = [color,335,18,23]; @symbol_type<0> = [Number,335,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 336; @position = 18; @symbol_constdef = [background,336,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 339; @symbol_moduledef = [confirmation_icon__hint_keep,339,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 339; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 340; @position = 18; @symbol_constdef = [filename,340,18,26]; @symbol_type<0> = [String,340,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_keep.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 341; @position = 18; @symbol_constdef = [dithering,341,18,27]; @symbol_type<0> = [String,341,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 344; @symbol_moduledef = [system_icon_dark__save,344,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 344; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 345; @position = 18; @symbol_constdef = [filename,345,18,26]; @symbol_type<0> = [String,345,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__save.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 346; @position = 18; @symbol_constdef = [compress,346,18,26]; @symbol_type<0> = [String,346,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 347; @position = 18; @symbol_constdef = [dithering,347,18,27]; @symbol_type<0> = [String,347,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 348; @position = 18; @symbol_constdef = [automaticPalette,348,18,34]; @symbol_type<0> = [String,348,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 351; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,351,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 351; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 352; @position = 18; @symbol_constdef = [exclude,352,18,25]; @symbol_type<0> = [Boolean,352,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 355; @symbol_moduledef = [system_icon_light__search,355,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 355; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 356; @position = 18; @symbol_constdef = [filename,356,18,26]; @symbol_type<0> = [String,356,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__search.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 357; @position = 18; @symbol_constdef = [compress,357,18,26]; @symbol_type<0> = [String,357,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 358; @position = 18; @symbol_constdef = [dithering,358,18,27]; @symbol_type<0> = [String,358,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 359; @position = 18; @symbol_constdef = [automaticPalette,359,18,34]; @symbol_type<0> = [String,359,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 362; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,362,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 362; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 363; @position = 18; @symbol_constdef = [exclude,363,18,25]; @symbol_type<0> = [Boolean,363,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 366; @symbol_moduledef = [system_icon_positive__hint_button_left_top,366,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 366; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 367; @position = 18; @symbol_constdef = [exclude,367,18,25]; @symbol_type<0> = [Boolean,367,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 370; @symbol_moduledef = [system_loc__hint_button_right_bottom,370,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 370; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 371; @position = 18; @symbol_constdef = [x,371,18,19]; @symbol_type<0> = [Number,371,23,29]; ]
+            const x as Number = 307;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 372; @position = 18; @symbol_constdef = [y,372,18,19]; @symbol_type<0> = [Number,372,23,29]; ]
+            const y as Number = 287;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 373; @position = 18; @symbol_constdef = [verticalJustification,373,18,39]; @symbol_type<0> = [String,373,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 376; @symbol_moduledef = [confirmation_icon_dark__hint_reject,376,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 376; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 377; @position = 18; @symbol_constdef = [filename,377,18,26]; @symbol_type<0> = [String,377,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_reject.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 378; @position = 18; @symbol_constdef = [dithering,378,18,27]; @symbol_type<0> = [String,378,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 381; @symbol_moduledef = [confirmation_color_dark__body,381,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 381; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 383 18 ]
+                symbol [ Graphics %tmp.72 383 31 39 ];
+                %tmp.72 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.73 383 40 57 ];
+                %tmp.73 = getv %tmp.72 :COLOR_TRANSPARENT;
+                putv self :background %tmp.73;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 382; @position = 18; @symbol_constdef = [color,382,18,23]; @symbol_type<0> = [Number,382,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 383; @position = 18; @symbol_constdef = [background,383,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 386; @symbol_moduledef = [confirmation_icon_light__hint_confirm,386,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 386; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 387; @position = 18; @symbol_constdef = [filename,387,18,26]; @symbol_type<0> = [String,387,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_completion.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 388; @position = 18; @symbol_constdef = [dithering,388,18,27]; @symbol_type<0> = [String,388,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 391; @symbol_moduledef = [prompt_color_dark__title,391,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 391; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 393 18 ]
+                symbol [ Graphics %tmp.74 393 31 39 ];
+                %tmp.74 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.75 393 40 57 ];
+                %tmp.75 = getv %tmp.74 :COLOR_TRANSPARENT;
+                putv self :background %tmp.75;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 392; @position = 18; @symbol_constdef = [color,392,18,23]; @symbol_type<0> = [Number,392,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [background,393,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 396; @symbol_moduledef = [system_icon_destructive__cancel,396,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 396; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 397; @position = 18; @symbol_constdef = [filename,397,18,26]; @symbol_type<0> = [String,397,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__cancel.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [dithering,398,18,27]; @symbol_type<0> = [String,398,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 401; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,401,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 401; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 402; @position = 18; @symbol_constdef = [filename,402,18,26]; @symbol_type<0> = [String,402,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 403; @position = 18; @symbol_constdef = [dithering,403,18,27]; @symbol_type<0> = [String,403,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 406; @symbol_moduledef = [prompt_loc__title,406,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 406; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 407; @position = 18; @symbol_constdef = [x,407,18,19]; @symbol_type<0> = [Number,407,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 408; @position = 18; @symbol_constdef = [y,408,18,19]; @symbol_type<0> = [Number,408,23,29]; ]
+            const y as Number = 32;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 411; @symbol_moduledef = [confirmation_font_enhanced_readability__body,411,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 411; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 412; @position = 18; @symbol_constdef = [exclude,412,18,25]; @symbol_type<0> = [Boolean,412,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 415; @symbol_moduledef = [prompt_color_light__title,415,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 415; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 417 18 ]
+                symbol [ Graphics %tmp.76 417 31 39 ];
+                %tmp.76 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.77 417 40 57 ];
+                %tmp.77 = getv %tmp.76 :COLOR_TRANSPARENT;
+                putv self :background %tmp.77;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 416; @position = 18; @symbol_constdef = [color,416,18,23]; @symbol_type<0> = [Number,416,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 417; @position = 18; @symbol_constdef = [background,417,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 420; @symbol_moduledef = [system_icon_dark__hint_button_right_top,420,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 420; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 421; @position = 18; @symbol_constdef = [filename,421,18,26]; @symbol_type<0> = [String,421,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 422; @position = 18; @symbol_constdef = [dithering,422,18,27]; @symbol_type<0> = [String,422,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 425; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,425,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 425; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 426; @position = 18; @symbol_constdef = [exclude,426,18,25]; @symbol_type<0> = [Boolean,426,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 429; @symbol_moduledef = [confirmation_icon_dark__hint_keep,429,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 429; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 430; @position = 18; @symbol_constdef = [filename,430,18,26]; @symbol_type<0> = [String,430,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_keep.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 431; @position = 18; @symbol_constdef = [dithering,431,18,27]; @symbol_type<0> = [String,431,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 434; @symbol_moduledef = [system_icon_light__cancel,434,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 434; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 435; @position = 18; @symbol_constdef = [filename,435,18,26]; @symbol_type<0> = [String,435,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__cancel.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 436; @position = 18; @symbol_constdef = [compress,436,18,26]; @symbol_type<0> = [String,436,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 437; @position = 18; @symbol_constdef = [dithering,437,18,27]; @symbol_type<0> = [String,437,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 438; @position = 18; @symbol_constdef = [automaticPalette,438,18,34]; @symbol_type<0> = [String,438,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 441; @symbol_moduledef = [confirmation_icon_light__hint_reject,441,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 441; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 442; @position = 18; @symbol_constdef = [filename,442,18,26]; @symbol_type<0> = [String,442,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_reject.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 443; @position = 18; @symbol_constdef = [dithering,443,18,27]; @symbol_type<0> = [String,443,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 446; @symbol_moduledef = [system_icon_light__about,446,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 446; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 447; @position = 18; @symbol_constdef = [filename,447,18,26]; @symbol_type<0> = [String,447,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__about.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [compress,448,18,26]; @symbol_type<0> = [String,448,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 449; @position = 18; @symbol_constdef = [dithering,449,18,27]; @symbol_type<0> = [String,449,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 450; @position = 18; @symbol_constdef = [automaticPalette,450,18,34]; @symbol_type<0> = [String,450,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 453; @symbol_moduledef = [system_size__toast_icon,453,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 453; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 454; @position = 18; @symbol_constdef = [scaleX,454,18,24]; @symbol_type<0> = [Number,454,28,34]; ]
+            const scaleX as Number = 34;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 455; @position = 18; @symbol_constdef = [scaleY,455,18,24]; @symbol_type<0> = [Number,455,28,34]; ]
+            const scaleY as Number = 34;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 456; @position = 18; @symbol_constdef = [scaleRelativeTo,456,18,33]; @symbol_type<0> = [String,456,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 459; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,459,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 459; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 460; @position = 18; @symbol_constdef = [exclude,460,18,25]; @symbol_type<0> = [Boolean,460,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 463; @symbol_moduledef = [confirmation_icon__hint_reject,463,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 463; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 464; @position = 18; @symbol_constdef = [filename,464,18,26]; @symbol_type<0> = [String,464,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_reject.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 465; @position = 18; @symbol_constdef = [dithering,465,18,27]; @symbol_type<0> = [String,465,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 468; @symbol_moduledef = [system_icon_light__hint_action_menu,468,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 468; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 469; @position = 18; @symbol_constdef = [filename,469,18,26]; @symbol_type<0> = [String,469,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__hint_action_menu.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 470; @position = 18; @symbol_constdef = [dithering,470,18,27]; @symbol_type<0> = [String,470,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 473; @symbol_moduledef = [system_icon_light__hint_button_right_middle,473,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 473; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 474; @position = 18; @symbol_constdef = [exclude,474,18,25]; @symbol_type<0> = [Boolean,474,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 477; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,477,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 477; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 478; @position = 18; @symbol_constdef = [exclude,478,18,25]; @symbol_type<0> = [Boolean,478,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 481; @symbol_moduledef = [confirmation_loc__hint_reject,481,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 481; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 482; @position = 18; @symbol_constdef = [x,482,18,19]; @symbol_type<0> = [Number,482,23,29]; ]
+            const x as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 483; @position = 18; @symbol_constdef = [y,483,18,19]; @symbol_type<0> = [Number,483,23,29]; ]
+            const y as Number = 0;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 486; @symbol_moduledef = [confirmation_icon_dark__hint_delete,486,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 486; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 487; @position = 18; @symbol_constdef = [filename,487,18,26]; @symbol_type<0> = [String,487,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_delete.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 488; @position = 18; @symbol_constdef = [dithering,488,18,27]; @symbol_type<0> = [String,488,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 491; @symbol_moduledef = [activity_color_dark__background,491,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 491; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 492; @position = 18; @symbol_constdef = [color,492,18,23]; @symbol_type<0> = [Number,492,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 493; @position = 18; @symbol_constdef = [background,493,18,28]; @symbol_type<0> = [Number,493,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 496; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,496,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 496; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 497; @position = 18; @symbol_constdef = [exclude,497,18,25]; @symbol_type<0> = [Boolean,497,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 500; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,500,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 500; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 501; @position = 18; @symbol_constdef = [exclude,501,18,25]; @symbol_type<0> = [Boolean,501,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 504; @symbol_moduledef = [system_size__menu_icon,504,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 504; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 505; @position = 18; @symbol_constdef = [scaleX,505,18,24]; @symbol_type<0> = [Number,505,28,34]; ]
+            const scaleX as Number = 52;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 506; @position = 18; @symbol_constdef = [scaleY,506,18,24]; @symbol_type<0> = [Number,506,28,34]; ]
+            const scaleY as Number = 52;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 507; @position = 18; @symbol_constdef = [scaleRelativeTo,507,18,33]; @symbol_type<0> = [String,507,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 510; @symbol_moduledef = [system_icon_destructive__warning,510,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 510; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 511; @position = 18; @symbol_constdef = [filename,511,18,26]; @symbol_type<0> = [String,511,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__warning.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 512; @position = 18; @symbol_constdef = [dithering,512,18,27]; @symbol_type<0> = [String,512,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 515; @symbol_moduledef = [system_loc__hint_button_right_middle,515,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 515; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 516; @position = 18; @symbol_constdef = [exclude,516,18,25]; @symbol_type<0> = [Boolean,516,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 519; @symbol_moduledef = [system_icon_dark__cancel,519,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 519; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [filename,520,18,26]; @symbol_type<0> = [String,520,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__cancel.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 521; @position = 18; @symbol_constdef = [compress,521,18,26]; @symbol_type<0> = [String,521,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 522; @position = 18; @symbol_constdef = [dithering,522,18,27]; @symbol_type<0> = [String,522,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 523; @position = 18; @symbol_constdef = [automaticPalette,523,18,34]; @symbol_type<0> = [String,523,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 526; @symbol_moduledef = [prompt_size__body_with_title,526,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 526; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [width,527,18,23]; @symbol_type<0> = [Number,527,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 528; @position = 18; @symbol_constdef = [height,528,18,24]; @symbol_type<0> = [Number,528,28,34]; ]
+            const height as Number = 220;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 531; @symbol_moduledef = [system_loc__hint_button_right_top,531,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 531; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [x,532,18,19]; @symbol_type<0> = [Number,532,23,29]; ]
+            const x as Number = 307;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [y,533,18,19]; @symbol_type<0> = [Number,533,23,29]; ]
+            const y as Number = 70;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 534; @position = 18; @symbol_constdef = [verticalJustification,534,18,39]; @symbol_type<0> = [String,534,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 537; @symbol_moduledef = [system_color_light__text,537,15,39]; ]
+        module system_color_light__text {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 537; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 539 18 ]
+                symbol [ Graphics %tmp.78 539 31 39 ];
+                %tmp.78 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.79 539 40 57 ];
+                %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
+                putv self :background %tmp.79;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 538; @position = 18; @symbol_constdef = [color,538,18,23]; @symbol_type<0> = [Number,538,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 539; @position = 18; @symbol_constdef = [background,539,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 542; @symbol_moduledef = [system_icon_light__check,542,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 542; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [filename,543,18,26]; @symbol_type<0> = [String,543,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__check.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [compress,544,18,26]; @symbol_type<0> = [String,544,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [dithering,545,18,27]; @symbol_type<0> = [String,545,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 546; @position = 18; @symbol_constdef = [automaticPalette,546,18,34]; @symbol_type<0> = [String,546,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 549; @symbol_moduledef = [confirmation_input__reject,549,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 549; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 550; @position = 18; @symbol_constdef = [y1,550,18,20]; @symbol_type<0> = [Number,550,24,30]; ]
+            const y1 as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 551; @position = 18; @symbol_constdef = [x1,551,18,20]; @symbol_type<0> = [Number,551,24,30]; ]
+            const x1 as Number = 0;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 552; @position = 18; @symbol_constdef = [y2,552,18,20]; @symbol_type<0> = [Number,552,24,30]; ]
+            const y2 as Number = 60;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 553; @position = 18; @symbol_constdef = [x2,553,18,20]; @symbol_type<0> = [Number,553,24,30]; ]
+            const x2 as Number = 320;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 556; @symbol_moduledef = [system_icon_light__revert,556,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 556; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 557; @position = 18; @symbol_constdef = [filename,557,18,26]; @symbol_type<0> = [String,557,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__revert.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 558; @position = 18; @symbol_constdef = [compress,558,18,26]; @symbol_type<0> = [String,558,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 559; @position = 18; @symbol_constdef = [dithering,559,18,27]; @symbol_type<0> = [String,559,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 560; @position = 18; @symbol_constdef = [automaticPalette,560,18,34]; @symbol_type<0> = [String,560,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 563; @symbol_moduledef = [system_size__subwindow,563,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 563; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 564; @position = 18; @symbol_constdef = [exclude,564,18,25]; @symbol_type<0> = [Boolean,564,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 567; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,567,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 567; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [exclude,568,18,25]; @symbol_type<0> = [Boolean,568,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 571; @symbol_moduledef = [system_icon_dark__check,571,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 571; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 572; @position = 18; @symbol_constdef = [filename,572,18,26]; @symbol_type<0> = [String,572,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__check.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 573; @position = 18; @symbol_constdef = [compress,573,18,26]; @symbol_type<0> = [String,573,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 574; @position = 18; @symbol_constdef = [dithering,574,18,27]; @symbol_type<0> = [String,574,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 575; @position = 18; @symbol_constdef = [automaticPalette,575,18,34]; @symbol_type<0> = [String,575,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 578; @symbol_moduledef = [confirmation_loc__hint_keep,578,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 578; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 579; @position = 18; @symbol_constdef = [x,579,18,19]; @symbol_type<0> = [Number,579,23,29]; ]
+            const x as Number = 260;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [y,580,18,19]; @symbol_type<0> = [Number,580,23,29]; ]
+            const y as Number = 288;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 581; @position = 18; @symbol_constdef = [verticalJustification,581,18,39]; @symbol_type<0> = [String,581,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 584; @symbol_moduledef = [confirmation_loc__hint_delete,584,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 584; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 585; @position = 18; @symbol_constdef = [x,585,18,19]; @symbol_type<0> = [Number,585,23,29]; ]
+            const x as Number = 260;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 586; @position = 18; @symbol_constdef = [y,586,18,19]; @symbol_type<0> = [Number,586,23,29]; ]
+            const y as Number = 70;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 587; @position = 18; @symbol_constdef = [verticalJustification,587,18,39]; @symbol_type<0> = [String,587,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 590; @symbol_moduledef = [system_icon_positive__hint_action_menu,590,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 590; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [filename,591,18,26]; @symbol_type<0> = [String,591,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_positive__hint_action_menu.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [dithering,592,18,27]; @symbol_type<0> = [String,592,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 595; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,595,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 595; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [exclude,596,18,25]; @symbol_type<0> = [Boolean,596,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 599; @symbol_moduledef = [system_icon_light__hint_button_left_middle,599,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 599; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 600; @position = 18; @symbol_constdef = [exclude,600,18,25]; @symbol_type<0> = [Boolean,600,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 603; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,603,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 603; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 604; @position = 18; @symbol_constdef = [filename,604,18,26]; @symbol_type<0> = [String,604,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 605; @position = 18; @symbol_constdef = [dithering,605,18,27]; @symbol_type<0> = [String,605,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 608; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,608,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 608; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 609; @position = 18; @symbol_constdef = [filename,609,18,26]; @symbol_type<0> = [String,609,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 610; @position = 18; @symbol_constdef = [dithering,610,18,27]; @symbol_type<0> = [String,610,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 613; @symbol_moduledef = [system_icon_dark__revert,613,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 613; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [filename,614,18,26]; @symbol_type<0> = [String,614,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__revert.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 615; @position = 18; @symbol_constdef = [compress,615,18,26]; @symbol_type<0> = [String,615,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 616; @position = 18; @symbol_constdef = [dithering,616,18,27]; @symbol_type<0> = [String,616,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 617; @position = 18; @symbol_constdef = [automaticPalette,617,18,34]; @symbol_type<0> = [String,617,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 620; @symbol_moduledef = [confirmation_icon_light__hint_delete,620,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 620; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [filename,621,18,26]; @symbol_type<0> = [String,621,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_delete.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 622; @position = 18; @symbol_constdef = [dithering,622,18,27]; @symbol_type<0> = [String,622,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 625; @symbol_moduledef = [system_icon_dark__question,625,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 625; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 626; @position = 18; @symbol_constdef = [filename,626,18,26]; @symbol_type<0> = [String,626,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__question.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 627; @position = 18; @symbol_constdef = [compress,627,18,26]; @symbol_type<0> = [String,627,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 628; @position = 18; @symbol_constdef = [dithering,628,18,27]; @symbol_type<0> = [String,628,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 629; @position = 18; @symbol_constdef = [automaticPalette,629,18,34]; @symbol_type<0> = [String,629,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 632; @symbol_moduledef = [system_icon_light__discard,632,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 632; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 633; @position = 18; @symbol_constdef = [filename,633,18,26]; @symbol_type<0> = [String,633,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__discard.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 634; @position = 18; @symbol_constdef = [compress,634,18,26]; @symbol_type<0> = [String,634,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [dithering,635,18,27]; @symbol_type<0> = [String,635,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [automaticPalette,636,18,34]; @symbol_type<0> = [String,636,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 639; @symbol_moduledef = [device_info,639,15,26]; ]
+        module device_info {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 639; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 641 18 ]
+                symbol [ Toybox %tmp.81 641 32 38 ];
+                %tmp.81 = getv ? :Toybox;
+                symbol [ System %tmp.82 641 39 45 ];
+                %tmp.82 = getv %tmp.81 :System;
+                symbol [ SCREEN_SHAPE_RECTANGLE %tmp.83 641 46 68 ];
+                %tmp.83 = getv %tmp.82 :SCREEN_SHAPE_RECTANGLE;
+                putv self :screenShape %tmp.83;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [screenWidth,640,18,29]; @symbol_type<0> = [Number,640,33,39]; ]
+            const screenWidth as Number = 320;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 641; @position = 18; @symbol_constdef = [screenShape,641,18,29]; ]
+            const screenShape;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 642; @position = 18; @symbol_constdef = [hasNightMode,642,18,30]; @symbol_type<0> = [Boolean,642,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 643; @position = 18; @symbol_constdef = [hasGpu,643,18,24]; @symbol_type<0> = [Boolean,643,28,35]; ]
+            const hasGpu as Boolean = false;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 644; @position = 18; @symbol_constdef = [screenHeight,644,18,30]; @symbol_type<0> = [Number,644,34,40]; ]
+            const screenHeight as Number = 360;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 645; @position = 18; @symbol_constdef = [hasTouchScreen,645,18,32]; @symbol_type<0> = [Boolean,645,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 646; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,646,18,44]; @symbol_type<0> = [Boolean,646,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 649; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,649,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 649; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [filename,650,18,26]; @symbol_type<0> = [String,650,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_completion.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 651; @position = 18; @symbol_constdef = [dithering,651,18,27]; @symbol_type<0> = [String,651,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 654; @symbol_moduledef = [prompt_font__body_no_title,654,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 654; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 655 18 ]
+                symbol [ Graphics %tmp.84 655 34 42 ];
+                %tmp.84 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.85 655 43 62 ];
+                %tmp.85 = getv %tmp.84 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.86 655 63 71 ];
+                %tmp.86 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.87 655 72 92 ];
+                %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_VCENTER;
+                %tmp.88 = bitor %tmp.85 %tmp.87;
+                putv self :justification %tmp.88;
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 656 18 ]
+                symbol [ Graphics %tmp.89 656 25 33 ];
+                %tmp.89 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.90 656 34 43 ];
+                %tmp.90 = getv %tmp.89 :FONT_TINY;
+                putv self :font %tmp.90;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 655; @position = 18; @symbol_constdef = [justification,655,18,31]; ]
+            const justification;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 656; @position = 18; @symbol_constdef = [font,656,18,22]; ]
+            const font;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 659; @symbol_moduledef = [prompt_size__title_icon,659,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 659; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 660; @position = 18; @symbol_constdef = [scaleX,660,18,24]; @symbol_type<0> = [Float,660,28,33]; ]
+            const scaleX as Float = 0.14;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 661; @position = 18; @symbol_constdef = [scaleRelativeTo,661,18,33]; @symbol_type<0> = [String,661,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 664; @symbol_moduledef = [system_icon_dark__warning,664,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 664; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 665; @position = 18; @symbol_constdef = [filename,665,18,26]; @symbol_type<0> = [String,665,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__warning.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 666; @position = 18; @symbol_constdef = [compress,666,18,26]; @symbol_type<0> = [String,666,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 667; @position = 18; @symbol_constdef = [dithering,667,18,27]; @symbol_type<0> = [String,667,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 668; @position = 18; @symbol_constdef = [automaticPalette,668,18,34]; @symbol_type<0> = [String,668,38,44]; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 671; @symbol_moduledef = [prompt_loc__title_icon,671,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 671; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 672; @position = 18; @symbol_constdef = [x,672,18,19]; @symbol_type<0> = [Number,672,23,29]; ]
+            const x as Number = 160;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 673; @position = 18; @symbol_constdef = [y,673,18,19]; @symbol_type<0> = [Number,673,23,29]; ]
+            const y as Number = 47;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 674; @position = 18; @symbol_constdef = [horizontalJustification,674,18,41]; @symbol_type<0> = [String,674,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 675; @position = 18; @symbol_constdef = [verticalJustification,675,18,39]; @symbol_type<0> = [String,675,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 678; @symbol_moduledef = [prompt_font_enhanced_readability__title,678,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 678; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 679; @position = 18; @symbol_constdef = [exclude,679,18,25]; @symbol_type<0> = [Boolean,679,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 682; @symbol_moduledef = [prompt_color_dark__body,682,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 682; ]
+            <init> {
+[ "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen" 684 18 ]
+                symbol [ Graphics %tmp.91 684 31 39 ];
+                %tmp.91 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.92 684 40 57 ];
+                %tmp.92 = getv %tmp.91 :COLOR_TRANSPARENT;
+                putv self :background %tmp.92;
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 683; @position = 18; @symbol_constdef = [color,683,18,23]; @symbol_type<0> = [Number,683,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 684; @position = 18; @symbol_constdef = [background,684,18,28]; ]
+            const background;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 687; @symbol_moduledef = [confirmation_icon__hint_delete,687,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 687; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 688; @position = 18; @symbol_constdef = [filename,688,18,26]; @symbol_type<0> = [String,688,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_delete.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 689; @position = 18; @symbol_constdef = [dithering,689,18,27]; @symbol_type<0> = [String,689,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 692; @symbol_moduledef = [system_icon_light__hint_button_right_top,692,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 692; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 693; @position = 18; @symbol_constdef = [filename,693,18,26]; @symbol_type<0> = [String,693,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 694; @position = 18; @symbol_constdef = [dithering,694,18,27]; @symbol_type<0> = [String,694,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 697; @symbol_moduledef = [confirmation_size__body,697,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 697; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 698; @position = 18; @symbol_constdef = [width,698,18,23]; @symbol_type<0> = [Number,698,27,33]; ]
+            const width as Number = 320;
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 699; @position = 18; @symbol_constdef = [height,699,18,24]; @symbol_type<0> = [Number,699,28,34]; ]
+            const height as Number = 220;
+        }
+        [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 702; @symbol_moduledef = [system_icon_positive__check,702,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 702; ]
+            <init> {
+            }
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 703; @position = 18; @symbol_constdef = [filename,703,18,26]; @symbol_type<0> = [String,703,30,36]; ]
+            const filename as String = "/home/zyzto/.Garmin/ConnectIQ/Devices/venusq2/system_icon_positive__check.svg";
+            [ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 704; @position = 18; @symbol_constdef = [dithering,704,18,27]; @symbol_type<0> = [String,704,31,37]; ]
+            const dithering as String = "none";
+        }
+    }
+}
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}
