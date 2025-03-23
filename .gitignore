@@ -1,0 +1,23 @@
+# Build output
+bin/
+build/
+*.prg
+*.prg.debug.xml
+
+# Developer key
+developer_key
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+*.swp
+*.bak
+*.tmp
+*.log
+
+# OS specific files
+.DS_Store
+Thumbs.db
