@@ -61,9 +61,9 @@ TODO
 
 ## Development
 **Requirements:**
-- Garmin SDK 4.1.6
-- Monkey C 3.2.0
-- Java 11 JDK
+- Garmin SDK 4.0.0
+- Monkey C
+- Java
 
 ### Build
 ```bash
