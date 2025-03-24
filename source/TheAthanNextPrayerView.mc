@@ -3,7 +3,6 @@ import Toybox.WatchUi;
 import Toybox.Time;
 import Toybox.Time.Gregorian;
 import Toybox.Lang;
-import Toybox.System;
 import Toybox.Application;
 
 class TheAthanNextPrayerView extends WatchUi.View {
@@ -18,25 +17,25 @@ class TheAthanNextPrayerView extends WatchUi.View {
     private var _centerY;
     
     function initialize() {
-        System.println("DEBUG: NextPrayerView initialize");
+        TheAthanLogger.debug("NextPrayerView", "initialize");
         View.initialize();
     }
 
     // Load resources and set up the layout
     function onLayout(dc as Dc) as Void {
-        System.println("DEBUG: NextPrayerView onLayout");
+        TheAthanLogger.debug("NextPrayerView", "onLayout");
         // Get device dimensions
         _width = dc.getWidth();
         _height = dc.getHeight();
         _centerX = _width / 2;
         _centerY = _height / 2;
         
-        System.println("DEBUG: Device dimensions: " + _width + "x" + _height);
+        TheAthanLogger.debug("NextPrayerView", "Device dimensions: " + _width + "x" + _height);
         
         try {
             // Load the layout
             setLayout(Rez.Layouts.MainLayout(dc));
-            System.println("DEBUG: Layout set");
+            TheAthanLogger.debug("NextPrayerView", "Layout set");
             
             // Get UI elements
             _titleLabel = View.findDrawableById("titleLabel");
@@ -45,37 +44,36 @@ class TheAthanNextPrayerView extends WatchUi.View {
             
             if (_titleLabel != null) {
                 _titleLabel.setText(WatchUi.loadResource(Rez.Strings.next_prayer));
-                System.println("DEBUG: titleLabel found and set");
+                TheAthanLogger.debug("NextPrayerView", "titleLabel found and set");
             } else {
-                System.println("DEBUG: titleLabel not found");
+                TheAthanLogger.warn("NextPrayerView", "titleLabel not found");
             }
         } catch (e) {
-            System.println("DEBUG: Exception in onLayout: " + e.getErrorMessage());
+            TheAthanLogger.error("NextPrayerView", "Exception in onLayout: " + e.getErrorMessage());
         }
     }
 
     // Called when this View is brought to the foreground
     function onShow() as Void {
-        System.println("DEBUG: NextPrayerView onShow");
+        TheAthanLogger.debug("NextPrayerView", "onShow");
         updateView();
     }
 
     // Update the view
     function updateView() {
-        System.println("DEBUG: NextPrayerView updateView");
+        TheAthanLogger.debug("NextPrayerView", "updateView");
         
         // Get the next prayer
         var app = Application.getApp() as TheAthanApp;
         var nextPrayer = app.getNextPrayer();
         
         if (nextPrayer != null) {
-            System.println("DEBUG: Next prayer found: " + nextPrayer.name);
+            TheAthanLogger.debug("NextPrayerView", "Next prayer found: " + nextPrayer.name);
             
             // We no longer need to check if Fajr is for next day since we're fetching both today and tomorrow's prayers
             // The API client now handles this by setting the correct date for each prayer
-            var now = Time.now();
             var prayerTimeInfo = Gregorian.info(nextPrayer.time, Time.FORMAT_SHORT);
-            System.println("DEBUG: Next prayer time day: " + prayerTimeInfo.day);
+            TheAthanLogger.debug("NextPrayerView", "Next prayer time day: " + prayerTimeInfo.day);
             
             // Update prayer name
             if (_prayerNameLabel != null) {
@@ -104,9 +102,9 @@ class TheAthanNextPrayerView extends WatchUi.View {
                     
                     // Add prayer info to the display text
                     _prayerNameLabel.setText(displayText + "\n" + prayerInfo);
-                    System.println("DEBUG: Prayer name set");
+                    TheAthanLogger.debug("NextPrayerView", "Prayer name set");
                 } catch (e) {
-                    System.println("DEBUG: Exception setting prayer name: " + e.getErrorMessage());
+                    TheAthanLogger.error("NextPrayerView", "Exception setting prayer name: " + e.getErrorMessage());
                 }
             }
             
@@ -116,13 +114,13 @@ class TheAthanNextPrayerView extends WatchUi.View {
                     var timeInfo = Gregorian.info(nextPrayer.time, Time.FORMAT_SHORT);
                     var timeString = Lang.format("$1$:$2$", [timeInfo.hour.format("%02d"), timeInfo.min.format("%02d")]);
                     _prayerTimeLabel.setText(timeString);
-                    System.println("DEBUG: Prayer time set: " + timeString);
+                    TheAthanLogger.debug("NextPrayerView", "Prayer time set: " + timeString);
                 } catch (e) {
-                    System.println("DEBUG: Exception setting prayer time: " + e.getErrorMessage());
+                    TheAthanLogger.error("NextPrayerView", "Exception setting prayer time: " + e.getErrorMessage());
                 }
             }
         } else {
-            System.println("DEBUG: Next prayer is null");
+            TheAthanLogger.warn("NextPrayerView", "Next prayer is null");
             if (_prayerNameLabel != null) {
                 _prayerNameLabel.setText("");
             }
@@ -137,7 +135,7 @@ class TheAthanNextPrayerView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        System.println("DEBUG: NextPrayerView onUpdate");
+        TheAthanLogger.debug("NextPrayerView", "onUpdate");
         try {
             // Clear the screen
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
@@ -151,18 +149,18 @@ class TheAthanNextPrayerView extends WatchUi.View {
             
             // Removed "updating location" message as requested
         } catch (e) {
-            System.println("DEBUG: Exception in onUpdate: " + e.getErrorMessage());
+            TheAthanLogger.error("NextPrayerView", "Exception in onUpdate: " + e.getErrorMessage());
         }
     }
     
     // Draw the countdown timer
     function drawCountdownTimer(dc) {
-        System.println("DEBUG: drawCountdownTimer");
+        TheAthanLogger.debug("NextPrayerView", "drawCountdownTimer");
         var app = Application.getApp() as TheAthanApp;
         var nextPrayer = app.getNextPrayer();
         
         if (nextPrayer != null) {
-            System.println("DEBUG: Drawing countdown for: " + nextPrayer.name);
+            TheAthanLogger.debug("NextPrayerView", "Drawing countdown for: " + nextPrayer.name);
             // Calculate time remaining
             var now = Time.now();
             var diff = nextPrayer.time.subtract(now);
@@ -174,7 +172,7 @@ class TheAthanNextPrayerView extends WatchUi.View {
                 var minutes = (seconds % 3600) / 60;
                 var secs = seconds % 60;
                 
-                System.println("DEBUG: Time remaining: " + hours + "h " + minutes + "m " + secs + "s");
+                TheAthanLogger.debug("NextPrayerView", "Time remaining: " + hours + "h " + minutes + "m " + secs + "s");
                 
                 // Removed circle as requested
                 // Using the center of the screen for positioning
@@ -196,15 +194,15 @@ class TheAthanNextPrayerView extends WatchUi.View {
                     timeText = secs.format("%02d") + " " + WatchUi.loadResource(Rez.Strings.seconds);
                     dc.drawText(_centerX, textY + 30, Graphics.FONT_SMALL, timeText, Graphics.TEXT_JUSTIFY_CENTER);
                     
-                    System.println("DEBUG: Countdown timer drawn");
+                    TheAthanLogger.debug("NextPrayerView", "Countdown timer drawn");
                 } catch (e) {
-                    System.println("DEBUG: Exception drawing countdown: " + e.getErrorMessage());
+                    TheAthanLogger.error("NextPrayerView", "Exception drawing countdown: " + e.getErrorMessage());
                 }
             } else {
-                System.println("DEBUG: No time remaining");
+                TheAthanLogger.debug("NextPrayerView", "No time remaining");
             }
         } else {
-            System.println("DEBUG: No next prayer to draw");
+            TheAthanLogger.warn("NextPrayerView", "No next prayer to draw");
         }
     }
 }

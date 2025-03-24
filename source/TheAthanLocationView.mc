@@ -12,25 +12,25 @@ class TheAthanLocationView extends WatchUi.View {
     private var _centerY;
     
     function initialize() {
-        System.println("DEBUG: LocationView initialize");
+        TheAthanLogger.debug("LocationView", "initialize");
         View.initialize();
     }
 
     // Load resources and set up the layout
     function onLayout(dc as Dc) as Void {
-        System.println("DEBUG: LocationView onLayout");
+        TheAthanLogger.debug("LocationView", "onLayout");
         // Get device dimensions
         _width = dc.getWidth();
         _height = dc.getHeight();
         _centerX = _width / 2;
         _centerY = _height / 2;
         
-        System.println("DEBUG: Device dimensions: " + _width + "x" + _height);
+        TheAthanLogger.debug("LocationView", "Device dimensions: " + _width + "x" + _height);
     }
 
     // Called when this View is brought to the foreground
     function onShow() as Void {
-        System.println("DEBUG: LocationView onShow");
+        TheAthanLogger.debug("LocationView", "onShow");
         // Add this view to navigation history
         TheAthanConstants.addToHistory(TheAthanConstants.VIEW_LOCATION);
         
@@ -43,7 +43,7 @@ class TheAthanLocationView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        System.println("DEBUG: LocationView onUpdate");
+        TheAthanLogger.debug("LocationView", "onUpdate");
         try {
             // Clear the screen
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
@@ -70,7 +70,7 @@ class TheAthanLocationView extends WatchUi.View {
             dc.drawText(_centerX, _height - 30, Graphics.FONT_TINY, "Press BACK when done", Graphics.TEXT_JUSTIFY_CENTER);
             
         } catch (e) {
-            System.println("DEBUG: Exception in onUpdate: " + e.getErrorMessage());
+            TheAthanLogger.error("LocationView", "Exception in onUpdate: " + e.getErrorMessage());
         }
     }
     
@@ -95,9 +95,9 @@ class TheAthanLocationView extends WatchUi.View {
                 WatchUi.requestUpdate();
             }
             
-            System.println("DEBUG: Location animation drawn");
+            TheAthanLogger.debug("LocationView", "Location animation drawn");
         } catch (e) {
-            System.println("DEBUG: Exception drawing location animation: " + e.getErrorMessage());
+            TheAthanLogger.error("LocationView", "Exception drawing location animation: " + e.getErrorMessage());
         }
     }
 }

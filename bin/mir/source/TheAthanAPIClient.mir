@@ -6,1743 +6,1681 @@ import Toybox.Communications;
 import Toybox.Time;
 [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Time,4,14,18]; @symbol_importdef<2> = [Gregorian,4,19,28]; ]
 import Toybox.Time.Gregorian;
-[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [System,5,14,20]; ]
-import Toybox.System;
-[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [WatchUi,6,14,21]; ]
-import Toybox.WatchUi;
-[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 8; @symbol_classdef = [TheAthanAPIClient,8,6,23]; ]
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 6; @symbol_classdef = [TheAthanAPIClient,6,6,23]; ]
 class TheAthanAPIClient {
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 8; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 6; ]
     <init> {
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 77 16 ]
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 8 16 ]
         %tmp.1 = newa 0;
         putv self :_todayPrayerTimes %tmp.1;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 78 16 ]
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 9 16 ]
         %tmp.2 = newa 0;
         putv self :_tomorrowPrayerTimes %tmp.2;
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 8; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 10; @position = 16; @symbol_vardef = [_callback,10,16,25]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 7; @position = 16; @symbol_vardef = [_callback,7,16,25]; ]
     private
     var _callback;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 12; @symbol_functiondef = [initialize,12,13,23]; @symbol_param<0> = [callback,12,24,32]; ]
-    function initialize(callback) as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_12_34_14_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 13 8 ]
-        %tmp.1 = lgetv %callback;
-        symbol [ callback %tmp.1 13 20 28 ];
-        symbol [ _callback ? 13 8 17 ];
-        putv self :_callback %tmp.1;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_12_34_14_4_stop:
-    }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 17; @symbol_functiondef = [fetchPrayerTimes,17,13,29]; @symbol_param<0> = [latitude,17,30,38]; @symbol_param<1> = [longitude,17,40,49]; ]
-    function fetchPrayerTimes(latitude, longitude) {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 18 8 ]
-        symbol [ System %tmp.1 18 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 18 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: fetchPrayerTimes start";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 19 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_stop" ]
-        %options.1 = local;
-        symbol [ options %options.1 19 12 19 ];
-        %tmp.4 = newd 2;
-        %tmp.6 = const :method;
-        symbol [ method %tmp.6 20 13 19 const ];
-        symbol [ Communications %tmp.7 20 23 37 ];
-        %tmp.7 = getm $.Toybox.Communications;
-        symbol [ HTTP_REQUEST_METHOD_GET %tmp.8 20 38 61 ];
-        %tmp.8 = getv %tmp.7 :HTTP_REQUEST_METHOD_GET;
-        %tmp.9 = dup %tmp.4;
-        %tmp.10 = aputv %tmp.9 %tmp.6 %tmp.8;
-        %tmp.12 = const :responseType;
-        symbol [ responseType %tmp.12 21 13 25 const ];
-        symbol [ Communications %tmp.13 21 29 43 ];
-        %tmp.13 = getm $.Toybox.Communications;
-        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.14 21 44 75 ];
-        %tmp.14 = getv %tmp.13 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
-        %tmp.15 = dup %tmp.10;
-        %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
-        lputv %options.1 %tmp.16;
-        symbol [ options %options.1 19 12 19 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 25 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_stop" ]
-        %now.2 = local;
-        symbol [ now %now.2 25 12 15 ];
-        symbol [ Time %tmp.17 25 18 22 ];
-        %tmp.17 = getm $.Toybox.Time;
-        symbol [ now %tmp.18 25 23 26 ];
-        %tmp.18 = getv function %tmp.17 :now;
-        %tmp.19 = invoke %tmp.17 %tmp.18();
-        lputv %now.2 %tmp.19;
-        symbol [ now %now.2 25 12 15 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 26 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_stop" ]
-        %info.3 = local;
-        symbol [ info %info.3 26 12 16 ];
-        symbol [ Gregorian %tmp.20 26 19 28 ];
-        %tmp.20 = getm $.Toybox.Time.Gregorian;
-        symbol [ info %tmp.21 26 29 33 ];
-        %tmp.21 = getv function %tmp.20 :info;
-        %tmp.22 = lgetv %now.2;
-        symbol [ now %tmp.22 26 34 37 ];
-        symbol [ Time %tmp.23 26 39 43 ];
-        %tmp.23 = getm $.Toybox.Time;
-        symbol [ FORMAT_SHORT %tmp.24 26 44 56 ];
-        %tmp.24 = getv %tmp.23 :FORMAT_SHORT;
-        %tmp.25 = invoke %tmp.20 %tmp.21(%tmp.22, %tmp.24);
-        lputv %info.3 %tmp.25;
-        symbol [ info %info.3 26 12 16 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 29 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_stop" ]
-        %todayDateString.4 = local;
-        symbol [ todayDateString %todayDateString.4 29 12 27 ];
-        symbol [ Lang %tmp.26 29 30 34 ];
-        %tmp.26 = getm $.Toybox.Lang;
-        symbol [ format %tmp.27 29 35 41 ];
-        %tmp.27 = getv function %tmp.26 :format;
-        %tmp.28 = "$1$-$2$-$3$";
-        %tmp.29 = newa 3;
-        %tmp.30 = lgetv %info.3;
-        symbol [ info %tmp.30 30 12 16 ];
-        symbol [ year %tmp.31 30 17 21 ];
-        %tmp.31 = getv %tmp.30 :year;
-        %tmp.32 = dup %tmp.29;
-        %tmp.33 = aputv %tmp.32 0 %tmp.31;
-        %tmp.34 = lgetv %info.3;
-        symbol [ info %tmp.34 31 12 16 ];
-        symbol [ month %tmp.35 31 17 22 ];
-        %tmp.35 = getv %tmp.34 :month;
-        symbol [ format %tmp.36 31 23 29 ];
-        %tmp.36 = getv function %tmp.35 :format;
-        %tmp.37 = "%02d";
-        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
-        %tmp.39 = dup %tmp.33;
-        %tmp.40 = aputv %tmp.39 1 %tmp.38;
-        %tmp.41 = lgetv %info.3;
-        symbol [ info %tmp.41 32 12 16 ];
-        symbol [ day %tmp.42 32 17 20 ];
-        %tmp.42 = getv %tmp.41 :day;
-        symbol [ format %tmp.43 32 21 27 ];
-        %tmp.43 = getv function %tmp.42 :format;
-        %tmp.44 = "%02d";
-        %tmp.45 = invoke %tmp.42 %tmp.43(%tmp.44);
-        %tmp.46 = dup %tmp.40;
-        %tmp.47 = aputv %tmp.46 2 %tmp.45;
-        %tmp.48 = invoke %tmp.26 %tmp.27(%tmp.28, %tmp.47);
-        lputv %todayDateString.4 %tmp.48;
-        symbol [ todayDateString %todayDateString.4 29 12 27 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 34 8 ]
-        symbol [ System %tmp.49 34 8 14 ];
-        %tmp.49 = getm $.Toybox.System;
-        symbol [ println %tmp.50 34 15 22 ];
-        %tmp.50 = getv function %tmp.49 :println;
-        %tmp.51 = "DEBUG: Today's date string: ";
-        %tmp.52 = lgetv %todayDateString.4;
-        symbol [ todayDateString %tmp.52 34 56 71 ];
-        %tmp.53 = add %tmp.51 %tmp.52;
-        invoke %tmp.49 %tmp.50(%tmp.53);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 37 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_stop" ]
-        %tomorrow.5 = local;
-        symbol [ tomorrow %tomorrow.5 37 12 20 ];
-        %tmp.54 = lgetv %now.2;
-        symbol [ now %tmp.54 37 23 26 ];
-        symbol [ add %tmp.55 37 27 30 ];
-        %tmp.55 = getv function %tmp.54 :add;
-        symbol [ Time %tmp.58 37 35 39 ];
-        %tmp.58 = getm $.Toybox.Time;
-        symbol [ Duration %tmp.59 37 40 48 ];
-        %tmp.59 = getv function ? %tmp.58 :Duration;
-        %tmp.60 = 86400;
-        %tmp.56 = newc %tmp.59 (%tmp.60);
-        %tmp.61 = invoke %tmp.54 %tmp.55(%tmp.56);
-        lputv %tomorrow.5 %tmp.61;
-        symbol [ tomorrow %tomorrow.5 37 12 20 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 38 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_stop" ]
-        %tomorrowInfo.6 = local;
-        symbol [ tomorrowInfo %tomorrowInfo.6 38 12 24 ];
-        symbol [ Gregorian %tmp.62 38 27 36 ];
-        %tmp.62 = getm $.Toybox.Time.Gregorian;
-        symbol [ info %tmp.63 38 37 41 ];
-        %tmp.63 = getv function %tmp.62 :info;
-        %tmp.64 = lgetv %tomorrow.5;
-        symbol [ tomorrow %tmp.64 38 42 50 ];
-        symbol [ Time %tmp.65 38 52 56 ];
-        %tmp.65 = getm $.Toybox.Time;
-        symbol [ FORMAT_SHORT %tmp.66 38 57 69 ];
-        %tmp.66 = getv %tmp.65 :FORMAT_SHORT;
-        %tmp.67 = invoke %tmp.62 %tmp.63(%tmp.64, %tmp.66);
-        lputv %tomorrowInfo.6 %tmp.67;
-        symbol [ tomorrowInfo %tomorrowInfo.6 38 12 24 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 41 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_stop" ]
-        %tomorrowDateString.7 = local;
-        symbol [ tomorrowDateString %tomorrowDateString.7 41 12 30 ];
-        symbol [ Lang %tmp.68 41 33 37 ];
-        %tmp.68 = getm $.Toybox.Lang;
-        symbol [ format %tmp.69 41 38 44 ];
-        %tmp.69 = getv function %tmp.68 :format;
-        %tmp.70 = "$1$-$2$-$3$";
-        %tmp.71 = newa 3;
-        %tmp.72 = lgetv %tomorrowInfo.6;
-        symbol [ tomorrowInfo %tmp.72 42 12 24 ];
-        symbol [ year %tmp.73 42 25 29 ];
-        %tmp.73 = getv %tmp.72 :year;
-        %tmp.74 = dup %tmp.71;
-        %tmp.75 = aputv %tmp.74 0 %tmp.73;
-        %tmp.76 = lgetv %tomorrowInfo.6;
-        symbol [ tomorrowInfo %tmp.76 43 12 24 ];
-        symbol [ month %tmp.77 43 25 30 ];
-        %tmp.77 = getv %tmp.76 :month;
-        symbol [ format %tmp.78 43 31 37 ];
-        %tmp.78 = getv function %tmp.77 :format;
-        %tmp.79 = "%02d";
-        %tmp.80 = invoke %tmp.77 %tmp.78(%tmp.79);
-        %tmp.81 = dup %tmp.75;
-        %tmp.82 = aputv %tmp.81 1 %tmp.80;
-        %tmp.83 = lgetv %tomorrowInfo.6;
-        symbol [ tomorrowInfo %tmp.83 44 12 24 ];
-        symbol [ day %tmp.84 44 25 28 ];
-        %tmp.84 = getv %tmp.83 :day;
-        symbol [ format %tmp.85 44 29 35 ];
-        %tmp.85 = getv function %tmp.84 :format;
-        %tmp.86 = "%02d";
-        %tmp.87 = invoke %tmp.84 %tmp.85(%tmp.86);
-        %tmp.88 = dup %tmp.82;
-        %tmp.89 = aputv %tmp.88 2 %tmp.87;
-        %tmp.90 = invoke %tmp.68 %tmp.69(%tmp.70, %tmp.89);
-        lputv %tomorrowDateString.7 %tmp.90;
-        symbol [ tomorrowDateString %tomorrowDateString.7 41 12 30 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 46 8 ]
-        symbol [ System %tmp.91 46 8 14 ];
-        %tmp.91 = getm $.Toybox.System;
-        symbol [ println %tmp.92 46 15 22 ];
-        %tmp.92 = getv function %tmp.91 :println;
-        %tmp.93 = "DEBUG: Tomorrow's date string: ";
-        %tmp.94 = lgetv %tomorrowDateString.7;
-        symbol [ tomorrowDateString %tmp.94 46 59 77 ];
-        %tmp.95 = add %tmp.93 %tmp.94;
-        invoke %tmp.91 %tmp.92(%tmp.95);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 49 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_stop" ]
-        %todayUrl.8 = local;
-        symbol [ todayUrl %todayUrl.8 49 12 20 ];
-        symbol [ Lang %tmp.96 49 23 27 ];
-        %tmp.96 = getm $.Toybox.Lang;
-        symbol [ format %tmp.97 49 28 34 ];
-        %tmp.97 = getv function %tmp.96 :format;
-        %tmp.98 = "https://api.aladhan.com/v1/timings/$1$?latitude=$2$&longitude=$3$&method=2";
-        %tmp.99 = newa 3;
-        %tmp.100 = lgetv %todayDateString.4;
-        symbol [ todayDateString %tmp.100 51 13 28 ];
-        %tmp.101 = dup %tmp.99;
-        %tmp.102 = aputv %tmp.101 0 %tmp.100;
-        %tmp.103 = lgetv %latitude;
-        symbol [ latitude %tmp.103 51 30 38 ];
-        %tmp.104 = dup %tmp.102;
-        %tmp.105 = aputv %tmp.104 1 %tmp.103;
-        %tmp.106 = lgetv %longitude;
-        symbol [ longitude %tmp.106 51 40 49 ];
-        %tmp.107 = dup %tmp.105;
-        %tmp.108 = aputv %tmp.107 2 %tmp.106;
-        %tmp.109 = invoke %tmp.96 %tmp.97(%tmp.98, %tmp.108);
-        lputv %todayUrl.8 %tmp.109;
-        symbol [ todayUrl %todayUrl.8 49 12 20 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 53 8 ]
-        symbol [ System %tmp.110 53 8 14 ];
-        %tmp.110 = getm $.Toybox.System;
-        symbol [ println %tmp.111 53 15 22 ];
-        %tmp.111 = getv function %tmp.110 :println;
-        %tmp.112 = "DEBUG: Today's API URL: ";
-        %tmp.113 = lgetv %todayUrl.8;
-        symbol [ todayUrl %tmp.113 53 52 60 ];
-        %tmp.114 = add %tmp.112 %tmp.113;
-        invoke %tmp.110 %tmp.111(%tmp.114);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 55 8 ]
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_finally;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_beginTry:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_12_70_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 57 12 ]
-        symbol [ Communications %tmp.115 57 12 26 ];
-        %tmp.115 = getm $.Toybox.Communications;
-        symbol [ makeWebRequest %tmp.116 57 27 41 ];
-        %tmp.116 = getv function %tmp.115 :makeWebRequest;
-        %tmp.117 = lgetv %todayUrl.8;
-        symbol [ todayUrl %tmp.117 57 42 50 ];
-        %tmp.118 = newd 0;
-        %tmp.119 = lgetv %options.1;
-        symbol [ options %tmp.119 57 56 63 ];
-        %tmp.120 = self;
-        symbol [ method %tmp.121 57 65 71 ];
-        %tmp.121 = getv function %tmp.120 :method;
-        %tmp.123 = const :onReceiveTodayPrayerTimes;
-        symbol [ onReceiveTodayPrayerTimes %tmp.123 57 73 98 const ];
-        %tmp.124 = invoke %tmp.120 %tmp.121(%tmp.123);
-        invoke %tmp.115 %tmp.116(%tmp.117, %tmp.118, %tmp.119, %tmp.124);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 58 12 ]
-        symbol [ System %tmp.125 58 12 18 ];
-        %tmp.125 = getm $.Toybox.System;
-        symbol [ println %tmp.126 58 19 26 ];
-        %tmp.126 = getv function %tmp.125 :println;
-        %tmp.127 = "DEBUG: makeWebRequest called for today";
-        invoke %tmp.125 %tmp.126(%tmp.127);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 61 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_12_70_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_12_70_8_stop" ]
-        %tomorrowUrl.9 = local;
-        symbol [ tomorrowUrl %tomorrowUrl.9 61 16 27 ];
-        symbol [ Lang %tmp.128 61 30 34 ];
-        %tmp.128 = getm $.Toybox.Lang;
-        symbol [ format %tmp.129 61 35 41 ];
-        %tmp.129 = getv function %tmp.128 :format;
-        %tmp.130 = "https://api.aladhan.com/v1/timings/$1$?latitude=$2$&longitude=$3$&method=2";
-        %tmp.131 = newa 3;
-        %tmp.132 = lgetv %tomorrowDateString.7;
-        symbol [ tomorrowDateString %tmp.132 63 17 35 ];
-        %tmp.133 = dup %tmp.131;
-        %tmp.134 = aputv %tmp.133 0 %tmp.132;
-        %tmp.135 = lgetv %latitude;
-        symbol [ latitude %tmp.135 63 37 45 ];
-        %tmp.136 = dup %tmp.134;
-        %tmp.137 = aputv %tmp.136 1 %tmp.135;
-        %tmp.138 = lgetv %longitude;
-        symbol [ longitude %tmp.138 63 47 56 ];
-        %tmp.139 = dup %tmp.137;
-        %tmp.140 = aputv %tmp.139 2 %tmp.138;
-        %tmp.141 = invoke %tmp.128 %tmp.129(%tmp.130, %tmp.140);
-        lputv %tomorrowUrl.9 %tmp.141;
-        symbol [ tomorrowUrl %tomorrowUrl.9 61 16 27 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 65 12 ]
-        symbol [ System %tmp.142 65 12 18 ];
-        %tmp.142 = getm $.Toybox.System;
-        symbol [ println %tmp.143 65 19 26 ];
-        %tmp.143 = getv function %tmp.142 :println;
-        %tmp.144 = "DEBUG: Tomorrow's API URL: ";
-        %tmp.145 = lgetv %tomorrowUrl.9;
-        symbol [ tomorrowUrl %tmp.145 65 59 70 ];
-        %tmp.146 = add %tmp.144 %tmp.145;
-        invoke %tmp.142 %tmp.143(%tmp.146);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 68 12 ]
-        symbol [ Communications %tmp.147 68 12 26 ];
-        %tmp.147 = getm $.Toybox.Communications;
-        symbol [ makeWebRequest %tmp.148 68 27 41 ];
-        %tmp.148 = getv function %tmp.147 :makeWebRequest;
-        %tmp.149 = lgetv %tomorrowUrl.9;
-        symbol [ tomorrowUrl %tmp.149 68 42 53 ];
-        %tmp.150 = newd 0;
-        %tmp.151 = lgetv %options.1;
-        symbol [ options %tmp.151 68 59 66 ];
-        %tmp.152 = self;
-        symbol [ method %tmp.153 68 68 74 ];
-        %tmp.153 = getv function %tmp.152 :method;
-        %tmp.155 = const :onReceiveTomorrowPrayerTimes;
-        symbol [ onReceiveTomorrowPrayerTimes %tmp.155 68 76 104 const ];
-        %tmp.156 = invoke %tmp.152 %tmp.153(%tmp.155);
-        invoke %tmp.147 %tmp.148(%tmp.149, %tmp.150, %tmp.151, %tmp.156);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 69 12 ]
-        symbol [ System %tmp.157 69 12 18 ];
-        %tmp.157 = getm $.Toybox.System;
-        symbol [ println %tmp.158 69 19 26 ];
-        %tmp.158 = getv function %tmp.157 :println;
-        %tmp.159 = "DEBUG: makeWebRequest called for tomorrow";
-        invoke %tmp.157 %tmp.158(%tmp.159);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_12_70_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_endTry:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_finally;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_catch:
-        %tmp.160 = exception;
-        push %tmp.160;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 70 10 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_70_10_73_8_end" ]
-        %e.10 = local;
-        symbol [ e %e.10 70 17 18 ];
-        %tmp.161 = dup %tmp.160;
-        lputv %e.10 %tmp.161;
-        symbol [ e %e.10 70 17 18 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_70_20_73_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 71 12 ]
-        symbol [ System %tmp.162 71 12 18 ];
-        %tmp.162 = getm $.Toybox.System;
-        symbol [ println %tmp.163 71 19 26 ];
-        %tmp.163 = getv function %tmp.162 :println;
-        %tmp.164 = "DEBUG: Exception in makeWebRequest: ";
-        %tmp.165 = lgetv %e.10;
-        symbol [ e %tmp.165 71 68 69 ];
-        symbol [ getErrorMessage %tmp.166 71 70 85 ];
-        %tmp.166 = getv function %tmp.165 :getErrorMessage;
-        %tmp.167 = invoke %tmp.165 %tmp.166();
-        %tmp.168 = add %tmp.164 %tmp.167;
-        invoke %tmp.162 %tmp.163(%tmp.168);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 72 12 ]
-        symbol [ _callback %tmp.170 72 12 21 ];
-        %tmp.170 = getv ? :_callback;
-        symbol [ invoke %tmp.171 72 22 28 ];
-        %tmp.171 = getv function %tmp.170 :invoke;
-        %tmp.172 = null;
-        invoke %tmp.170 %tmp.171(%tmp.172);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_70_20_73_8_stop:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_finally;
-        pop;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_70_10_73_8_end:
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_70_10_73_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_70_10_73_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_finally;
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_finally;
-        throw %tmp.160;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_finally:
-        jsrret;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_55_8_73_8_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_17_51_74_4_stop:
-    }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 77; @position = 16; @symbol_vardef = [_todayPrayerTimes,77,16,33]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 8; @position = 16; @symbol_vardef = [_todayPrayerTimes,8,16,33]; ]
     private
     var _todayPrayerTimes;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 78; @position = 16; @symbol_vardef = [_tomorrowPrayerTimes,78,16,36]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 9; @position = 16; @symbol_vardef = [_tomorrowPrayerTimes,9,16,36]; ]
     private
     var _tomorrowPrayerTimes;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 79; @position = 16; @symbol_vardef = [_todayReceived,79,16,30]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 10; @position = 16; @symbol_vardef = [_todayReceived,10,16,30]; ]
     private
     var _todayReceived = false;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 80; @position = 16; @symbol_vardef = [_tomorrowReceived,80,16,33]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 11; @position = 16; @symbol_vardef = [_tomorrowReceived,11,16,33]; ]
     private
     var _tomorrowReceived = false;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 83; @symbol_functiondef = [onReceiveTodayPrayerTimes,83,13,38]; @symbol_param<0> = [responseCode,83,39,51]; @symbol_param<0>_type<0> = [Number,83,55,61]; @symbol_param<1> = [data,83,63,67]; @symbol_param<1>_type<0> = [Dictionary,83,71,81]; @symbol_param<1>_type<1> = [String,83,85,91]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; @symbol_param<0> = [callback,13,24,32]; ]
+    function initialize(callback) as Void {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_13_34_15_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 14 8 ]
+        %tmp.1 = lgetv %callback;
+        symbol [ callback %tmp.1 14 20 28 ];
+        symbol [ _callback ? 14 8 17 ];
+        putv self :_callback %tmp.1;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_13_34_15_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 18; @symbol_functiondef = [fetchPrayerTimes,18,13,29]; @symbol_param<0> = [latitude,18,30,38]; @symbol_param<1> = [longitude,18,40,49]; ]
+    function fetchPrayerTimes(latitude, longitude) {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 19 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_stop" ]
+        %options.1 = local;
+        symbol [ options %options.1 19 12 19 ];
+        %tmp.1 = newd 2;
+        %tmp.3 = const :method;
+        symbol [ method %tmp.3 20 13 19 const ];
+        symbol [ Communications %tmp.4 20 23 37 ];
+        %tmp.4 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_GET %tmp.5 20 38 61 ];
+        %tmp.5 = getv %tmp.4 :HTTP_REQUEST_METHOD_GET;
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 %tmp.3 %tmp.5;
+        %tmp.9 = const :responseType;
+        symbol [ responseType %tmp.9 21 13 25 const ];
+        symbol [ Communications %tmp.10 21 29 43 ];
+        %tmp.10 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.11 21 44 75 ];
+        %tmp.11 = getv %tmp.10 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.12 = dup %tmp.7;
+        %tmp.13 = aputv %tmp.12 %tmp.9 %tmp.11;
+        lputv %options.1 %tmp.13;
+        symbol [ options %options.1 19 12 19 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 24 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_stop" ]
+        %now.2 = local;
+        symbol [ now %now.2 24 12 15 ];
+        symbol [ Time %tmp.14 24 18 22 ];
+        %tmp.14 = getm $.Toybox.Time;
+        symbol [ now %tmp.15 24 23 26 ];
+        %tmp.15 = getv function %tmp.14 :now;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %now.2 %tmp.16;
+        symbol [ now %now.2 24 12 15 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 25 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_stop" ]
+        %tomorrow.3 = local;
+        symbol [ tomorrow %tomorrow.3 25 12 20 ];
+        %tmp.17 = lgetv %now.2;
+        symbol [ now %tmp.17 25 23 26 ];
+        symbol [ add %tmp.18 25 27 30 ];
+        %tmp.18 = getv function %tmp.17 :add;
+        symbol [ Time %tmp.21 25 35 39 ];
+        %tmp.21 = getm $.Toybox.Time;
+        symbol [ Duration %tmp.22 25 40 48 ];
+        %tmp.22 = getv function ? %tmp.21 :Duration;
+        %tmp.23 = 86400;
+        %tmp.19 = newc %tmp.22 (%tmp.23);
+        %tmp.24 = invoke %tmp.17 %tmp.18(%tmp.19);
+        lputv %tomorrow.3 %tmp.24;
+        symbol [ tomorrow %tomorrow.3 25 12 20 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 28 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_stop" ]
+        %todayDateString.4 = local;
+        symbol [ todayDateString %todayDateString.4 28 12 27 ];
+        %tmp.25 = self;
+        symbol [ formatDate %tmp.26 28 30 40 ];
+        %tmp.26 = getv function %tmp.25 :formatDate;
+        %tmp.27 = lgetv %now.2;
+        symbol [ now %tmp.27 28 41 44 ];
+        %tmp.28 = invoke %tmp.25 %tmp.26(%tmp.27);
+        lputv %todayDateString.4 %tmp.28;
+        symbol [ todayDateString %todayDateString.4 28 12 27 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 29 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_stop" ]
+        %tomorrowDateString.5 = local;
+        symbol [ tomorrowDateString %tomorrowDateString.5 29 12 30 ];
+        %tmp.29 = self;
+        symbol [ formatDate %tmp.30 29 33 43 ];
+        %tmp.30 = getv function %tmp.29 :formatDate;
+        %tmp.31 = lgetv %tomorrow.3;
+        symbol [ tomorrow %tmp.31 29 44 52 ];
+        %tmp.32 = invoke %tmp.29 %tmp.30(%tmp.31);
+        lputv %tomorrowDateString.5 %tmp.32;
+        symbol [ tomorrowDateString %tomorrowDateString.5 29 12 30 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 32 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_stop" ]
+        %baseUrl.6 = local;
+        symbol [ baseUrl %baseUrl.6 32 12 19 ];
+        %tmp.33 = "https://api.aladhan.com/v1/timings/$1$?latitude=$2$&longitude=$3$&method=2&timezone=GMT-3";
+        lputv %baseUrl.6 %tmp.33;
+        symbol [ baseUrl %baseUrl.6 32 12 19 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 33 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_stop" ]
+        %todayUrl.7 = local;
+        symbol [ todayUrl %todayUrl.7 33 12 20 ];
+        symbol [ Lang %tmp.34 33 23 27 ];
+        %tmp.34 = getm $.Toybox.Lang;
+        symbol [ format %tmp.35 33 28 34 ];
+        %tmp.35 = getv function %tmp.34 :format;
+        %tmp.36 = lgetv %baseUrl.6;
+        symbol [ baseUrl %tmp.36 33 35 42 ];
+        %tmp.37 = newa 3;
+        %tmp.38 = lgetv %todayDateString.4;
+        symbol [ todayDateString %tmp.38 33 45 60 ];
+        %tmp.39 = dup %tmp.37;
+        %tmp.40 = aputv %tmp.39 0 %tmp.38;
+        %tmp.41 = lgetv %latitude;
+        symbol [ latitude %tmp.41 33 62 70 ];
+        %tmp.42 = dup %tmp.40;
+        %tmp.43 = aputv %tmp.42 1 %tmp.41;
+        %tmp.44 = lgetv %longitude;
+        symbol [ longitude %tmp.44 33 72 81 ];
+        %tmp.45 = dup %tmp.43;
+        %tmp.46 = aputv %tmp.45 2 %tmp.44;
+        %tmp.47 = invoke %tmp.34 %tmp.35(%tmp.36, %tmp.46);
+        lputv %todayUrl.7 %tmp.47;
+        symbol [ todayUrl %todayUrl.7 33 12 20 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 34 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_stop" ]
+        %tomorrowUrl.8 = local;
+        symbol [ tomorrowUrl %tomorrowUrl.8 34 12 23 ];
+        symbol [ Lang %tmp.48 34 26 30 ];
+        %tmp.48 = getm $.Toybox.Lang;
+        symbol [ format %tmp.49 34 31 37 ];
+        %tmp.49 = getv function %tmp.48 :format;
+        %tmp.50 = lgetv %baseUrl.6;
+        symbol [ baseUrl %tmp.50 34 38 45 ];
+        %tmp.51 = newa 3;
+        %tmp.52 = lgetv %tomorrowDateString.5;
+        symbol [ tomorrowDateString %tmp.52 34 48 66 ];
+        %tmp.53 = dup %tmp.51;
+        %tmp.54 = aputv %tmp.53 0 %tmp.52;
+        %tmp.55 = lgetv %latitude;
+        symbol [ latitude %tmp.55 34 68 76 ];
+        %tmp.56 = dup %tmp.54;
+        %tmp.57 = aputv %tmp.56 1 %tmp.55;
+        %tmp.58 = lgetv %longitude;
+        symbol [ longitude %tmp.58 34 78 87 ];
+        %tmp.59 = dup %tmp.57;
+        %tmp.60 = aputv %tmp.59 2 %tmp.58;
+        %tmp.61 = invoke %tmp.48 %tmp.49(%tmp.50, %tmp.60);
+        lputv %tomorrowUrl.8 %tmp.61;
+        symbol [ tomorrowUrl %tomorrowUrl.8 34 12 23 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 36 8 ]
+        symbol [ TheAthanLogger %tmp.63 36 8 22 ];
+        %tmp.63 = getv ? :TheAthanLogger;
+        symbol [ info %tmp.64 36 23 27 ];
+        %tmp.64 = getv function %tmp.63 :info;
+        %tmp.65 = "APIClient";
+        %tmp.66 = "Using timezone: UTC";
+        invoke %tmp.63 %tmp.64(%tmp.65, %tmp.66);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 38 8 ]
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_12_46_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 40 12 ]
+        symbol [ TheAthanLogger %tmp.68 40 12 26 ];
+        %tmp.68 = getv ? :TheAthanLogger;
+        symbol [ info %tmp.69 40 27 31 ];
+        %tmp.69 = getv function %tmp.68 :info;
+        %tmp.70 = "APIClient";
+        %tmp.71 = "Fetching today's prayer times: ";
+        %tmp.72 = lgetv %todayUrl.7;
+        symbol [ todayUrl %tmp.72 40 81 89 ];
+        %tmp.73 = add %tmp.71 %tmp.72;
+        invoke %tmp.68 %tmp.69(%tmp.70, %tmp.73);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 41 12 ]
+        symbol [ TheAthanLogger %tmp.75 41 12 26 ];
+        %tmp.75 = getv ? :TheAthanLogger;
+        symbol [ info %tmp.76 41 27 31 ];
+        %tmp.76 = getv function %tmp.75 :info;
+        %tmp.77 = "APIClient";
+        %tmp.78 = "Fetching tomorrow's prayer times: ";
+        %tmp.79 = lgetv %tomorrowUrl.8;
+        symbol [ tomorrowUrl %tmp.79 41 84 95 ];
+        %tmp.80 = add %tmp.78 %tmp.79;
+        invoke %tmp.75 %tmp.76(%tmp.77, %tmp.80);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 44 12 ]
+        symbol [ Communications %tmp.81 44 12 26 ];
+        %tmp.81 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.82 44 27 41 ];
+        %tmp.82 = getv function %tmp.81 :makeWebRequest;
+        %tmp.83 = lgetv %todayUrl.7;
+        symbol [ todayUrl %tmp.83 44 42 50 ];
+        %tmp.84 = newd 0;
+        %tmp.85 = lgetv %options.1;
+        symbol [ options %tmp.85 44 56 63 ];
+        %tmp.86 = self;
+        symbol [ method %tmp.87 44 65 71 ];
+        %tmp.87 = getv function %tmp.86 :method;
+        %tmp.89 = const :onReceiveTodayPrayerTimes;
+        symbol [ onReceiveTodayPrayerTimes %tmp.89 44 73 98 const ];
+        %tmp.90 = invoke %tmp.86 %tmp.87(%tmp.89);
+        invoke %tmp.81 %tmp.82(%tmp.83, %tmp.84, %tmp.85, %tmp.90);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 45 12 ]
+        symbol [ Communications %tmp.91 45 12 26 ];
+        %tmp.91 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.92 45 27 41 ];
+        %tmp.92 = getv function %tmp.91 :makeWebRequest;
+        %tmp.93 = lgetv %tomorrowUrl.8;
+        symbol [ tomorrowUrl %tmp.93 45 42 53 ];
+        %tmp.94 = newd 0;
+        %tmp.95 = lgetv %options.1;
+        symbol [ options %tmp.95 45 59 66 ];
+        %tmp.96 = self;
+        symbol [ method %tmp.97 45 68 74 ];
+        %tmp.97 = getv function %tmp.96 :method;
+        %tmp.99 = const :onReceiveTomorrowPrayerTimes;
+        symbol [ onReceiveTomorrowPrayerTimes %tmp.99 45 76 104 const ];
+        %tmp.100 = invoke %tmp.96 %tmp.97(%tmp.99);
+        invoke %tmp.91 %tmp.92(%tmp.93, %tmp.94, %tmp.95, %tmp.100);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_12_46_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_catch:
+        %tmp.101 = exception;
+        push %tmp.101;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 46 10 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_46_10_49_8_end" ]
+        %e.9 = local;
+        symbol [ e %e.9 46 17 18 ];
+        %tmp.102 = dup %tmp.101;
+        lputv %e.9 %tmp.102;
+        symbol [ e %e.9 46 17 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_46_20_49_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 47 12 ]
+        symbol [ TheAthanLogger %tmp.104 47 12 26 ];
+        %tmp.104 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.105 47 27 32 ];
+        %tmp.105 = getv function %tmp.104 :error;
+        %tmp.106 = "APIClient";
+        %tmp.107 = "Error making API requests: ";
+        %tmp.108 = lgetv %e.9;
+        symbol [ e %tmp.108 47 78 79 ];
+        symbol [ getErrorMessage %tmp.109 47 80 95 ];
+        %tmp.109 = getv function %tmp.108 :getErrorMessage;
+        %tmp.110 = invoke %tmp.108 %tmp.109();
+        %tmp.111 = add %tmp.107 %tmp.110;
+        invoke %tmp.104 %tmp.105(%tmp.106, %tmp.111);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 48 12 ]
+        symbol [ _callback %tmp.113 48 12 21 ];
+        %tmp.113 = getv ? :_callback;
+        symbol [ invoke %tmp.114 48 22 28 ];
+        %tmp.114 = getv function %tmp.113 :invoke;
+        %tmp.115 = null;
+        invoke %tmp.113 %tmp.114(%tmp.115);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_46_20_49_8_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_finally;
+        pop;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_46_10_49_8_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_46_10_49_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_46_10_49_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_finally;
+        throw %tmp.101;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_finally:
+        jsrret;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_38_8_49_8_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_18_51_50_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 53; @symbol_functiondef = [formatDate,53,13,23]; @symbol_param<0> = [moment,53,24,30]; ]
+    function formatDate(moment) {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_53_32_60_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 54 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_53_32_60_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_53_32_60_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 54 12 16 ];
+        symbol [ Gregorian %tmp.1 54 19 28 ];
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.2 54 29 33 ];
+        %tmp.2 = getv function %tmp.1 :info;
+        %tmp.3 = lgetv %moment;
+        symbol [ moment %tmp.3 54 34 40 ];
+        symbol [ Time %tmp.4 54 42 46 ];
+        %tmp.4 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.5 54 47 59 ];
+        %tmp.5 = getv %tmp.4 :FORMAT_SHORT;
+        %tmp.6 = invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+        lputv %info.1 %tmp.6;
+        symbol [ info %info.1 54 12 16 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 55 8 ]
+        symbol [ Lang %tmp.7 55 15 19 ];
+        %tmp.7 = getm $.Toybox.Lang;
+        symbol [ format %tmp.8 55 20 26 ];
+        %tmp.8 = getv function %tmp.7 :format;
+        %tmp.9 = "$1$-$2$-$3$";
+        %tmp.10 = newa 3;
+        %tmp.11 = lgetv %info.1;
+        symbol [ info %tmp.11 56 12 16 ];
+        symbol [ year %tmp.12 56 17 21 ];
+        %tmp.12 = getv %tmp.11 :year;
+        %tmp.13 = dup %tmp.10;
+        %tmp.14 = aputv %tmp.13 0 %tmp.12;
+        %tmp.15 = lgetv %info.1;
+        symbol [ info %tmp.15 57 12 16 ];
+        symbol [ month %tmp.16 57 17 22 ];
+        %tmp.16 = getv %tmp.15 :month;
+        symbol [ format %tmp.17 57 23 29 ];
+        %tmp.17 = getv function %tmp.16 :format;
+        %tmp.18 = "%02d";
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        %tmp.20 = dup %tmp.14;
+        %tmp.21 = aputv %tmp.20 1 %tmp.19;
+        %tmp.22 = lgetv %info.1;
+        symbol [ info %tmp.22 58 12 16 ];
+        symbol [ day %tmp.23 58 17 20 ];
+        %tmp.23 = getv %tmp.22 :day;
+        symbol [ format %tmp.24 58 21 27 ];
+        %tmp.24 = getv function %tmp.23 :format;
+        %tmp.25 = "%02d";
+        %tmp.26 = invoke %tmp.23 %tmp.24(%tmp.25);
+        %tmp.27 = dup %tmp.21;
+        %tmp.28 = aputv %tmp.27 2 %tmp.26;
+        %tmp.29 = invoke %tmp.7 %tmp.8(%tmp.9, %tmp.28);
+        ret %tmp.29;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_53_32_60_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 63; @symbol_functiondef = [onReceiveTodayPrayerTimes,63,13,38]; @symbol_param<0> = [responseCode,63,39,51]; @symbol_param<0>_type<0> = [Number,63,55,61]; @symbol_param<1> = [data,63,63,67]; @symbol_param<1>_type<0> = [Dictionary,63,71,81]; @symbol_param<1>_type<1> = [String,63,85,91]; ]
     function onReceiveTodayPrayerTimes(responseCode as Number, data as Dictionary or String or Null) as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_83_109_93_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 84 8 ]
-        symbol [ System %tmp.1 84 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 84 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: onReceiveTodayPrayerTimes - responseCode: ";
-        %tmp.4 = lgetv %responseCode;
-        symbol [ responseCode %tmp.4 84 77 89 ];
-        %tmp.5 = add %tmp.3 %tmp.4;
-        invoke %tmp.1 %tmp.2(%tmp.5);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 86 8 ]
-        %tmp.6 = self;
-        symbol [ parsePrayerTimes %tmp.7 86 28 44 ];
-        %tmp.7 = getv function %tmp.6 :parsePrayerTimes;
-        %tmp.8 = lgetv %responseCode;
-        symbol [ responseCode %tmp.8 86 45 57 ];
-        %tmp.9 = lgetv %data;
-        symbol [ data %tmp.9 86 59 63 ];
-        %tmp.10 = false;
-        %tmp.11 = invoke %tmp.6 %tmp.7(%tmp.8, %tmp.9, %tmp.10);
-        symbol [ _todayPrayerTimes ? 86 8 25 ];
-        putv self :_todayPrayerTimes %tmp.11;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 87 8 ]
-        %tmp.12 = true;
-        symbol [ _todayReceived ? 87 8 22 ];
-        putv self :_todayReceived %tmp.12;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 90 8 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_8_92_8_if_stmt:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_12_90_30_begin:
-        symbol [ _todayReceived %tmp.14 90 12 26 ];
-        %tmp.14 = getv ? :_todayReceived;
-        bf %tmp.14 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_8_92_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_30_90_30_true:
-        symbol [ _tomorrowReceived %tmp.16 90 30 47 ];
-        %tmp.16 = getv ? :_tomorrowReceived;
-        push %tmp.16;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_30_90_30_end:
-        %tmp.17 = phi [%tmp.14 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_12_90_30_begin] [%tmp.16 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_30_90_30_true] [%tmp.17 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_30_90_30_end];
-        bf %tmp.17 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_8_92_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_8_92_8_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_49_92_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 91 12 ]
-        %tmp.18 = self;
-        symbol [ combinePrayerTimesAndCallback %tmp.19 91 12 41 ];
-        %tmp.19 = getv function %tmp.18 :combinePrayerTimesAndCallback;
-        invoke %tmp.18 %tmp.19();
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_49_92_8_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_8_92_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_90_8_92_8_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_83_109_93_4_stop:
-    }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 96; @symbol_functiondef = [onReceiveTomorrowPrayerTimes,96,13,41]; @symbol_param<0> = [responseCode,96,42,54]; @symbol_param<0>_type<0> = [Number,96,58,64]; @symbol_param<1> = [data,96,66,70]; @symbol_param<1>_type<0> = [Dictionary,96,74,84]; @symbol_param<1>_type<1> = [String,96,88,94]; ]
-    function onReceiveTomorrowPrayerTimes(responseCode as Number, data as Dictionary or String or Null) as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_96_112_106_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 97 8 ]
-        symbol [ System %tmp.1 97 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 97 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: onReceiveTomorrowPrayerTimes - responseCode: ";
-        %tmp.4 = lgetv %responseCode;
-        symbol [ responseCode %tmp.4 97 80 92 ];
-        %tmp.5 = add %tmp.3 %tmp.4;
-        invoke %tmp.1 %tmp.2(%tmp.5);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 99 8 ]
-        %tmp.6 = self;
-        symbol [ parsePrayerTimes %tmp.7 99 31 47 ];
-        %tmp.7 = getv function %tmp.6 :parsePrayerTimes;
-        %tmp.8 = lgetv %responseCode;
-        symbol [ responseCode %tmp.8 99 48 60 ];
-        %tmp.9 = lgetv %data;
-        symbol [ data %tmp.9 99 62 66 ];
-        %tmp.10 = true;
-        %tmp.11 = invoke %tmp.6 %tmp.7(%tmp.8, %tmp.9, %tmp.10);
-        symbol [ _tomorrowPrayerTimes ? 99 8 28 ];
-        putv self :_tomorrowPrayerTimes %tmp.11;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 100 8 ]
-        %tmp.12 = true;
-        symbol [ _tomorrowReceived ? 100 8 25 ];
-        putv self :_tomorrowReceived %tmp.12;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 103 8 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_8_105_8_if_stmt:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_12_103_30_begin:
-        symbol [ _todayReceived %tmp.14 103 12 26 ];
-        %tmp.14 = getv ? :_todayReceived;
-        bf %tmp.14 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_8_105_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_30_103_30_true:
-        symbol [ _tomorrowReceived %tmp.16 103 30 47 ];
-        %tmp.16 = getv ? :_tomorrowReceived;
-        push %tmp.16;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_30_103_30_end:
-        %tmp.17 = phi [%tmp.14 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_12_103_30_begin] [%tmp.16 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_30_103_30_true] [%tmp.17 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_30_103_30_end];
-        bf %tmp.17 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_8_105_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_8_105_8_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_49_105_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 104 12 ]
-        %tmp.18 = self;
-        symbol [ combinePrayerTimesAndCallback %tmp.19 104 12 41 ];
-        %tmp.19 = getv function %tmp.18 :combinePrayerTimesAndCallback;
-        invoke %tmp.18 %tmp.19();
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_49_105_8_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_8_105_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_103_8_105_8_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_96_112_106_4_stop:
-    }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 109; @symbol_functiondef = [combinePrayerTimesAndCallback,109,13,42]; ]
-    function combinePrayerTimesAndCallback() {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_109_45_133_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 110 8 ]
-        symbol [ System %tmp.1 110 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 110 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: Combining prayer times";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 111 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_109_45_133_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_109_45_133_4_stop" ]
-        %combinedPrayerTimes.1 = local;
-        symbol [ combinedPrayerTimes %combinedPrayerTimes.1 111 12 31 ];
-        %tmp.4 = newa 0;
-        lputv %combinedPrayerTimes.1 %tmp.4;
-        symbol [ combinedPrayerTimes %combinedPrayerTimes.1 111 12 31 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 114 8 ]
-        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_init:
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_end" ]
-        %i.2 = local;
-        symbol [ i %i.2 114 17 18 ];
-        %tmp.5 = 0;
-        lputv %i.2 %tmp.5;
-        symbol [ i %i.2 114 17 18 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_test:
-        %tmp.6 = lgetv %i.2;
-        symbol [ i %tmp.6 114 24 25 ];
-        symbol [ _todayPrayerTimes %tmp.8 114 28 45 ];
-        %tmp.8 = getv ? :_todayPrayerTimes;
-        symbol [ size %tmp.9 114 46 50 ];
-        %tmp.9 = getv function %tmp.8 :size;
-        %tmp.10 = invoke %tmp.8 %tmp.9();
-        %tmp.11 = lt %tmp.6 %tmp.10;
-        bf %tmp.11 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_begin:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_59_116_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 115 12 ]
-        %tmp.12 = lgetv %combinedPrayerTimes.1;
-        symbol [ combinedPrayerTimes %tmp.12 115 12 31 ];
-        symbol [ add %tmp.13 115 32 35 ];
-        %tmp.13 = getv function %tmp.12 :add;
-        symbol [ _todayPrayerTimes %tmp.15 115 36 53 ];
-        %tmp.15 = getv ? :_todayPrayerTimes;
-        %tmp.16 = lgetv %i.2;
-        symbol [ i %tmp.16 115 54 55 ];
-        %tmp.17 = agetv %tmp.15 %tmp.16;
-        invoke %tmp.12 %tmp.13(%tmp.17);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_59_116_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_incr:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 114 ]
-        %tmp.20 = lgetv %i.2;
-        symbol [ i %tmp.20 114 54 55 ];
-        %tmp.21 = add %tmp.20 1;
-        lputv %i.2 %tmp.21;
-        symbol [ i %i.2 114 54 55 ];
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_test;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_114_8_116_8_for_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 119 8 ]
-        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_init:
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_end" ]
-        %i.3 = local;
-        symbol [ i %i.3 119 17 18 ];
-        %tmp.22 = 0;
-        lputv %i.3 %tmp.22;
-        symbol [ i %i.3 119 17 18 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_test:
-        %tmp.23 = lgetv %i.3;
-        symbol [ i %tmp.23 119 24 25 ];
-        symbol [ _tomorrowPrayerTimes %tmp.25 119 28 48 ];
-        %tmp.25 = getv ? :_tomorrowPrayerTimes;
-        symbol [ size %tmp.26 119 49 53 ];
-        %tmp.26 = getv function %tmp.25 :size;
-        %tmp.27 = invoke %tmp.25 %tmp.26();
-        %tmp.28 = lt %tmp.23 %tmp.27;
-        bf %tmp.28 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_begin:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_62_121_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 120 12 ]
-        %tmp.29 = lgetv %combinedPrayerTimes.1;
-        symbol [ combinedPrayerTimes %tmp.29 120 12 31 ];
-        symbol [ add %tmp.30 120 32 35 ];
-        %tmp.30 = getv function %tmp.29 :add;
-        symbol [ _tomorrowPrayerTimes %tmp.32 120 36 56 ];
-        %tmp.32 = getv ? :_tomorrowPrayerTimes;
-        %tmp.33 = lgetv %i.3;
-        symbol [ i %tmp.33 120 57 58 ];
-        %tmp.34 = agetv %tmp.32 %tmp.33;
-        invoke %tmp.29 %tmp.30(%tmp.34);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_62_121_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_incr:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 119 ]
-        %tmp.37 = lgetv %i.3;
-        symbol [ i %tmp.37 119 57 58 ];
-        %tmp.38 = add %tmp.37 1;
-        lputv %i.3 %tmp.38;
-        symbol [ i %i.3 119 57 58 ];
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_test;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_119_8_121_8_for_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 124 8 ]
-        %tmp.39 = self;
-        symbol [ sortPrayerTimes %tmp.40 124 8 23 ];
-        %tmp.40 = getv function %tmp.39 :sortPrayerTimes;
-        %tmp.41 = lgetv %combinedPrayerTimes.1;
-        symbol [ combinedPrayerTimes %tmp.41 124 24 43 ];
-        invoke %tmp.39 %tmp.40(%tmp.41);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 126 8 ]
-        symbol [ System %tmp.42 126 8 14 ];
-        %tmp.42 = getm $.Toybox.System;
-        symbol [ println %tmp.43 126 15 22 ];
-        %tmp.43 = getv function %tmp.42 :println;
-        %tmp.44 = "DEBUG: Final combined prayer times count: ";
-        %tmp.45 = lgetv %combinedPrayerTimes.1;
-        symbol [ combinedPrayerTimes %tmp.45 126 70 89 ];
-        symbol [ size %tmp.46 126 90 94 ];
-        %tmp.46 = getv function %tmp.45 :size;
-        %tmp.47 = invoke %tmp.45 %tmp.46();
-        %tmp.48 = add %tmp.44 %tmp.47;
-        invoke %tmp.42 %tmp.43(%tmp.48);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 128 8 ]
-        symbol [ _callback %tmp.50 128 8 17 ];
-        %tmp.50 = getv ? :_callback;
-        symbol [ invoke %tmp.51 128 18 24 ];
-        %tmp.51 = getv function %tmp.50 :invoke;
-        %tmp.52 = lgetv %combinedPrayerTimes.1;
-        symbol [ combinedPrayerTimes %tmp.52 128 25 44 ];
-        invoke %tmp.50 %tmp.51(%tmp.52);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 131 8 ]
-        %tmp.53 = false;
-        symbol [ _todayReceived ? 131 8 22 ];
-        putv self :_todayReceived %tmp.53;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 132 8 ]
-        %tmp.54 = false;
-        symbol [ _tomorrowReceived ? 132 8 25 ];
-        putv self :_tomorrowReceived %tmp.54;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_109_45_133_4_stop:
-    }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 136; @symbol_functiondef = [parsePrayerTimes,136,13,29]; @symbol_param<0> = [responseCode,136,30,42]; @symbol_param<0>_type<0> = [Number,136,46,52]; @symbol_param<1> = [data,136,54,58]; @symbol_param<1>_type<0> = [Dictionary,136,62,72]; @symbol_param<1>_type<1> = [String,136,76,82]; @symbol_param<2> = [isTomorrow,136,92,102]; @symbol_param<2>_type<0> = [Boolean,136,106,113]; @symbol_return<0> = [Array,136,118,123]; ]
-    function parsePrayerTimes(responseCode as Number, data as Dictionary or String or Null, isTomorrow as Boolean) as Array {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_124_213_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 137 8 ]
-        symbol [ System %tmp.1 137 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 137 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: parsePrayerTimes - ";
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_begin:
-        %tmp.4 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.4 137 55 65 ];
-        bf %tmp.4 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_true:
-        %tmp.5 = "tomorrow";
-        push %tmp.5;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_false:
-        %tmp.6 = "today";
-        push %tmp.6;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_end:
-        %tmp.7 = phi [%tmp.4 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_begin] [%tmp.5 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_true] [%tmp.6 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_false] [%tmp.7 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_137_55_137_81_end];
-        %tmp.8 = add %tmp.3 %tmp.7;
-        invoke %tmp.1 %tmp.2(%tmp.8);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 139 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_124_213_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_124_213_4_stop" ]
-        %prayerTimes.1 = local;
-        symbol [ prayerTimes %prayerTimes.1 139 12 23 ];
-        %tmp.9 = newa 0;
-        lputv %prayerTimes.1 %tmp.9;
-        symbol [ prayerTimes %prayerTimes.1 139 12 23 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 141 8 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_8_209_8_if_stmt:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_12_141_51_begin:
-        %tmp.10 = lgetv %responseCode;
-        symbol [ responseCode %tmp.10 141 12 24 ];
-        %tmp.11 = 200;
-        %tmp.12 = eq %tmp.10 %tmp.11;
-        bf %tmp.12 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_8_209_8_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_35_141_51_true:
-        %tmp.13 = lgetv %data;
-        symbol [ data %tmp.13 141 35 39 ];
-        symbol [ Dictionary %tmp.15 141 51 61 ];
-        %tmp.15 = getv ? :Dictionary;
-        %tmp.16 = isa %tmp.13 %tmp.15;
-        push %tmp.16;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_35_141_51_end:
-        %tmp.17 = phi [%tmp.12 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_12_141_51_begin] [%tmp.16 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_35_141_51_true] [%tmp.17 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_35_141_51_end];
-        bf %tmp.17 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_8_209_8_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_8_209_8_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_63_193_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 142 12 ]
-        symbol [ System %tmp.18 142 12 18 ];
-        %tmp.18 = getm $.Toybox.System;
-        symbol [ println %tmp.19 142 19 26 ];
-        %tmp.19 = getv function %tmp.18 :println;
-        %tmp.20 = "DEBUG: Response is 200 and data is Dictionary";
-        invoke %tmp.18 %tmp.19(%tmp.20);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 143 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_63_193_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_63_193_8_stop" ]
-        %dataDict.2 = local;
-        symbol [ dataDict %dataDict.2 143 16 24 ];
-        %tmp.21 = lgetv %data;
-        symbol [ data %tmp.21 143 27 31 ];
-        %tmp.22 = as %tmp.21 { (Dictionary) };
-        %tmp.23 = as %tmp.22 Dictionary;
-        symbol [ Dictionary %tmp.23 143 35 45 ];
-        lputv %dataDict.2 %tmp.23;
-        symbol [ dataDict %dataDict.2 143 16 24 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 146 12 ]
-        symbol [ System %tmp.24 146 12 18 ];
-        %tmp.24 = getm $.Toybox.System;
-        symbol [ println %tmp.25 146 19 26 ];
-        %tmp.25 = getv function %tmp.24 :println;
-        %tmp.26 = "DEBUG: Response keys: ";
-        %tmp.27 = lgetv %dataDict.2;
-        symbol [ dataDict %tmp.27 146 54 62 ];
-        symbol [ keys %tmp.28 146 63 67 ];
-        %tmp.28 = getv function %tmp.27 :keys;
-        %tmp.29 = invoke %tmp.27 %tmp.28();
-        %tmp.30 = add %tmp.26 %tmp.29;
-        invoke %tmp.24 %tmp.25(%tmp.30);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 148 12 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_148_12_152_12_if_stmt:
-        %tmp.31 = lgetv %dataDict.2;
-        symbol [ dataDict %tmp.31 148 16 24 ];
-        symbol [ hasKey %tmp.32 148 25 31 ];
-        %tmp.32 = getv function %tmp.31 :hasKey;
-        %tmp.33 = "code";
-        %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
-        bf %tmp.34 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_148_12_152_12_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_148_12_152_12_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_148_41_150_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 149 16 ]
-        symbol [ System %tmp.35 149 16 22 ];
-        %tmp.35 = getm $.Toybox.System;
-        symbol [ println %tmp.36 149 23 30 ];
-        %tmp.36 = getv function %tmp.35 :println;
-        %tmp.37 = "DEBUG: data has code: ";
-        %tmp.38 = lgetv %dataDict.2;
-        symbol [ dataDict %tmp.38 149 58 66 ];
-        symbol [ get %tmp.39 149 67 70 ];
-        %tmp.39 = getv function %tmp.38 :get;
-        %tmp.40 = "code";
-        %tmp.41 = invoke %tmp.38 %tmp.39(%tmp.40);
-        %tmp.42 = add %tmp.37 %tmp.41;
-        invoke %tmp.35 %tmp.36(%tmp.42);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_148_41_150_12_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_148_12_152_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_148_12_152_12_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_150_19_152_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 151 16 ]
-        symbol [ System %tmp.43 151 16 22 ];
-        %tmp.43 = getm $.Toybox.System;
-        symbol [ println %tmp.44 151 23 30 ];
-        %tmp.44 = getv function %tmp.43 :println;
-        %tmp.45 = "DEBUG: data does not have code key";
-        invoke %tmp.43 %tmp.44(%tmp.45);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_150_19_152_12_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_148_12_152_12_if_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 154 12 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_12_192_12_if_stmt:
-        %tmp.46 = lgetv %dataDict.2;
-        symbol [ dataDict %tmp.46 154 16 24 ];
-        symbol [ hasKey %tmp.47 154 25 31 ];
-        %tmp.47 = getv function %tmp.46 :hasKey;
-        %tmp.48 = "data";
-        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
-        bf %tmp.49 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_12_192_12_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_12_192_12_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_41_190_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 155 16 ]
-        symbol [ System %tmp.50 155 16 22 ];
-        %tmp.50 = getm $.Toybox.System;
-        symbol [ println %tmp.51 155 23 30 ];
-        %tmp.51 = getv function %tmp.50 :println;
-        %tmp.52 = "DEBUG: data has data key";
-        invoke %tmp.50 %tmp.51(%tmp.52);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 156 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_41_190_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_41_190_12_stop" ]
-        %dataObj.3 = local;
-        symbol [ dataObj %dataObj.3 156 20 27 ];
-        %tmp.53 = lgetv %dataDict.2;
-        symbol [ dataDict %tmp.53 156 30 38 ];
-        symbol [ get %tmp.54 156 39 42 ];
-        %tmp.54 = getv function %tmp.53 :get;
-        %tmp.55 = "data";
-        %tmp.56 = invoke %tmp.53 %tmp.54(%tmp.55);
-        lputv %dataObj.3 %tmp.56;
-        symbol [ dataObj %dataObj.3 156 20 27 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 158 16 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_16_189_16_if_stmt:
-        %tmp.57 = lgetv %dataObj.3;
-        symbol [ dataObj %tmp.57 158 20 27 ];
-        symbol [ Dictionary %tmp.59 158 39 49 ];
-        %tmp.59 = getv ? :Dictionary;
-        %tmp.60 = isa %tmp.57 %tmp.59;
-        bf %tmp.60 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_16_189_16_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_16_189_16_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_51_187_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 159 20 ]
-        symbol [ System %tmp.61 159 20 26 ];
-        %tmp.61 = getm $.Toybox.System;
-        symbol [ println %tmp.62 159 27 34 ];
-        %tmp.62 = getv function %tmp.61 :println;
-        %tmp.63 = "DEBUG: data object is a Dictionary";
-        invoke %tmp.61 %tmp.62(%tmp.63);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 160 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_51_187_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_51_187_16_stop" ]
-        %dataObjDict.4 = local;
-        symbol [ dataObjDict %dataObjDict.4 160 24 35 ];
-        %tmp.64 = lgetv %dataObj.3;
-        symbol [ dataObj %tmp.64 160 38 45 ];
-        %tmp.65 = as %tmp.64 { (Dictionary) };
-        %tmp.66 = as %tmp.65 Dictionary;
-        symbol [ Dictionary %tmp.66 160 49 59 ];
-        lputv %dataObjDict.4 %tmp.66;
-        symbol [ dataObjDict %dataObjDict.4 160 24 35 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 161 20 ]
-        symbol [ System %tmp.67 161 20 26 ];
-        %tmp.67 = getm $.Toybox.System;
-        symbol [ println %tmp.68 161 27 34 ];
-        %tmp.68 = getv function %tmp.67 :println;
-        %tmp.69 = "DEBUG: data object keys: ";
-        %tmp.70 = lgetv %dataObjDict.4;
-        symbol [ dataObjDict %tmp.70 161 65 76 ];
-        symbol [ keys %tmp.71 161 77 81 ];
-        %tmp.71 = getv function %tmp.70 :keys;
-        %tmp.72 = invoke %tmp.70 %tmp.71();
-        %tmp.73 = add %tmp.69 %tmp.72;
-        invoke %tmp.67 %tmp.68(%tmp.73);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 163 20 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_20_186_20_if_stmt:
-        %tmp.74 = lgetv %dataObjDict.4;
-        symbol [ dataObjDict %tmp.74 163 24 35 ];
-        symbol [ hasKey %tmp.75 163 36 42 ];
-        %tmp.75 = getv function %tmp.74 :hasKey;
-        %tmp.76 = "timings";
-        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
-        bf %tmp.77 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_20_186_20_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_20_186_20_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_55_184_20_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 164 24 ]
-        symbol [ System %tmp.78 164 24 30 ];
-        %tmp.78 = getm $.Toybox.System;
-        symbol [ println %tmp.79 164 31 38 ];
-        %tmp.79 = getv function %tmp.78 :println;
-        %tmp.80 = "DEBUG: timings found";
-        invoke %tmp.78 %tmp.79(%tmp.80);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 165 24 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_55_184_20_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_55_184_20_stop" ]
-        %timings.5 = local;
-        symbol [ timings %timings.5 165 28 35 ];
-        %tmp.81 = lgetv %dataObjDict.4;
-        symbol [ dataObjDict %tmp.81 165 38 49 ];
-        symbol [ get %tmp.82 165 50 53 ];
-        %tmp.82 = getv function %tmp.81 :get;
-        %tmp.83 = "timings";
-        %tmp.84 = invoke %tmp.81 %tmp.82(%tmp.83);
-        lputv %timings.5 %tmp.84;
-        symbol [ timings %timings.5 165 28 35 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 167 24 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_24_183_24_if_stmt:
-        %tmp.85 = lgetv %timings.5;
-        symbol [ timings %tmp.85 167 28 35 ];
-        symbol [ Dictionary %tmp.87 167 47 57 ];
-        %tmp.87 = getv ? :Dictionary;
-        %tmp.88 = isa %tmp.85 %tmp.87;
-        bf %tmp.88 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_24_183_24_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_24_183_24_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_59_181_24_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 168 28 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_59_181_24_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_59_181_24_stop" ]
-        %timingsDict.6 = local;
-        symbol [ timingsDict %timingsDict.6 168 32 43 ];
-        %tmp.89 = lgetv %timings.5;
-        symbol [ timings %tmp.89 168 46 53 ];
-        %tmp.90 = as %tmp.89 { (Dictionary) };
-        %tmp.91 = as %tmp.90 Dictionary;
-        symbol [ Dictionary %tmp.91 168 57 67 ];
-        lputv %timingsDict.6 %tmp.91;
-        symbol [ timingsDict %timingsDict.6 168 32 43 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 169 28 ]
-        symbol [ System %tmp.92 169 28 34 ];
-        %tmp.92 = getm $.Toybox.System;
-        symbol [ println %tmp.93 169 35 42 ];
-        %tmp.93 = getv function %tmp.92 :println;
-        %tmp.94 = "DEBUG: timings keys: ";
-        %tmp.95 = lgetv %timingsDict.6;
-        symbol [ timingsDict %tmp.95 169 69 80 ];
-        symbol [ keys %tmp.96 169 81 85 ];
-        %tmp.96 = getv function %tmp.95 :keys;
-        %tmp.97 = invoke %tmp.95 %tmp.96();
-        %tmp.98 = add %tmp.94 %tmp.97;
-        invoke %tmp.92 %tmp.93(%tmp.98);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 172 28 ]
-        symbol [ System %tmp.99 172 28 34 ];
-        %tmp.99 = getm $.Toybox.System;
-        symbol [ println %tmp.100 172 35 42 ];
-        %tmp.100 = getv function %tmp.99 :println;
-        %tmp.101 = "DEBUG: Adding prayer times for ";
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_begin:
-        %tmp.102 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.102 172 80 90 ];
-        bf %tmp.102 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_true:
-        %tmp.103 = "tomorrow";
-        push %tmp.103;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_false:
-        %tmp.104 = "today";
-        push %tmp.104;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_end:
-        %tmp.105 = phi [%tmp.102 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_begin] [%tmp.103 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_true] [%tmp.104 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_false] [%tmp.105 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_172_80_172_106_end];
-        %tmp.106 = add %tmp.101 %tmp.105;
-        invoke %tmp.99 %tmp.100(%tmp.106);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 173 28 ]
-        %tmp.107 = self;
-        symbol [ addPrayerTime %tmp.108 173 28 41 ];
-        %tmp.108 = getv function %tmp.107 :addPrayerTime;
-        %tmp.109 = lgetv %prayerTimes.1;
-        symbol [ prayerTimes %tmp.109 173 42 53 ];
-        %tmp.110 = "fajr";
-        %tmp.111 = lgetv %timingsDict.6;
-        symbol [ timingsDict %tmp.111 173 63 74 ];
-        symbol [ get %tmp.112 173 75 78 ];
-        %tmp.112 = getv function %tmp.111 :get;
-        %tmp.113 = "Fajr";
-        %tmp.114 = invoke %tmp.111 %tmp.112(%tmp.113);
-        %tmp.115 = as %tmp.114 String;
-        symbol [ String %tmp.115 173 90 96 ];
-        %tmp.116 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.116 173 98 108 ];
-        invoke %tmp.107 %tmp.108(%tmp.109, %tmp.110, %tmp.115, %tmp.116);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 174 28 ]
-        %tmp.117 = self;
-        symbol [ addPrayerTime %tmp.118 174 28 41 ];
-        %tmp.118 = getv function %tmp.117 :addPrayerTime;
-        %tmp.119 = lgetv %prayerTimes.1;
-        symbol [ prayerTimes %tmp.119 174 42 53 ];
-        %tmp.120 = "dhuhr";
-        %tmp.121 = lgetv %timingsDict.6;
-        symbol [ timingsDict %tmp.121 174 64 75 ];
-        symbol [ get %tmp.122 174 76 79 ];
-        %tmp.122 = getv function %tmp.121 :get;
-        %tmp.123 = "Dhuhr";
-        %tmp.124 = invoke %tmp.121 %tmp.122(%tmp.123);
-        %tmp.125 = as %tmp.124 String;
-        symbol [ String %tmp.125 174 92 98 ];
-        %tmp.126 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.126 174 100 110 ];
-        invoke %tmp.117 %tmp.118(%tmp.119, %tmp.120, %tmp.125, %tmp.126);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 175 28 ]
-        %tmp.127 = self;
-        symbol [ addPrayerTime %tmp.128 175 28 41 ];
-        %tmp.128 = getv function %tmp.127 :addPrayerTime;
-        %tmp.129 = lgetv %prayerTimes.1;
-        symbol [ prayerTimes %tmp.129 175 42 53 ];
-        %tmp.130 = "asr";
-        %tmp.131 = lgetv %timingsDict.6;
-        symbol [ timingsDict %tmp.131 175 62 73 ];
-        symbol [ get %tmp.132 175 74 77 ];
-        %tmp.132 = getv function %tmp.131 :get;
-        %tmp.133 = "Asr";
-        %tmp.134 = invoke %tmp.131 %tmp.132(%tmp.133);
-        %tmp.135 = as %tmp.134 String;
-        symbol [ String %tmp.135 175 88 94 ];
-        %tmp.136 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.136 175 96 106 ];
-        invoke %tmp.127 %tmp.128(%tmp.129, %tmp.130, %tmp.135, %tmp.136);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 176 28 ]
-        %tmp.137 = self;
-        symbol [ addPrayerTime %tmp.138 176 28 41 ];
-        %tmp.138 = getv function %tmp.137 :addPrayerTime;
-        %tmp.139 = lgetv %prayerTimes.1;
-        symbol [ prayerTimes %tmp.139 176 42 53 ];
-        %tmp.140 = "maghrib";
-        %tmp.141 = lgetv %timingsDict.6;
-        symbol [ timingsDict %tmp.141 176 66 77 ];
-        symbol [ get %tmp.142 176 78 81 ];
-        %tmp.142 = getv function %tmp.141 :get;
-        %tmp.143 = "Maghrib";
-        %tmp.144 = invoke %tmp.141 %tmp.142(%tmp.143);
-        %tmp.145 = as %tmp.144 String;
-        symbol [ String %tmp.145 176 96 102 ];
-        %tmp.146 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.146 176 104 114 ];
-        invoke %tmp.137 %tmp.138(%tmp.139, %tmp.140, %tmp.145, %tmp.146);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 177 28 ]
-        %tmp.147 = self;
-        symbol [ addPrayerTime %tmp.148 177 28 41 ];
-        %tmp.148 = getv function %tmp.147 :addPrayerTime;
-        %tmp.149 = lgetv %prayerTimes.1;
-        symbol [ prayerTimes %tmp.149 177 42 53 ];
-        %tmp.150 = "isha";
-        %tmp.151 = lgetv %timingsDict.6;
-        symbol [ timingsDict %tmp.151 177 63 74 ];
-        symbol [ get %tmp.152 177 75 78 ];
-        %tmp.152 = getv function %tmp.151 :get;
-        %tmp.153 = "Isha";
-        %tmp.154 = invoke %tmp.151 %tmp.152(%tmp.153);
-        %tmp.155 = as %tmp.154 String;
-        symbol [ String %tmp.155 177 90 96 ];
-        %tmp.156 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.156 177 98 108 ];
-        invoke %tmp.147 %tmp.148(%tmp.149, %tmp.150, %tmp.155, %tmp.156);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 180 28 ]
-        %tmp.157 = self;
-        symbol [ sortPrayerTimes %tmp.158 180 28 43 ];
-        %tmp.158 = getv function %tmp.157 :sortPrayerTimes;
-        %tmp.159 = lgetv %prayerTimes.1;
-        symbol [ prayerTimes %tmp.159 180 44 55 ];
-        invoke %tmp.157 %tmp.158(%tmp.159);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_59_181_24_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_24_183_24_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_24_183_24_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_181_31_183_24_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 182 28 ]
-        symbol [ System %tmp.160 182 28 34 ];
-        %tmp.160 = getm $.Toybox.System;
-        symbol [ println %tmp.161 182 35 42 ];
-        %tmp.161 = getv function %tmp.160 :println;
-        %tmp.162 = "DEBUG: timings is not a Dictionary";
-        invoke %tmp.160 %tmp.161(%tmp.162);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_181_31_183_24_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_167_24_183_24_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_55_184_20_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_20_186_20_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_20_186_20_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_184_27_186_20_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 185 24 ]
-        symbol [ System %tmp.163 185 24 30 ];
-        %tmp.163 = getm $.Toybox.System;
-        symbol [ println %tmp.164 185 31 38 ];
-        %tmp.164 = getv function %tmp.163 :println;
-        %tmp.165 = "DEBUG: No timings key in data";
-        invoke %tmp.163 %tmp.164(%tmp.165);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_184_27_186_20_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_163_20_186_20_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_51_187_16_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_16_189_16_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_16_189_16_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_187_23_189_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 188 20 ]
-        symbol [ System %tmp.166 188 20 26 ];
-        %tmp.166 = getm $.Toybox.System;
-        symbol [ println %tmp.167 188 27 34 ];
-        %tmp.167 = getv function %tmp.166 :println;
-        %tmp.168 = "DEBUG: data object is not a Dictionary";
-        invoke %tmp.166 %tmp.167(%tmp.168);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_187_23_189_16_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_158_16_189_16_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_41_190_12_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_12_192_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_12_192_12_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_190_19_192_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 191 16 ]
-        symbol [ System %tmp.169 191 16 22 ];
-        %tmp.169 = getm $.Toybox.System;
-        symbol [ println %tmp.170 191 23 30 ];
-        %tmp.170 = getv function %tmp.169 :println;
-        %tmp.171 = "DEBUG: data does not have data key";
-        invoke %tmp.169 %tmp.170(%tmp.171);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_190_19_192_12_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_154_12_192_12_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_63_193_8_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_8_209_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_8_209_8_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_193_15_209_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 194 12 ]
-        symbol [ System %tmp.172 194 12 18 ];
-        %tmp.172 = getm $.Toybox.System;
-        symbol [ println %tmp.173 194 19 26 ];
-        %tmp.173 = getv function %tmp.172 :println;
-        %tmp.174 = "DEBUG: Error fetching prayer times: ";
-        %tmp.175 = lgetv %responseCode;
-        symbol [ responseCode %tmp.175 194 68 80 ];
-        %tmp.176 = add %tmp.174 %tmp.175;
-        invoke %tmp.172 %tmp.173(%tmp.176);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 195 12 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_195_12_208_12_if_stmt:
-        %tmp.177 = lgetv %data;
-        symbol [ data %tmp.177 195 16 20 ];
-        %tmp.178 = null;
-        %tmp.179 = ne %tmp.177 %tmp.178;
-        bf %tmp.179 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_195_12_208_12_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_195_12_208_12_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_195_30_206_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 196 16 ]
-        symbol [ System %tmp.180 196 16 22 ];
-        %tmp.180 = getm $.Toybox.System;
-        symbol [ println %tmp.181 196 23 30 ];
-        %tmp.181 = getv function %tmp.180 :println;
-        %tmp.182 = "DEBUG: Data is not null";
-        invoke %tmp.180 %tmp.181(%tmp.182);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 197 16 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_16_205_16_if_stmt:
-        %tmp.183 = lgetv %data;
-        symbol [ data %tmp.183 197 20 24 ];
-        %tmp.184 = as %tmp.183 { (!Null) };
-        symbol [ Dictionary %tmp.186 197 36 46 ];
-        %tmp.186 = getv ? :Dictionary;
-        %tmp.187 = isa %tmp.184 %tmp.186;
-        bf %tmp.187 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_16_205_16_if_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_16_205_16_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_48_201_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 198 20 ]
-        symbol [ System %tmp.188 198 20 26 ];
-        %tmp.188 = getm $.Toybox.System;
-        symbol [ println %tmp.189 198 27 34 ];
-        %tmp.189 = getv function %tmp.188 :println;
-        %tmp.190 = "DEBUG: Data is Dictionary";
-        invoke %tmp.188 %tmp.189(%tmp.190);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 199 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_48_201_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_48_201_16_stop" ]
-        %dataDict.7 = local;
-        symbol [ dataDict %dataDict.7 199 24 32 ];
-        %tmp.191 = lgetv %data;
-        symbol [ data %tmp.191 199 35 39 ];
-        %tmp.192 = as %tmp.191 { (Dictionary) && (!Null) };
-        %tmp.193 = as %tmp.192 Dictionary;
-        symbol [ Dictionary %tmp.193 199 43 53 ];
-        lputv %dataDict.7 %tmp.193;
-        symbol [ dataDict %dataDict.7 199 24 32 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 200 20 ]
-        symbol [ System %tmp.194 200 20 26 ];
-        %tmp.194 = getm $.Toybox.System;
-        symbol [ println %tmp.195 200 27 34 ];
-        %tmp.195 = getv function %tmp.194 :println;
-        %tmp.196 = "DEBUG: Response keys: ";
-        %tmp.197 = lgetv %dataDict.7;
-        symbol [ dataDict %tmp.197 200 62 70 ];
-        symbol [ keys %tmp.198 200 71 75 ];
-        %tmp.198 = getv function %tmp.197 :keys;
-        %tmp.199 = invoke %tmp.197 %tmp.198();
-        %tmp.200 = add %tmp.196 %tmp.199;
-        invoke %tmp.194 %tmp.195(%tmp.200);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_48_201_16_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_16_205_16_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_16_205_16_if_false:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 201 23 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_201_23_205_16_if_stmt:
-        %tmp.201 = lgetv %data;
-        symbol [ data %tmp.201 201 27 31 ];
-        %tmp.202 = as %tmp.201 { (!Dictionary) && (!Null) };
-        symbol [ String %tmp.204 201 43 49 ];
-        %tmp.204 = getv ? :String;
-        %tmp.205 = isa %tmp.202 %tmp.204;
-        bf %tmp.205 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_201_23_205_16_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_201_23_205_16_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_201_51_203_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 202 20 ]
-        symbol [ System %tmp.206 202 20 26 ];
-        %tmp.206 = getm $.Toybox.System;
-        symbol [ println %tmp.207 202 27 34 ];
-        %tmp.207 = getv function %tmp.206 :println;
-        %tmp.208 = "DEBUG: Data is String: ";
-        %tmp.209 = lgetv %data;
-        symbol [ data %tmp.209 202 63 67 ];
-        %tmp.210 = as %tmp.209 { (!Dictionary) && (String) && (!Null) };
-        %tmp.211 = add %tmp.208 %tmp.210;
-        invoke %tmp.206 %tmp.207(%tmp.211);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_201_51_203_16_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_201_23_205_16_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_201_23_205_16_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_203_23_205_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 204 20 ]
-        symbol [ System %tmp.212 204 20 26 ];
-        %tmp.212 = getm $.Toybox.System;
-        symbol [ println %tmp.213 204 27 34 ];
-        %tmp.213 = getv function %tmp.212 :println;
-        %tmp.214 = "DEBUG: Data is unknown type";
-        invoke %tmp.212 %tmp.213(%tmp.214);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_203_23_205_16_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_201_23_205_16_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_16_205_16_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_195_30_206_12_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_195_12_208_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_195_12_208_12_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_206_19_208_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 207 16 ]
-        symbol [ System %tmp.215 207 16 22 ];
-        %tmp.215 = getm $.Toybox.System;
-        symbol [ println %tmp.216 207 23 30 ];
-        %tmp.216 = getv function %tmp.215 :println;
-        %tmp.217 = "DEBUG: Data is null";
-        invoke %tmp.215 %tmp.216(%tmp.217);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_206_19_208_12_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_195_12_208_12_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_193_15_209_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_141_8_209_8_if_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 211 8 ]
-        symbol [ System %tmp.218 211 8 14 ];
-        %tmp.218 = getm $.Toybox.System;
-        symbol [ println %tmp.219 211 15 22 ];
-        %tmp.219 = getv function %tmp.218 :println;
-        %tmp.220 = "DEBUG: ";
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_begin:
-        %tmp.221 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.221 211 36 46 ];
-        bf %tmp.221 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_true:
-        %tmp.222 = "Tomorrow";
-        push %tmp.222;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_false:
-        %tmp.223 = "Today";
-        push %tmp.223;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_end:
-        %tmp.224 = phi [%tmp.221 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_begin] [%tmp.222 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_true] [%tmp.223 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_false] [%tmp.224 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_211_36_211_62_end];
-        %tmp.225 = add %tmp.220 %tmp.224;
-        %tmp.226 = " prayer times count: ";
-        %tmp.227 = add %tmp.225 %tmp.226;
-        %tmp.228 = lgetv %prayerTimes.1;
-        symbol [ prayerTimes %tmp.228 211 99 110 ];
-        symbol [ size %tmp.229 211 111 115 ];
-        %tmp.229 = getv function %tmp.228 :size;
-        %tmp.230 = invoke %tmp.228 %tmp.229();
-        %tmp.231 = add %tmp.227 %tmp.230;
-        invoke %tmp.218 %tmp.219(%tmp.231);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 212 8 ]
-        %tmp.232 = lgetv %prayerTimes.1;
-        symbol [ prayerTimes %tmp.232 212 15 26 ];
-        ret %tmp.232;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_124_213_4_stop:
-    }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 216; @symbol_functiondef = [addPrayerTime,216,13,26]; @symbol_param<0> = [prayerTimes,216,27,38]; @symbol_param<1> = [name,216,40,44]; @symbol_param<2> = [timeString,216,46,56]; @symbol_param<3> = [isTomorrow,216,58,68]; ]
-    function addPrayerTime(prayerTimes, name, timeString, isTomorrow) {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_216_70_258_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 217 8 ]
-        symbol [ System %tmp.1 217 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 217 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: addPrayerTime: ";
-        %tmp.4 = lgetv %name;
-        symbol [ name %tmp.4 217 50 54 ];
-        %tmp.5 = add %tmp.3 %tmp.4;
-        %tmp.6 = " - ";
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_63_109_73_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 64 8 ]
+        symbol [ TheAthanLogger %tmp.2 64 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ info %tmp.3 64 23 27 ];
+        %tmp.3 = getv function %tmp.2 :info;
+        %tmp.4 = "APIClient";
+        %tmp.5 = "Received today's prayer times response. Code: ";
+        %tmp.6 = lgetv %responseCode;
+        symbol [ responseCode %tmp.6 64 92 104 ];
         %tmp.7 = add %tmp.5 %tmp.6;
-        %tmp.8 = lgetv %timeString;
-        symbol [ timeString %tmp.8 217 65 75 ];
-        %tmp.9 = add %tmp.7 %tmp.8;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_begin:
-        %tmp.10 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.10 217 79 89 ];
-        bf %tmp.10 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_true:
-        %tmp.11 = " (tomorrow)";
-        push %tmp.11;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_false:
-        %tmp.12 = " (today)";
-        push %tmp.12;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_end:
-        %tmp.13 = phi [%tmp.10 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_begin] [%tmp.11 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_true] [%tmp.12 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_false] [%tmp.13 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_217_79_217_108_end];
-        %tmp.14 = add %tmp.9 %tmp.13;
-        invoke %tmp.1 %tmp.2(%tmp.14);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 218 8 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_218_8_257_8_if_stmt:
-        %tmp.15 = lgetv %timeString;
-        symbol [ timeString %tmp.15 218 12 22 ];
-        %tmp.16 = null;
-        %tmp.17 = ne %tmp.15 %tmp.16;
-        bf %tmp.17 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_218_8_257_8_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_218_8_257_8_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_218_32_255_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 219 12 ]
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_finally;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_beginTry:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 221 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_stop" ]
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.7);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 65 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_65_8_67_8_if_stmt:
+        %tmp.8 = lgetv %responseCode;
+        symbol [ responseCode %tmp.8 65 12 24 ];
+        %tmp.9 = 200;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        bf %tmp.10 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_65_8_67_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_65_8_67_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_65_33_67_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 66 12 ]
+        symbol [ TheAthanLogger %tmp.12 66 12 26 ];
+        %tmp.12 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.13 66 27 32 ];
+        %tmp.13 = getv function %tmp.12 :error;
+        %tmp.14 = "APIClient";
+        %tmp.15 = "API error for today's prayer times. Code: ";
+        %tmp.16 = lgetv %responseCode;
+        symbol [ responseCode %tmp.16 66 93 105 ];
+        %tmp.17 = add %tmp.15 %tmp.16;
+        invoke %tmp.12 %tmp.13(%tmp.14, %tmp.17);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_65_33_67_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_65_8_67_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_65_8_67_8_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 69 8 ]
+        %tmp.18 = self;
+        symbol [ parsePrayerTimes %tmp.19 69 28 44 ];
+        %tmp.19 = getv function %tmp.18 :parsePrayerTimes;
+        %tmp.20 = lgetv %responseCode;
+        symbol [ responseCode %tmp.20 69 45 57 ];
+        %tmp.21 = lgetv %data;
+        symbol [ data %tmp.21 69 59 63 ];
+        %tmp.22 = false;
+        %tmp.23 = invoke %tmp.18 %tmp.19(%tmp.20, %tmp.21, %tmp.22);
+        symbol [ _todayPrayerTimes ? 69 8 25 ];
+        putv self :_todayPrayerTimes %tmp.23;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 70 8 ]
+        symbol [ TheAthanLogger %tmp.25 70 8 22 ];
+        %tmp.25 = getv ? :TheAthanLogger;
+        symbol [ info %tmp.26 70 23 27 ];
+        %tmp.26 = getv function %tmp.25 :info;
+        %tmp.27 = "APIClient";
+        %tmp.28 = "Parsed today's prayer times. Count: ";
+        symbol [ _todayPrayerTimes %tmp.30 70 82 99 ];
+        %tmp.30 = getv ? :_todayPrayerTimes;
+        symbol [ size %tmp.31 70 100 104 ];
+        %tmp.31 = getv function %tmp.30 :size;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = add %tmp.28 %tmp.32;
+        invoke %tmp.25 %tmp.26(%tmp.27, %tmp.33);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 71 8 ]
+        %tmp.34 = true;
+        symbol [ _todayReceived ? 71 8 22 ];
+        putv self :_todayReceived %tmp.34;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 72 8 ]
+        %tmp.35 = self;
+        symbol [ checkAndCombinePrayerTimes %tmp.36 72 8 34 ];
+        %tmp.36 = getv function %tmp.35 :checkAndCombinePrayerTimes;
+        invoke %tmp.35 %tmp.36();
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_63_109_73_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 76; @symbol_functiondef = [onReceiveTomorrowPrayerTimes,76,13,41]; @symbol_param<0> = [responseCode,76,42,54]; @symbol_param<0>_type<0> = [Number,76,58,64]; @symbol_param<1> = [data,76,66,70]; @symbol_param<1>_type<0> = [Dictionary,76,74,84]; @symbol_param<1>_type<1> = [String,76,88,94]; ]
+    function onReceiveTomorrowPrayerTimes(responseCode as Number, data as Dictionary or String or Null) as Void {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_76_112_86_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 77 8 ]
+        symbol [ TheAthanLogger %tmp.2 77 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ info %tmp.3 77 23 27 ];
+        %tmp.3 = getv function %tmp.2 :info;
+        %tmp.4 = "APIClient";
+        %tmp.5 = "Received tomorrow's prayer times response. Code: ";
+        %tmp.6 = lgetv %responseCode;
+        symbol [ responseCode %tmp.6 77 95 107 ];
+        %tmp.7 = add %tmp.5 %tmp.6;
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.7);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 78 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_78_8_80_8_if_stmt:
+        %tmp.8 = lgetv %responseCode;
+        symbol [ responseCode %tmp.8 78 12 24 ];
+        %tmp.9 = 200;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        bf %tmp.10 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_78_8_80_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_78_8_80_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_78_33_80_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 79 12 ]
+        symbol [ TheAthanLogger %tmp.12 79 12 26 ];
+        %tmp.12 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.13 79 27 32 ];
+        %tmp.13 = getv function %tmp.12 :error;
+        %tmp.14 = "APIClient";
+        %tmp.15 = "API error for tomorrow's prayer times. Code: ";
+        %tmp.16 = lgetv %responseCode;
+        symbol [ responseCode %tmp.16 79 96 108 ];
+        %tmp.17 = add %tmp.15 %tmp.16;
+        invoke %tmp.12 %tmp.13(%tmp.14, %tmp.17);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_78_33_80_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_78_8_80_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_78_8_80_8_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 82 8 ]
+        %tmp.18 = self;
+        symbol [ parsePrayerTimes %tmp.19 82 31 47 ];
+        %tmp.19 = getv function %tmp.18 :parsePrayerTimes;
+        %tmp.20 = lgetv %responseCode;
+        symbol [ responseCode %tmp.20 82 48 60 ];
+        %tmp.21 = lgetv %data;
+        symbol [ data %tmp.21 82 62 66 ];
+        %tmp.22 = true;
+        %tmp.23 = invoke %tmp.18 %tmp.19(%tmp.20, %tmp.21, %tmp.22);
+        symbol [ _tomorrowPrayerTimes ? 82 8 28 ];
+        putv self :_tomorrowPrayerTimes %tmp.23;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 83 8 ]
+        symbol [ TheAthanLogger %tmp.25 83 8 22 ];
+        %tmp.25 = getv ? :TheAthanLogger;
+        symbol [ info %tmp.26 83 23 27 ];
+        %tmp.26 = getv function %tmp.25 :info;
+        %tmp.27 = "APIClient";
+        %tmp.28 = "Parsed tomorrow's prayer times. Count: ";
+        symbol [ _tomorrowPrayerTimes %tmp.30 83 85 105 ];
+        %tmp.30 = getv ? :_tomorrowPrayerTimes;
+        symbol [ size %tmp.31 83 106 110 ];
+        %tmp.31 = getv function %tmp.30 :size;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = add %tmp.28 %tmp.32;
+        invoke %tmp.25 %tmp.26(%tmp.27, %tmp.33);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 84 8 ]
+        %tmp.34 = true;
+        symbol [ _tomorrowReceived ? 84 8 25 ];
+        putv self :_tomorrowReceived %tmp.34;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 85 8 ]
+        %tmp.35 = self;
+        symbol [ checkAndCombinePrayerTimes %tmp.36 85 8 34 ];
+        %tmp.36 = getv function %tmp.35 :checkAndCombinePrayerTimes;
+        invoke %tmp.35 %tmp.36();
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_76_112_86_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 89; @symbol_functiondef = [checkAndCombinePrayerTimes,89,13,39]; ]
+    function checkAndCombinePrayerTimes() {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_89_42_123_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 90 8 ]
+        symbol [ TheAthanLogger %tmp.2 90 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 90 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "APIClient";
+        %tmp.5 = "Checking if both responses received: Today=";
+        symbol [ _todayReceived %tmp.7 90 90 104 ];
+        %tmp.7 = getv ? :_todayReceived;
+        %tmp.8 = add %tmp.5 %tmp.7;
+        %tmp.9 = ", Tomorrow=";
+        %tmp.10 = add %tmp.8 %tmp.9;
+        symbol [ _tomorrowReceived %tmp.12 90 123 140 ];
+        %tmp.12 = getv ? :_tomorrowReceived;
+        %tmp.13 = add %tmp.10 %tmp.12;
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.13);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 92 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_8_122_8_if_stmt:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_12_92_30_begin:
+        symbol [ _todayReceived %tmp.15 92 12 26 ];
+        %tmp.15 = getv ? :_todayReceived;
+        bf %tmp.15 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_8_122_8_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_30_92_30_true:
+        symbol [ _tomorrowReceived %tmp.17 92 30 47 ];
+        %tmp.17 = getv ? :_tomorrowReceived;
+        push %tmp.17;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_30_92_30_end:
+        %tmp.18 = phi [%tmp.15 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_12_92_30_begin] [%tmp.17 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_30_92_30_true] [%tmp.18 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_30_92_30_end];
+        bf %tmp.18 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_8_122_8_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_8_122_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_49_120_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 93 12 ]
+        symbol [ TheAthanLogger %tmp.20 93 12 26 ];
+        %tmp.20 = getv ? :TheAthanLogger;
+        symbol [ info %tmp.21 93 27 31 ];
+        %tmp.21 = getv function %tmp.20 :info;
+        %tmp.22 = "APIClient";
+        %tmp.23 = "Both responses received, combining prayer times";
+        invoke %tmp.20 %tmp.21(%tmp.22, %tmp.23);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 94 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_49_120_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_49_120_8_stop" ]
+        %combinedPrayerTimes.1 = local;
+        symbol [ combinedPrayerTimes %combinedPrayerTimes.1 94 16 35 ];
+        %tmp.24 = newa 0;
+        lputv %combinedPrayerTimes.1 %tmp.24;
+        symbol [ combinedPrayerTimes %combinedPrayerTimes.1 94 16 35 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 97 12 ]
+        symbol [ TheAthanLogger %tmp.26 97 12 26 ];
+        %tmp.26 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.27 97 27 32 ];
+        %tmp.27 = getv function %tmp.26 :debug;
+        %tmp.28 = "APIClient";
+        %tmp.29 = "Adding today's prayer times: ";
+        symbol [ _todayPrayerTimes %tmp.31 97 80 97 ];
+        %tmp.31 = getv ? :_todayPrayerTimes;
+        symbol [ size %tmp.32 97 98 102 ];
+        %tmp.32 = getv function %tmp.31 :size;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        %tmp.34 = add %tmp.29 %tmp.33;
+        %tmp.35 = " prayers";
+        %tmp.36 = add %tmp.34 %tmp.35;
+        invoke %tmp.26 %tmp.27(%tmp.28, %tmp.36);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 98 12 ]
+        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_init:
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 98 21 22 ];
+        %tmp.37 = 0;
+        lputv %i.2 %tmp.37;
+        symbol [ i %i.2 98 21 22 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_test:
+        %tmp.38 = lgetv %i.2;
+        symbol [ i %tmp.38 98 28 29 ];
+        symbol [ _todayPrayerTimes %tmp.40 98 32 49 ];
+        %tmp.40 = getv ? :_todayPrayerTimes;
+        symbol [ size %tmp.41 98 50 54 ];
+        %tmp.41 = getv function %tmp.40 :size;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        %tmp.43 = lt %tmp.38 %tmp.42;
+        bf %tmp.43 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_begin:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_63_101_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 99 16 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_63_101_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_63_101_12_stop" ]
+        %prayerTime.3 = local;
+        symbol [ prayerTime %prayerTime.3 99 20 30 ];
+        symbol [ _todayPrayerTimes %tmp.45 99 33 50 ];
+        %tmp.45 = getv ? :_todayPrayerTimes;
+        %tmp.46 = lgetv %i.2;
+        symbol [ i %tmp.46 99 51 52 ];
+        %tmp.47 = agetv %tmp.45 %tmp.46;
+        %tmp.48 = as %tmp.47 TheAthanPrayerTime;
+        symbol [ TheAthanPrayerTime %tmp.48 99 57 75 ];
+        lputv %prayerTime.3 %tmp.48;
+        symbol [ prayerTime %prayerTime.3 99 20 30 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 100 16 ]
+        %tmp.49 = lgetv %combinedPrayerTimes.1;
+        symbol [ combinedPrayerTimes %tmp.49 100 16 35 ];
+        symbol [ add %tmp.50 100 36 39 ];
+        %tmp.50 = getv function %tmp.49 :add;
+        %tmp.51 = lgetv %prayerTime.3;
+        symbol [ prayerTime %tmp.51 100 40 50 ];
+        invoke %tmp.49 %tmp.50(%tmp.51);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_63_101_12_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_incr:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 98 ]
+        %tmp.54 = lgetv %i.2;
+        symbol [ i %tmp.54 98 58 59 ];
+        %tmp.55 = add %tmp.54 1;
+        lputv %i.2 %tmp.55;
+        symbol [ i %i.2 98 58 59 ];
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_test;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_98_12_101_12_for_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 104 12 ]
+        symbol [ TheAthanLogger %tmp.57 104 12 26 ];
+        %tmp.57 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.58 104 27 32 ];
+        %tmp.58 = getv function %tmp.57 :debug;
+        %tmp.59 = "APIClient";
+        %tmp.60 = "Adding tomorrow's prayer times: ";
+        symbol [ _tomorrowPrayerTimes %tmp.62 104 83 103 ];
+        %tmp.62 = getv ? :_tomorrowPrayerTimes;
+        symbol [ size %tmp.63 104 104 108 ];
+        %tmp.63 = getv function %tmp.62 :size;
+        %tmp.64 = invoke %tmp.62 %tmp.63();
+        %tmp.65 = add %tmp.60 %tmp.64;
+        %tmp.66 = " prayers";
+        %tmp.67 = add %tmp.65 %tmp.66;
+        invoke %tmp.57 %tmp.58(%tmp.59, %tmp.67);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 105 12 ]
+        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_init:
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_end" ]
+        %i.4 = local;
+        symbol [ i %i.4 105 21 22 ];
+        %tmp.68 = 0;
+        lputv %i.4 %tmp.68;
+        symbol [ i %i.4 105 21 22 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_test:
+        %tmp.69 = lgetv %i.4;
+        symbol [ i %tmp.69 105 28 29 ];
+        symbol [ _tomorrowPrayerTimes %tmp.71 105 32 52 ];
+        %tmp.71 = getv ? :_tomorrowPrayerTimes;
+        symbol [ size %tmp.72 105 53 57 ];
+        %tmp.72 = getv function %tmp.71 :size;
+        %tmp.73 = invoke %tmp.71 %tmp.72();
+        %tmp.74 = lt %tmp.69 %tmp.73;
+        bf %tmp.74 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_begin:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_66_108_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 106 16 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_66_108_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_66_108_12_stop" ]
+        %prayerTime.5 = local;
+        symbol [ prayerTime %prayerTime.5 106 20 30 ];
+        symbol [ _tomorrowPrayerTimes %tmp.76 106 33 53 ];
+        %tmp.76 = getv ? :_tomorrowPrayerTimes;
+        %tmp.77 = lgetv %i.4;
+        symbol [ i %tmp.77 106 54 55 ];
+        %tmp.78 = agetv %tmp.76 %tmp.77;
+        %tmp.79 = as %tmp.78 TheAthanPrayerTime;
+        symbol [ TheAthanPrayerTime %tmp.79 106 60 78 ];
+        lputv %prayerTime.5 %tmp.79;
+        symbol [ prayerTime %prayerTime.5 106 20 30 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 107 16 ]
+        %tmp.80 = lgetv %combinedPrayerTimes.1;
+        symbol [ combinedPrayerTimes %tmp.80 107 16 35 ];
+        symbol [ add %tmp.81 107 36 39 ];
+        %tmp.81 = getv function %tmp.80 :add;
+        %tmp.82 = lgetv %prayerTime.5;
+        symbol [ prayerTime %tmp.82 107 40 50 ];
+        invoke %tmp.80 %tmp.81(%tmp.82);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_66_108_12_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_incr:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 105 ]
+        %tmp.85 = lgetv %i.4;
+        symbol [ i %tmp.85 105 61 62 ];
+        %tmp.86 = add %tmp.85 1;
+        lputv %i.4 %tmp.86;
+        symbol [ i %i.4 105 61 62 ];
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_test;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_105_12_108_12_for_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 110 12 ]
+        symbol [ TheAthanLogger %tmp.88 110 12 26 ];
+        %tmp.88 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.89 110 27 32 ];
+        %tmp.89 = getv function %tmp.88 :debug;
+        %tmp.90 = "APIClient";
+        %tmp.91 = "Sorting combined prayer times";
+        invoke %tmp.88 %tmp.89(%tmp.90, %tmp.91);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 111 12 ]
+        %tmp.92 = self;
+        symbol [ sortPrayerTimes %tmp.93 111 12 27 ];
+        %tmp.93 = getv function %tmp.92 :sortPrayerTimes;
+        %tmp.94 = lgetv %combinedPrayerTimes.1;
+        symbol [ combinedPrayerTimes %tmp.94 111 28 47 ];
+        invoke %tmp.92 %tmp.93(%tmp.94);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 113 12 ]
+        symbol [ TheAthanLogger %tmp.96 113 12 26 ];
+        %tmp.96 = getv ? :TheAthanLogger;
+        symbol [ info %tmp.97 113 27 31 ];
+        %tmp.97 = getv function %tmp.96 :info;
+        %tmp.98 = "APIClient";
+        %tmp.99 = "Invoking callback with ";
+        %tmp.100 = lgetv %combinedPrayerTimes.1;
+        symbol [ combinedPrayerTimes %tmp.100 113 73 92 ];
+        symbol [ size %tmp.101 113 93 97 ];
+        %tmp.101 = getv function %tmp.100 :size;
+        %tmp.102 = invoke %tmp.100 %tmp.101();
+        %tmp.103 = add %tmp.99 %tmp.102;
+        %tmp.104 = " prayer times";
+        %tmp.105 = add %tmp.103 %tmp.104;
+        invoke %tmp.96 %tmp.97(%tmp.98, %tmp.105);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 114 12 ]
+        symbol [ _callback %tmp.107 114 12 21 ];
+        %tmp.107 = getv ? :_callback;
+        symbol [ invoke %tmp.108 114 22 28 ];
+        %tmp.108 = getv function %tmp.107 :invoke;
+        %tmp.109 = lgetv %combinedPrayerTimes.1;
+        symbol [ combinedPrayerTimes %tmp.109 114 29 48 ];
+        invoke %tmp.107 %tmp.108(%tmp.109);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 117 12 ]
+        %tmp.110 = false;
+        symbol [ _todayReceived ? 117 12 26 ];
+        putv self :_todayReceived %tmp.110;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 118 12 ]
+        %tmp.111 = false;
+        symbol [ _tomorrowReceived ? 118 12 29 ];
+        putv self :_tomorrowReceived %tmp.111;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 119 12 ]
+        symbol [ TheAthanLogger %tmp.113 119 12 26 ];
+        %tmp.113 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.114 119 27 32 ];
+        %tmp.114 = getv function %tmp.113 :debug;
+        %tmp.115 = "APIClient";
+        %tmp.116 = "Reset received flags for next fetch";
+        invoke %tmp.113 %tmp.114(%tmp.115, %tmp.116);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_49_120_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_8_122_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_8_122_8_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_120_15_122_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 121 12 ]
+        symbol [ TheAthanLogger %tmp.118 121 12 26 ];
+        %tmp.118 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.119 121 27 32 ];
+        %tmp.119 = getv function %tmp.118 :debug;
+        %tmp.120 = "APIClient";
+        %tmp.121 = "Still waiting for responses";
+        invoke %tmp.118 %tmp.119(%tmp.120, %tmp.121);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_120_15_122_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_92_8_122_8_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_89_42_123_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 126; @symbol_functiondef = [parsePrayerTimes,126,13,29]; @symbol_param<0> = [responseCode,126,30,42]; @symbol_param<0>_type<0> = [Number,126,46,52]; @symbol_param<1> = [data,126,54,58]; @symbol_param<1>_type<0> = [Dictionary,126,62,72]; @symbol_param<1>_type<1> = [String,126,76,82]; @symbol_param<2> = [isTomorrow,126,92,102]; @symbol_param<2>_type<0> = [Boolean,126,106,113]; @symbol_return<0> = [Array,126,118,123]; ]
+    function parsePrayerTimes(responseCode as Number, data as Dictionary or String or Null, isTomorrow as Boolean) as Array {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_126_124_188_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 127 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_126_124_188_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_126_124_188_4_stop" ]
+        %prayerTimes.1 = local;
+        symbol [ prayerTimes %prayerTimes.1 127 12 23 ];
+        %tmp.1 = newa 0;
+        lputv %prayerTimes.1 %tmp.1;
+        symbol [ prayerTimes %prayerTimes.1 127 12 23 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 128 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_126_124_188_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_126_124_188_4_stop" ]
+        %dayType.2 = local;
+        symbol [ dayType %dayType.2 128 12 19 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_begin:
+        %tmp.2 = lgetv %isTomorrow;
+        symbol [ isTomorrow %tmp.2 128 22 32 ];
+        bf %tmp.2 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_true:
+        %tmp.3 = "tomorrow";
+        push %tmp.3;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_false:
+        %tmp.4 = "today";
+        push %tmp.4;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_end:
+        %tmp.5 = phi [%tmp.2 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_begin] [%tmp.3 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_true] [%tmp.4 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_false] [%tmp.5 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_128_22_128_48_end];
+        lputv %dayType.2 %tmp.5;
+        symbol [ dayType %dayType.2 128 12 19 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 130 8 ]
+        symbol [ TheAthanLogger %tmp.7 130 8 22 ];
+        %tmp.7 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.8 130 23 28 ];
+        %tmp.8 = getv function %tmp.7 :debug;
+        %tmp.9 = "APIClient";
+        %tmp.10 = "Parsing ";
+        %tmp.11 = lgetv %dayType.2;
+        symbol [ dayType %tmp.11 130 55 62 ];
+        %tmp.12 = add %tmp.10 %tmp.11;
+        %tmp.13 = "'s prayer times. Response code: ";
+        %tmp.14 = add %tmp.12 %tmp.13;
+        %tmp.15 = lgetv %responseCode;
+        symbol [ responseCode %tmp.15 130 102 114 ];
+        %tmp.16 = add %tmp.14 %tmp.15;
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.16);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 132 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_8_185_8_if_stmt:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_12_132_51_begin:
+        %tmp.17 = lgetv %responseCode;
+        symbol [ responseCode %tmp.17 132 12 24 ];
+        %tmp.18 = 200;
+        %tmp.19 = eq %tmp.17 %tmp.18;
+        bf %tmp.19 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_8_185_8_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_35_132_51_true:
+        %tmp.20 = lgetv %data;
+        symbol [ data %tmp.20 132 35 39 ];
+        symbol [ Dictionary %tmp.22 132 51 61 ];
+        %tmp.22 = getv ? :Dictionary;
+        %tmp.23 = isa %tmp.20 %tmp.22;
+        push %tmp.23;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_35_132_51_end:
+        %tmp.24 = phi [%tmp.19 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_12_132_51_begin] [%tmp.23 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_35_132_51_true] [%tmp.24 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_35_132_51_end];
+        bf %tmp.24 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_8_185_8_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_8_185_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_63_183_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 133 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_63_183_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_63_183_8_stop" ]
+        %dataDict.3 = local;
+        symbol [ dataDict %dataDict.3 133 16 24 ];
+        %tmp.25 = lgetv %data;
+        symbol [ data %tmp.25 133 27 31 ];
+        %tmp.26 = as %tmp.25 { (Dictionary) };
+        %tmp.27 = as %tmp.26 Dictionary;
+        symbol [ Dictionary %tmp.27 133 35 45 ];
+        lputv %dataDict.3 %tmp.27;
+        symbol [ dataDict %dataDict.3 133 16 24 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 134 12 ]
+        symbol [ TheAthanLogger %tmp.29 134 12 26 ];
+        %tmp.29 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.30 134 27 32 ];
+        %tmp.30 = getv function %tmp.29 :debug;
+        %tmp.31 = "APIClient";
+        %tmp.32 = "Data is a valid dictionary";
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 136 12 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_12_182_12_if_stmt:
+        %tmp.33 = lgetv %dataDict.3;
+        symbol [ dataDict %tmp.33 136 16 24 ];
+        symbol [ hasKey %tmp.34 136 25 31 ];
+        %tmp.34 = getv function %tmp.33 :hasKey;
+        %tmp.35 = "data";
+        %tmp.36 = invoke %tmp.33 %tmp.34(%tmp.35);
+        bf %tmp.36 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_12_182_12_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_12_182_12_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_41_180_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 137 16 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_41_180_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_41_180_12_stop" ]
+        %dataObj.4 = local;
+        symbol [ dataObj %dataObj.4 137 20 27 ];
+        %tmp.37 = lgetv %dataDict.3;
+        symbol [ dataDict %tmp.37 137 30 38 ];
+        symbol [ get %tmp.38 137 39 42 ];
+        %tmp.38 = getv function %tmp.37 :get;
+        %tmp.39 = "data";
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        lputv %dataObj.4 %tmp.40;
+        symbol [ dataObj %dataObj.4 137 20 27 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 138 16 ]
+        symbol [ TheAthanLogger %tmp.42 138 16 30 ];
+        %tmp.42 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.43 138 31 36 ];
+        %tmp.43 = getv function %tmp.42 :debug;
+        %tmp.44 = "APIClient";
+        %tmp.45 = "Found 'data' key in response";
+        invoke %tmp.42 %tmp.43(%tmp.44, %tmp.45);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 140 16 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_16_179_16_if_stmt:
+        %tmp.46 = lgetv %dataObj.4;
+        symbol [ dataObj %tmp.46 140 20 27 ];
+        symbol [ Dictionary %tmp.48 140 39 49 ];
+        %tmp.48 = getv ? :Dictionary;
+        %tmp.49 = isa %tmp.46 %tmp.48;
+        bf %tmp.49 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_16_179_16_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_16_179_16_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_51_177_16_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 141 20 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_51_177_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_51_177_16_stop" ]
+        %dataObjDict.5 = local;
+        symbol [ dataObjDict %dataObjDict.5 141 24 35 ];
+        %tmp.50 = lgetv %dataObj.4;
+        symbol [ dataObj %tmp.50 141 38 45 ];
+        %tmp.51 = as %tmp.50 { (Dictionary) };
+        %tmp.52 = as %tmp.51 Dictionary;
+        symbol [ Dictionary %tmp.52 141 49 59 ];
+        lputv %dataObjDict.5 %tmp.52;
+        symbol [ dataObjDict %dataObjDict.5 141 24 35 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 143 20 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_20_176_20_if_stmt:
+        %tmp.53 = lgetv %dataObjDict.5;
+        symbol [ dataObjDict %tmp.53 143 24 35 ];
+        symbol [ hasKey %tmp.54 143 36 42 ];
+        %tmp.54 = getv function %tmp.53 :hasKey;
+        %tmp.55 = "timings";
+        %tmp.56 = invoke %tmp.53 %tmp.54(%tmp.55);
+        bf %tmp.56 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_20_176_20_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_20_176_20_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_55_174_20_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 144 24 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_55_174_20_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_55_174_20_stop" ]
+        %timings.6 = local;
+        symbol [ timings %timings.6 144 28 35 ];
+        %tmp.57 = lgetv %dataObjDict.5;
+        symbol [ dataObjDict %tmp.57 144 38 49 ];
+        symbol [ get %tmp.58 144 50 53 ];
+        %tmp.58 = getv function %tmp.57 :get;
+        %tmp.59 = "timings";
+        %tmp.60 = invoke %tmp.57 %tmp.58(%tmp.59);
+        lputv %timings.6 %tmp.60;
+        symbol [ timings %timings.6 144 28 35 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 145 24 ]
+        symbol [ TheAthanLogger %tmp.62 145 24 38 ];
+        %tmp.62 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.63 145 39 44 ];
+        %tmp.63 = getv function %tmp.62 :debug;
+        %tmp.64 = "APIClient";
+        %tmp.65 = "Found 'timings' key in data object";
+        invoke %tmp.62 %tmp.63(%tmp.64, %tmp.65);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 147 24 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_24_173_24_if_stmt:
+        %tmp.66 = lgetv %timings.6;
+        symbol [ timings %tmp.66 147 28 35 ];
+        symbol [ Dictionary %tmp.68 147 47 57 ];
+        %tmp.68 = getv ? :Dictionary;
+        %tmp.69 = isa %tmp.66 %tmp.68;
+        bf %tmp.69 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_24_173_24_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_24_173_24_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_59_171_24_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 148 28 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_59_171_24_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_59_171_24_stop" ]
+        %timingsDict.7 = local;
+        symbol [ timingsDict %timingsDict.7 148 32 43 ];
+        %tmp.70 = lgetv %timings.6;
+        symbol [ timings %tmp.70 148 46 53 ];
+        %tmp.71 = as %tmp.70 { (Dictionary) };
+        %tmp.72 = as %tmp.71 Dictionary;
+        symbol [ Dictionary %tmp.72 148 57 67 ];
+        lputv %timingsDict.7 %tmp.72;
+        symbol [ timingsDict %timingsDict.7 148 32 43 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 149 28 ]
+        symbol [ TheAthanLogger %tmp.74 149 28 42 ];
+        %tmp.74 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.75 149 43 48 ];
+        %tmp.75 = getv function %tmp.74 :debug;
+        %tmp.76 = "APIClient";
+        %tmp.77 = "Timings is a valid dictionary";
+        invoke %tmp.74 %tmp.75(%tmp.76, %tmp.77);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 152 28 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_59_171_24_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_59_171_24_stop" ]
+        %prayerNames.8 = local;
+        symbol [ prayerNames %prayerNames.8 152 32 43 ];
+        %tmp.78 = newd 5;
+        %tmp.79 = "fajr";
+        %tmp.80 = "Fajr";
+        %tmp.81 = dup %tmp.78;
+        %tmp.82 = aputv %tmp.81 %tmp.79 %tmp.80;
+        %tmp.83 = "dhuhr";
+        %tmp.84 = "Dhuhr";
+        %tmp.85 = dup %tmp.82;
+        %tmp.86 = aputv %tmp.85 %tmp.83 %tmp.84;
+        %tmp.87 = "asr";
+        %tmp.88 = "Asr";
+        %tmp.89 = dup %tmp.86;
+        %tmp.90 = aputv %tmp.89 %tmp.87 %tmp.88;
+        %tmp.91 = "maghrib";
+        %tmp.92 = "Maghrib";
+        %tmp.93 = dup %tmp.90;
+        %tmp.94 = aputv %tmp.93 %tmp.91 %tmp.92;
+        %tmp.95 = "isha";
+        %tmp.96 = "Isha";
+        %tmp.97 = dup %tmp.94;
+        %tmp.98 = aputv %tmp.97 %tmp.95 %tmp.96;
+        lputv %prayerNames.8 %tmp.98;
+        symbol [ prayerNames %prayerNames.8 152 32 43 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 161 28 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_59_171_24_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_59_171_24_stop" ]
+        %keys.9 = local;
+        symbol [ keys %keys.9 161 32 36 ];
+        %tmp.99 = lgetv %prayerNames.8;
+        symbol [ prayerNames %tmp.99 161 39 50 ];
+        symbol [ keys %tmp.100 161 51 55 ];
+        %tmp.100 = getv function %tmp.99 :keys;
+        %tmp.101 = invoke %tmp.99 %tmp.100();
+        lputv %keys.9 %tmp.101;
+        symbol [ keys %keys.9 161 32 36 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 162 28 ]
+        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_init:
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_end" ]
+        %i.10 = local;
+        symbol [ i %i.10 162 37 38 ];
+        %tmp.102 = 0;
+        lputv %i.10 %tmp.102;
+        symbol [ i %i.10 162 37 38 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_test:
+        %tmp.103 = lgetv %i.10;
+        symbol [ i %tmp.103 162 44 45 ];
+        %tmp.104 = lgetv %keys.9;
+        symbol [ keys %tmp.104 162 48 52 ];
+        symbol [ size %tmp.105 162 53 57 ];
+        %tmp.105 = getv function %tmp.104 :size;
+        %tmp.106 = invoke %tmp.104 %tmp.105();
+        %tmp.107 = lt %tmp.103 %tmp.106;
+        bf %tmp.107 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_begin:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_66_167_28_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 163 32 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_66_167_28_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_66_167_28_stop" ]
+        %name.11 = local;
+        symbol [ name %name.11 163 36 40 ];
+        %tmp.108 = lgetv %keys.9;
+        symbol [ keys %tmp.108 163 43 47 ];
+        %tmp.109 = lgetv %i.10;
+        symbol [ i %tmp.109 163 48 49 ];
+        %tmp.110 = agetv %tmp.108 %tmp.109;
+        %tmp.111 = as %tmp.110 String;
+        symbol [ String %tmp.111 163 54 60 ];
+        lputv %name.11 %tmp.111;
+        symbol [ name %name.11 163 36 40 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 164 32 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_66_167_28_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_66_167_28_stop" ]
+        %apiKey.12 = local;
+        symbol [ apiKey %apiKey.12 164 36 42 ];
+        %tmp.112 = lgetv %prayerNames.8;
+        symbol [ prayerNames %tmp.112 164 45 56 ];
+        %tmp.113 = lgetv %name.11;
+        symbol [ name %tmp.113 164 57 61 ];
+        %tmp.114 = agetv %tmp.112 %tmp.113;
+        %tmp.115 = as %tmp.114 String;
+        symbol [ String %tmp.115 164 66 72 ];
+        lputv %apiKey.12 %tmp.115;
+        symbol [ apiKey %apiKey.12 164 36 42 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 165 32 ]
+        symbol [ TheAthanLogger %tmp.117 165 32 46 ];
+        %tmp.117 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.118 165 47 52 ];
+        %tmp.118 = getv function %tmp.117 :debug;
+        %tmp.119 = "APIClient";
+        %tmp.120 = "Processing prayer: ";
+        %tmp.121 = lgetv %name.11;
+        symbol [ name %tmp.121 165 90 94 ];
+        %tmp.122 = add %tmp.120 %tmp.121;
+        %tmp.123 = " (";
+        %tmp.124 = add %tmp.122 %tmp.123;
+        %tmp.125 = lgetv %apiKey.12;
+        symbol [ apiKey %tmp.125 165 104 110 ];
+        %tmp.126 = add %tmp.124 %tmp.125;
+        %tmp.127 = ")";
+        %tmp.128 = add %tmp.126 %tmp.127;
+        invoke %tmp.117 %tmp.118(%tmp.119, %tmp.128);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 166 32 ]
+        %tmp.129 = self;
+        symbol [ addPrayerTime %tmp.130 166 32 45 ];
+        %tmp.130 = getv function %tmp.129 :addPrayerTime;
+        %tmp.131 = lgetv %prayerTimes.1;
+        symbol [ prayerTimes %tmp.131 166 46 57 ];
+        %tmp.132 = lgetv %name.11;
+        symbol [ name %tmp.132 166 59 63 ];
+        %tmp.133 = lgetv %timingsDict.7;
+        symbol [ timingsDict %tmp.133 166 65 76 ];
+        symbol [ get %tmp.134 166 77 80 ];
+        %tmp.134 = getv function %tmp.133 :get;
+        %tmp.135 = lgetv %apiKey.12;
+        symbol [ apiKey %tmp.135 166 81 87 ];
+        %tmp.136 = invoke %tmp.133 %tmp.134(%tmp.135);
+        %tmp.137 = as %tmp.136 String;
+        symbol [ String %tmp.137 166 92 98 ];
+        %tmp.138 = lgetv %isTomorrow;
+        symbol [ isTomorrow %tmp.138 166 100 110 ];
+        invoke %tmp.129 %tmp.130(%tmp.131, %tmp.132, %tmp.137, %tmp.138);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_66_167_28_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_incr:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 162 ]
+        %tmp.141 = lgetv %i.10;
+        symbol [ i %tmp.141 162 61 62 ];
+        %tmp.142 = add %tmp.141 1;
+        lputv %i.10 %tmp.142;
+        symbol [ i %i.10 162 61 62 ];
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_test;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_162_28_167_28_for_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 169 28 ]
+        %tmp.143 = self;
+        symbol [ sortPrayerTimes %tmp.144 169 28 43 ];
+        %tmp.144 = getv function %tmp.143 :sortPrayerTimes;
+        %tmp.145 = lgetv %prayerTimes.1;
+        symbol [ prayerTimes %tmp.145 169 44 55 ];
+        invoke %tmp.143 %tmp.144(%tmp.145);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 170 28 ]
+        symbol [ TheAthanLogger %tmp.147 170 28 42 ];
+        %tmp.147 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.148 170 43 48 ];
+        %tmp.148 = getv function %tmp.147 :debug;
+        %tmp.149 = "APIClient";
+        %tmp.150 = "Successfully parsed and sorted ";
+        %tmp.151 = lgetv %prayerTimes.1;
+        symbol [ prayerTimes %tmp.151 170 98 109 ];
+        symbol [ size %tmp.152 170 110 114 ];
+        %tmp.152 = getv function %tmp.151 :size;
+        %tmp.153 = invoke %tmp.151 %tmp.152();
+        %tmp.154 = add %tmp.150 %tmp.153;
+        %tmp.155 = " prayer times for ";
+        %tmp.156 = add %tmp.154 %tmp.155;
+        %tmp.157 = lgetv %dayType.2;
+        symbol [ dayType %tmp.157 170 142 149 ];
+        %tmp.158 = add %tmp.156 %tmp.157;
+        invoke %tmp.147 %tmp.148(%tmp.149, %tmp.158);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_59_171_24_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_24_173_24_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_24_173_24_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_171_31_173_24_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 172 28 ]
+        symbol [ TheAthanLogger %tmp.160 172 28 42 ];
+        %tmp.160 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.161 172 43 48 ];
+        %tmp.161 = getv function %tmp.160 :error;
+        %tmp.162 = "APIClient";
+        %tmp.163 = "Timings is not a dictionary";
+        invoke %tmp.160 %tmp.161(%tmp.162, %tmp.163);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_171_31_173_24_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_147_24_173_24_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_55_174_20_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_20_176_20_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_20_176_20_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_174_27_176_20_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 175 24 ]
+        symbol [ TheAthanLogger %tmp.165 175 24 38 ];
+        %tmp.165 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.166 175 39 44 ];
+        %tmp.166 = getv function %tmp.165 :error;
+        %tmp.167 = "APIClient";
+        %tmp.168 = "No 'timings' key found in data object";
+        invoke %tmp.165 %tmp.166(%tmp.167, %tmp.168);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_174_27_176_20_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_143_20_176_20_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_51_177_16_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_16_179_16_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_16_179_16_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_177_23_179_16_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 178 20 ]
+        symbol [ TheAthanLogger %tmp.170 178 20 34 ];
+        %tmp.170 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.171 178 35 40 ];
+        %tmp.171 = getv function %tmp.170 :error;
+        %tmp.172 = "APIClient";
+        %tmp.173 = "Data object is not a dictionary";
+        invoke %tmp.170 %tmp.171(%tmp.172, %tmp.173);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_177_23_179_16_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_140_16_179_16_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_41_180_12_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_12_182_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_12_182_12_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_180_19_182_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 181 16 ]
+        symbol [ TheAthanLogger %tmp.175 181 16 30 ];
+        %tmp.175 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.176 181 31 36 ];
+        %tmp.176 = getv function %tmp.175 :error;
+        %tmp.177 = "APIClient";
+        %tmp.178 = "No 'data' key found in response";
+        invoke %tmp.175 %tmp.176(%tmp.177, %tmp.178);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_180_19_182_12_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_136_12_182_12_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_63_183_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_8_185_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_8_185_8_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_183_15_185_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 184 12 ]
+        symbol [ TheAthanLogger %tmp.180 184 12 26 ];
+        %tmp.180 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.181 184 27 32 ];
+        %tmp.181 = getv function %tmp.180 :error;
+        %tmp.182 = "APIClient";
+        %tmp.183 = "Invalid response: Code ";
+        %tmp.184 = lgetv %responseCode;
+        symbol [ responseCode %tmp.184 184 74 86 ];
+        %tmp.185 = add %tmp.183 %tmp.184;
+        %tmp.186 = " or data is not a dictionary";
+        %tmp.187 = add %tmp.185 %tmp.186;
+        invoke %tmp.180 %tmp.181(%tmp.182, %tmp.187);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_183_15_185_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_132_8_185_8_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 187 8 ]
+        %tmp.188 = lgetv %prayerTimes.1;
+        symbol [ prayerTimes %tmp.188 187 15 26 ];
+        ret %tmp.188;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_126_124_188_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 191; @symbol_functiondef = [addPrayerTime,191,13,26]; @symbol_param<0> = [prayerTimes,191,27,38]; @symbol_param<0>_type<0> = [Array,191,42,47]; @symbol_param<1> = [name,191,49,53]; @symbol_param<1>_type<0> = [String,191,57,63]; @symbol_param<2> = [timeString,191,65,75]; @symbol_param<2>_type<0> = [String,191,79,85]; @symbol_param<3> = [isTomorrow,191,87,97]; @symbol_param<3>_type<0> = [Boolean,191,101,108]; ]
+    function addPrayerTime(prayerTimes as Array, name as String, timeString as String, isTomorrow as Boolean) {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_191_110_223_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 192 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_192_8_195_8_if_stmt:
+        %tmp.1 = lgetv %timeString;
+        symbol [ timeString %tmp.1 192 12 22 ];
+        %tmp.2 = null;
+        %tmp.3 = eq %tmp.1 %tmp.2;
+        bf %tmp.3 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_192_8_195_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_192_8_195_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_192_32_195_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 193 12 ]
+        symbol [ TheAthanLogger %tmp.5 193 12 26 ];
+        %tmp.5 = getv ? :TheAthanLogger;
+        symbol [ warn %tmp.6 193 27 31 ];
+        %tmp.6 = getv function %tmp.5 :warn;
+        %tmp.7 = "APIClient";
+        %tmp.8 = "Time string is null for prayer: ";
+        %tmp.9 = lgetv %name;
+        symbol [ name %tmp.9 193 82 86 ];
+        %tmp.10 = add %tmp.8 %tmp.9;
+        invoke %tmp.5 %tmp.6(%tmp.7, %tmp.10);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 194 12 ]
+        ret ?;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_192_32_195_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_192_8_195_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_192_8_195_8_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 197 8 ]
+        symbol [ TheAthanLogger %tmp.12 197 8 22 ];
+        %tmp.12 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.13 197 23 28 ];
+        %tmp.13 = getv function %tmp.12 :debug;
+        %tmp.14 = "APIClient";
+        %tmp.15 = "Adding prayer time: ";
+        %tmp.16 = lgetv %name;
+        symbol [ name %tmp.16 197 67 71 ];
+        %tmp.17 = add %tmp.15 %tmp.16;
+        %tmp.18 = " at ";
+        %tmp.19 = add %tmp.17 %tmp.18;
+        %tmp.20 = lgetv %timeString;
+        symbol [ timeString %tmp.20 197 83 93 ];
+        %tmp.21 = add %tmp.19 %tmp.20;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_begin:
+        %tmp.22 = lgetv %isTomorrow;
+        symbol [ isTomorrow %tmp.22 197 97 107 ];
+        bf %tmp.22 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_true:
+        %tmp.23 = " (tomorrow)";
+        push %tmp.23;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_false:
+        %tmp.24 = " (today)";
+        push %tmp.24;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_end:
+        %tmp.25 = phi [%tmp.22 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_begin] [%tmp.23 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_true] [%tmp.24 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_false] [%tmp.25 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_197_97_197_126_end];
+        %tmp.26 = add %tmp.21 %tmp.25;
+        invoke %tmp.12 %tmp.13(%tmp.14, %tmp.26);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 199 8 ]
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 201 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_stop" ]
         %hour.1 = local;
-        symbol [ hour %hour.1 221 20 24 ];
-        %tmp.18 = lgetv %timeString;
-        symbol [ timeString %tmp.18 221 27 37 ];
-        %tmp.19 = as %tmp.18 { (!Null) };
-        symbol [ substring %tmp.20 221 38 47 ];
-        %tmp.20 = getv function %tmp.19 :substring;
-        %tmp.21 = 0;
-        %tmp.22 = 2;
-        %tmp.23 = invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22);
-        symbol [ toNumber %tmp.24 221 54 62 ];
-        %tmp.24 = getv function %tmp.23 :toNumber;
-        %tmp.25 = invoke %tmp.23 %tmp.24();
-        lputv %hour.1 %tmp.25;
-        symbol [ hour %hour.1 221 20 24 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 222 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_stop" ]
-        %minute.2 = local;
-        symbol [ minute %minute.2 222 20 26 ];
-        %tmp.26 = lgetv %timeString;
-        symbol [ timeString %tmp.26 222 29 39 ];
-        %tmp.27 = as %tmp.26 { (!Null) };
-        symbol [ substring %tmp.28 222 40 49 ];
+        symbol [ hour %hour.1 201 16 20 ];
+        %tmp.27 = lgetv %timeString;
+        symbol [ timeString %tmp.27 201 23 33 ];
+        symbol [ substring %tmp.28 201 34 43 ];
         %tmp.28 = getv function %tmp.27 :substring;
-        %tmp.29 = 3;
-        %tmp.30 = 5;
+        %tmp.29 = 0;
+        %tmp.30 = 2;
         %tmp.31 = invoke %tmp.27 %tmp.28(%tmp.29, %tmp.30);
-        symbol [ toNumber %tmp.32 222 56 64 ];
+        symbol [ toNumber %tmp.32 201 50 58 ];
         %tmp.32 = getv function %tmp.31 :toNumber;
         %tmp.33 = invoke %tmp.31 %tmp.32();
-        lputv %minute.2 %tmp.33;
-        symbol [ minute %minute.2 222 20 26 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 224 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_stop" ]
-        %now.3 = local;
-        symbol [ now %now.3 224 20 23 ];
-        symbol [ Time %tmp.34 224 26 30 ];
-        %tmp.34 = getm $.Toybox.Time;
-        symbol [ now %tmp.35 224 31 34 ];
-        %tmp.35 = getv function %tmp.34 :now;
-        %tmp.36 = invoke %tmp.34 %tmp.35();
-        lputv %now.3 %tmp.36;
-        symbol [ now %now.3 224 20 23 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 225 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_stop" ]
-        %info.4 = local;
-        symbol [ info %info.4 225 20 24 ];
-        symbol [ Gregorian %tmp.37 225 27 36 ];
-        %tmp.37 = getm $.Toybox.Time.Gregorian;
-        symbol [ info %tmp.38 225 37 41 ];
-        %tmp.38 = getv function %tmp.37 :info;
-        %tmp.39 = lgetv %now.3;
-        symbol [ now %tmp.39 225 42 45 ];
-        symbol [ Time %tmp.40 225 47 51 ];
-        %tmp.40 = getm $.Toybox.Time;
-        symbol [ FORMAT_SHORT %tmp.41 225 52 64 ];
-        %tmp.41 = getv %tmp.40 :FORMAT_SHORT;
-        %tmp.42 = invoke %tmp.37 %tmp.38(%tmp.39, %tmp.41);
-        lputv %info.4 %tmp.42;
-        symbol [ info %info.4 225 20 24 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 228 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_stop" ]
-        %day.5 = local;
-        symbol [ day %day.5 228 20 23 ];
-        %tmp.43 = lgetv %info.4;
-        symbol [ info %tmp.43 228 26 30 ];
-        symbol [ day %tmp.44 228 31 34 ];
-        %tmp.44 = getv %tmp.43 :day;
-        lputv %day.5 %tmp.44;
-        symbol [ day %day.5 228 20 23 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 229 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_stop" ]
-        %month.6 = local;
-        symbol [ month %month.6 229 20 25 ];
-        %tmp.45 = lgetv %info.4;
-        symbol [ info %tmp.45 229 28 32 ];
-        symbol [ month %tmp.46 229 33 38 ];
-        %tmp.46 = getv %tmp.45 :month;
-        lputv %month.6 %tmp.46;
-        symbol [ month %month.6 229 20 25 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 230 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_stop" ]
-        %year.7 = local;
-        symbol [ year %year.7 230 20 24 ];
-        %tmp.47 = lgetv %info.4;
-        symbol [ info %tmp.47 230 27 31 ];
-        symbol [ year %tmp.48 230 32 36 ];
-        %tmp.48 = getv %tmp.47 :year;
-        lputv %year.7 %tmp.48;
-        symbol [ year %year.7 230 20 24 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 232 16 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_16_239_16_if_stmt:
-        %tmp.49 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.49 232 20 30 ];
-        bf %tmp.49 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_16_239_16_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_16_239_16_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_32_239_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 234 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_32_239_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_32_239_16_stop" ]
-        %tomorrow.8 = local;
-        symbol [ tomorrow %tomorrow.8 234 24 32 ];
-        %tmp.50 = lgetv %now.3;
-        symbol [ now %tmp.50 234 35 38 ];
-        symbol [ add %tmp.51 234 39 42 ];
-        %tmp.51 = getv function %tmp.50 :add;
-        symbol [ Time %tmp.54 234 47 51 ];
-        %tmp.54 = getm $.Toybox.Time;
-        symbol [ Duration %tmp.55 234 52 60 ];
-        %tmp.55 = getv function ? %tmp.54 :Duration;
-        %tmp.56 = 86400;
-        %tmp.52 = newc %tmp.55 (%tmp.56);
-        %tmp.57 = invoke %tmp.50 %tmp.51(%tmp.52);
-        lputv %tomorrow.8 %tmp.57;
-        symbol [ tomorrow %tomorrow.8 234 24 32 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 235 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_32_239_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_32_239_16_stop" ]
-        %tomorrowInfo.9 = local;
-        symbol [ tomorrowInfo %tomorrowInfo.9 235 24 36 ];
-        symbol [ Gregorian %tmp.58 235 39 48 ];
-        %tmp.58 = getm $.Toybox.Time.Gregorian;
-        symbol [ info %tmp.59 235 49 53 ];
-        %tmp.59 = getv function %tmp.58 :info;
-        %tmp.60 = lgetv %tomorrow.8;
-        symbol [ tomorrow %tmp.60 235 54 62 ];
-        symbol [ Time %tmp.61 235 64 68 ];
-        %tmp.61 = getm $.Toybox.Time;
-        symbol [ FORMAT_SHORT %tmp.62 235 69 81 ];
-        %tmp.62 = getv %tmp.61 :FORMAT_SHORT;
-        %tmp.63 = invoke %tmp.58 %tmp.59(%tmp.60, %tmp.62);
-        lputv %tomorrowInfo.9 %tmp.63;
-        symbol [ tomorrowInfo %tomorrowInfo.9 235 24 36 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 236 20 ]
-        %tmp.64 = lgetv %tomorrowInfo.9;
-        symbol [ tomorrowInfo %tmp.64 236 26 38 ];
-        symbol [ day %tmp.65 236 39 42 ];
-        %tmp.65 = getv %tmp.64 :day;
-        lputv %day.5 %tmp.65;
-        symbol [ day %day.5 236 20 23 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 237 20 ]
-        %tmp.66 = lgetv %tomorrowInfo.9;
-        symbol [ tomorrowInfo %tmp.66 237 28 40 ];
-        symbol [ month %tmp.67 237 41 46 ];
-        %tmp.67 = getv %tmp.66 :month;
-        lputv %month.6 %tmp.67;
-        symbol [ month %month.6 237 20 25 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 238 20 ]
-        %tmp.68 = lgetv %tomorrowInfo.9;
-        symbol [ tomorrowInfo %tmp.68 238 27 39 ];
-        symbol [ year %tmp.69 238 40 44 ];
-        %tmp.69 = getv %tmp.68 :year;
-        lputv %year.7 %tmp.69;
-        symbol [ year %year.7 238 20 24 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_32_239_16_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_16_239_16_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_232_16_239_16_if_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 241 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_stop" ]
-        %prayerTime.10 = local;
-        symbol [ prayerTime %prayerTime.10 241 20 30 ];
-        symbol [ Gregorian %tmp.70 241 33 42 ];
-        %tmp.70 = getm $.Toybox.Time.Gregorian;
-        symbol [ moment %tmp.71 241 43 49 ];
-        %tmp.71 = getv function %tmp.70 :moment;
-        %tmp.72 = newd 6;
-        %tmp.74 = const :year;
-        symbol [ year %tmp.74 242 21 25 const ];
-        %tmp.75 = lgetv %year.7;
-        symbol [ year %tmp.75 242 29 33 ];
-        %tmp.76 = dup %tmp.72;
-        %tmp.77 = aputv %tmp.76 %tmp.74 %tmp.75;
-        %tmp.79 = const :month;
-        symbol [ month %tmp.79 243 21 26 const ];
-        %tmp.80 = lgetv %month.6;
-        symbol [ month %tmp.80 243 30 35 ];
-        %tmp.81 = dup %tmp.77;
-        %tmp.82 = aputv %tmp.81 %tmp.79 %tmp.80;
-        %tmp.84 = const :day;
-        symbol [ day %tmp.84 244 21 24 const ];
-        %tmp.85 = lgetv %day.5;
-        symbol [ day %tmp.85 244 28 31 ];
-        %tmp.86 = dup %tmp.82;
-        %tmp.87 = aputv %tmp.86 %tmp.84 %tmp.85;
-        %tmp.89 = const :hour;
-        symbol [ hour %tmp.89 245 21 25 const ];
-        %tmp.90 = lgetv %hour.1;
-        symbol [ hour %tmp.90 245 29 33 ];
-        %tmp.91 = dup %tmp.87;
-        %tmp.92 = aputv %tmp.91 %tmp.89 %tmp.90;
-        %tmp.94 = const :minute;
-        symbol [ minute %tmp.94 246 21 27 const ];
-        %tmp.95 = lgetv %minute.2;
-        symbol [ minute %tmp.95 246 31 37 ];
-        %tmp.96 = dup %tmp.92;
-        %tmp.97 = aputv %tmp.96 %tmp.94 %tmp.95;
-        %tmp.99 = const :second;
-        symbol [ second %tmp.99 247 21 27 const ];
-        %tmp.100 = 0;
-        %tmp.101 = dup %tmp.97;
-        %tmp.102 = aputv %tmp.101 %tmp.99 %tmp.100;
-        %tmp.103 = invoke %tmp.70 %tmp.71(%tmp.102);
-        lputv %prayerTime.10 %tmp.103;
-        symbol [ prayerTime %prayerTime.10 241 20 30 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 250 16 ]
-        %tmp.104 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.104 250 16 27 ];
-        symbol [ add %tmp.105 250 28 31 ];
-        %tmp.105 = getv function %tmp.104 :add;
-        symbol [ TheAthanPrayerTime %tmp.109 250 36 54 ];
-        %tmp.109 = getv ? :TheAthanPrayerTime;
-        %tmp.110 = lgetv %name;
-        symbol [ name %tmp.110 250 55 59 ];
-        %tmp.111 = lgetv %prayerTime.10;
-        symbol [ prayerTime %tmp.111 250 61 71 ];
-        %tmp.106 = newc %tmp.109 (%tmp.110, %tmp.111);
-        invoke %tmp.104 %tmp.105(%tmp.106);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 251 16 ]
-        symbol [ System %tmp.112 251 16 22 ];
-        %tmp.112 = getm $.Toybox.System;
-        symbol [ println %tmp.113 251 23 30 ];
-        %tmp.113 = getv function %tmp.112 :println;
-        %tmp.114 = "DEBUG: Prayer time added: ";
-        %tmp.115 = lgetv %name;
-        symbol [ name %tmp.115 251 62 66 ];
-        %tmp.116 = add %tmp.114 %tmp.115;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_begin:
-        %tmp.117 = lgetv %isTomorrow;
-        symbol [ isTomorrow %tmp.117 251 70 80 ];
-        bf %tmp.117 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_true:
-        %tmp.118 = " (tomorrow)";
-        push %tmp.118;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_false:
-        %tmp.119 = " (today)";
-        push %tmp.119;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_end:
-        %tmp.120 = phi [%tmp.117 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_begin] [%tmp.118 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_true] [%tmp.119 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_false] [%tmp.120 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_251_70_251_99_end];
-        %tmp.121 = add %tmp.116 %tmp.120;
-        invoke %tmp.112 %tmp.113(%tmp.121);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_16_252_12_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_endTry:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_finally;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_catch:
-        %tmp.122 = exception;
-        push %tmp.122;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 252 14 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_252_14_254_12_end" ]
-        %e.11 = local;
-        symbol [ e %e.11 252 21 22 ];
-        %tmp.123 = dup %tmp.122;
-        lputv %e.11 %tmp.123;
-        symbol [ e %e.11 252 21 22 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_252_24_254_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 253 16 ]
-        symbol [ System %tmp.124 253 16 22 ];
-        %tmp.124 = getm $.Toybox.System;
-        symbol [ println %tmp.125 253 23 30 ];
-        %tmp.125 = getv function %tmp.124 :println;
-        %tmp.126 = "DEBUG: Exception in addPrayerTime: ";
-        %tmp.127 = lgetv %e.11;
-        symbol [ e %tmp.127 253 71 72 ];
-        symbol [ getErrorMessage %tmp.128 253 73 88 ];
-        %tmp.128 = getv function %tmp.127 :getErrorMessage;
-        %tmp.129 = invoke %tmp.127 %tmp.128();
-        %tmp.130 = add %tmp.126 %tmp.129;
-        invoke %tmp.124 %tmp.125(%tmp.130);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_252_24_254_12_stop:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_finally;
+        lputv %hour.1 %tmp.33;
+        symbol [ hour %hour.1 201 16 20 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 202 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_stop" ]
+        %minute.2 = local;
+        symbol [ minute %minute.2 202 16 22 ];
+        %tmp.34 = lgetv %timeString;
+        symbol [ timeString %tmp.34 202 25 35 ];
+        symbol [ substring %tmp.35 202 36 45 ];
+        %tmp.35 = getv function %tmp.34 :substring;
+        %tmp.36 = 3;
+        %tmp.37 = 5;
+        %tmp.38 = invoke %tmp.34 %tmp.35(%tmp.36, %tmp.37);
+        symbol [ toNumber %tmp.39 202 52 60 ];
+        %tmp.39 = getv function %tmp.38 :toNumber;
+        %tmp.40 = invoke %tmp.38 %tmp.39();
+        lputv %minute.2 %tmp.40;
+        symbol [ minute %minute.2 202 16 22 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 204 12 ]
+        symbol [ TheAthanLogger %tmp.42 204 12 26 ];
+        %tmp.42 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.43 204 27 32 ];
+        %tmp.43 = getv function %tmp.42 :debug;
+        %tmp.44 = "APIClient";
+        %tmp.45 = "Parsed time: ";
+        %tmp.46 = lgetv %hour.1;
+        symbol [ hour %tmp.46 204 64 68 ];
+        %tmp.47 = add %tmp.45 %tmp.46;
+        %tmp.48 = ":";
+        %tmp.49 = add %tmp.47 %tmp.48;
+        %tmp.50 = lgetv %minute.2;
+        symbol [ minute %tmp.50 204 77 83 ];
+        %tmp.51 = add %tmp.49 %tmp.50;
+        invoke %tmp.42 %tmp.43(%tmp.44, %tmp.51);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 207 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_stop" ]
+        %dateInfo.3 = local;
+        symbol [ dateInfo %dateInfo.3 207 16 24 ];
+        %tmp.52 = self;
+        symbol [ getDateInfo %tmp.53 207 27 38 ];
+        %tmp.53 = getv function %tmp.52 :getDateInfo;
+        %tmp.54 = lgetv %isTomorrow;
+        symbol [ isTomorrow %tmp.54 207 39 49 ];
+        %tmp.55 = invoke %tmp.52 %tmp.53(%tmp.54);
+        lputv %dateInfo.3 %tmp.55;
+        symbol [ dateInfo %dateInfo.3 207 16 24 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 209 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_stop" ]
+        %prayerTime.4 = local;
+        symbol [ prayerTime %prayerTime.4 209 16 26 ];
+        symbol [ Gregorian %tmp.56 209 29 38 ];
+        %tmp.56 = getm $.Toybox.Time.Gregorian;
+        symbol [ moment %tmp.57 209 39 45 ];
+        %tmp.57 = getv function %tmp.56 :moment;
+        %tmp.58 = newd 6;
+        %tmp.60 = const :year;
+        symbol [ year %tmp.60 210 17 21 const ];
+        %tmp.61 = lgetv %dateInfo.3;
+        symbol [ dateInfo %tmp.61 210 25 33 ];
+        %tmp.62 = "year";
+        %tmp.63 = agetv %tmp.61 %tmp.62;
+        %tmp.64 = dup %tmp.58;
+        %tmp.65 = aputv %tmp.64 %tmp.60 %tmp.63;
+        %tmp.67 = const :month;
+        symbol [ month %tmp.67 211 17 22 const ];
+        %tmp.68 = lgetv %dateInfo.3;
+        symbol [ dateInfo %tmp.68 211 26 34 ];
+        %tmp.69 = "month";
+        %tmp.70 = agetv %tmp.68 %tmp.69;
+        %tmp.71 = dup %tmp.65;
+        %tmp.72 = aputv %tmp.71 %tmp.67 %tmp.70;
+        %tmp.74 = const :day;
+        symbol [ day %tmp.74 212 17 20 const ];
+        %tmp.75 = lgetv %dateInfo.3;
+        symbol [ dateInfo %tmp.75 212 24 32 ];
+        %tmp.76 = "day";
+        %tmp.77 = agetv %tmp.75 %tmp.76;
+        %tmp.78 = dup %tmp.72;
+        %tmp.79 = aputv %tmp.78 %tmp.74 %tmp.77;
+        %tmp.81 = const :hour;
+        symbol [ hour %tmp.81 213 17 21 const ];
+        %tmp.82 = lgetv %hour.1;
+        symbol [ hour %tmp.82 213 25 29 ];
+        %tmp.83 = dup %tmp.79;
+        %tmp.84 = aputv %tmp.83 %tmp.81 %tmp.82;
+        %tmp.86 = const :minute;
+        symbol [ minute %tmp.86 214 17 23 const ];
+        %tmp.87 = lgetv %minute.2;
+        symbol [ minute %tmp.87 214 27 33 ];
+        %tmp.88 = dup %tmp.84;
+        %tmp.89 = aputv %tmp.88 %tmp.86 %tmp.87;
+        %tmp.91 = const :second;
+        symbol [ second %tmp.91 215 17 23 const ];
+        %tmp.92 = 0;
+        %tmp.93 = dup %tmp.89;
+        %tmp.94 = aputv %tmp.93 %tmp.91 %tmp.92;
+        %tmp.95 = invoke %tmp.56 %tmp.57(%tmp.94);
+        lputv %prayerTime.4 %tmp.95;
+        symbol [ prayerTime %prayerTime.4 209 16 26 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 218 12 ]
+        %tmp.96 = lgetv %prayerTimes;
+        symbol [ prayerTimes %tmp.96 218 12 23 ];
+        symbol [ add %tmp.97 218 24 27 ];
+        %tmp.97 = getv function %tmp.96 :add;
+        symbol [ TheAthanPrayerTime %tmp.101 218 32 50 ];
+        %tmp.101 = getv ? :TheAthanPrayerTime;
+        %tmp.102 = lgetv %name;
+        symbol [ name %tmp.102 218 51 55 ];
+        %tmp.103 = lgetv %prayerTime.4;
+        symbol [ prayerTime %tmp.103 218 57 67 ];
+        %tmp.98 = newc %tmp.101 (%tmp.102, %tmp.103);
+        invoke %tmp.96 %tmp.97(%tmp.98);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 219 12 ]
+        symbol [ TheAthanLogger %tmp.105 219 12 26 ];
+        %tmp.105 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.106 219 27 32 ];
+        %tmp.106 = getv function %tmp.105 :debug;
+        %tmp.107 = "APIClient";
+        %tmp.108 = "Successfully added ";
+        %tmp.109 = lgetv %name;
+        symbol [ name %tmp.109 219 70 74 ];
+        %tmp.110 = add %tmp.108 %tmp.109;
+        %tmp.111 = " prayer time";
+        %tmp.112 = add %tmp.110 %tmp.111;
+        invoke %tmp.105 %tmp.106(%tmp.107, %tmp.112);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_12_220_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_catch:
+        %tmp.113 = exception;
+        push %tmp.113;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 220 10 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_220_10_222_8_end" ]
+        %e.5 = local;
+        symbol [ e %e.5 220 17 18 ];
+        %tmp.114 = dup %tmp.113;
+        lputv %e.5 %tmp.114;
+        symbol [ e %e.5 220 17 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_220_20_222_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 221 12 ]
+        symbol [ TheAthanLogger %tmp.116 221 12 26 ];
+        %tmp.116 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.117 221 27 32 ];
+        %tmp.117 = getv function %tmp.116 :error;
+        %tmp.118 = "APIClient";
+        %tmp.119 = "Error adding prayer time ";
+        %tmp.120 = lgetv %name;
+        symbol [ name %tmp.120 221 76 80 ];
+        %tmp.121 = add %tmp.119 %tmp.120;
+        %tmp.122 = ": ";
+        %tmp.123 = add %tmp.121 %tmp.122;
+        %tmp.124 = lgetv %e.5;
+        symbol [ e %tmp.124 221 90 91 ];
+        symbol [ getErrorMessage %tmp.125 221 92 107 ];
+        %tmp.125 = getv function %tmp.124 :getErrorMessage;
+        %tmp.126 = invoke %tmp.124 %tmp.125();
+        %tmp.127 = add %tmp.123 %tmp.126;
+        invoke %tmp.116 %tmp.117(%tmp.118, %tmp.127);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_220_20_222_8_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_finally;
         pop;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_252_14_254_12_end:
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_252_14_254_12_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_252_14_254_12_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_finally;
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_finally;
-        throw %tmp.122;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_finally:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_220_10_222_8_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_220_10_222_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_220_10_222_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_finally;
+        throw %tmp.113;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_finally:
         jsrret;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_219_12_254_12_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_218_32_255_8_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_218_8_257_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_218_8_257_8_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_255_15_257_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 256 12 ]
-        symbol [ System %tmp.131 256 12 18 ];
-        %tmp.131 = getm $.Toybox.System;
-        symbol [ println %tmp.132 256 19 26 ];
-        %tmp.132 = getv function %tmp.131 :println;
-        %tmp.133 = "DEBUG: timeString is null for ";
-        %tmp.134 = lgetv %name;
-        symbol [ name %tmp.134 256 62 66 ];
-        %tmp.135 = add %tmp.133 %tmp.134;
-        invoke %tmp.131 %tmp.132(%tmp.135);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_255_15_257_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_218_8_257_8_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_216_70_258_4_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_199_8_222_8_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_191_110_223_4_stop:
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 261; @symbol_functiondef = [sortPrayerTimes,261,13,28]; @symbol_param<0> = [prayerTimes,261,29,40]; ]
-    function sortPrayerTimes(prayerTimes) {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_261_42_274_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 262 8 ]
-        symbol [ System %tmp.1 262 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 262 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: sortPrayerTimes";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 264 8 ]
-        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_init:
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_end" ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 226; @symbol_functiondef = [getDateInfo,226,13,24]; @symbol_param<0> = [isTomorrow,226,25,35]; @symbol_param<0>_type<0> = [Boolean,226,39,46]; @symbol_return<0> = [Dictionary,226,51,61]; ]
+    function getDateInfo(isTomorrow as Boolean) as Dictionary {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_226_62_236_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 227 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_226_62_236_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_226_62_236_4_stop" ]
+        %now.1 = local;
+        symbol [ now %now.1 227 12 15 ];
+        symbol [ Time %tmp.1 227 18 22 ];
+        %tmp.1 = getm $.Toybox.Time;
+        symbol [ now %tmp.2 227 23 26 ];
+        %tmp.2 = getv function %tmp.1 :now;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %now.1 %tmp.3;
+        symbol [ now %now.1 227 12 15 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 228 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_226_62_236_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_226_62_236_4_stop" ]
+        %moment.2 = local;
+        symbol [ moment %moment.2 228 12 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_begin:
+        %tmp.4 = lgetv %isTomorrow;
+        symbol [ isTomorrow %tmp.4 228 21 31 ];
+        bf %tmp.4 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_true:
+        %tmp.5 = lgetv %now.1;
+        symbol [ now %tmp.5 228 34 37 ];
+        symbol [ add %tmp.6 228 38 41 ];
+        %tmp.6 = getv function %tmp.5 :add;
+        symbol [ Time %tmp.9 228 46 50 ];
+        %tmp.9 = getm $.Toybox.Time;
+        symbol [ Duration %tmp.10 228 51 59 ];
+        %tmp.10 = getv function ? %tmp.9 :Duration;
+        %tmp.11 = 86400;
+        %tmp.7 = newc %tmp.10 (%tmp.11);
+        %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.7);
+        push %tmp.12;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_false:
+        %tmp.13 = lgetv %now.1;
+        symbol [ now %tmp.13 228 70 73 ];
+        push %tmp.13;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_end:
+        %tmp.14 = phi [%tmp.4 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_begin] [%tmp.12 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_true] [%tmp.13 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_false] [%tmp.14 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_228_21_228_70_end];
+        lputv %moment.2 %tmp.14;
+        symbol [ moment %moment.2 228 12 18 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 229 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_226_62_236_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_226_62_236_4_stop" ]
+        %info.3 = local;
+        symbol [ info %info.3 229 12 16 ];
+        symbol [ Gregorian %tmp.15 229 19 28 ];
+        %tmp.15 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.16 229 29 33 ];
+        %tmp.16 = getv function %tmp.15 :info;
+        %tmp.17 = lgetv %moment.2;
+        symbol [ moment %tmp.17 229 34 40 ];
+        symbol [ Time %tmp.18 229 42 46 ];
+        %tmp.18 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.19 229 47 59 ];
+        %tmp.19 = getv %tmp.18 :FORMAT_SHORT;
+        %tmp.20 = invoke %tmp.15 %tmp.16(%tmp.17, %tmp.19);
+        lputv %info.3 %tmp.20;
+        symbol [ info %info.3 229 12 16 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 231 8 ]
+        %tmp.21 = newd 3;
+        %tmp.23 = const :year;
+        symbol [ year %tmp.23 232 13 17 const ];
+        %tmp.24 = lgetv %info.3;
+        symbol [ info %tmp.24 232 21 25 ];
+        symbol [ year %tmp.25 232 26 30 ];
+        %tmp.25 = getv %tmp.24 :year;
+        %tmp.26 = dup %tmp.21;
+        %tmp.27 = aputv %tmp.26 %tmp.23 %tmp.25;
+        %tmp.29 = const :month;
+        symbol [ month %tmp.29 233 13 18 const ];
+        %tmp.30 = lgetv %info.3;
+        symbol [ info %tmp.30 233 22 26 ];
+        symbol [ month %tmp.31 233 27 32 ];
+        %tmp.31 = getv %tmp.30 :month;
+        %tmp.32 = dup %tmp.27;
+        %tmp.33 = aputv %tmp.32 %tmp.29 %tmp.31;
+        %tmp.35 = const :day;
+        symbol [ day %tmp.35 234 13 16 const ];
+        %tmp.36 = lgetv %info.3;
+        symbol [ info %tmp.36 234 20 24 ];
+        symbol [ day %tmp.37 234 25 28 ];
+        %tmp.37 = getv %tmp.36 :day;
+        %tmp.38 = dup %tmp.33;
+        %tmp.39 = aputv %tmp.38 %tmp.35 %tmp.37;
+        ret %tmp.39;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_226_62_236_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 239; @symbol_functiondef = [sortPrayerTimes,239,13,28]; @symbol_param<0> = [prayerTimes,239,29,40]; @symbol_param<0>_type<0> = [Array,239,44,49]; ]
+    function sortPrayerTimes(prayerTimes as Array) {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_239_51_253_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 241 8 ]
+        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_init:
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_end" ]
         %i.1 = local;
-        symbol [ i %i.1 264 17 18 ];
-        %tmp.4 = 0;
-        lputv %i.1 %tmp.4;
-        symbol [ i %i.1 264 17 18 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_test:
-        %tmp.5 = lgetv %i.1;
-        symbol [ i %tmp.5 264 24 25 ];
-        %tmp.6 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.6 264 28 39 ];
-        symbol [ size %tmp.7 264 40 44 ];
-        %tmp.7 = getv function %tmp.6 :size;
-        %tmp.8 = invoke %tmp.6 %tmp.7();
-        %tmp.9 = 1;
-        %tmp.10 = sub %tmp.8 %tmp.9;
-        %tmp.11 = lt %tmp.5 %tmp.10;
-        bf %tmp.11 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_begin:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_57_272_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 265 12 ]
-        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_init:
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_end" ]
+        symbol [ i %i.1 241 17 18 ];
+        %tmp.1 = 0;
+        lputv %i.1 %tmp.1;
+        symbol [ i %i.1 241 17 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_test:
+        %tmp.2 = lgetv %i.1;
+        symbol [ i %tmp.2 241 24 25 ];
+        %tmp.3 = lgetv %prayerTimes;
+        symbol [ prayerTimes %tmp.3 241 28 39 ];
+        symbol [ size %tmp.4 241 40 44 ];
+        %tmp.4 = getv function %tmp.3 :size;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = 1;
+        %tmp.7 = sub %tmp.5 %tmp.6;
+        %tmp.8 = lt %tmp.2 %tmp.7;
+        bf %tmp.8 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_begin:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_57_252_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 242 12 ]
+        for @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_test @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_incr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_init:
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_begin" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_end" ]
         %j.2 = local;
-        symbol [ j %j.2 265 21 22 ];
-        %tmp.12 = 0;
-        lputv %j.2 %tmp.12;
-        symbol [ j %j.2 265 21 22 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_test:
-        %tmp.13 = lgetv %j.2;
-        symbol [ j %tmp.13 265 28 29 ];
-        %tmp.14 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.14 265 32 43 ];
-        symbol [ size %tmp.15 265 44 48 ];
-        %tmp.15 = getv function %tmp.14 :size;
-        %tmp.16 = invoke %tmp.14 %tmp.15();
-        %tmp.17 = lgetv %i.1;
-        symbol [ i %tmp.17 265 53 54 ];
-        %tmp.18 = sub %tmp.16 %tmp.17;
-        %tmp.19 = 1;
-        %tmp.20 = sub %tmp.18 %tmp.19;
-        %tmp.21 = lt %tmp.13 %tmp.20;
-        bf %tmp.21 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_begin:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_65_271_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 266 16 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_266_16_270_16_if_stmt:
-        %tmp.22 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.22 266 20 31 ];
-        %tmp.23 = lgetv %j.2;
-        symbol [ j %tmp.23 266 32 33 ];
-        %tmp.24 = agetv %tmp.22 %tmp.23;
-        symbol [ time %tmp.25 266 35 39 ];
-        %tmp.25 = getv %tmp.24 :time;
-        symbol [ greaterThan %tmp.26 266 40 51 ];
-        %tmp.26 = getv function %tmp.25 :greaterThan;
-        %tmp.27 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.27 266 52 63 ];
-        %tmp.28 = lgetv %j.2;
-        symbol [ j %tmp.28 266 64 65 ];
-        %tmp.29 = 1;
-        %tmp.30 = add %tmp.28 %tmp.29;
-        %tmp.31 = agetv %tmp.27 %tmp.30;
-        symbol [ time %tmp.32 266 71 75 ];
-        %tmp.32 = getv %tmp.31 :time;
-        %tmp.33 = invoke %tmp.25 %tmp.26(%tmp.32);
-        bf %tmp.33 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_266_16_270_16_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_266_16_270_16_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_266_78_270_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 267 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_266_78_270_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_266_78_270_16_stop" ]
-        %temp.3 = local;
-        symbol [ temp %temp.3 267 24 28 ];
-        %tmp.34 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.34 267 31 42 ];
-        %tmp.35 = lgetv %j.2;
-        symbol [ j %tmp.35 267 43 44 ];
-        %tmp.36 = agetv %tmp.34 %tmp.35;
-        lputv %temp.3 %tmp.36;
-        symbol [ temp %temp.3 267 24 28 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 268 20 ]
-        %tmp.37 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.37 268 20 31 ];
-        %tmp.38 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.38 268 37 48 ];
-        %tmp.39 = lgetv %j.2;
-        symbol [ j %tmp.39 268 49 50 ];
-        %tmp.40 = 1;
-        %tmp.41 = add %tmp.39 %tmp.40;
-        %tmp.42 = agetv %tmp.38 %tmp.41;
-        %tmp.43 = lgetv %j.2;
-        symbol [ j %tmp.43 268 32 33 ];
-        aputv %tmp.37 %tmp.43 %tmp.42;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 269 20 ]
-        %tmp.44 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.44 269 20 31 ];
-        %tmp.45 = lgetv %temp.3;
-        symbol [ temp %tmp.45 269 41 45 ];
+        symbol [ j %j.2 242 21 22 ];
+        %tmp.9 = 0;
+        lputv %j.2 %tmp.9;
+        symbol [ j %j.2 242 21 22 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_test:
+        %tmp.10 = lgetv %j.2;
+        symbol [ j %tmp.10 242 28 29 ];
+        %tmp.11 = lgetv %prayerTimes;
+        symbol [ prayerTimes %tmp.11 242 32 43 ];
+        symbol [ size %tmp.12 242 44 48 ];
+        %tmp.12 = getv function %tmp.11 :size;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        %tmp.14 = lgetv %i.1;
+        symbol [ i %tmp.14 242 53 54 ];
+        %tmp.15 = sub %tmp.13 %tmp.14;
+        %tmp.16 = 1;
+        %tmp.17 = sub %tmp.15 %tmp.16;
+        %tmp.18 = lt %tmp.10 %tmp.17;
+        bf %tmp.18 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_begin:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_65_251_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 243 16 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_65_251_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_65_251_12_stop" ]
+        %prayer1.3 = local;
+        symbol [ prayer1 %prayer1.3 243 20 27 ];
+        %tmp.19 = lgetv %prayerTimes;
+        symbol [ prayerTimes %tmp.19 243 30 41 ];
+        %tmp.20 = lgetv %j.2;
+        symbol [ j %tmp.20 243 42 43 ];
+        %tmp.21 = agetv %tmp.19 %tmp.20;
+        %tmp.22 = as %tmp.21 TheAthanPrayerTime;
+        symbol [ TheAthanPrayerTime %tmp.22 243 48 66 ];
+        lputv %prayer1.3 %tmp.22;
+        symbol [ prayer1 %prayer1.3 243 20 27 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 244 16 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_65_251_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_65_251_12_stop" ]
+        %prayer2.4 = local;
+        symbol [ prayer2 %prayer2.4 244 20 27 ];
+        %tmp.23 = lgetv %prayerTimes;
+        symbol [ prayerTimes %tmp.23 244 30 41 ];
+        %tmp.24 = lgetv %j.2;
+        symbol [ j %tmp.24 244 42 43 ];
+        %tmp.25 = 1;
+        %tmp.26 = add %tmp.24 %tmp.25;
+        %tmp.27 = agetv %tmp.23 %tmp.26;
+        %tmp.28 = as %tmp.27 TheAthanPrayerTime;
+        symbol [ TheAthanPrayerTime %tmp.28 244 52 70 ];
+        lputv %prayer2.4 %tmp.28;
+        symbol [ prayer2 %prayer2.4 244 20 27 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 246 16 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_246_16_250_16_if_stmt:
+        %tmp.29 = lgetv %prayer1.3;
+        symbol [ prayer1 %tmp.29 246 20 27 ];
+        symbol [ time %tmp.30 246 28 32 ];
+        %tmp.30 = getv %tmp.29 :time;
+        symbol [ greaterThan %tmp.31 246 33 44 ];
+        %tmp.31 = getv function %tmp.30 :greaterThan;
+        %tmp.32 = lgetv %prayer2.4;
+        symbol [ prayer2 %tmp.32 246 45 52 ];
+        symbol [ time %tmp.33 246 53 57 ];
+        %tmp.33 = getv %tmp.32 :time;
+        %tmp.34 = invoke %tmp.30 %tmp.31(%tmp.33);
+        bf %tmp.34 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_246_16_250_16_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_246_16_250_16_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_246_60_250_16_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 247 20 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_246_60_250_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_246_60_250_16_stop" ]
+        %temp.5 = local;
+        symbol [ temp %temp.5 247 24 28 ];
+        %tmp.35 = lgetv %prayer1.3;
+        symbol [ prayer1 %tmp.35 247 31 38 ];
+        lputv %temp.5 %tmp.35;
+        symbol [ temp %temp.5 247 24 28 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 248 20 ]
+        %tmp.36 = lgetv %prayerTimes;
+        symbol [ prayerTimes %tmp.36 248 20 31 ];
+        %tmp.37 = lgetv %prayer2.4;
+        symbol [ prayer2 %tmp.37 248 37 44 ];
+        %tmp.38 = lgetv %j.2;
+        symbol [ j %tmp.38 248 32 33 ];
+        aputv %tmp.36 %tmp.38 %tmp.37;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 249 20 ]
+        %tmp.39 = lgetv %prayerTimes;
+        symbol [ prayerTimes %tmp.39 249 20 31 ];
+        %tmp.40 = lgetv %temp.5;
+        symbol [ temp %tmp.40 249 41 45 ];
+        %tmp.41 = lgetv %j.2;
+        symbol [ j %tmp.41 249 32 33 ];
+        %tmp.42 = 1;
+        %tmp.43 = add %tmp.41 %tmp.42;
+        aputv %tmp.39 %tmp.43 %tmp.40;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_246_60_250_16_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_246_16_250_16_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_246_16_250_16_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_65_251_12_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_incr:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 242 ]
         %tmp.46 = lgetv %j.2;
-        symbol [ j %tmp.46 269 32 33 ];
-        %tmp.47 = 1;
-        %tmp.48 = add %tmp.46 %tmp.47;
-        aputv %tmp.44 %tmp.48 %tmp.45;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_266_78_270_16_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_266_16_270_16_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_266_16_270_16_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_65_271_12_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_incr:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 265 ]
-        %tmp.51 = lgetv %j.2;
-        symbol [ j %tmp.51 265 60 61 ];
-        %tmp.52 = add %tmp.51 1;
-        lputv %j.2 %tmp.52;
-        symbol [ j %j.2 265 60 61 ];
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_test;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_265_12_271_12_for_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_57_272_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_incr:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 264 ]
-        %tmp.55 = lgetv %i.1;
-        symbol [ i %tmp.55 264 52 53 ];
-        %tmp.56 = add %tmp.55 1;
-        lputv %i.1 %tmp.56;
-        symbol [ i %i.1 264 52 53 ];
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_test;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_264_8_272_8_for_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 273 8 ]
-        symbol [ System %tmp.57 273 8 14 ];
-        %tmp.57 = getm $.Toybox.System;
-        symbol [ println %tmp.58 273 15 22 ];
-        %tmp.58 = getv function %tmp.57 :println;
-        %tmp.59 = "DEBUG: Prayer times sorted, count: ";
-        %tmp.60 = lgetv %prayerTimes;
-        symbol [ prayerTimes %tmp.60 273 63 74 ];
-        symbol [ size %tmp.61 273 75 79 ];
-        %tmp.61 = getv function %tmp.60 :size;
-        %tmp.62 = invoke %tmp.60 %tmp.61();
-        %tmp.63 = add %tmp.59 %tmp.62;
-        invoke %tmp.57 %tmp.58(%tmp.63);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_261_42_274_4_stop:
+        symbol [ j %tmp.46 242 60 61 ];
+        %tmp.47 = add %tmp.46 1;
+        lputv %j.2 %tmp.47;
+        symbol [ j %j.2 242 60 61 ];
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_test;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_242_12_251_12_for_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_57_252_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_incr:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc" 241 ]
+        %tmp.50 = lgetv %i.1;
+        symbol [ i %tmp.50 241 52 53 ];
+        %tmp.51 = add %tmp.50 1;
+        lputv %i.1 %tmp.51;
+        symbol [ i %i.1 241 52 53 ];
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_test;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_241_8_252_8_for_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanAPIClient_mc_239_51_253_4_stop:
     }
 }
 [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanAPIClient.mc"; @line = 1; ]

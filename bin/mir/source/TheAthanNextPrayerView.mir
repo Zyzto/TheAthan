@@ -8,1304 +8,1316 @@ import Toybox.Time;
 import Toybox.Time.Gregorian;
 [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Lang,5,14,18]; ]
 import Toybox.Lang;
-[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [System,6,14,20]; ]
-import Toybox.System;
-[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Application,7,14,25]; ]
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Application,6,14,25]; ]
 import Toybox.Application;
-[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 9; @symbol_classdef = [TheAthanNextPrayerView,9,6,28]; @symbol_extends<0> = [WatchUi,9,37,44]; @symbol_extends<1> = [View,9,45,49]; ]
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 8; @symbol_classdef = [TheAthanNextPrayerView,8,6,28]; @symbol_extends<0> = [WatchUi,8,37,44]; @symbol_extends<1> = [View,8,45,49]; ]
 class TheAthanNextPrayerView extends WatchUi.View {
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 9; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 8; ]
     <init> {
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 9; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 8; ]
     static
     <init> {
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 11; @position = 16; @symbol_vardef = [_titleLabel,11,16,27]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 10; @position = 16; @symbol_vardef = [_titleLabel,10,16,27]; ]
     private
     var _titleLabel;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 12; @position = 16; @symbol_vardef = [_prayerNameLabel,12,16,32]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 11; @position = 16; @symbol_vardef = [_prayerNameLabel,11,16,32]; ]
     private
     var _prayerNameLabel;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 13; @position = 16; @symbol_vardef = [_prayerTimeLabel,13,16,32]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 12; @position = 16; @symbol_vardef = [_prayerTimeLabel,12,16,32]; ]
     private
     var _prayerTimeLabel;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 15; @position = 16; @symbol_vardef = [_width,15,16,22]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 14; @position = 16; @symbol_vardef = [_width,14,16,22]; ]
     private
     var _width;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 16; @position = 16; @symbol_vardef = [_height,16,16,23]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 15; @position = 16; @symbol_vardef = [_height,15,16,23]; ]
     private
     var _height;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 17; @position = 16; @symbol_vardef = [_centerX,17,16,24]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 16; @position = 16; @symbol_vardef = [_centerX,16,16,24]; ]
     private
     var _centerX;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 18; @position = 16; @symbol_vardef = [_centerY,18,16,24]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 17; @position = 16; @symbol_vardef = [_centerY,17,16,24]; ]
     private
     var _centerY;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 20; @symbol_functiondef = [initialize,20,13,23]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 19; @symbol_functiondef = [initialize,19,13,23]; ]
     function initialize() as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_20_26_23_4_start:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_19_26_22_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 20 8 ]
+        symbol [ TheAthanLogger %tmp.2 20 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 20 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "NextPrayerView";
+        %tmp.5 = "initialize";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 21 8 ]
-        symbol [ System %tmp.1 21 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 21 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: NextPrayerView initialize";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 22 8 ]
-        symbol [ View %tmp.5 22 8 12 ];
-        %tmp.5 = getv ? :View;
-        symbol [ initialize %tmp.6 22 13 23 ];
-        %tmp.6 = getv function %tmp.5 :initialize;
-        invoke %tmp.5 %tmp.6();
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_20_26_23_4_stop:
+        symbol [ View %tmp.7 21 8 12 ];
+        %tmp.7 = getv ? :View;
+        symbol [ initialize %tmp.8 21 13 23 ];
+        %tmp.8 = getv function %tmp.7 :initialize;
+        invoke %tmp.7 %tmp.8();
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_19_26_22_4_stop:
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 26; @symbol_functiondef = [onLayout,26,13,21]; @symbol_param<0> = [dc,26,22,24]; @symbol_param<0>_type<0> = [Dc,26,28,30]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 25; @symbol_functiondef = [onLayout,25,13,21]; @symbol_param<0> = [dc,25,22,24]; @symbol_param<0>_type<0> = [Dc,25,28,30]; ]
     function onLayout(dc as Dc) as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_26_40_55_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 27 8 ]
-        symbol [ System %tmp.1 27 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 27 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: NextPrayerView onLayout";
-        invoke %tmp.1 %tmp.2(%tmp.3);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_25_40_54_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 26 8 ]
+        symbol [ TheAthanLogger %tmp.2 26 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 26 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "NextPrayerView";
+        %tmp.5 = "onLayout";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 28 8 ]
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 28 17 19 ];
+        symbol [ getWidth %tmp.7 28 20 28 ];
+        %tmp.7 = getv function %tmp.6 :getWidth;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        symbol [ _width ? 28 8 14 ];
+        putv self :_width %tmp.8;
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 29 8 ]
-        %tmp.4 = lgetv %dc;
-        symbol [ dc %tmp.4 29 17 19 ];
-        symbol [ getWidth %tmp.5 29 20 28 ];
-        %tmp.5 = getv function %tmp.4 :getWidth;
-        %tmp.6 = invoke %tmp.4 %tmp.5();
-        symbol [ _width ? 29 8 14 ];
-        putv self :_width %tmp.6;
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 29 18 20 ];
+        symbol [ getHeight %tmp.10 29 21 30 ];
+        %tmp.10 = getv function %tmp.9 :getHeight;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        symbol [ _height ? 29 8 15 ];
+        putv self :_height %tmp.11;
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 30 8 ]
-        %tmp.7 = lgetv %dc;
-        symbol [ dc %tmp.7 30 18 20 ];
-        symbol [ getHeight %tmp.8 30 21 30 ];
-        %tmp.8 = getv function %tmp.7 :getHeight;
-        %tmp.9 = invoke %tmp.7 %tmp.8();
-        symbol [ _height ? 30 8 15 ];
-        putv self :_height %tmp.9;
+        symbol [ _width %tmp.13 30 19 25 ];
+        %tmp.13 = getv ? :_width;
+        %tmp.14 = 2;
+        %tmp.15 = div %tmp.13 %tmp.14;
+        symbol [ _centerX ? 30 8 16 ];
+        putv self :_centerX %tmp.15;
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 31 8 ]
-        symbol [ _width %tmp.11 31 19 25 ];
-        %tmp.11 = getv ? :_width;
-        %tmp.12 = 2;
-        %tmp.13 = div %tmp.11 %tmp.12;
-        symbol [ _centerX ? 31 8 16 ];
-        putv self :_centerX %tmp.13;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 32 8 ]
-        symbol [ _height %tmp.15 32 19 26 ];
-        %tmp.15 = getv ? :_height;
-        %tmp.16 = 2;
-        %tmp.17 = div %tmp.15 %tmp.16;
-        symbol [ _centerY ? 32 8 16 ];
-        putv self :_centerY %tmp.17;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 34 8 ]
-        symbol [ System %tmp.18 34 8 14 ];
-        %tmp.18 = getm $.Toybox.System;
-        symbol [ println %tmp.19 34 15 22 ];
-        %tmp.19 = getv function %tmp.18 :println;
-        %tmp.20 = "DEBUG: Device dimensions: ";
-        symbol [ _width %tmp.22 34 54 60 ];
-        %tmp.22 = getv ? :_width;
-        %tmp.23 = add %tmp.20 %tmp.22;
-        %tmp.24 = "x";
-        %tmp.25 = add %tmp.23 %tmp.24;
-        symbol [ _height %tmp.27 34 69 76 ];
-        %tmp.27 = getv ? :_height;
-        %tmp.28 = add %tmp.25 %tmp.27;
-        invoke %tmp.18 %tmp.19(%tmp.28);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 36 8 ]
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_finally;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_beginTry:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_12_52_8_start:
+        symbol [ _height %tmp.17 31 19 26 ];
+        %tmp.17 = getv ? :_height;
+        %tmp.18 = 2;
+        %tmp.19 = div %tmp.17 %tmp.18;
+        symbol [ _centerY ? 31 8 16 ];
+        putv self :_centerY %tmp.19;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 33 8 ]
+        symbol [ TheAthanLogger %tmp.21 33 8 22 ];
+        %tmp.21 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.22 33 23 28 ];
+        %tmp.22 = getv function %tmp.21 :debug;
+        %tmp.23 = "NextPrayerView";
+        %tmp.24 = "Device dimensions: ";
+        symbol [ _width %tmp.26 33 71 77 ];
+        %tmp.26 = getv ? :_width;
+        %tmp.27 = add %tmp.24 %tmp.26;
+        %tmp.28 = "x";
+        %tmp.29 = add %tmp.27 %tmp.28;
+        symbol [ _height %tmp.31 33 86 93 ];
+        %tmp.31 = getv ? :_height;
+        %tmp.32 = add %tmp.29 %tmp.31;
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.32);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 35 8 ]
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_12_51_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 37 12 ]
+        %tmp.33 = self;
+        symbol [ setLayout %tmp.34 37 12 21 ];
+        %tmp.34 = getv function %tmp.33 :setLayout;
+        symbol [ Rez %tmp.36 37 22 25 ];
+        %tmp.36 = getv ? :Rez;
+        symbol [ Layouts %tmp.37 37 26 33 ];
+        %tmp.37 = getv %tmp.36 :Layouts;
+        symbol [ MainLayout %tmp.38 37 34 44 ];
+        %tmp.38 = getv function %tmp.37 :MainLayout;
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 37 45 47 ];
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        invoke %tmp.33 %tmp.34(%tmp.40);
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 38 12 ]
-        %tmp.29 = self;
-        symbol [ setLayout %tmp.30 38 12 21 ];
-        %tmp.30 = getv function %tmp.29 :setLayout;
-        symbol [ Rez %tmp.32 38 22 25 ];
-        %tmp.32 = getv ? :Rez;
-        symbol [ Layouts %tmp.33 38 26 33 ];
-        %tmp.33 = getv %tmp.32 :Layouts;
-        symbol [ MainLayout %tmp.34 38 34 44 ];
-        %tmp.34 = getv function %tmp.33 :MainLayout;
-        %tmp.35 = lgetv %dc;
-        symbol [ dc %tmp.35 38 45 47 ];
-        %tmp.36 = invoke %tmp.33 %tmp.34(%tmp.35);
-        invoke %tmp.29 %tmp.30(%tmp.36);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 39 12 ]
-        symbol [ System %tmp.37 39 12 18 ];
-        %tmp.37 = getm $.Toybox.System;
-        symbol [ println %tmp.38 39 19 26 ];
-        %tmp.38 = getv function %tmp.37 :println;
-        %tmp.39 = "DEBUG: Layout set";
-        invoke %tmp.37 %tmp.38(%tmp.39);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 42 12 ]
-        symbol [ View %tmp.41 42 26 30 ];
-        %tmp.41 = getv ? :View;
-        symbol [ findDrawableById %tmp.42 42 31 47 ];
-        %tmp.42 = getv function %tmp.41 :findDrawableById;
-        %tmp.43 = "titleLabel";
-        %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
-        symbol [ _titleLabel ? 42 12 23 ];
-        putv self :_titleLabel %tmp.44;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 43 12 ]
-        symbol [ View %tmp.46 43 31 35 ];
-        %tmp.46 = getv ? :View;
-        symbol [ findDrawableById %tmp.47 43 36 52 ];
-        %tmp.47 = getv function %tmp.46 :findDrawableById;
-        %tmp.48 = "prayerNameLabel";
-        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
-        symbol [ _prayerNameLabel ? 43 12 28 ];
-        putv self :_prayerNameLabel %tmp.49;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 44 12 ]
-        symbol [ View %tmp.51 44 31 35 ];
-        %tmp.51 = getv ? :View;
-        symbol [ findDrawableById %tmp.52 44 36 52 ];
-        %tmp.52 = getv function %tmp.51 :findDrawableById;
-        %tmp.53 = "prayerTimeLabel";
-        %tmp.54 = invoke %tmp.51 %tmp.52(%tmp.53);
-        symbol [ _prayerTimeLabel ? 44 12 28 ];
-        putv self :_prayerTimeLabel %tmp.54;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 46 12 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_46_12_51_12_if_stmt:
-        symbol [ _titleLabel %tmp.56 46 16 27 ];
-        %tmp.56 = getv ? :_titleLabel;
-        %tmp.57 = null;
-        %tmp.58 = ne %tmp.56 %tmp.57;
-        bf %tmp.58 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_46_12_51_12_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_46_12_51_12_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_46_37_49_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 47 16 ]
-        symbol [ _titleLabel %tmp.60 47 16 27 ];
-        %tmp.60 = getv ? :_titleLabel;
-        %tmp.61 = as %tmp.60 { (!Null) };
-        symbol [ setText %tmp.62 47 28 35 ];
-        %tmp.62 = getv function %tmp.61 :setText;
-        symbol [ WatchUi %tmp.63 47 36 43 ];
-        %tmp.63 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.64 47 44 56 ];
-        %tmp.64 = getv function %tmp.63 :loadResource;
-        symbol [ Rez %tmp.66 47 57 60 ];
-        %tmp.66 = getv ? :Rez;
-        symbol [ Strings %tmp.67 47 61 68 ];
-        %tmp.67 = getv %tmp.66 :Strings;
-        symbol [ next_prayer %tmp.68 47 69 80 ];
-        %tmp.68 = getv %tmp.67 :next_prayer;
-        %tmp.69 = invoke %tmp.63 %tmp.64(%tmp.68);
-        invoke %tmp.61 %tmp.62(%tmp.69);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 48 16 ]
-        symbol [ System %tmp.70 48 16 22 ];
-        %tmp.70 = getm $.Toybox.System;
-        symbol [ println %tmp.71 48 23 30 ];
-        %tmp.71 = getv function %tmp.70 :println;
-        %tmp.72 = "DEBUG: titleLabel found and set";
-        invoke %tmp.70 %tmp.71(%tmp.72);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_46_37_49_12_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_46_12_51_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_46_12_51_12_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_49_19_51_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 50 16 ]
-        symbol [ System %tmp.73 50 16 22 ];
-        %tmp.73 = getm $.Toybox.System;
-        symbol [ println %tmp.74 50 23 30 ];
-        %tmp.74 = getv function %tmp.73 :println;
-        %tmp.75 = "DEBUG: titleLabel not found";
-        invoke %tmp.73 %tmp.74(%tmp.75);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_49_19_51_12_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_46_12_51_12_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_12_52_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_endTry:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_finally;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_catch:
-        %tmp.76 = exception;
-        push %tmp.76;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 52 10 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_52_10_54_8_end" ]
-        %e.1 = local;
-        symbol [ e %e.1 52 17 18 ];
-        %tmp.77 = dup %tmp.76;
-        lputv %e.1 %tmp.77;
-        symbol [ e %e.1 52 17 18 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_52_20_54_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 53 12 ]
-        symbol [ System %tmp.78 53 12 18 ];
-        %tmp.78 = getm $.Toybox.System;
-        symbol [ println %tmp.79 53 19 26 ];
-        %tmp.79 = getv function %tmp.78 :println;
-        %tmp.80 = "DEBUG: Exception in onLayout: ";
-        %tmp.81 = lgetv %e.1;
-        symbol [ e %tmp.81 53 62 63 ];
-        symbol [ getErrorMessage %tmp.82 53 64 79 ];
-        %tmp.82 = getv function %tmp.81 :getErrorMessage;
-        %tmp.83 = invoke %tmp.81 %tmp.82();
-        %tmp.84 = add %tmp.80 %tmp.83;
-        invoke %tmp.78 %tmp.79(%tmp.84);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_52_20_54_8_stop:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_finally;
-        pop;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_52_10_54_8_end:
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_52_10_54_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_52_10_54_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_finally;
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_finally;
-        throw %tmp.76;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_finally:
-        jsrret;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_36_8_54_8_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_26_40_55_4_stop:
-    }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 58; @symbol_functiondef = [onShow,58,13,19]; ]
-    function onShow() as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_58_30_61_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 59 8 ]
-        symbol [ System %tmp.1 59 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 59 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: NextPrayerView onShow";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 60 8 ]
-        %tmp.4 = self;
-        symbol [ updateView %tmp.5 60 8 18 ];
-        %tmp.5 = getv function %tmp.4 :updateView;
-        invoke %tmp.4 %tmp.5();
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_58_30_61_4_stop:
-    }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 64; @symbol_functiondef = [updateView,64,13,23]; ]
-    function updateView() {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_64_26_136_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 65 8 ]
-        symbol [ System %tmp.1 65 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 65 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: NextPrayerView updateView";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 68 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_64_26_136_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_64_26_136_4_stop" ]
-        %app.1 = local;
-        symbol [ app %app.1 68 12 15 ];
-        symbol [ Application %tmp.4 68 18 29 ];
-        %tmp.4 = getm $.Toybox.Application;
-        symbol [ getApp %tmp.5 68 30 36 ];
-        %tmp.5 = getv function %tmp.4 :getApp;
-        %tmp.6 = invoke %tmp.4 %tmp.5();
-        %tmp.7 = as %tmp.6 TheAthanApp;
-        symbol [ TheAthanApp %tmp.7 68 42 53 ];
-        lputv %app.1 %tmp.7;
-        symbol [ app %app.1 68 12 15 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 69 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_64_26_136_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_64_26_136_4_stop" ]
-        %nextPrayer.2 = local;
-        symbol [ nextPrayer %nextPrayer.2 69 12 22 ];
-        %tmp.8 = lgetv %app.1;
-        symbol [ app %tmp.8 69 25 28 ];
-        symbol [ getNextPrayer %tmp.9 69 29 42 ];
-        %tmp.9 = getv function %tmp.8 :getNextPrayer;
-        %tmp.10 = invoke %tmp.8 %tmp.9();
-        lputv %nextPrayer.2 %tmp.10;
-        symbol [ nextPrayer %nextPrayer.2 69 12 22 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 71 8 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_8_132_8_if_stmt:
-        %tmp.11 = lgetv %nextPrayer.2;
-        symbol [ nextPrayer %tmp.11 71 12 22 ];
-        %tmp.12 = null;
-        %tmp.13 = ne %tmp.11 %tmp.12;
-        bf %tmp.13 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_8_132_8_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_8_132_8_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_32_124_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 72 12 ]
-        symbol [ System %tmp.14 72 12 18 ];
-        %tmp.14 = getm $.Toybox.System;
-        symbol [ println %tmp.15 72 19 26 ];
-        %tmp.15 = getv function %tmp.14 :println;
-        %tmp.16 = "DEBUG: Next prayer found: ";
-        %tmp.17 = lgetv %nextPrayer.2;
-        symbol [ nextPrayer %tmp.17 72 58 68 ];
-        %tmp.18 = as %tmp.17 { (!Null) };
-        symbol [ name %tmp.19 72 69 73 ];
-        %tmp.19 = getv %tmp.18 :name;
-        %tmp.20 = add %tmp.16 %tmp.19;
-        invoke %tmp.14 %tmp.15(%tmp.20);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 76 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_32_124_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_32_124_8_stop" ]
-        %now.3 = local;
-        symbol [ now %now.3 76 16 19 ];
-        symbol [ Time %tmp.21 76 22 26 ];
-        %tmp.21 = getm $.Toybox.Time;
-        symbol [ now %tmp.22 76 27 30 ];
-        %tmp.22 = getv function %tmp.21 :now;
-        %tmp.23 = invoke %tmp.21 %tmp.22();
-        lputv %now.3 %tmp.23;
-        symbol [ now %now.3 76 16 19 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 77 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_32_124_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_32_124_8_stop" ]
-        %prayerTimeInfo.4 = local;
-        symbol [ prayerTimeInfo %prayerTimeInfo.4 77 16 30 ];
-        symbol [ Gregorian %tmp.24 77 33 42 ];
-        %tmp.24 = getm $.Toybox.Time.Gregorian;
-        symbol [ info %tmp.25 77 43 47 ];
-        %tmp.25 = getv function %tmp.24 :info;
-        %tmp.26 = lgetv %nextPrayer.2;
-        symbol [ nextPrayer %tmp.26 77 48 58 ];
-        %tmp.27 = as %tmp.26 { (!Null) };
-        symbol [ time %tmp.28 77 59 63 ];
-        %tmp.28 = getv %tmp.27 :time;
-        symbol [ Time %tmp.29 77 65 69 ];
-        %tmp.29 = getm $.Toybox.Time;
-        symbol [ FORMAT_SHORT %tmp.30 77 70 82 ];
-        %tmp.30 = getv %tmp.29 :FORMAT_SHORT;
-        %tmp.31 = invoke %tmp.24 %tmp.25(%tmp.28, %tmp.30);
-        lputv %prayerTimeInfo.4 %tmp.31;
-        symbol [ prayerTimeInfo %prayerTimeInfo.4 77 16 30 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 78 12 ]
-        symbol [ System %tmp.32 78 12 18 ];
-        %tmp.32 = getm $.Toybox.System;
-        symbol [ println %tmp.33 78 19 26 ];
-        %tmp.33 = getv function %tmp.32 :println;
-        %tmp.34 = "DEBUG: Next prayer time day: ";
-        %tmp.35 = lgetv %prayerTimeInfo.4;
-        symbol [ prayerTimeInfo %tmp.35 78 61 75 ];
-        symbol [ day %tmp.36 78 76 79 ];
-        %tmp.36 = getv %tmp.35 :day;
-        %tmp.37 = add %tmp.34 %tmp.36;
-        invoke %tmp.32 %tmp.33(%tmp.37);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 81 12 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_81_12_111_12_if_stmt:
-        symbol [ _prayerNameLabel %tmp.39 81 16 32 ];
-        %tmp.39 = getv ? :_prayerNameLabel;
-        %tmp.40 = null;
-        %tmp.41 = ne %tmp.39 %tmp.40;
-        bf %tmp.41 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_81_12_111_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_81_12_111_12_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_81_42_111_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 82 16 ]
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_finally;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_beginTry:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_20_108_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 84 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_20_108_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_20_108_16_stop" ]
-        %prayerName.5 = local;
-        symbol [ prayerName %prayerName.5 84 24 34 ];
-        %tmp.42 = lgetv %nextPrayer.2;
-        symbol [ nextPrayer %tmp.42 84 37 47 ];
-        %tmp.43 = as %tmp.42 { (!Null) };
-        symbol [ name %tmp.44 84 48 52 ];
-        %tmp.44 = getv %tmp.43 :name;
-        lputv %prayerName.5 %tmp.44;
-        symbol [ prayerName %prayerName.5 84 24 34 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 85 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_20_108_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_20_108_16_stop" ]
-        %displayText.6 = local;
-        symbol [ displayText %displayText.6 85 24 35 ];
-        %tmp.45 = "";
-        lputv %displayText.6 %tmp.45;
-        symbol [ displayText %displayText.6 85 24 35 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 86 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_20_108_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_20_108_16_stop" ]
-        %prayerInfo.7 = local;
-        symbol [ prayerInfo %prayerInfo.7 86 24 34 ];
-        %tmp.46 = "";
-        lputv %prayerInfo.7 %tmp.46;
-        symbol [ prayerInfo %prayerInfo.7 86 24 34 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 88 20 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_88_20_103_20_if_stmt:
-        %tmp.47 = lgetv %prayerName.5;
-        symbol [ prayerName %tmp.47 88 24 34 ];
-        symbol [ equals %tmp.48 88 35 41 ];
-        %tmp.48 = getv function %tmp.47 :equals;
-        %tmp.49 = "fajr";
+        symbol [ TheAthanLogger %tmp.42 38 12 26 ];
+        %tmp.42 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.43 38 27 32 ];
+        %tmp.43 = getv function %tmp.42 :debug;
+        %tmp.44 = "NextPrayerView";
+        %tmp.45 = "Layout set";
+        invoke %tmp.42 %tmp.43(%tmp.44, %tmp.45);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 41 12 ]
+        symbol [ View %tmp.47 41 26 30 ];
+        %tmp.47 = getv ? :View;
+        symbol [ findDrawableById %tmp.48 41 31 47 ];
+        %tmp.48 = getv function %tmp.47 :findDrawableById;
+        %tmp.49 = "titleLabel";
         %tmp.50 = invoke %tmp.47 %tmp.48(%tmp.49);
-        bf %tmp.50 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_88_20_103_20_if_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_88_20_103_20_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_88_51_91_20_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 89 24 ]
-        symbol [ WatchUi %tmp.51 89 38 45 ];
-        %tmp.51 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.52 89 46 58 ];
-        %tmp.52 = getv function %tmp.51 :loadResource;
-        symbol [ Rez %tmp.54 89 59 62 ];
-        %tmp.54 = getv ? :Rez;
-        symbol [ Strings %tmp.55 89 63 70 ];
-        %tmp.55 = getv %tmp.54 :Strings;
-        symbol [ fajr %tmp.56 89 71 75 ];
-        %tmp.56 = getv %tmp.55 :fajr;
-        %tmp.57 = invoke %tmp.51 %tmp.52(%tmp.56);
-        lputv %displayText.6 %tmp.57;
-        symbol [ displayText %displayText.6 89 24 35 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 90 24 ]
-        %tmp.58 = "Dawn Prayer";
-        lputv %prayerInfo.7 %tmp.58;
-        symbol [ prayerInfo %prayerInfo.7 90 24 34 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_88_51_91_20_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_88_20_103_20_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_88_20_103_20_if_false:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 91 27 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_91_27_103_20_if_stmt:
-        %tmp.59 = lgetv %prayerName.5;
-        symbol [ prayerName %tmp.59 91 31 41 ];
-        symbol [ equals %tmp.60 91 42 48 ];
-        %tmp.60 = getv function %tmp.59 :equals;
-        %tmp.61 = "dhuhr";
-        %tmp.62 = invoke %tmp.59 %tmp.60(%tmp.61);
-        bf %tmp.62 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_91_27_103_20_if_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_91_27_103_20_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_91_59_94_20_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 92 24 ]
-        symbol [ WatchUi %tmp.63 92 38 45 ];
-        %tmp.63 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.64 92 46 58 ];
-        %tmp.64 = getv function %tmp.63 :loadResource;
-        symbol [ Rez %tmp.66 92 59 62 ];
-        %tmp.66 = getv ? :Rez;
-        symbol [ Strings %tmp.67 92 63 70 ];
-        %tmp.67 = getv %tmp.66 :Strings;
-        symbol [ dhuhr %tmp.68 92 71 76 ];
-        %tmp.68 = getv %tmp.67 :dhuhr;
-        %tmp.69 = invoke %tmp.63 %tmp.64(%tmp.68);
-        lputv %displayText.6 %tmp.69;
-        symbol [ displayText %displayText.6 92 24 35 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 93 24 ]
-        %tmp.70 = "Noon Prayer";
-        lputv %prayerInfo.7 %tmp.70;
-        symbol [ prayerInfo %prayerInfo.7 93 24 34 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_91_59_94_20_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_91_27_103_20_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_91_27_103_20_if_false:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 94 27 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_94_27_103_20_if_stmt:
-        %tmp.71 = lgetv %prayerName.5;
-        symbol [ prayerName %tmp.71 94 31 41 ];
-        symbol [ equals %tmp.72 94 42 48 ];
-        %tmp.72 = getv function %tmp.71 :equals;
-        %tmp.73 = "asr";
-        %tmp.74 = invoke %tmp.71 %tmp.72(%tmp.73);
-        bf %tmp.74 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_94_27_103_20_if_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_94_27_103_20_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_94_57_97_20_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 95 24 ]
-        symbol [ WatchUi %tmp.75 95 38 45 ];
-        %tmp.75 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.76 95 46 58 ];
-        %tmp.76 = getv function %tmp.75 :loadResource;
-        symbol [ Rez %tmp.78 95 59 62 ];
-        %tmp.78 = getv ? :Rez;
-        symbol [ Strings %tmp.79 95 63 70 ];
-        %tmp.79 = getv %tmp.78 :Strings;
-        symbol [ asr %tmp.80 95 71 74 ];
-        %tmp.80 = getv %tmp.79 :asr;
-        %tmp.81 = invoke %tmp.75 %tmp.76(%tmp.80);
-        lputv %displayText.6 %tmp.81;
-        symbol [ displayText %displayText.6 95 24 35 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 96 24 ]
-        %tmp.82 = "Afternoon Prayer";
-        lputv %prayerInfo.7 %tmp.82;
-        symbol [ prayerInfo %prayerInfo.7 96 24 34 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_94_57_97_20_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_94_27_103_20_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_94_27_103_20_if_false:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 97 27 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_97_27_103_20_if_stmt:
-        %tmp.83 = lgetv %prayerName.5;
-        symbol [ prayerName %tmp.83 97 31 41 ];
-        symbol [ equals %tmp.84 97 42 48 ];
-        %tmp.84 = getv function %tmp.83 :equals;
-        %tmp.85 = "maghrib";
-        %tmp.86 = invoke %tmp.83 %tmp.84(%tmp.85);
-        bf %tmp.86 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_97_27_103_20_if_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_97_27_103_20_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_97_61_100_20_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 98 24 ]
-        symbol [ WatchUi %tmp.87 98 38 45 ];
-        %tmp.87 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.88 98 46 58 ];
-        %tmp.88 = getv function %tmp.87 :loadResource;
-        symbol [ Rez %tmp.90 98 59 62 ];
-        %tmp.90 = getv ? :Rez;
-        symbol [ Strings %tmp.91 98 63 70 ];
-        %tmp.91 = getv %tmp.90 :Strings;
-        symbol [ maghrib %tmp.92 98 71 78 ];
-        %tmp.92 = getv %tmp.91 :maghrib;
-        %tmp.93 = invoke %tmp.87 %tmp.88(%tmp.92);
-        lputv %displayText.6 %tmp.93;
-        symbol [ displayText %displayText.6 98 24 35 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 99 24 ]
-        %tmp.94 = "Sunset Prayer";
-        lputv %prayerInfo.7 %tmp.94;
-        symbol [ prayerInfo %prayerInfo.7 99 24 34 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_97_61_100_20_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_97_27_103_20_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_97_27_103_20_if_false:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 100 27 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_100_27_103_20_if_stmt:
-        %tmp.95 = lgetv %prayerName.5;
-        symbol [ prayerName %tmp.95 100 31 41 ];
-        symbol [ equals %tmp.96 100 42 48 ];
-        %tmp.96 = getv function %tmp.95 :equals;
-        %tmp.97 = "isha";
-        %tmp.98 = invoke %tmp.95 %tmp.96(%tmp.97);
-        bf %tmp.98 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_100_27_103_20_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_100_27_103_20_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_100_58_103_20_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 101 24 ]
-        symbol [ WatchUi %tmp.99 101 38 45 ];
-        %tmp.99 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.100 101 46 58 ];
-        %tmp.100 = getv function %tmp.99 :loadResource;
-        symbol [ Rez %tmp.102 101 59 62 ];
-        %tmp.102 = getv ? :Rez;
-        symbol [ Strings %tmp.103 101 63 70 ];
-        %tmp.103 = getv %tmp.102 :Strings;
-        symbol [ isha %tmp.104 101 71 75 ];
-        %tmp.104 = getv %tmp.103 :isha;
-        %tmp.105 = invoke %tmp.99 %tmp.100(%tmp.104);
-        lputv %displayText.6 %tmp.105;
-        symbol [ displayText %displayText.6 101 24 35 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 102 24 ]
-        %tmp.106 = "Night Prayer";
-        lputv %prayerInfo.7 %tmp.106;
-        symbol [ prayerInfo %prayerInfo.7 102 24 34 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_100_58_103_20_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_100_27_103_20_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_100_27_103_20_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_97_27_103_20_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_94_27_103_20_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_91_27_103_20_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_88_20_103_20_if_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 106 20 ]
-        symbol [ _prayerNameLabel %tmp.108 106 20 36 ];
-        %tmp.108 = getv ? :_prayerNameLabel;
-        symbol [ setText %tmp.109 106 37 44 ];
-        %tmp.109 = getv function %tmp.108 :setText;
-        %tmp.110 = lgetv %displayText.6;
-        symbol [ displayText %tmp.110 106 45 56 ];
-        %tmp.111 = "\n";
-        %tmp.112 = add %tmp.110 %tmp.111;
-        %tmp.113 = lgetv %prayerInfo.7;
-        symbol [ prayerInfo %tmp.113 106 66 76 ];
-        %tmp.114 = add %tmp.112 %tmp.113;
-        invoke %tmp.108 %tmp.109(%tmp.114);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 107 20 ]
-        symbol [ System %tmp.115 107 20 26 ];
-        %tmp.115 = getm $.Toybox.System;
-        symbol [ println %tmp.116 107 27 34 ];
-        %tmp.116 = getv function %tmp.115 :println;
-        %tmp.117 = "DEBUG: Prayer name set";
-        invoke %tmp.115 %tmp.116(%tmp.117);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_20_108_16_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_endTry:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_finally;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_catch:
-        %tmp.118 = exception;
-        push %tmp.118;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 108 18 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_108_18_110_16_end" ]
-        %e.8 = local;
-        symbol [ e %e.8 108 25 26 ];
-        %tmp.119 = dup %tmp.118;
-        lputv %e.8 %tmp.119;
-        symbol [ e %e.8 108 25 26 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_108_28_110_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 109 20 ]
-        symbol [ System %tmp.120 109 20 26 ];
-        %tmp.120 = getm $.Toybox.System;
-        symbol [ println %tmp.121 109 27 34 ];
-        %tmp.121 = getv function %tmp.120 :println;
-        %tmp.122 = "DEBUG: Exception setting prayer name: ";
-        %tmp.123 = lgetv %e.8;
-        symbol [ e %tmp.123 109 78 79 ];
-        symbol [ getErrorMessage %tmp.124 109 80 95 ];
-        %tmp.124 = getv function %tmp.123 :getErrorMessage;
-        %tmp.125 = invoke %tmp.123 %tmp.124();
-        %tmp.126 = add %tmp.122 %tmp.125;
-        invoke %tmp.120 %tmp.121(%tmp.126);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_108_28_110_16_stop:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_finally;
+        symbol [ _titleLabel ? 41 12 23 ];
+        putv self :_titleLabel %tmp.50;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 42 12 ]
+        symbol [ View %tmp.52 42 31 35 ];
+        %tmp.52 = getv ? :View;
+        symbol [ findDrawableById %tmp.53 42 36 52 ];
+        %tmp.53 = getv function %tmp.52 :findDrawableById;
+        %tmp.54 = "prayerNameLabel";
+        %tmp.55 = invoke %tmp.52 %tmp.53(%tmp.54);
+        symbol [ _prayerNameLabel ? 42 12 28 ];
+        putv self :_prayerNameLabel %tmp.55;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 43 12 ]
+        symbol [ View %tmp.57 43 31 35 ];
+        %tmp.57 = getv ? :View;
+        symbol [ findDrawableById %tmp.58 43 36 52 ];
+        %tmp.58 = getv function %tmp.57 :findDrawableById;
+        %tmp.59 = "prayerTimeLabel";
+        %tmp.60 = invoke %tmp.57 %tmp.58(%tmp.59);
+        symbol [ _prayerTimeLabel ? 43 12 28 ];
+        putv self :_prayerTimeLabel %tmp.60;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 45 12 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_45_12_50_12_if_stmt:
+        symbol [ _titleLabel %tmp.62 45 16 27 ];
+        %tmp.62 = getv ? :_titleLabel;
+        %tmp.63 = null;
+        %tmp.64 = ne %tmp.62 %tmp.63;
+        bf %tmp.64 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_45_12_50_12_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_45_12_50_12_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_45_37_48_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 46 16 ]
+        symbol [ _titleLabel %tmp.66 46 16 27 ];
+        %tmp.66 = getv ? :_titleLabel;
+        %tmp.67 = as %tmp.66 { (!Null) };
+        symbol [ setText %tmp.68 46 28 35 ];
+        %tmp.68 = getv function %tmp.67 :setText;
+        symbol [ WatchUi %tmp.69 46 36 43 ];
+        %tmp.69 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.70 46 44 56 ];
+        %tmp.70 = getv function %tmp.69 :loadResource;
+        symbol [ Rez %tmp.72 46 57 60 ];
+        %tmp.72 = getv ? :Rez;
+        symbol [ Strings %tmp.73 46 61 68 ];
+        %tmp.73 = getv %tmp.72 :Strings;
+        symbol [ next_prayer %tmp.74 46 69 80 ];
+        %tmp.74 = getv %tmp.73 :next_prayer;
+        %tmp.75 = invoke %tmp.69 %tmp.70(%tmp.74);
+        invoke %tmp.67 %tmp.68(%tmp.75);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 47 16 ]
+        symbol [ TheAthanLogger %tmp.77 47 16 30 ];
+        %tmp.77 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.78 47 31 36 ];
+        %tmp.78 = getv function %tmp.77 :debug;
+        %tmp.79 = "NextPrayerView";
+        %tmp.80 = "titleLabel found and set";
+        invoke %tmp.77 %tmp.78(%tmp.79, %tmp.80);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_45_37_48_12_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_45_12_50_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_45_12_50_12_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_48_19_50_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 49 16 ]
+        symbol [ TheAthanLogger %tmp.82 49 16 30 ];
+        %tmp.82 = getv ? :TheAthanLogger;
+        symbol [ warn %tmp.83 49 31 35 ];
+        %tmp.83 = getv function %tmp.82 :warn;
+        %tmp.84 = "NextPrayerView";
+        %tmp.85 = "titleLabel not found";
+        invoke %tmp.82 %tmp.83(%tmp.84, %tmp.85);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_48_19_50_12_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_45_12_50_12_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_12_51_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_catch:
+        %tmp.86 = exception;
+        push %tmp.86;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 51 10 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_51_10_53_8_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 51 17 18 ];
+        %tmp.87 = dup %tmp.86;
+        lputv %e.1 %tmp.87;
+        symbol [ e %e.1 51 17 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_51_20_53_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 52 12 ]
+        symbol [ TheAthanLogger %tmp.89 52 12 26 ];
+        %tmp.89 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.90 52 27 32 ];
+        %tmp.90 = getv function %tmp.89 :error;
+        %tmp.91 = "NextPrayerView";
+        %tmp.92 = "Exception in onLayout: ";
+        %tmp.93 = lgetv %e.1;
+        symbol [ e %tmp.93 52 79 80 ];
+        symbol [ getErrorMessage %tmp.94 52 81 96 ];
+        %tmp.94 = getv function %tmp.93 :getErrorMessage;
+        %tmp.95 = invoke %tmp.93 %tmp.94();
+        %tmp.96 = add %tmp.92 %tmp.95;
+        invoke %tmp.89 %tmp.90(%tmp.91, %tmp.96);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_51_20_53_8_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_finally;
         pop;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_108_18_110_16_end:
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_108_18_110_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_108_18_110_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_finally;
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_finally;
-        throw %tmp.118;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_finally:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_51_10_53_8_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_51_10_53_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_51_10_53_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_finally;
+        throw %tmp.86;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_finally:
         jsrret;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_82_16_110_16_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_81_42_111_12_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_81_12_111_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_81_12_111_12_if_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 114 12 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_114_12_123_12_if_stmt:
-        symbol [ _prayerTimeLabel %tmp.128 114 16 32 ];
-        %tmp.128 = getv ? :_prayerTimeLabel;
-        %tmp.129 = null;
-        %tmp.130 = ne %tmp.128 %tmp.129;
-        bf %tmp.130 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_114_12_123_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_114_12_123_12_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_114_42_123_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 115 16 ]
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_finally;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_beginTry:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_20_120_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 116 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_20_120_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_20_120_16_stop" ]
-        %timeInfo.9 = local;
-        symbol [ timeInfo %timeInfo.9 116 24 32 ];
-        symbol [ Gregorian %tmp.131 116 35 44 ];
-        %tmp.131 = getm $.Toybox.Time.Gregorian;
-        symbol [ info %tmp.132 116 45 49 ];
-        %tmp.132 = getv function %tmp.131 :info;
-        %tmp.133 = lgetv %nextPrayer.2;
-        symbol [ nextPrayer %tmp.133 116 50 60 ];
-        %tmp.134 = as %tmp.133 { (!Null) };
-        symbol [ time %tmp.135 116 61 65 ];
-        %tmp.135 = getv %tmp.134 :time;
-        symbol [ Time %tmp.136 116 67 71 ];
-        %tmp.136 = getm $.Toybox.Time;
-        symbol [ FORMAT_SHORT %tmp.137 116 72 84 ];
-        %tmp.137 = getv %tmp.136 :FORMAT_SHORT;
-        %tmp.138 = invoke %tmp.131 %tmp.132(%tmp.135, %tmp.137);
-        lputv %timeInfo.9 %tmp.138;
-        symbol [ timeInfo %timeInfo.9 116 24 32 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 117 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_20_120_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_20_120_16_stop" ]
-        %timeString.10 = local;
-        symbol [ timeString %timeString.10 117 24 34 ];
-        symbol [ Lang %tmp.139 117 37 41 ];
-        %tmp.139 = getm $.Toybox.Lang;
-        symbol [ format %tmp.140 117 42 48 ];
-        %tmp.140 = getv function %tmp.139 :format;
-        %tmp.141 = "$1$:$2$";
-        %tmp.142 = newa 2;
-        %tmp.143 = lgetv %timeInfo.9;
-        symbol [ timeInfo %tmp.143 117 61 69 ];
-        symbol [ hour %tmp.144 117 70 74 ];
-        %tmp.144 = getv %tmp.143 :hour;
-        symbol [ format %tmp.145 117 75 81 ];
-        %tmp.145 = getv function %tmp.144 :format;
-        %tmp.146 = "%02d";
-        %tmp.147 = invoke %tmp.144 %tmp.145(%tmp.146);
-        %tmp.148 = dup %tmp.142;
-        %tmp.149 = aputv %tmp.148 0 %tmp.147;
-        %tmp.150 = lgetv %timeInfo.9;
-        symbol [ timeInfo %tmp.150 117 91 99 ];
-        symbol [ min %tmp.151 117 100 103 ];
-        %tmp.151 = getv %tmp.150 :min;
-        symbol [ format %tmp.152 117 104 110 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_35_8_53_8_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_25_40_54_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 57; @symbol_functiondef = [onShow,57,13,19]; ]
+    function onShow() as Void {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_57_30_60_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 58 8 ]
+        symbol [ TheAthanLogger %tmp.2 58 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 58 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "NextPrayerView";
+        %tmp.5 = "onShow";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 59 8 ]
+        %tmp.6 = self;
+        symbol [ updateView %tmp.7 59 8 18 ];
+        %tmp.7 = getv function %tmp.6 :updateView;
+        invoke %tmp.6 %tmp.7();
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_57_30_60_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 63; @symbol_functiondef = [updateView,63,13,23]; ]
+    function updateView() {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_63_26_134_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 64 8 ]
+        symbol [ TheAthanLogger %tmp.2 64 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 64 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "NextPrayerView";
+        %tmp.5 = "updateView";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 67 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_63_26_134_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_63_26_134_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 67 12 15 ];
+        symbol [ Application %tmp.6 67 18 29 ];
+        %tmp.6 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.7 67 30 36 ];
+        %tmp.7 = getv function %tmp.6 :getApp;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = as %tmp.8 TheAthanApp;
+        symbol [ TheAthanApp %tmp.9 67 42 53 ];
+        lputv %app.1 %tmp.9;
+        symbol [ app %app.1 67 12 15 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 68 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_63_26_134_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_63_26_134_4_stop" ]
+        %nextPrayer.2 = local;
+        symbol [ nextPrayer %nextPrayer.2 68 12 22 ];
+        %tmp.10 = lgetv %app.1;
+        symbol [ app %tmp.10 68 25 28 ];
+        symbol [ getNextPrayer %tmp.11 68 29 42 ];
+        %tmp.11 = getv function %tmp.10 :getNextPrayer;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %nextPrayer.2 %tmp.12;
+        symbol [ nextPrayer %nextPrayer.2 68 12 22 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 70 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_8_130_8_if_stmt:
+        %tmp.13 = lgetv %nextPrayer.2;
+        symbol [ nextPrayer %tmp.13 70 12 22 ];
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_8_130_8_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_8_130_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_32_122_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 71 12 ]
+        symbol [ TheAthanLogger %tmp.17 71 12 26 ];
+        %tmp.17 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.18 71 27 32 ];
+        %tmp.18 = getv function %tmp.17 :debug;
+        %tmp.19 = "NextPrayerView";
+        %tmp.20 = "Next prayer found: ";
+        %tmp.21 = lgetv %nextPrayer.2;
+        symbol [ nextPrayer %tmp.21 71 75 85 ];
+        %tmp.22 = as %tmp.21 { (!Null) };
+        symbol [ name %tmp.23 71 86 90 ];
+        %tmp.23 = getv %tmp.22 :name;
+        %tmp.24 = add %tmp.20 %tmp.23;
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.24);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 75 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_32_122_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_32_122_8_stop" ]
+        %prayerTimeInfo.3 = local;
+        symbol [ prayerTimeInfo %prayerTimeInfo.3 75 16 30 ];
+        symbol [ Gregorian %tmp.25 75 33 42 ];
+        %tmp.25 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.26 75 43 47 ];
+        %tmp.26 = getv function %tmp.25 :info;
+        %tmp.27 = lgetv %nextPrayer.2;
+        symbol [ nextPrayer %tmp.27 75 48 58 ];
+        %tmp.28 = as %tmp.27 { (!Null) };
+        symbol [ time %tmp.29 75 59 63 ];
+        %tmp.29 = getv %tmp.28 :time;
+        symbol [ Time %tmp.30 75 65 69 ];
+        %tmp.30 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.31 75 70 82 ];
+        %tmp.31 = getv %tmp.30 :FORMAT_SHORT;
+        %tmp.32 = invoke %tmp.25 %tmp.26(%tmp.29, %tmp.31);
+        lputv %prayerTimeInfo.3 %tmp.32;
+        symbol [ prayerTimeInfo %prayerTimeInfo.3 75 16 30 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 76 12 ]
+        symbol [ TheAthanLogger %tmp.34 76 12 26 ];
+        %tmp.34 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.35 76 27 32 ];
+        %tmp.35 = getv function %tmp.34 :debug;
+        %tmp.36 = "NextPrayerView";
+        %tmp.37 = "Next prayer time day: ";
+        %tmp.38 = lgetv %prayerTimeInfo.3;
+        symbol [ prayerTimeInfo %tmp.38 76 78 92 ];
+        symbol [ day %tmp.39 76 93 96 ];
+        %tmp.39 = getv %tmp.38 :day;
+        %tmp.40 = add %tmp.37 %tmp.39;
+        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.40);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 79 12 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_79_12_109_12_if_stmt:
+        symbol [ _prayerNameLabel %tmp.42 79 16 32 ];
+        %tmp.42 = getv ? :_prayerNameLabel;
+        %tmp.43 = null;
+        %tmp.44 = ne %tmp.42 %tmp.43;
+        bf %tmp.44 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_79_12_109_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_79_12_109_12_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_79_42_109_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 80 16 ]
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_20_106_16_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 82 20 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_20_106_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_20_106_16_stop" ]
+        %prayerName.4 = local;
+        symbol [ prayerName %prayerName.4 82 24 34 ];
+        %tmp.45 = lgetv %nextPrayer.2;
+        symbol [ nextPrayer %tmp.45 82 37 47 ];
+        %tmp.46 = as %tmp.45 { (!Null) };
+        symbol [ name %tmp.47 82 48 52 ];
+        %tmp.47 = getv %tmp.46 :name;
+        lputv %prayerName.4 %tmp.47;
+        symbol [ prayerName %prayerName.4 82 24 34 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 83 20 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_20_106_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_20_106_16_stop" ]
+        %displayText.5 = local;
+        symbol [ displayText %displayText.5 83 24 35 ];
+        %tmp.48 = "";
+        lputv %displayText.5 %tmp.48;
+        symbol [ displayText %displayText.5 83 24 35 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 84 20 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_20_106_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_20_106_16_stop" ]
+        %prayerInfo.6 = local;
+        symbol [ prayerInfo %prayerInfo.6 84 24 34 ];
+        %tmp.49 = "";
+        lputv %prayerInfo.6 %tmp.49;
+        symbol [ prayerInfo %prayerInfo.6 84 24 34 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 86 20 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_86_20_101_20_if_stmt:
+        %tmp.50 = lgetv %prayerName.4;
+        symbol [ prayerName %tmp.50 86 24 34 ];
+        symbol [ equals %tmp.51 86 35 41 ];
+        %tmp.51 = getv function %tmp.50 :equals;
+        %tmp.52 = "fajr";
+        %tmp.53 = invoke %tmp.50 %tmp.51(%tmp.52);
+        bf %tmp.53 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_86_20_101_20_if_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_86_20_101_20_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_86_51_89_20_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 87 24 ]
+        symbol [ WatchUi %tmp.54 87 38 45 ];
+        %tmp.54 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.55 87 46 58 ];
+        %tmp.55 = getv function %tmp.54 :loadResource;
+        symbol [ Rez %tmp.57 87 59 62 ];
+        %tmp.57 = getv ? :Rez;
+        symbol [ Strings %tmp.58 87 63 70 ];
+        %tmp.58 = getv %tmp.57 :Strings;
+        symbol [ fajr %tmp.59 87 71 75 ];
+        %tmp.59 = getv %tmp.58 :fajr;
+        %tmp.60 = invoke %tmp.54 %tmp.55(%tmp.59);
+        lputv %displayText.5 %tmp.60;
+        symbol [ displayText %displayText.5 87 24 35 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 88 24 ]
+        %tmp.61 = "Dawn Prayer";
+        lputv %prayerInfo.6 %tmp.61;
+        symbol [ prayerInfo %prayerInfo.6 88 24 34 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_86_51_89_20_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_86_20_101_20_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_86_20_101_20_if_false:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 89 27 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_89_27_101_20_if_stmt:
+        %tmp.62 = lgetv %prayerName.4;
+        symbol [ prayerName %tmp.62 89 31 41 ];
+        symbol [ equals %tmp.63 89 42 48 ];
+        %tmp.63 = getv function %tmp.62 :equals;
+        %tmp.64 = "dhuhr";
+        %tmp.65 = invoke %tmp.62 %tmp.63(%tmp.64);
+        bf %tmp.65 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_89_27_101_20_if_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_89_27_101_20_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_89_59_92_20_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 90 24 ]
+        symbol [ WatchUi %tmp.66 90 38 45 ];
+        %tmp.66 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.67 90 46 58 ];
+        %tmp.67 = getv function %tmp.66 :loadResource;
+        symbol [ Rez %tmp.69 90 59 62 ];
+        %tmp.69 = getv ? :Rez;
+        symbol [ Strings %tmp.70 90 63 70 ];
+        %tmp.70 = getv %tmp.69 :Strings;
+        symbol [ dhuhr %tmp.71 90 71 76 ];
+        %tmp.71 = getv %tmp.70 :dhuhr;
+        %tmp.72 = invoke %tmp.66 %tmp.67(%tmp.71);
+        lputv %displayText.5 %tmp.72;
+        symbol [ displayText %displayText.5 90 24 35 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 91 24 ]
+        %tmp.73 = "Noon Prayer";
+        lputv %prayerInfo.6 %tmp.73;
+        symbol [ prayerInfo %prayerInfo.6 91 24 34 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_89_59_92_20_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_89_27_101_20_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_89_27_101_20_if_false:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 92 27 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_92_27_101_20_if_stmt:
+        %tmp.74 = lgetv %prayerName.4;
+        symbol [ prayerName %tmp.74 92 31 41 ];
+        symbol [ equals %tmp.75 92 42 48 ];
+        %tmp.75 = getv function %tmp.74 :equals;
+        %tmp.76 = "asr";
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        bf %tmp.77 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_92_27_101_20_if_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_92_27_101_20_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_92_57_95_20_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 93 24 ]
+        symbol [ WatchUi %tmp.78 93 38 45 ];
+        %tmp.78 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.79 93 46 58 ];
+        %tmp.79 = getv function %tmp.78 :loadResource;
+        symbol [ Rez %tmp.81 93 59 62 ];
+        %tmp.81 = getv ? :Rez;
+        symbol [ Strings %tmp.82 93 63 70 ];
+        %tmp.82 = getv %tmp.81 :Strings;
+        symbol [ asr %tmp.83 93 71 74 ];
+        %tmp.83 = getv %tmp.82 :asr;
+        %tmp.84 = invoke %tmp.78 %tmp.79(%tmp.83);
+        lputv %displayText.5 %tmp.84;
+        symbol [ displayText %displayText.5 93 24 35 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 94 24 ]
+        %tmp.85 = "Afternoon Prayer";
+        lputv %prayerInfo.6 %tmp.85;
+        symbol [ prayerInfo %prayerInfo.6 94 24 34 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_92_57_95_20_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_92_27_101_20_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_92_27_101_20_if_false:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 95 27 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_95_27_101_20_if_stmt:
+        %tmp.86 = lgetv %prayerName.4;
+        symbol [ prayerName %tmp.86 95 31 41 ];
+        symbol [ equals %tmp.87 95 42 48 ];
+        %tmp.87 = getv function %tmp.86 :equals;
+        %tmp.88 = "maghrib";
+        %tmp.89 = invoke %tmp.86 %tmp.87(%tmp.88);
+        bf %tmp.89 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_95_27_101_20_if_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_95_27_101_20_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_95_61_98_20_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 96 24 ]
+        symbol [ WatchUi %tmp.90 96 38 45 ];
+        %tmp.90 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.91 96 46 58 ];
+        %tmp.91 = getv function %tmp.90 :loadResource;
+        symbol [ Rez %tmp.93 96 59 62 ];
+        %tmp.93 = getv ? :Rez;
+        symbol [ Strings %tmp.94 96 63 70 ];
+        %tmp.94 = getv %tmp.93 :Strings;
+        symbol [ maghrib %tmp.95 96 71 78 ];
+        %tmp.95 = getv %tmp.94 :maghrib;
+        %tmp.96 = invoke %tmp.90 %tmp.91(%tmp.95);
+        lputv %displayText.5 %tmp.96;
+        symbol [ displayText %displayText.5 96 24 35 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 97 24 ]
+        %tmp.97 = "Sunset Prayer";
+        lputv %prayerInfo.6 %tmp.97;
+        symbol [ prayerInfo %prayerInfo.6 97 24 34 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_95_61_98_20_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_95_27_101_20_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_95_27_101_20_if_false:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 98 27 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_98_27_101_20_if_stmt:
+        %tmp.98 = lgetv %prayerName.4;
+        symbol [ prayerName %tmp.98 98 31 41 ];
+        symbol [ equals %tmp.99 98 42 48 ];
+        %tmp.99 = getv function %tmp.98 :equals;
+        %tmp.100 = "isha";
+        %tmp.101 = invoke %tmp.98 %tmp.99(%tmp.100);
+        bf %tmp.101 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_98_27_101_20_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_98_27_101_20_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_98_58_101_20_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 99 24 ]
+        symbol [ WatchUi %tmp.102 99 38 45 ];
+        %tmp.102 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.103 99 46 58 ];
+        %tmp.103 = getv function %tmp.102 :loadResource;
+        symbol [ Rez %tmp.105 99 59 62 ];
+        %tmp.105 = getv ? :Rez;
+        symbol [ Strings %tmp.106 99 63 70 ];
+        %tmp.106 = getv %tmp.105 :Strings;
+        symbol [ isha %tmp.107 99 71 75 ];
+        %tmp.107 = getv %tmp.106 :isha;
+        %tmp.108 = invoke %tmp.102 %tmp.103(%tmp.107);
+        lputv %displayText.5 %tmp.108;
+        symbol [ displayText %displayText.5 99 24 35 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 100 24 ]
+        %tmp.109 = "Night Prayer";
+        lputv %prayerInfo.6 %tmp.109;
+        symbol [ prayerInfo %prayerInfo.6 100 24 34 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_98_58_101_20_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_98_27_101_20_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_98_27_101_20_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_95_27_101_20_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_92_27_101_20_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_89_27_101_20_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_86_20_101_20_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 104 20 ]
+        symbol [ _prayerNameLabel %tmp.111 104 20 36 ];
+        %tmp.111 = getv ? :_prayerNameLabel;
+        symbol [ setText %tmp.112 104 37 44 ];
+        %tmp.112 = getv function %tmp.111 :setText;
+        %tmp.113 = lgetv %displayText.5;
+        symbol [ displayText %tmp.113 104 45 56 ];
+        %tmp.114 = "\n";
+        %tmp.115 = add %tmp.113 %tmp.114;
+        %tmp.116 = lgetv %prayerInfo.6;
+        symbol [ prayerInfo %tmp.116 104 66 76 ];
+        %tmp.117 = add %tmp.115 %tmp.116;
+        invoke %tmp.111 %tmp.112(%tmp.117);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 105 20 ]
+        symbol [ TheAthanLogger %tmp.119 105 20 34 ];
+        %tmp.119 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.120 105 35 40 ];
+        %tmp.120 = getv function %tmp.119 :debug;
+        %tmp.121 = "NextPrayerView";
+        %tmp.122 = "Prayer name set";
+        invoke %tmp.119 %tmp.120(%tmp.121, %tmp.122);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_20_106_16_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_catch:
+        %tmp.123 = exception;
+        push %tmp.123;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 106 18 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_106_18_108_16_end" ]
+        %e.7 = local;
+        symbol [ e %e.7 106 25 26 ];
+        %tmp.124 = dup %tmp.123;
+        lputv %e.7 %tmp.124;
+        symbol [ e %e.7 106 25 26 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_106_28_108_16_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 107 20 ]
+        symbol [ TheAthanLogger %tmp.126 107 20 34 ];
+        %tmp.126 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.127 107 35 40 ];
+        %tmp.127 = getv function %tmp.126 :error;
+        %tmp.128 = "NextPrayerView";
+        %tmp.129 = "Exception setting prayer name: ";
+        %tmp.130 = lgetv %e.7;
+        symbol [ e %tmp.130 107 95 96 ];
+        symbol [ getErrorMessage %tmp.131 107 97 112 ];
+        %tmp.131 = getv function %tmp.130 :getErrorMessage;
+        %tmp.132 = invoke %tmp.130 %tmp.131();
+        %tmp.133 = add %tmp.129 %tmp.132;
+        invoke %tmp.126 %tmp.127(%tmp.128, %tmp.133);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_106_28_108_16_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_finally;
+        pop;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_106_18_108_16_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_106_18_108_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_106_18_108_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_finally;
+        throw %tmp.123;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_finally:
+        jsrret;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_80_16_108_16_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_79_42_109_12_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_79_12_109_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_79_12_109_12_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 112 12 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_112_12_121_12_if_stmt:
+        symbol [ _prayerTimeLabel %tmp.135 112 16 32 ];
+        %tmp.135 = getv ? :_prayerTimeLabel;
+        %tmp.136 = null;
+        %tmp.137 = ne %tmp.135 %tmp.136;
+        bf %tmp.137 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_112_12_121_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_112_12_121_12_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_112_42_121_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 113 16 ]
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_20_118_16_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 114 20 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_20_118_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_20_118_16_stop" ]
+        %timeInfo.8 = local;
+        symbol [ timeInfo %timeInfo.8 114 24 32 ];
+        symbol [ Gregorian %tmp.138 114 35 44 ];
+        %tmp.138 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.139 114 45 49 ];
+        %tmp.139 = getv function %tmp.138 :info;
+        %tmp.140 = lgetv %nextPrayer.2;
+        symbol [ nextPrayer %tmp.140 114 50 60 ];
+        %tmp.141 = as %tmp.140 { (!Null) };
+        symbol [ time %tmp.142 114 61 65 ];
+        %tmp.142 = getv %tmp.141 :time;
+        symbol [ Time %tmp.143 114 67 71 ];
+        %tmp.143 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.144 114 72 84 ];
+        %tmp.144 = getv %tmp.143 :FORMAT_SHORT;
+        %tmp.145 = invoke %tmp.138 %tmp.139(%tmp.142, %tmp.144);
+        lputv %timeInfo.8 %tmp.145;
+        symbol [ timeInfo %timeInfo.8 114 24 32 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 115 20 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_20_118_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_20_118_16_stop" ]
+        %timeString.9 = local;
+        symbol [ timeString %timeString.9 115 24 34 ];
+        symbol [ Lang %tmp.146 115 37 41 ];
+        %tmp.146 = getm $.Toybox.Lang;
+        symbol [ format %tmp.147 115 42 48 ];
+        %tmp.147 = getv function %tmp.146 :format;
+        %tmp.148 = "$1$:$2$";
+        %tmp.149 = newa 2;
+        %tmp.150 = lgetv %timeInfo.8;
+        symbol [ timeInfo %tmp.150 115 61 69 ];
+        symbol [ hour %tmp.151 115 70 74 ];
+        %tmp.151 = getv %tmp.150 :hour;
+        symbol [ format %tmp.152 115 75 81 ];
         %tmp.152 = getv function %tmp.151 :format;
         %tmp.153 = "%02d";
         %tmp.154 = invoke %tmp.151 %tmp.152(%tmp.153);
         %tmp.155 = dup %tmp.149;
-        %tmp.156 = aputv %tmp.155 1 %tmp.154;
-        %tmp.157 = invoke %tmp.139 %tmp.140(%tmp.141, %tmp.156);
-        lputv %timeString.10 %tmp.157;
-        symbol [ timeString %timeString.10 117 24 34 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 118 20 ]
-        symbol [ _prayerTimeLabel %tmp.159 118 20 36 ];
-        %tmp.159 = getv ? :_prayerTimeLabel;
-        symbol [ setText %tmp.160 118 37 44 ];
-        %tmp.160 = getv function %tmp.159 :setText;
-        %tmp.161 = lgetv %timeString.10;
-        symbol [ timeString %tmp.161 118 45 55 ];
-        invoke %tmp.159 %tmp.160(%tmp.161);
+        %tmp.156 = aputv %tmp.155 0 %tmp.154;
+        %tmp.157 = lgetv %timeInfo.8;
+        symbol [ timeInfo %tmp.157 115 91 99 ];
+        symbol [ min %tmp.158 115 100 103 ];
+        %tmp.158 = getv %tmp.157 :min;
+        symbol [ format %tmp.159 115 104 110 ];
+        %tmp.159 = getv function %tmp.158 :format;
+        %tmp.160 = "%02d";
+        %tmp.161 = invoke %tmp.158 %tmp.159(%tmp.160);
+        %tmp.162 = dup %tmp.156;
+        %tmp.163 = aputv %tmp.162 1 %tmp.161;
+        %tmp.164 = invoke %tmp.146 %tmp.147(%tmp.148, %tmp.163);
+        lputv %timeString.9 %tmp.164;
+        symbol [ timeString %timeString.9 115 24 34 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 116 20 ]
+        symbol [ _prayerTimeLabel %tmp.166 116 20 36 ];
+        %tmp.166 = getv ? :_prayerTimeLabel;
+        symbol [ setText %tmp.167 116 37 44 ];
+        %tmp.167 = getv function %tmp.166 :setText;
+        %tmp.168 = lgetv %timeString.9;
+        symbol [ timeString %tmp.168 116 45 55 ];
+        invoke %tmp.166 %tmp.167(%tmp.168);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 117 20 ]
+        symbol [ TheAthanLogger %tmp.170 117 20 34 ];
+        %tmp.170 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.171 117 35 40 ];
+        %tmp.171 = getv function %tmp.170 :debug;
+        %tmp.172 = "NextPrayerView";
+        %tmp.173 = "Prayer time set: ";
+        %tmp.174 = lgetv %timeString.9;
+        symbol [ timeString %tmp.174 117 81 91 ];
+        %tmp.175 = add %tmp.173 %tmp.174;
+        invoke %tmp.170 %tmp.171(%tmp.172, %tmp.175);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_20_118_16_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_catch:
+        %tmp.176 = exception;
+        push %tmp.176;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 118 18 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_118_18_120_16_end" ]
+        %e.10 = local;
+        symbol [ e %e.10 118 25 26 ];
+        %tmp.177 = dup %tmp.176;
+        lputv %e.10 %tmp.177;
+        symbol [ e %e.10 118 25 26 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_118_28_120_16_start:
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 119 20 ]
-        symbol [ System %tmp.162 119 20 26 ];
-        %tmp.162 = getm $.Toybox.System;
-        symbol [ println %tmp.163 119 27 34 ];
-        %tmp.163 = getv function %tmp.162 :println;
-        %tmp.164 = "DEBUG: Prayer time set: ";
-        %tmp.165 = lgetv %timeString.10;
-        symbol [ timeString %tmp.165 119 64 74 ];
-        %tmp.166 = add %tmp.164 %tmp.165;
-        invoke %tmp.162 %tmp.163(%tmp.166);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_20_120_16_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_endTry:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_finally;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_catch:
-        %tmp.167 = exception;
-        push %tmp.167;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 120 18 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_120_18_122_16_end" ]
-        %e.11 = local;
-        symbol [ e %e.11 120 25 26 ];
-        %tmp.168 = dup %tmp.167;
-        lputv %e.11 %tmp.168;
-        symbol [ e %e.11 120 25 26 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_120_28_122_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 121 20 ]
-        symbol [ System %tmp.169 121 20 26 ];
-        %tmp.169 = getm $.Toybox.System;
-        symbol [ println %tmp.170 121 27 34 ];
-        %tmp.170 = getv function %tmp.169 :println;
-        %tmp.171 = "DEBUG: Exception setting prayer time: ";
-        %tmp.172 = lgetv %e.11;
-        symbol [ e %tmp.172 121 78 79 ];
-        symbol [ getErrorMessage %tmp.173 121 80 95 ];
-        %tmp.173 = getv function %tmp.172 :getErrorMessage;
-        %tmp.174 = invoke %tmp.172 %tmp.173();
-        %tmp.175 = add %tmp.171 %tmp.174;
-        invoke %tmp.169 %tmp.170(%tmp.175);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_120_28_122_16_stop:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_finally;
+        symbol [ TheAthanLogger %tmp.179 119 20 34 ];
+        %tmp.179 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.180 119 35 40 ];
+        %tmp.180 = getv function %tmp.179 :error;
+        %tmp.181 = "NextPrayerView";
+        %tmp.182 = "Exception setting prayer time: ";
+        %tmp.183 = lgetv %e.10;
+        symbol [ e %tmp.183 119 95 96 ];
+        symbol [ getErrorMessage %tmp.184 119 97 112 ];
+        %tmp.184 = getv function %tmp.183 :getErrorMessage;
+        %tmp.185 = invoke %tmp.183 %tmp.184();
+        %tmp.186 = add %tmp.182 %tmp.185;
+        invoke %tmp.179 %tmp.180(%tmp.181, %tmp.186);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_118_28_120_16_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_finally;
         pop;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_120_18_122_16_end:
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_120_18_122_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_120_18_122_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_finally;
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_finally;
-        throw %tmp.167;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_finally:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_118_18_120_16_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_118_18_120_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_118_18_120_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_finally;
+        throw %tmp.176;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_finally:
         jsrret;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_115_16_122_16_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_114_42_123_12_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_114_12_123_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_114_12_123_12_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_32_124_8_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_8_132_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_8_132_8_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_124_15_132_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 125 12 ]
-        symbol [ System %tmp.176 125 12 18 ];
-        %tmp.176 = getm $.Toybox.System;
-        symbol [ println %tmp.177 125 19 26 ];
-        %tmp.177 = getv function %tmp.176 :println;
-        %tmp.178 = "DEBUG: Next prayer is null";
-        invoke %tmp.176 %tmp.177(%tmp.178);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 126 12 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_126_12_128_12_if_stmt:
-        symbol [ _prayerNameLabel %tmp.180 126 16 32 ];
-        %tmp.180 = getv ? :_prayerNameLabel;
-        %tmp.181 = null;
-        %tmp.182 = ne %tmp.180 %tmp.181;
-        bf %tmp.182 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_126_12_128_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_126_12_128_12_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_126_42_128_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 127 16 ]
-        symbol [ _prayerNameLabel %tmp.184 127 16 32 ];
-        %tmp.184 = getv ? :_prayerNameLabel;
-        %tmp.185 = as %tmp.184 { (!Null) };
-        symbol [ setText %tmp.186 127 33 40 ];
-        %tmp.186 = getv function %tmp.185 :setText;
-        %tmp.187 = "";
-        invoke %tmp.185 %tmp.186(%tmp.187);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_126_42_128_12_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_126_12_128_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_126_12_128_12_if_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 129 12 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_129_12_131_12_if_stmt:
-        symbol [ _prayerTimeLabel %tmp.189 129 16 32 ];
-        %tmp.189 = getv ? :_prayerTimeLabel;
-        %tmp.190 = null;
-        %tmp.191 = ne %tmp.189 %tmp.190;
-        bf %tmp.191 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_129_12_131_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_129_12_131_12_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_129_42_131_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 130 16 ]
-        symbol [ _prayerTimeLabel %tmp.193 130 16 32 ];
-        %tmp.193 = getv ? :_prayerTimeLabel;
-        %tmp.194 = as %tmp.193 { (!Null) };
-        symbol [ setText %tmp.195 130 33 40 ];
-        %tmp.195 = getv function %tmp.194 :setText;
-        %tmp.196 = "";
-        invoke %tmp.194 %tmp.195(%tmp.196);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_129_42_131_12_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_129_12_131_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_129_12_131_12_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_124_15_132_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_71_8_132_8_if_end:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 135 8 ]
-        symbol [ WatchUi %tmp.197 135 8 15 ];
-        %tmp.197 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.198 135 16 29 ];
-        %tmp.198 = getv function %tmp.197 :requestUpdate;
-        invoke %tmp.197 %tmp.198();
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_64_26_136_4_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_113_16_120_16_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_112_42_121_12_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_112_12_121_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_112_12_121_12_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_32_122_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_8_130_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_8_130_8_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_122_15_130_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 123 12 ]
+        symbol [ TheAthanLogger %tmp.188 123 12 26 ];
+        %tmp.188 = getv ? :TheAthanLogger;
+        symbol [ warn %tmp.189 123 27 31 ];
+        %tmp.189 = getv function %tmp.188 :warn;
+        %tmp.190 = "NextPrayerView";
+        %tmp.191 = "Next prayer is null";
+        invoke %tmp.188 %tmp.189(%tmp.190, %tmp.191);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 124 12 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_124_12_126_12_if_stmt:
+        symbol [ _prayerNameLabel %tmp.193 124 16 32 ];
+        %tmp.193 = getv ? :_prayerNameLabel;
+        %tmp.194 = null;
+        %tmp.195 = ne %tmp.193 %tmp.194;
+        bf %tmp.195 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_124_12_126_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_124_12_126_12_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_124_42_126_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 125 16 ]
+        symbol [ _prayerNameLabel %tmp.197 125 16 32 ];
+        %tmp.197 = getv ? :_prayerNameLabel;
+        %tmp.198 = as %tmp.197 { (!Null) };
+        symbol [ setText %tmp.199 125 33 40 ];
+        %tmp.199 = getv function %tmp.198 :setText;
+        %tmp.200 = "";
+        invoke %tmp.198 %tmp.199(%tmp.200);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_124_42_126_12_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_124_12_126_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_124_12_126_12_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 127 12 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_127_12_129_12_if_stmt:
+        symbol [ _prayerTimeLabel %tmp.202 127 16 32 ];
+        %tmp.202 = getv ? :_prayerTimeLabel;
+        %tmp.203 = null;
+        %tmp.204 = ne %tmp.202 %tmp.203;
+        bf %tmp.204 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_127_12_129_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_127_12_129_12_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_127_42_129_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 128 16 ]
+        symbol [ _prayerTimeLabel %tmp.206 128 16 32 ];
+        %tmp.206 = getv ? :_prayerTimeLabel;
+        %tmp.207 = as %tmp.206 { (!Null) };
+        symbol [ setText %tmp.208 128 33 40 ];
+        %tmp.208 = getv function %tmp.207 :setText;
+        %tmp.209 = "";
+        invoke %tmp.207 %tmp.208(%tmp.209);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_127_42_129_12_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_127_12_129_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_127_12_129_12_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_122_15_130_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_70_8_130_8_if_end:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 133 8 ]
+        symbol [ WatchUi %tmp.210 133 8 15 ];
+        %tmp.210 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.211 133 16 29 ];
+        %tmp.211 = getv function %tmp.210 :requestUpdate;
+        invoke %tmp.210 %tmp.211();
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_63_26_134_4_stop:
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 139; @symbol_functiondef = [onUpdate,139,13,21]; @symbol_param<0> = [dc,139,22,24]; @symbol_param<0>_type<0> = [Dc,139,28,30]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 137; @symbol_functiondef = [onUpdate,137,13,21]; @symbol_param<0> = [dc,137,22,24]; @symbol_param<0>_type<0> = [Dc,137,28,30]; ]
     function onUpdate(dc as Dc) as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_40_156_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 140 8 ]
-        symbol [ System %tmp.1 140 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 140 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: NextPrayerView onUpdate";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 141 8 ]
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_finally;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_beginTry:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_12_153_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 143 12 ]
-        %tmp.4 = lgetv %dc;
-        symbol [ dc %tmp.4 143 12 14 ];
-        symbol [ setColor %tmp.5 143 15 23 ];
-        %tmp.5 = getv function %tmp.4 :setColor;
-        symbol [ Graphics %tmp.6 143 24 32 ];
-        %tmp.6 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.7 143 33 44 ];
-        %tmp.7 = getv %tmp.6 :COLOR_BLACK;
-        symbol [ Graphics %tmp.8 143 46 54 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_137_40_154_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 138 8 ]
+        symbol [ TheAthanLogger %tmp.2 138 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 138 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "NextPrayerView";
+        %tmp.5 = "onUpdate";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 139 8 ]
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_12_151_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 141 12 ]
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 141 12 14 ];
+        symbol [ setColor %tmp.7 141 15 23 ];
+        %tmp.7 = getv function %tmp.6 :setColor;
+        symbol [ Graphics %tmp.8 141 24 32 ];
         %tmp.8 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.9 143 55 66 ];
+        symbol [ COLOR_BLACK %tmp.9 141 33 44 ];
         %tmp.9 = getv %tmp.8 :COLOR_BLACK;
-        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 144 12 ]
-        %tmp.10 = lgetv %dc;
-        symbol [ dc %tmp.10 144 12 14 ];
-        symbol [ clear %tmp.11 144 15 20 ];
-        %tmp.11 = getv function %tmp.10 :clear;
-        invoke %tmp.10 %tmp.11();
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 147 12 ]
-        symbol [ View %tmp.13 147 12 16 ];
-        %tmp.13 = getv ? :View;
-        symbol [ onUpdate %tmp.14 147 17 25 ];
-        %tmp.14 = getv function %tmp.13 :onUpdate;
-        %tmp.15 = lgetv %dc;
-        symbol [ dc %tmp.15 147 26 28 ];
-        invoke %tmp.13 %tmp.14(%tmp.15);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 150 12 ]
-        %tmp.16 = self;
-        symbol [ drawCountdownTimer %tmp.17 150 12 30 ];
-        %tmp.17 = getv function %tmp.16 :drawCountdownTimer;
-        %tmp.18 = lgetv %dc;
-        symbol [ dc %tmp.18 150 31 33 ];
-        invoke %tmp.16 %tmp.17(%tmp.18);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_12_153_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_endTry:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_finally;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_catch:
-        %tmp.19 = exception;
-        push %tmp.19;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 153 10 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_153_10_155_8_end" ]
+        symbol [ Graphics %tmp.10 141 46 54 ];
+        %tmp.10 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.11 141 55 66 ];
+        %tmp.11 = getv %tmp.10 :COLOR_BLACK;
+        invoke %tmp.6 %tmp.7(%tmp.9, %tmp.11);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 142 12 ]
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 142 12 14 ];
+        symbol [ clear %tmp.13 142 15 20 ];
+        %tmp.13 = getv function %tmp.12 :clear;
+        invoke %tmp.12 %tmp.13();
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 145 12 ]
+        symbol [ View %tmp.15 145 12 16 ];
+        %tmp.15 = getv ? :View;
+        symbol [ onUpdate %tmp.16 145 17 25 ];
+        %tmp.16 = getv function %tmp.15 :onUpdate;
+        %tmp.17 = lgetv %dc;
+        symbol [ dc %tmp.17 145 26 28 ];
+        invoke %tmp.15 %tmp.16(%tmp.17);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 148 12 ]
+        %tmp.18 = self;
+        symbol [ drawCountdownTimer %tmp.19 148 12 30 ];
+        %tmp.19 = getv function %tmp.18 :drawCountdownTimer;
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 148 31 33 ];
+        invoke %tmp.18 %tmp.19(%tmp.20);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_12_151_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_catch:
+        %tmp.21 = exception;
+        push %tmp.21;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 151 10 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_151_10_153_8_end" ]
         %e.1 = local;
-        symbol [ e %e.1 153 17 18 ];
-        %tmp.20 = dup %tmp.19;
-        lputv %e.1 %tmp.20;
-        symbol [ e %e.1 153 17 18 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_153_20_155_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 154 12 ]
-        symbol [ System %tmp.21 154 12 18 ];
-        %tmp.21 = getm $.Toybox.System;
-        symbol [ println %tmp.22 154 19 26 ];
-        %tmp.22 = getv function %tmp.21 :println;
-        %tmp.23 = "DEBUG: Exception in onUpdate: ";
-        %tmp.24 = lgetv %e.1;
-        symbol [ e %tmp.24 154 62 63 ];
-        symbol [ getErrorMessage %tmp.25 154 64 79 ];
-        %tmp.25 = getv function %tmp.24 :getErrorMessage;
-        %tmp.26 = invoke %tmp.24 %tmp.25();
-        %tmp.27 = add %tmp.23 %tmp.26;
-        invoke %tmp.21 %tmp.22(%tmp.27);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_153_20_155_8_stop:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_finally;
+        symbol [ e %e.1 151 17 18 ];
+        %tmp.22 = dup %tmp.21;
+        lputv %e.1 %tmp.22;
+        symbol [ e %e.1 151 17 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_151_20_153_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 152 12 ]
+        symbol [ TheAthanLogger %tmp.24 152 12 26 ];
+        %tmp.24 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.25 152 27 32 ];
+        %tmp.25 = getv function %tmp.24 :error;
+        %tmp.26 = "NextPrayerView";
+        %tmp.27 = "Exception in onUpdate: ";
+        %tmp.28 = lgetv %e.1;
+        symbol [ e %tmp.28 152 79 80 ];
+        symbol [ getErrorMessage %tmp.29 152 81 96 ];
+        %tmp.29 = getv function %tmp.28 :getErrorMessage;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = add %tmp.27 %tmp.30;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.31);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_151_20_153_8_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_finally;
         pop;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_153_10_155_8_end:
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_153_10_155_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_153_10_155_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_finally;
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_finally;
-        throw %tmp.19;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_finally:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_151_10_153_8_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_151_10_153_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_151_10_153_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_finally;
+        throw %tmp.21;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_finally:
         jsrret;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_141_8_155_8_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_40_156_4_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_139_8_153_8_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_137_40_154_4_stop:
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 159; @symbol_functiondef = [drawCountdownTimer,159,13,31]; @symbol_param<0> = [dc,159,32,34]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 157; @symbol_functiondef = [drawCountdownTimer,157,13,31]; @symbol_param<0> = [dc,157,32,34]; ]
     function drawCountdownTimer(dc) {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_159_36_209_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 160 8 ]
-        symbol [ System %tmp.1 160 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 160 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: drawCountdownTimer";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 161 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_159_36_209_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_159_36_209_4_stop" ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_157_36_207_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 158 8 ]
+        symbol [ TheAthanLogger %tmp.2 158 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 158 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "NextPrayerView";
+        %tmp.5 = "drawCountdownTimer";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 159 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_157_36_207_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_157_36_207_4_stop" ]
         %app.1 = local;
-        symbol [ app %app.1 161 12 15 ];
-        symbol [ Application %tmp.4 161 18 29 ];
-        %tmp.4 = getm $.Toybox.Application;
-        symbol [ getApp %tmp.5 161 30 36 ];
-        %tmp.5 = getv function %tmp.4 :getApp;
-        %tmp.6 = invoke %tmp.4 %tmp.5();
-        %tmp.7 = as %tmp.6 TheAthanApp;
-        symbol [ TheAthanApp %tmp.7 161 42 53 ];
-        lputv %app.1 %tmp.7;
-        symbol [ app %app.1 161 12 15 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 162 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_159_36_209_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_159_36_209_4_stop" ]
+        symbol [ app %app.1 159 12 15 ];
+        symbol [ Application %tmp.6 159 18 29 ];
+        %tmp.6 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.7 159 30 36 ];
+        %tmp.7 = getv function %tmp.6 :getApp;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = as %tmp.8 TheAthanApp;
+        symbol [ TheAthanApp %tmp.9 159 42 53 ];
+        lputv %app.1 %tmp.9;
+        symbol [ app %app.1 159 12 15 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 160 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_157_36_207_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_157_36_207_4_stop" ]
         %nextPrayer.2 = local;
-        symbol [ nextPrayer %nextPrayer.2 162 12 22 ];
-        %tmp.8 = lgetv %app.1;
-        symbol [ app %tmp.8 162 25 28 ];
-        symbol [ getNextPrayer %tmp.9 162 29 42 ];
-        %tmp.9 = getv function %tmp.8 :getNextPrayer;
-        %tmp.10 = invoke %tmp.8 %tmp.9();
-        lputv %nextPrayer.2 %tmp.10;
-        symbol [ nextPrayer %nextPrayer.2 162 12 22 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 164 8 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_8_208_8_if_stmt:
-        %tmp.11 = lgetv %nextPrayer.2;
-        symbol [ nextPrayer %tmp.11 164 12 22 ];
-        %tmp.12 = null;
-        %tmp.13 = ne %tmp.11 %tmp.12;
-        bf %tmp.13 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_8_208_8_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_8_208_8_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_32_206_8_start:
+        symbol [ nextPrayer %nextPrayer.2 160 12 22 ];
+        %tmp.10 = lgetv %app.1;
+        symbol [ app %tmp.10 160 25 28 ];
+        symbol [ getNextPrayer %tmp.11 160 29 42 ];
+        %tmp.11 = getv function %tmp.10 :getNextPrayer;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %nextPrayer.2 %tmp.12;
+        symbol [ nextPrayer %nextPrayer.2 160 12 22 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 162 8 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_8_206_8_if_stmt:
+        %tmp.13 = lgetv %nextPrayer.2;
+        symbol [ nextPrayer %tmp.13 162 12 22 ];
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_8_206_8_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_8_206_8_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_32_204_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 163 12 ]
+        symbol [ TheAthanLogger %tmp.17 163 12 26 ];
+        %tmp.17 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.18 163 27 32 ];
+        %tmp.18 = getv function %tmp.17 :debug;
+        %tmp.19 = "NextPrayerView";
+        %tmp.20 = "Drawing countdown for: ";
+        %tmp.21 = lgetv %nextPrayer.2;
+        symbol [ nextPrayer %tmp.21 163 79 89 ];
+        %tmp.22 = as %tmp.21 { (!Null) };
+        symbol [ name %tmp.23 163 90 94 ];
+        %tmp.23 = getv %tmp.22 :name;
+        %tmp.24 = add %tmp.20 %tmp.23;
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.24);
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 165 12 ]
-        symbol [ System %tmp.14 165 12 18 ];
-        %tmp.14 = getm $.Toybox.System;
-        symbol [ println %tmp.15 165 19 26 ];
-        %tmp.15 = getv function %tmp.14 :println;
-        %tmp.16 = "DEBUG: Drawing countdown for: ";
-        %tmp.17 = lgetv %nextPrayer.2;
-        symbol [ nextPrayer %tmp.17 165 62 72 ];
-        %tmp.18 = as %tmp.17 { (!Null) };
-        symbol [ name %tmp.19 165 73 77 ];
-        %tmp.19 = getv %tmp.18 :name;
-        %tmp.20 = add %tmp.16 %tmp.19;
-        invoke %tmp.14 %tmp.15(%tmp.20);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 167 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_32_206_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_32_206_8_stop" ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_32_204_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_32_204_8_stop" ]
         %now.3 = local;
-        symbol [ now %now.3 167 16 19 ];
-        symbol [ Time %tmp.21 167 22 26 ];
-        %tmp.21 = getm $.Toybox.Time;
-        symbol [ now %tmp.22 167 27 30 ];
-        %tmp.22 = getv function %tmp.21 :now;
-        %tmp.23 = invoke %tmp.21 %tmp.22();
-        lputv %now.3 %tmp.23;
-        symbol [ now %now.3 167 16 19 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 168 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_32_206_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_32_206_8_stop" ]
+        symbol [ now %now.3 165 16 19 ];
+        symbol [ Time %tmp.25 165 22 26 ];
+        %tmp.25 = getm $.Toybox.Time;
+        symbol [ now %tmp.26 165 27 30 ];
+        %tmp.26 = getv function %tmp.25 :now;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        lputv %now.3 %tmp.27;
+        symbol [ now %now.3 165 16 19 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 166 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_32_204_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_32_204_8_stop" ]
         %diff.4 = local;
-        symbol [ diff %diff.4 168 16 20 ];
-        %tmp.24 = lgetv %nextPrayer.2;
-        symbol [ nextPrayer %tmp.24 168 23 33 ];
-        %tmp.25 = as %tmp.24 { (!Null) };
-        symbol [ time %tmp.26 168 34 38 ];
-        %tmp.26 = getv %tmp.25 :time;
-        symbol [ subtract %tmp.27 168 39 47 ];
-        %tmp.27 = getv function %tmp.26 :subtract;
-        %tmp.28 = lgetv %now.3;
-        symbol [ now %tmp.28 168 48 51 ];
-        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
-        lputv %diff.4 %tmp.29;
-        symbol [ diff %diff.4 168 16 20 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 169 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_32_206_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_32_206_8_stop" ]
+        symbol [ diff %diff.4 166 16 20 ];
+        %tmp.28 = lgetv %nextPrayer.2;
+        symbol [ nextPrayer %tmp.28 166 23 33 ];
+        %tmp.29 = as %tmp.28 { (!Null) };
+        symbol [ time %tmp.30 166 34 38 ];
+        %tmp.30 = getv %tmp.29 :time;
+        symbol [ subtract %tmp.31 166 39 47 ];
+        %tmp.31 = getv function %tmp.30 :subtract;
+        %tmp.32 = lgetv %now.3;
+        symbol [ now %tmp.32 166 48 51 ];
+        %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
+        lputv %diff.4 %tmp.33;
+        symbol [ diff %diff.4 166 16 20 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 167 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_32_204_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_32_204_8_stop" ]
         %seconds.5 = local;
-        symbol [ seconds %seconds.5 169 16 23 ];
-        %tmp.30 = lgetv %diff.4;
-        symbol [ diff %tmp.30 169 26 30 ];
-        symbol [ value %tmp.31 169 31 36 ];
-        %tmp.31 = getv function %tmp.30 :value;
-        %tmp.32 = invoke %tmp.30 %tmp.31();
-        lputv %seconds.5 %tmp.32;
-        symbol [ seconds %seconds.5 169 16 23 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 171 12 ]
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_12_205_12_if_stmt:
-        %tmp.33 = lgetv %seconds.5;
-        symbol [ seconds %tmp.33 171 16 23 ];
-        %tmp.34 = 0;
-        %tmp.35 = gt %tmp.33 %tmp.34;
-        bf %tmp.35 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_12_205_12_if_else_false;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_12_205_12_if_true:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 173 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_stop" ]
+        symbol [ seconds %seconds.5 167 16 23 ];
+        %tmp.34 = lgetv %diff.4;
+        symbol [ diff %tmp.34 167 26 30 ];
+        symbol [ value %tmp.35 167 31 36 ];
+        %tmp.35 = getv function %tmp.34 :value;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        lputv %seconds.5 %tmp.36;
+        symbol [ seconds %seconds.5 167 16 23 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 169 12 ]
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_12_203_12_if_stmt:
+        %tmp.37 = lgetv %seconds.5;
+        symbol [ seconds %tmp.37 169 16 23 ];
+        %tmp.38 = 0;
+        %tmp.39 = gt %tmp.37 %tmp.38;
+        bf %tmp.39 @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_12_203_12_if_else_false;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_12_203_12_if_true:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 171 16 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_stop" ]
         %hours.6 = local;
-        symbol [ hours %hours.6 173 20 25 ];
-        %tmp.36 = lgetv %seconds.5;
-        symbol [ seconds %tmp.36 173 28 35 ];
-        %tmp.37 = 3600;
-        %tmp.38 = div %tmp.36 %tmp.37;
-        lputv %hours.6 %tmp.38;
-        symbol [ hours %hours.6 173 20 25 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 174 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_stop" ]
+        symbol [ hours %hours.6 171 20 25 ];
+        %tmp.40 = lgetv %seconds.5;
+        symbol [ seconds %tmp.40 171 28 35 ];
+        %tmp.41 = 3600;
+        %tmp.42 = div %tmp.40 %tmp.41;
+        lputv %hours.6 %tmp.42;
+        symbol [ hours %hours.6 171 20 25 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 172 16 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_stop" ]
         %minutes.7 = local;
-        symbol [ minutes %minutes.7 174 20 27 ];
-        %tmp.39 = lgetv %seconds.5;
-        symbol [ seconds %tmp.39 174 31 38 ];
-        %tmp.40 = 3600;
-        %tmp.41 = mod %tmp.39 %tmp.40;
-        %tmp.42 = 60;
-        %tmp.43 = div %tmp.41 %tmp.42;
-        lputv %minutes.7 %tmp.43;
-        symbol [ minutes %minutes.7 174 20 27 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 175 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_stop" ]
+        symbol [ minutes %minutes.7 172 20 27 ];
+        %tmp.43 = lgetv %seconds.5;
+        symbol [ seconds %tmp.43 172 31 38 ];
+        %tmp.44 = 3600;
+        %tmp.45 = mod %tmp.43 %tmp.44;
+        %tmp.46 = 60;
+        %tmp.47 = div %tmp.45 %tmp.46;
+        lputv %minutes.7 %tmp.47;
+        symbol [ minutes %minutes.7 172 20 27 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 173 16 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_stop" ]
         %secs.8 = local;
-        symbol [ secs %secs.8 175 20 24 ];
-        %tmp.44 = lgetv %seconds.5;
-        symbol [ seconds %tmp.44 175 27 34 ];
-        %tmp.45 = 60;
-        %tmp.46 = mod %tmp.44 %tmp.45;
-        lputv %secs.8 %tmp.46;
-        symbol [ secs %secs.8 175 20 24 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 177 16 ]
-        symbol [ System %tmp.47 177 16 22 ];
-        %tmp.47 = getm $.Toybox.System;
-        symbol [ println %tmp.48 177 23 30 ];
-        %tmp.48 = getv function %tmp.47 :println;
-        %tmp.49 = "DEBUG: Time remaining: ";
-        %tmp.50 = lgetv %hours.6;
-        symbol [ hours %tmp.50 177 59 64 ];
-        %tmp.51 = add %tmp.49 %tmp.50;
-        %tmp.52 = "h ";
-        %tmp.53 = add %tmp.51 %tmp.52;
-        %tmp.54 = lgetv %minutes.7;
-        symbol [ minutes %tmp.54 177 74 81 ];
-        %tmp.55 = add %tmp.53 %tmp.54;
-        %tmp.56 = "m ";
+        symbol [ secs %secs.8 173 20 24 ];
+        %tmp.48 = lgetv %seconds.5;
+        symbol [ seconds %tmp.48 173 27 34 ];
+        %tmp.49 = 60;
+        %tmp.50 = mod %tmp.48 %tmp.49;
+        lputv %secs.8 %tmp.50;
+        symbol [ secs %secs.8 173 20 24 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 175 16 ]
+        symbol [ TheAthanLogger %tmp.52 175 16 30 ];
+        %tmp.52 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.53 175 31 36 ];
+        %tmp.53 = getv function %tmp.52 :debug;
+        %tmp.54 = "NextPrayerView";
+        %tmp.55 = "Time remaining: ";
+        %tmp.56 = lgetv %hours.6;
+        symbol [ hours %tmp.56 175 76 81 ];
         %tmp.57 = add %tmp.55 %tmp.56;
-        %tmp.58 = lgetv %secs.8;
-        symbol [ secs %tmp.58 177 91 95 ];
+        %tmp.58 = "h ";
         %tmp.59 = add %tmp.57 %tmp.58;
-        %tmp.60 = "s";
+        %tmp.60 = lgetv %minutes.7;
+        symbol [ minutes %tmp.60 175 91 98 ];
         %tmp.61 = add %tmp.59 %tmp.60;
-        invoke %tmp.47 %tmp.48(%tmp.61);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 181 16 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_stop" ]
-        %textY.9 = local;
-        symbol [ textY %textY.9 181 20 25 ];
-        symbol [ _centerY %tmp.63 181 28 36 ];
-        %tmp.63 = getv ? :_centerY;
-        %tmp.64 = 15;
+        %tmp.62 = "m ";
+        %tmp.63 = add %tmp.61 %tmp.62;
+        %tmp.64 = lgetv %secs.8;
+        symbol [ secs %tmp.64 175 108 112 ];
         %tmp.65 = add %tmp.63 %tmp.64;
-        lputv %textY.9 %tmp.65;
-        symbol [ textY %textY.9 181 20 25 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 183 16 ]
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_finally;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_beginTry:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_20_200_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 185 20 ]
-        %tmp.66 = lgetv %dc;
-        symbol [ dc %tmp.66 185 20 22 ];
-        symbol [ setColor %tmp.67 185 23 31 ];
-        %tmp.67 = getv function %tmp.66 :setColor;
-        symbol [ Graphics %tmp.68 185 32 40 ];
-        %tmp.68 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.69 185 41 52 ];
-        %tmp.69 = getv %tmp.68 :COLOR_WHITE;
-        symbol [ Graphics %tmp.70 185 54 62 ];
-        %tmp.70 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.71 185 63 80 ];
-        %tmp.71 = getv %tmp.70 :COLOR_TRANSPARENT;
-        invoke %tmp.66 %tmp.67(%tmp.69, %tmp.71);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 188 20 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_20_200_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_20_200_16_stop" ]
+        %tmp.66 = "s";
+        %tmp.67 = add %tmp.65 %tmp.66;
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.67);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 179 16 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_stop" ]
+        %textY.9 = local;
+        symbol [ textY %textY.9 179 20 25 ];
+        symbol [ _centerY %tmp.69 179 28 36 ];
+        %tmp.69 = getv ? :_centerY;
+        %tmp.70 = 15;
+        %tmp.71 = add %tmp.69 %tmp.70;
+        lputv %textY.9 %tmp.71;
+        symbol [ textY %textY.9 179 20 25 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 181 16 ]
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_20_198_16_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 183 20 ]
+        %tmp.72 = lgetv %dc;
+        symbol [ dc %tmp.72 183 20 22 ];
+        symbol [ setColor %tmp.73 183 23 31 ];
+        %tmp.73 = getv function %tmp.72 :setColor;
+        symbol [ Graphics %tmp.74 183 32 40 ];
+        %tmp.74 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.75 183 41 52 ];
+        %tmp.75 = getv %tmp.74 :COLOR_WHITE;
+        symbol [ Graphics %tmp.76 183 54 62 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.77 183 63 80 ];
+        %tmp.77 = getv %tmp.76 :COLOR_TRANSPARENT;
+        invoke %tmp.72 %tmp.73(%tmp.75, %tmp.77);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 186 20 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_20_198_16_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_20_198_16_stop" ]
         %timeText.10 = local;
-        symbol [ timeText %timeText.10 188 24 32 ];
-        %tmp.72 = lgetv %hours.6;
-        symbol [ hours %tmp.72 188 35 40 ];
-        symbol [ format %tmp.73 188 41 47 ];
-        %tmp.73 = getv function %tmp.72 :format;
-        %tmp.74 = "%01d";
-        %tmp.75 = invoke %tmp.72 %tmp.73(%tmp.74);
-        %tmp.76 = " ";
-        %tmp.77 = add %tmp.75 %tmp.76;
-        symbol [ WatchUi %tmp.78 188 64 71 ];
-        %tmp.78 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.79 188 72 84 ];
-        %tmp.79 = getv function %tmp.78 :loadResource;
-        symbol [ Rez %tmp.81 188 85 88 ];
-        %tmp.81 = getv ? :Rez;
-        symbol [ Strings %tmp.82 188 89 96 ];
-        %tmp.82 = getv %tmp.81 :Strings;
-        symbol [ hours %tmp.83 188 97 102 ];
-        %tmp.83 = getv %tmp.82 :hours;
-        %tmp.84 = invoke %tmp.78 %tmp.79(%tmp.83);
-        %tmp.85 = add %tmp.77 %tmp.84;
-        lputv %timeText.10 %tmp.85;
-        symbol [ timeText %timeText.10 188 24 32 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 189 20 ]
-        %tmp.86 = lgetv %dc;
-        symbol [ dc %tmp.86 189 20 22 ];
-        symbol [ drawText %tmp.87 189 23 31 ];
-        %tmp.87 = getv function %tmp.86 :drawText;
-        symbol [ _centerX %tmp.89 189 32 40 ];
-        %tmp.89 = getv ? :_centerX;
-        %tmp.90 = lgetv %textY.9;
-        symbol [ textY %tmp.90 189 42 47 ];
-        %tmp.91 = 30;
-        %tmp.92 = sub %tmp.90 %tmp.91;
-        symbol [ Graphics %tmp.93 189 54 62 ];
-        %tmp.93 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.94 189 63 73 ];
-        %tmp.94 = getv %tmp.93 :FONT_SMALL;
-        %tmp.95 = lgetv %timeText.10;
-        symbol [ timeText %tmp.95 189 75 83 ];
-        symbol [ Graphics %tmp.96 189 85 93 ];
-        %tmp.96 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.97 189 94 113 ];
-        %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.86 %tmp.87(%tmp.89, %tmp.92, %tmp.94, %tmp.95, %tmp.97);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 192 20 ]
-        %tmp.98 = lgetv %minutes.7;
-        symbol [ minutes %tmp.98 192 31 38 ];
-        symbol [ format %tmp.99 192 39 45 ];
-        %tmp.99 = getv function %tmp.98 :format;
-        %tmp.100 = "%02d";
-        %tmp.101 = invoke %tmp.98 %tmp.99(%tmp.100);
-        %tmp.102 = " ";
-        %tmp.103 = add %tmp.101 %tmp.102;
-        symbol [ WatchUi %tmp.104 192 62 69 ];
-        %tmp.104 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.105 192 70 82 ];
-        %tmp.105 = getv function %tmp.104 :loadResource;
-        symbol [ Rez %tmp.107 192 83 86 ];
-        %tmp.107 = getv ? :Rez;
-        symbol [ Strings %tmp.108 192 87 94 ];
-        %tmp.108 = getv %tmp.107 :Strings;
-        symbol [ minutes %tmp.109 192 95 102 ];
-        %tmp.109 = getv %tmp.108 :minutes;
-        %tmp.110 = invoke %tmp.104 %tmp.105(%tmp.109);
-        %tmp.111 = add %tmp.103 %tmp.110;
-        lputv %timeText.10 %tmp.111;
-        symbol [ timeText %timeText.10 192 20 28 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 193 20 ]
-        %tmp.112 = lgetv %dc;
-        symbol [ dc %tmp.112 193 20 22 ];
-        symbol [ drawText %tmp.113 193 23 31 ];
-        %tmp.113 = getv function %tmp.112 :drawText;
-        symbol [ _centerX %tmp.115 193 32 40 ];
-        %tmp.115 = getv ? :_centerX;
-        %tmp.116 = lgetv %textY.9;
-        symbol [ textY %tmp.116 193 42 47 ];
-        symbol [ Graphics %tmp.117 193 49 57 ];
-        %tmp.117 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.118 193 58 68 ];
-        %tmp.118 = getv %tmp.117 :FONT_SMALL;
-        %tmp.119 = lgetv %timeText.10;
-        symbol [ timeText %tmp.119 193 70 78 ];
-        symbol [ Graphics %tmp.120 193 80 88 ];
-        %tmp.120 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.121 193 89 108 ];
-        %tmp.121 = getv %tmp.120 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.112 %tmp.113(%tmp.115, %tmp.116, %tmp.118, %tmp.119, %tmp.121);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 196 20 ]
-        %tmp.122 = lgetv %secs.8;
-        symbol [ secs %tmp.122 196 31 35 ];
-        symbol [ format %tmp.123 196 36 42 ];
-        %tmp.123 = getv function %tmp.122 :format;
-        %tmp.124 = "%02d";
-        %tmp.125 = invoke %tmp.122 %tmp.123(%tmp.124);
-        %tmp.126 = " ";
-        %tmp.127 = add %tmp.125 %tmp.126;
-        symbol [ WatchUi %tmp.128 196 59 66 ];
-        %tmp.128 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.129 196 67 79 ];
-        %tmp.129 = getv function %tmp.128 :loadResource;
-        symbol [ Rez %tmp.131 196 80 83 ];
-        %tmp.131 = getv ? :Rez;
-        symbol [ Strings %tmp.132 196 84 91 ];
-        %tmp.132 = getv %tmp.131 :Strings;
-        symbol [ seconds %tmp.133 196 92 99 ];
-        %tmp.133 = getv %tmp.132 :seconds;
-        %tmp.134 = invoke %tmp.128 %tmp.129(%tmp.133);
-        %tmp.135 = add %tmp.127 %tmp.134;
-        lputv %timeText.10 %tmp.135;
-        symbol [ timeText %timeText.10 196 20 28 ];
+        symbol [ timeText %timeText.10 186 24 32 ];
+        %tmp.78 = lgetv %hours.6;
+        symbol [ hours %tmp.78 186 35 40 ];
+        symbol [ format %tmp.79 186 41 47 ];
+        %tmp.79 = getv function %tmp.78 :format;
+        %tmp.80 = "%01d";
+        %tmp.81 = invoke %tmp.78 %tmp.79(%tmp.80);
+        %tmp.82 = " ";
+        %tmp.83 = add %tmp.81 %tmp.82;
+        symbol [ WatchUi %tmp.84 186 64 71 ];
+        %tmp.84 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.85 186 72 84 ];
+        %tmp.85 = getv function %tmp.84 :loadResource;
+        symbol [ Rez %tmp.87 186 85 88 ];
+        %tmp.87 = getv ? :Rez;
+        symbol [ Strings %tmp.88 186 89 96 ];
+        %tmp.88 = getv %tmp.87 :Strings;
+        symbol [ hours %tmp.89 186 97 102 ];
+        %tmp.89 = getv %tmp.88 :hours;
+        %tmp.90 = invoke %tmp.84 %tmp.85(%tmp.89);
+        %tmp.91 = add %tmp.83 %tmp.90;
+        lputv %timeText.10 %tmp.91;
+        symbol [ timeText %timeText.10 186 24 32 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 187 20 ]
+        %tmp.92 = lgetv %dc;
+        symbol [ dc %tmp.92 187 20 22 ];
+        symbol [ drawText %tmp.93 187 23 31 ];
+        %tmp.93 = getv function %tmp.92 :drawText;
+        symbol [ _centerX %tmp.95 187 32 40 ];
+        %tmp.95 = getv ? :_centerX;
+        %tmp.96 = lgetv %textY.9;
+        symbol [ textY %tmp.96 187 42 47 ];
+        %tmp.97 = 30;
+        %tmp.98 = sub %tmp.96 %tmp.97;
+        symbol [ Graphics %tmp.99 187 54 62 ];
+        %tmp.99 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.100 187 63 73 ];
+        %tmp.100 = getv %tmp.99 :FONT_SMALL;
+        %tmp.101 = lgetv %timeText.10;
+        symbol [ timeText %tmp.101 187 75 83 ];
+        symbol [ Graphics %tmp.102 187 85 93 ];
+        %tmp.102 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.103 187 94 113 ];
+        %tmp.103 = getv %tmp.102 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.92 %tmp.93(%tmp.95, %tmp.98, %tmp.100, %tmp.101, %tmp.103);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 190 20 ]
+        %tmp.104 = lgetv %minutes.7;
+        symbol [ minutes %tmp.104 190 31 38 ];
+        symbol [ format %tmp.105 190 39 45 ];
+        %tmp.105 = getv function %tmp.104 :format;
+        %tmp.106 = "%02d";
+        %tmp.107 = invoke %tmp.104 %tmp.105(%tmp.106);
+        %tmp.108 = " ";
+        %tmp.109 = add %tmp.107 %tmp.108;
+        symbol [ WatchUi %tmp.110 190 62 69 ];
+        %tmp.110 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.111 190 70 82 ];
+        %tmp.111 = getv function %tmp.110 :loadResource;
+        symbol [ Rez %tmp.113 190 83 86 ];
+        %tmp.113 = getv ? :Rez;
+        symbol [ Strings %tmp.114 190 87 94 ];
+        %tmp.114 = getv %tmp.113 :Strings;
+        symbol [ minutes %tmp.115 190 95 102 ];
+        %tmp.115 = getv %tmp.114 :minutes;
+        %tmp.116 = invoke %tmp.110 %tmp.111(%tmp.115);
+        %tmp.117 = add %tmp.109 %tmp.116;
+        lputv %timeText.10 %tmp.117;
+        symbol [ timeText %timeText.10 190 20 28 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 191 20 ]
+        %tmp.118 = lgetv %dc;
+        symbol [ dc %tmp.118 191 20 22 ];
+        symbol [ drawText %tmp.119 191 23 31 ];
+        %tmp.119 = getv function %tmp.118 :drawText;
+        symbol [ _centerX %tmp.121 191 32 40 ];
+        %tmp.121 = getv ? :_centerX;
+        %tmp.122 = lgetv %textY.9;
+        symbol [ textY %tmp.122 191 42 47 ];
+        symbol [ Graphics %tmp.123 191 49 57 ];
+        %tmp.123 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.124 191 58 68 ];
+        %tmp.124 = getv %tmp.123 :FONT_SMALL;
+        %tmp.125 = lgetv %timeText.10;
+        symbol [ timeText %tmp.125 191 70 78 ];
+        symbol [ Graphics %tmp.126 191 80 88 ];
+        %tmp.126 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.127 191 89 108 ];
+        %tmp.127 = getv %tmp.126 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.118 %tmp.119(%tmp.121, %tmp.122, %tmp.124, %tmp.125, %tmp.127);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 194 20 ]
+        %tmp.128 = lgetv %secs.8;
+        symbol [ secs %tmp.128 194 31 35 ];
+        symbol [ format %tmp.129 194 36 42 ];
+        %tmp.129 = getv function %tmp.128 :format;
+        %tmp.130 = "%02d";
+        %tmp.131 = invoke %tmp.128 %tmp.129(%tmp.130);
+        %tmp.132 = " ";
+        %tmp.133 = add %tmp.131 %tmp.132;
+        symbol [ WatchUi %tmp.134 194 59 66 ];
+        %tmp.134 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.135 194 67 79 ];
+        %tmp.135 = getv function %tmp.134 :loadResource;
+        symbol [ Rez %tmp.137 194 80 83 ];
+        %tmp.137 = getv ? :Rez;
+        symbol [ Strings %tmp.138 194 84 91 ];
+        %tmp.138 = getv %tmp.137 :Strings;
+        symbol [ seconds %tmp.139 194 92 99 ];
+        %tmp.139 = getv %tmp.138 :seconds;
+        %tmp.140 = invoke %tmp.134 %tmp.135(%tmp.139);
+        %tmp.141 = add %tmp.133 %tmp.140;
+        lputv %timeText.10 %tmp.141;
+        symbol [ timeText %timeText.10 194 20 28 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 195 20 ]
+        %tmp.142 = lgetv %dc;
+        symbol [ dc %tmp.142 195 20 22 ];
+        symbol [ drawText %tmp.143 195 23 31 ];
+        %tmp.143 = getv function %tmp.142 :drawText;
+        symbol [ _centerX %tmp.145 195 32 40 ];
+        %tmp.145 = getv ? :_centerX;
+        %tmp.146 = lgetv %textY.9;
+        symbol [ textY %tmp.146 195 42 47 ];
+        %tmp.147 = 30;
+        %tmp.148 = add %tmp.146 %tmp.147;
+        symbol [ Graphics %tmp.149 195 54 62 ];
+        %tmp.149 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.150 195 63 73 ];
+        %tmp.150 = getv %tmp.149 :FONT_SMALL;
+        %tmp.151 = lgetv %timeText.10;
+        symbol [ timeText %tmp.151 195 75 83 ];
+        symbol [ Graphics %tmp.152 195 85 93 ];
+        %tmp.152 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.153 195 94 113 ];
+        %tmp.153 = getv %tmp.152 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.142 %tmp.143(%tmp.145, %tmp.148, %tmp.150, %tmp.151, %tmp.153);
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 197 20 ]
-        %tmp.136 = lgetv %dc;
-        symbol [ dc %tmp.136 197 20 22 ];
-        symbol [ drawText %tmp.137 197 23 31 ];
-        %tmp.137 = getv function %tmp.136 :drawText;
-        symbol [ _centerX %tmp.139 197 32 40 ];
-        %tmp.139 = getv ? :_centerX;
-        %tmp.140 = lgetv %textY.9;
-        symbol [ textY %tmp.140 197 42 47 ];
-        %tmp.141 = 30;
-        %tmp.142 = add %tmp.140 %tmp.141;
-        symbol [ Graphics %tmp.143 197 54 62 ];
-        %tmp.143 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.144 197 63 73 ];
-        %tmp.144 = getv %tmp.143 :FONT_SMALL;
-        %tmp.145 = lgetv %timeText.10;
-        symbol [ timeText %tmp.145 197 75 83 ];
-        symbol [ Graphics %tmp.146 197 85 93 ];
-        %tmp.146 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.147 197 94 113 ];
-        %tmp.147 = getv %tmp.146 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.136 %tmp.137(%tmp.139, %tmp.142, %tmp.144, %tmp.145, %tmp.147);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 199 20 ]
-        symbol [ System %tmp.148 199 20 26 ];
-        %tmp.148 = getm $.Toybox.System;
-        symbol [ println %tmp.149 199 27 34 ];
-        %tmp.149 = getv function %tmp.148 :println;
-        %tmp.150 = "DEBUG: Countdown timer drawn";
-        invoke %tmp.148 %tmp.149(%tmp.150);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_20_200_16_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_endTry:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_finally;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_catch:
-        %tmp.151 = exception;
-        push %tmp.151;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 200 18 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_200_18_202_16_end" ]
+        symbol [ TheAthanLogger %tmp.155 197 20 34 ];
+        %tmp.155 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.156 197 35 40 ];
+        %tmp.156 = getv function %tmp.155 :debug;
+        %tmp.157 = "NextPrayerView";
+        %tmp.158 = "Countdown timer drawn";
+        invoke %tmp.155 %tmp.156(%tmp.157, %tmp.158);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_20_198_16_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_catch:
+        %tmp.159 = exception;
+        push %tmp.159;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 198 18 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_198_18_200_16_end" ]
         %e.11 = local;
-        symbol [ e %e.11 200 25 26 ];
-        %tmp.152 = dup %tmp.151;
-        lputv %e.11 %tmp.152;
-        symbol [ e %e.11 200 25 26 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_200_28_202_16_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 201 20 ]
-        symbol [ System %tmp.153 201 20 26 ];
-        %tmp.153 = getm $.Toybox.System;
-        symbol [ println %tmp.154 201 27 34 ];
-        %tmp.154 = getv function %tmp.153 :println;
-        %tmp.155 = "DEBUG: Exception drawing countdown: ";
-        %tmp.156 = lgetv %e.11;
-        symbol [ e %tmp.156 201 76 77 ];
-        symbol [ getErrorMessage %tmp.157 201 78 93 ];
-        %tmp.157 = getv function %tmp.156 :getErrorMessage;
-        %tmp.158 = invoke %tmp.156 %tmp.157();
-        %tmp.159 = add %tmp.155 %tmp.158;
-        invoke %tmp.153 %tmp.154(%tmp.159);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_200_28_202_16_stop:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_finally;
+        symbol [ e %e.11 198 25 26 ];
+        %tmp.160 = dup %tmp.159;
+        lputv %e.11 %tmp.160;
+        symbol [ e %e.11 198 25 26 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_198_28_200_16_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 199 20 ]
+        symbol [ TheAthanLogger %tmp.162 199 20 34 ];
+        %tmp.162 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.163 199 35 40 ];
+        %tmp.163 = getv function %tmp.162 :error;
+        %tmp.164 = "NextPrayerView";
+        %tmp.165 = "Exception drawing countdown: ";
+        %tmp.166 = lgetv %e.11;
+        symbol [ e %tmp.166 199 93 94 ];
+        symbol [ getErrorMessage %tmp.167 199 95 110 ];
+        %tmp.167 = getv function %tmp.166 :getErrorMessage;
+        %tmp.168 = invoke %tmp.166 %tmp.167();
+        %tmp.169 = add %tmp.165 %tmp.168;
+        invoke %tmp.162 %tmp.163(%tmp.164, %tmp.169);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_198_28_200_16_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_finally;
         pop;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_200_18_202_16_end:
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_200_18_202_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_200_18_202_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_finally;
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_finally;
-        throw %tmp.151;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_finally:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_198_18_200_16_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_198_18_200_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_198_18_200_16_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_finally;
+        throw %tmp.159;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_finally:
         jsrret;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_183_16_202_16_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_29_203_12_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_12_205_12_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_12_205_12_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_203_19_205_12_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 204 16 ]
-        symbol [ System %tmp.160 204 16 22 ];
-        %tmp.160 = getm $.Toybox.System;
-        symbol [ println %tmp.161 204 23 30 ];
-        %tmp.161 = getv function %tmp.160 :println;
-        %tmp.162 = "DEBUG: No time remaining";
-        invoke %tmp.160 %tmp.161(%tmp.162);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_203_19_205_12_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_171_12_205_12_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_32_206_8_stop:
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_8_208_8_if_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_8_208_8_if_else_false:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_206_15_208_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 207 12 ]
-        symbol [ System %tmp.163 207 12 18 ];
-        %tmp.163 = getm $.Toybox.System;
-        symbol [ println %tmp.164 207 19 26 ];
-        %tmp.164 = getv function %tmp.163 :println;
-        %tmp.165 = "DEBUG: No next prayer to draw";
-        invoke %tmp.163 %tmp.164(%tmp.165);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_206_15_208_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_164_8_208_8_if_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_159_36_209_4_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_181_16_200_16_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_29_201_12_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_12_203_12_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_12_203_12_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_201_19_203_12_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 202 16 ]
+        symbol [ TheAthanLogger %tmp.171 202 16 30 ];
+        %tmp.171 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.172 202 31 36 ];
+        %tmp.172 = getv function %tmp.171 :debug;
+        %tmp.173 = "NextPrayerView";
+        %tmp.174 = "No time remaining";
+        invoke %tmp.171 %tmp.172(%tmp.173, %tmp.174);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_201_19_203_12_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_169_12_203_12_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_32_204_8_stop:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_8_206_8_if_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_8_206_8_if_else_false:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_204_15_206_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc" 205 12 ]
+        symbol [ TheAthanLogger %tmp.176 205 12 26 ];
+        %tmp.176 = getv ? :TheAthanLogger;
+        symbol [ warn %tmp.177 205 27 31 ];
+        %tmp.177 = getv function %tmp.176 :warn;
+        %tmp.178 = "NextPrayerView";
+        %tmp.179 = "No next prayer to draw";
+        invoke %tmp.176 %tmp.177(%tmp.178, %tmp.179);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_204_15_206_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_162_8_206_8_if_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanNextPrayerView_mc_157_36_207_4_stop:
     }
 }
 [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanNextPrayerView.mc"; @line = 1; ]

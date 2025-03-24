@@ -4,715 +4,723 @@ import Toybox.Graphics;
 import Toybox.WatchUi;
 [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
 import Toybox.Lang;
-[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
-import Toybox.System;
-[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Application,5,14,25]; ]
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Application,4,14,25]; ]
 import Toybox.Application;
-[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 7; @symbol_classdef = [TheAthanQiblaView,7,6,23]; @symbol_extends<0> = [WatchUi,7,32,39]; @symbol_extends<1> = [View,7,40,44]; ]
+[ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 6; @symbol_classdef = [TheAthanQiblaView,6,6,23]; @symbol_extends<0> = [WatchUi,6,32,39]; @symbol_extends<1> = [View,6,40,44]; ]
 class TheAthanQiblaView extends WatchUi.View {
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 7; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 6; ]
     <init> {
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 7; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 9; @position = 16; @symbol_vardef = [_width,9,16,22]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 8; @position = 16; @symbol_vardef = [_width,8,16,22]; ]
     private
     var _width;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 10; @position = 16; @symbol_vardef = [_height,10,16,23]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 9; @position = 16; @symbol_vardef = [_height,9,16,23]; ]
     private
     var _height;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 11; @position = 16; @symbol_vardef = [_centerX,11,16,24]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 10; @position = 16; @symbol_vardef = [_centerX,10,16,24]; ]
     private
     var _centerX;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 12; @position = 16; @symbol_vardef = [_centerY,12,16,24]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 11; @position = 16; @symbol_vardef = [_centerY,11,16,24]; ]
     private
     var _centerY;
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 14; @symbol_functiondef = [initialize,14,13,23]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; ]
     function initialize() as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_14_26_17_4_start:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_13_26_16_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 14 8 ]
+        symbol [ TheAthanLogger %tmp.2 14 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 14 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "QiblaView";
+        %tmp.5 = "initialize";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 15 8 ]
-        symbol [ System %tmp.1 15 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 15 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: QiblaView initialize";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 16 8 ]
-        symbol [ View %tmp.5 16 8 12 ];
-        %tmp.5 = getv ? :View;
-        symbol [ initialize %tmp.6 16 13 23 ];
-        %tmp.6 = getv function %tmp.5 :initialize;
-        invoke %tmp.5 %tmp.6();
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_14_26_17_4_stop:
+        symbol [ View %tmp.7 15 8 12 ];
+        %tmp.7 = getv ? :View;
+        symbol [ initialize %tmp.8 15 13 23 ];
+        %tmp.8 = getv function %tmp.7 :initialize;
+        invoke %tmp.7 %tmp.8();
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_13_26_16_4_stop:
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 20; @symbol_functiondef = [onLayout,20,13,21]; @symbol_param<0> = [dc,20,22,24]; @symbol_param<0>_type<0> = [Dc,20,28,30]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 19; @symbol_functiondef = [onLayout,19,13,21]; @symbol_param<0> = [dc,19,22,24]; @symbol_param<0>_type<0> = [Dc,19,28,30]; ]
     function onLayout(dc as Dc) as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_20_40_29_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 21 8 ]
-        symbol [ System %tmp.1 21 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 21 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: QiblaView onLayout";
-        invoke %tmp.1 %tmp.2(%tmp.3);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_19_40_28_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 20 8 ]
+        symbol [ TheAthanLogger %tmp.2 20 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 20 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "QiblaView";
+        %tmp.5 = "onLayout";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 22 8 ]
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 22 17 19 ];
+        symbol [ getWidth %tmp.7 22 20 28 ];
+        %tmp.7 = getv function %tmp.6 :getWidth;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        symbol [ _width ? 22 8 14 ];
+        putv self :_width %tmp.8;
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 23 8 ]
-        %tmp.4 = lgetv %dc;
-        symbol [ dc %tmp.4 23 17 19 ];
-        symbol [ getWidth %tmp.5 23 20 28 ];
-        %tmp.5 = getv function %tmp.4 :getWidth;
-        %tmp.6 = invoke %tmp.4 %tmp.5();
-        symbol [ _width ? 23 8 14 ];
-        putv self :_width %tmp.6;
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 23 18 20 ];
+        symbol [ getHeight %tmp.10 23 21 30 ];
+        %tmp.10 = getv function %tmp.9 :getHeight;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        symbol [ _height ? 23 8 15 ];
+        putv self :_height %tmp.11;
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 24 8 ]
-        %tmp.7 = lgetv %dc;
-        symbol [ dc %tmp.7 24 18 20 ];
-        symbol [ getHeight %tmp.8 24 21 30 ];
-        %tmp.8 = getv function %tmp.7 :getHeight;
-        %tmp.9 = invoke %tmp.7 %tmp.8();
-        symbol [ _height ? 24 8 15 ];
-        putv self :_height %tmp.9;
+        symbol [ _width %tmp.13 24 19 25 ];
+        %tmp.13 = getv ? :_width;
+        %tmp.14 = 2;
+        %tmp.15 = div %tmp.13 %tmp.14;
+        symbol [ _centerX ? 24 8 16 ];
+        putv self :_centerX %tmp.15;
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 25 8 ]
-        symbol [ _width %tmp.11 25 19 25 ];
-        %tmp.11 = getv ? :_width;
-        %tmp.12 = 2;
-        %tmp.13 = div %tmp.11 %tmp.12;
-        symbol [ _centerX ? 25 8 16 ];
-        putv self :_centerX %tmp.13;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 26 8 ]
-        symbol [ _height %tmp.15 26 19 26 ];
-        %tmp.15 = getv ? :_height;
-        %tmp.16 = 2;
-        %tmp.17 = div %tmp.15 %tmp.16;
-        symbol [ _centerY ? 26 8 16 ];
-        putv self :_centerY %tmp.17;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 28 8 ]
-        symbol [ System %tmp.18 28 8 14 ];
-        %tmp.18 = getm $.Toybox.System;
-        symbol [ println %tmp.19 28 15 22 ];
-        %tmp.19 = getv function %tmp.18 :println;
-        %tmp.20 = "DEBUG: Device dimensions: ";
-        symbol [ _width %tmp.22 28 54 60 ];
-        %tmp.22 = getv ? :_width;
-        %tmp.23 = add %tmp.20 %tmp.22;
-        %tmp.24 = "x";
-        %tmp.25 = add %tmp.23 %tmp.24;
-        symbol [ _height %tmp.27 28 69 76 ];
-        %tmp.27 = getv ? :_height;
-        %tmp.28 = add %tmp.25 %tmp.27;
-        invoke %tmp.18 %tmp.19(%tmp.28);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_20_40_29_4_stop:
+        symbol [ _height %tmp.17 25 19 26 ];
+        %tmp.17 = getv ? :_height;
+        %tmp.18 = 2;
+        %tmp.19 = div %tmp.17 %tmp.18;
+        symbol [ _centerY ? 25 8 16 ];
+        putv self :_centerY %tmp.19;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 27 8 ]
+        symbol [ TheAthanLogger %tmp.21 27 8 22 ];
+        %tmp.21 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.22 27 23 28 ];
+        %tmp.22 = getv function %tmp.21 :debug;
+        %tmp.23 = "QiblaView";
+        %tmp.24 = "Device dimensions: ";
+        symbol [ _width %tmp.26 27 66 72 ];
+        %tmp.26 = getv ? :_width;
+        %tmp.27 = add %tmp.24 %tmp.26;
+        %tmp.28 = "x";
+        %tmp.29 = add %tmp.27 %tmp.28;
+        symbol [ _height %tmp.31 27 81 88 ];
+        %tmp.31 = getv ? :_height;
+        %tmp.32 = add %tmp.29 %tmp.31;
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.32);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_19_40_28_4_stop:
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 32; @symbol_functiondef = [onShow,32,13,19]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 31; @symbol_functiondef = [onShow,31,13,19]; ]
     function onShow() as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_32_30_37_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 33 8 ]
-        symbol [ System %tmp.1 33 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 33 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: QiblaView onShow";
-        invoke %tmp.1 %tmp.2(%tmp.3);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_31_30_36_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 32 8 ]
+        symbol [ TheAthanLogger %tmp.2 32 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 32 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "QiblaView";
+        %tmp.5 = "onShow";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 34 8 ]
+        symbol [ TheAthanConstants %tmp.7 34 8 25 ];
+        %tmp.7 = getv ? :TheAthanConstants;
+        symbol [ addToHistory %tmp.8 34 26 38 ];
+        %tmp.8 = getv function %tmp.7 :addToHistory;
+        symbol [ TheAthanConstants %tmp.10 34 39 56 ];
+        %tmp.10 = getv ? :TheAthanConstants;
+        symbol [ VIEW_QIBLA %tmp.11 34 57 67 ];
+        %tmp.11 = getv %tmp.10 :VIEW_QIBLA;
+        invoke %tmp.7 %tmp.8(%tmp.11);
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 35 8 ]
-        symbol [ TheAthanConstants %tmp.5 35 8 25 ];
-        %tmp.5 = getv ? :TheAthanConstants;
-        symbol [ addToHistory %tmp.6 35 26 38 ];
-        %tmp.6 = getv function %tmp.5 :addToHistory;
-        symbol [ TheAthanConstants %tmp.8 35 39 56 ];
-        %tmp.8 = getv ? :TheAthanConstants;
-        symbol [ VIEW_QIBLA %tmp.9 35 57 67 ];
-        %tmp.9 = getv %tmp.8 :VIEW_QIBLA;
-        invoke %tmp.5 %tmp.6(%tmp.9);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 36 8 ]
-        symbol [ WatchUi %tmp.10 36 8 15 ];
-        %tmp.10 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.11 36 16 29 ];
-        %tmp.11 = getv function %tmp.10 :requestUpdate;
-        invoke %tmp.10 %tmp.11();
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_32_30_37_4_stop:
+        symbol [ WatchUi %tmp.12 35 8 15 ];
+        %tmp.12 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.13 35 16 29 ];
+        %tmp.13 = getv function %tmp.12 :requestUpdate;
+        invoke %tmp.12 %tmp.13();
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_31_30_36_4_stop:
     }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 40; @symbol_functiondef = [onUpdate,40,13,21]; @symbol_param<0> = [dc,40,22,24]; @symbol_param<0>_type<0> = [Dc,40,28,30]; ]
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 39; @symbol_functiondef = [onUpdate,39,13,21]; @symbol_param<0> = [dc,39,22,24]; @symbol_param<0>_type<0> = [Dc,39,28,30]; ]
     function onUpdate(dc as Dc) as Void {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_40_40_61_4_start:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_39_40_60_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 40 8 ]
+        symbol [ TheAthanLogger %tmp.2 40 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 40 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "QiblaView";
+        %tmp.5 = "onUpdate";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
 [ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 41 8 ]
-        symbol [ System %tmp.1 41 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 41 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: QiblaView onUpdate";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 42 8 ]
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_finally;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_beginTry:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_12_58_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 44 12 ]
-        %tmp.4 = lgetv %dc;
-        symbol [ dc %tmp.4 44 12 14 ];
-        symbol [ setColor %tmp.5 44 15 23 ];
-        %tmp.5 = getv function %tmp.4 :setColor;
-        symbol [ Graphics %tmp.6 44 24 32 ];
-        %tmp.6 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.7 44 33 44 ];
-        %tmp.7 = getv %tmp.6 :COLOR_BLACK;
-        symbol [ Graphics %tmp.8 44 46 54 ];
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_12_57_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 43 12 ]
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 43 12 14 ];
+        symbol [ setColor %tmp.7 43 15 23 ];
+        %tmp.7 = getv function %tmp.6 :setColor;
+        symbol [ Graphics %tmp.8 43 24 32 ];
         %tmp.8 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.9 44 55 66 ];
+        symbol [ COLOR_BLACK %tmp.9 43 33 44 ];
         %tmp.9 = getv %tmp.8 :COLOR_BLACK;
-        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 45 12 ]
-        %tmp.10 = lgetv %dc;
-        symbol [ dc %tmp.10 45 12 14 ];
-        symbol [ clear %tmp.11 45 15 20 ];
-        %tmp.11 = getv function %tmp.10 :clear;
-        invoke %tmp.10 %tmp.11();
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 48 12 ]
+        symbol [ Graphics %tmp.10 43 46 54 ];
+        %tmp.10 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.11 43 55 66 ];
+        %tmp.11 = getv %tmp.10 :COLOR_BLACK;
+        invoke %tmp.6 %tmp.7(%tmp.9, %tmp.11);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 44 12 ]
         %tmp.12 = lgetv %dc;
-        symbol [ dc %tmp.12 48 12 14 ];
-        symbol [ setColor %tmp.13 48 15 23 ];
-        %tmp.13 = getv function %tmp.12 :setColor;
-        symbol [ Graphics %tmp.14 48 24 32 ];
-        %tmp.14 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.15 48 33 44 ];
-        %tmp.15 = getv %tmp.14 :COLOR_WHITE;
-        symbol [ Graphics %tmp.16 48 46 54 ];
+        symbol [ dc %tmp.12 44 12 14 ];
+        symbol [ clear %tmp.13 44 15 20 ];
+        %tmp.13 = getv function %tmp.12 :clear;
+        invoke %tmp.12 %tmp.13();
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 47 12 ]
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 47 12 14 ];
+        symbol [ setColor %tmp.15 47 15 23 ];
+        %tmp.15 = getv function %tmp.14 :setColor;
+        symbol [ Graphics %tmp.16 47 24 32 ];
         %tmp.16 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.17 48 55 72 ];
-        %tmp.17 = getv %tmp.16 :COLOR_TRANSPARENT;
-        invoke %tmp.12 %tmp.13(%tmp.15, %tmp.17);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 49 12 ]
-        %tmp.18 = lgetv %dc;
-        symbol [ dc %tmp.18 49 12 14 ];
-        symbol [ drawText %tmp.19 49 15 23 ];
-        %tmp.19 = getv function %tmp.18 :drawText;
-        symbol [ _centerX %tmp.21 49 24 32 ];
-        %tmp.21 = getv ? :_centerX;
-        %tmp.22 = 15;
-        symbol [ Graphics %tmp.23 49 38 46 ];
-        %tmp.23 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.24 49 47 57 ];
-        %tmp.24 = getv %tmp.23 :FONT_SMALL;
-        symbol [ WatchUi %tmp.25 49 59 66 ];
-        %tmp.25 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.26 49 67 79 ];
-        %tmp.26 = getv function %tmp.25 :loadResource;
-        symbol [ Rez %tmp.28 49 80 83 ];
-        %tmp.28 = getv ? :Rez;
-        symbol [ Strings %tmp.29 49 84 91 ];
-        %tmp.29 = getv %tmp.28 :Strings;
-        symbol [ qibla_finder %tmp.30 49 92 104 ];
-        %tmp.30 = getv %tmp.29 :qibla_finder;
-        %tmp.31 = invoke %tmp.25 %tmp.26(%tmp.30);
-        symbol [ Graphics %tmp.32 49 107 115 ];
-        %tmp.32 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.33 49 116 135 ];
-        %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.18 %tmp.19(%tmp.21, %tmp.22, %tmp.24, %tmp.31, %tmp.33);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 52 12 ]
-        %tmp.34 = self;
-        symbol [ drawQiblaCompass %tmp.35 52 12 28 ];
-        %tmp.35 = getv function %tmp.34 :drawQiblaCompass;
-        %tmp.36 = lgetv %dc;
-        symbol [ dc %tmp.36 52 29 31 ];
-        invoke %tmp.34 %tmp.35(%tmp.36);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 55 12 ]
-        %tmp.37 = lgetv %dc;
-        symbol [ dc %tmp.37 55 12 14 ];
-        symbol [ setColor %tmp.38 55 15 23 ];
-        %tmp.38 = getv function %tmp.37 :setColor;
-        symbol [ Graphics %tmp.39 55 24 32 ];
-        %tmp.39 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.40 55 33 46 ];
-        %tmp.40 = getv %tmp.39 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.41 55 48 56 ];
-        %tmp.41 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.42 55 57 74 ];
-        %tmp.42 = getv %tmp.41 :COLOR_TRANSPARENT;
-        invoke %tmp.37 %tmp.38(%tmp.40, %tmp.42);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 56 12 ]
-        %tmp.43 = lgetv %dc;
-        symbol [ dc %tmp.43 56 12 14 ];
-        symbol [ drawText %tmp.44 56 15 23 ];
-        %tmp.44 = getv function %tmp.43 :drawText;
-        symbol [ _centerX %tmp.46 56 24 32 ];
-        %tmp.46 = getv ? :_centerX;
-        symbol [ _height %tmp.48 56 34 41 ];
-        %tmp.48 = getv ? :_height;
-        %tmp.49 = 30;
-        %tmp.50 = sub %tmp.48 %tmp.49;
-        symbol [ Graphics %tmp.51 56 48 56 ];
-        %tmp.51 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.52 56 57 66 ];
-        %tmp.52 = getv %tmp.51 :FONT_TINY;
-        %tmp.53 = "^ Prayer Times";
-        symbol [ Graphics %tmp.54 56 86 94 ];
-        %tmp.54 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.55 56 95 114 ];
-        %tmp.55 = getv %tmp.54 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.43 %tmp.44(%tmp.46, %tmp.50, %tmp.52, %tmp.53, %tmp.55);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_12_58_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_endTry:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_finally;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_catch:
-        %tmp.56 = exception;
-        push %tmp.56;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 58 10 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_58_10_60_8_end" ]
-        %e.1 = local;
-        symbol [ e %e.1 58 17 18 ];
-        %tmp.57 = dup %tmp.56;
-        lputv %e.1 %tmp.57;
-        symbol [ e %e.1 58 17 18 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_58_20_60_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 59 12 ]
-        symbol [ System %tmp.58 59 12 18 ];
-        %tmp.58 = getm $.Toybox.System;
-        symbol [ println %tmp.59 59 19 26 ];
-        %tmp.59 = getv function %tmp.58 :println;
-        %tmp.60 = "DEBUG: Exception in onUpdate: ";
-        %tmp.61 = lgetv %e.1;
-        symbol [ e %tmp.61 59 62 63 ];
-        symbol [ getErrorMessage %tmp.62 59 64 79 ];
-        %tmp.62 = getv function %tmp.61 :getErrorMessage;
-        %tmp.63 = invoke %tmp.61 %tmp.62();
-        %tmp.64 = add %tmp.60 %tmp.63;
-        invoke %tmp.58 %tmp.59(%tmp.64);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_58_20_60_8_stop:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_finally;
-        pop;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_58_10_60_8_end:
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_58_10_60_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_58_10_60_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_finally;
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_finally;
-        throw %tmp.56;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_finally:
-        jsrret;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_42_8_60_8_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_40_40_61_4_stop:
-    }
-    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 64; @symbol_functiondef = [drawQiblaCompass,64,13,29]; @symbol_param<0> = [dc,64,30,32]; ]
-    function drawQiblaCompass(dc) {
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_64_34_110_4_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 65 8 ]
-        symbol [ System %tmp.1 65 8 14 ];
-        %tmp.1 = getm $.Toybox.System;
-        symbol [ println %tmp.2 65 15 22 ];
-        %tmp.2 = getv function %tmp.1 :println;
-        %tmp.3 = "DEBUG: drawQiblaCompass";
-        invoke %tmp.1 %tmp.2(%tmp.3);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 66 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_64_34_110_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_64_34_110_4_stop" ]
-        %app.1 = local;
-        symbol [ app %app.1 66 12 15 ];
-        symbol [ Application %tmp.4 66 18 29 ];
-        %tmp.4 = getm $.Toybox.Application;
-        symbol [ getApp %tmp.5 66 30 36 ];
-        %tmp.5 = getv function %tmp.4 :getApp;
-        %tmp.6 = invoke %tmp.4 %tmp.5();
-        %tmp.7 = as %tmp.6 TheAthanApp;
-        symbol [ TheAthanApp %tmp.7 66 42 53 ];
-        lputv %app.1 %tmp.7;
-        symbol [ app %app.1 66 12 15 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 67 8 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_64_34_110_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_64_34_110_4_stop" ]
-        %qiblaDirection.2 = local;
-        symbol [ qiblaDirection %qiblaDirection.2 67 12 26 ];
-        %tmp.8 = lgetv %app.1;
-        symbol [ app %tmp.8 67 29 32 ];
-        symbol [ getQiblaDirection %tmp.9 67 33 50 ];
-        %tmp.9 = getv function %tmp.8 :getQiblaDirection;
-        %tmp.10 = invoke %tmp.8 %tmp.9();
-        lputv %qiblaDirection.2 %tmp.10;
-        symbol [ qiblaDirection %qiblaDirection.2 67 12 26 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 69 8 ]
-        symbol [ System %tmp.11 69 8 14 ];
-        %tmp.11 = getm $.Toybox.System;
-        symbol [ println %tmp.12 69 15 22 ];
-        %tmp.12 = getv function %tmp.11 :println;
-        %tmp.13 = "DEBUG: Qibla direction: ";
-        %tmp.14 = lgetv %qiblaDirection.2;
-        symbol [ qiblaDirection %tmp.14 69 52 66 ];
-        %tmp.15 = add %tmp.13 %tmp.14;
-        invoke %tmp.11 %tmp.12(%tmp.15);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 71 8 ]
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_finally;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_beginTry:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 73 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_stop" ]
-        %radius.3 = local;
-        symbol [ radius %radius.3 73 16 22 ];
-        symbol [ _width %tmp.17 73 25 31 ];
-        %tmp.17 = getv ? :_width;
-        %tmp.18 = 0.35;
-        %tmp.19 = mul %tmp.17 %tmp.18;
-        lputv %radius.3 %tmp.19;
-        symbol [ radius %radius.3 73 16 22 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 76 12 ]
+        symbol [ COLOR_WHITE %tmp.17 47 33 44 ];
+        %tmp.17 = getv %tmp.16 :COLOR_WHITE;
+        symbol [ Graphics %tmp.18 47 46 54 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.19 47 55 72 ];
+        %tmp.19 = getv %tmp.18 :COLOR_TRANSPARENT;
+        invoke %tmp.14 %tmp.15(%tmp.17, %tmp.19);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 48 12 ]
         %tmp.20 = lgetv %dc;
-        symbol [ dc %tmp.20 76 12 14 ];
-        symbol [ setColor %tmp.21 76 15 23 ];
-        %tmp.21 = getv function %tmp.20 :setColor;
-        symbol [ Graphics %tmp.22 76 24 32 ];
-        %tmp.22 = getm $.Toybox.Graphics;
-        symbol [ COLOR_DK_BLUE %tmp.23 76 33 46 ];
-        %tmp.23 = getv %tmp.22 :COLOR_DK_BLUE;
-        symbol [ Graphics %tmp.24 76 48 56 ];
-        %tmp.24 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.25 76 57 68 ];
-        %tmp.25 = getv %tmp.24 :COLOR_BLACK;
-        invoke %tmp.20 %tmp.21(%tmp.23, %tmp.25);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 77 12 ]
-        %tmp.26 = lgetv %dc;
-        symbol [ dc %tmp.26 77 12 14 ];
-        symbol [ fillCircle %tmp.27 77 15 25 ];
-        %tmp.27 = getv function %tmp.26 :fillCircle;
-        symbol [ _centerX %tmp.29 77 26 34 ];
-        %tmp.29 = getv ? :_centerX;
-        symbol [ _centerY %tmp.31 77 36 44 ];
-        %tmp.31 = getv ? :_centerY;
-        %tmp.32 = lgetv %radius.3;
-        symbol [ radius %tmp.32 77 46 52 ];
-        invoke %tmp.26 %tmp.27(%tmp.29, %tmp.31, %tmp.32);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 80 12 ]
-        %tmp.33 = lgetv %dc;
-        symbol [ dc %tmp.33 80 12 14 ];
-        symbol [ setColor %tmp.34 80 15 23 ];
-        %tmp.34 = getv function %tmp.33 :setColor;
-        symbol [ Graphics %tmp.35 80 24 32 ];
-        %tmp.35 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.36 80 33 44 ];
-        %tmp.36 = getv %tmp.35 :COLOR_BLACK;
-        symbol [ Graphics %tmp.37 80 46 54 ];
-        %tmp.37 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.38 80 55 66 ];
-        %tmp.38 = getv %tmp.37 :COLOR_BLACK;
-        invoke %tmp.33 %tmp.34(%tmp.36, %tmp.38);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 81 12 ]
+        symbol [ dc %tmp.20 48 12 14 ];
+        symbol [ drawText %tmp.21 48 15 23 ];
+        %tmp.21 = getv function %tmp.20 :drawText;
+        symbol [ _centerX %tmp.23 48 24 32 ];
+        %tmp.23 = getv ? :_centerX;
+        %tmp.24 = 15;
+        symbol [ Graphics %tmp.25 48 38 46 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.26 48 47 57 ];
+        %tmp.26 = getv %tmp.25 :FONT_SMALL;
+        symbol [ WatchUi %tmp.27 48 59 66 ];
+        %tmp.27 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.28 48 67 79 ];
+        %tmp.28 = getv function %tmp.27 :loadResource;
+        symbol [ Rez %tmp.30 48 80 83 ];
+        %tmp.30 = getv ? :Rez;
+        symbol [ Strings %tmp.31 48 84 91 ];
+        %tmp.31 = getv %tmp.30 :Strings;
+        symbol [ qibla_finder %tmp.32 48 92 104 ];
+        %tmp.32 = getv %tmp.31 :qibla_finder;
+        %tmp.33 = invoke %tmp.27 %tmp.28(%tmp.32);
+        symbol [ Graphics %tmp.34 48 107 115 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.35 48 116 135 ];
+        %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.20 %tmp.21(%tmp.23, %tmp.24, %tmp.26, %tmp.33, %tmp.35);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 51 12 ]
+        %tmp.36 = self;
+        symbol [ drawQiblaCompass %tmp.37 51 12 28 ];
+        %tmp.37 = getv function %tmp.36 :drawQiblaCompass;
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 51 29 31 ];
+        invoke %tmp.36 %tmp.37(%tmp.38);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 54 12 ]
         %tmp.39 = lgetv %dc;
-        symbol [ dc %tmp.39 81 12 14 ];
-        symbol [ fillCircle %tmp.40 81 15 25 ];
-        %tmp.40 = getv function %tmp.39 :fillCircle;
-        symbol [ _centerX %tmp.42 81 26 34 ];
-        %tmp.42 = getv ? :_centerX;
-        symbol [ _centerY %tmp.44 81 36 44 ];
-        %tmp.44 = getv ? :_centerY;
-        %tmp.45 = lgetv %radius.3;
-        symbol [ radius %tmp.45 81 46 52 ];
-        %tmp.46 = 5;
-        %tmp.47 = sub %tmp.45 %tmp.46;
-        invoke %tmp.39 %tmp.40(%tmp.42, %tmp.44, %tmp.47);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 84 12 ]
-        %tmp.48 = lgetv %dc;
-        symbol [ dc %tmp.48 84 12 14 ];
-        symbol [ setColor %tmp.49 84 15 23 ];
-        %tmp.49 = getv function %tmp.48 :setColor;
-        symbol [ Graphics %tmp.50 84 24 32 ];
-        %tmp.50 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.51 84 33 44 ];
-        %tmp.51 = getv %tmp.50 :COLOR_WHITE;
-        symbol [ Graphics %tmp.52 84 46 54 ];
-        %tmp.52 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.53 84 55 72 ];
-        %tmp.53 = getv %tmp.52 :COLOR_TRANSPARENT;
-        invoke %tmp.48 %tmp.49(%tmp.51, %tmp.53);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 85 12 ]
-        %tmp.54 = lgetv %dc;
-        symbol [ dc %tmp.54 85 12 14 ];
-        symbol [ drawText %tmp.55 85 15 23 ];
-        %tmp.55 = getv function %tmp.54 :drawText;
-        symbol [ _centerX %tmp.57 85 24 32 ];
-        %tmp.57 = getv ? :_centerX;
-        symbol [ _centerY %tmp.59 85 34 42 ];
-        %tmp.59 = getv ? :_centerY;
-        %tmp.60 = lgetv %radius.3;
-        symbol [ radius %tmp.60 85 45 51 ];
-        %tmp.61 = sub %tmp.59 %tmp.60;
-        %tmp.62 = 15;
-        %tmp.63 = add %tmp.61 %tmp.62;
-        symbol [ Graphics %tmp.64 85 58 66 ];
-        %tmp.64 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.65 85 67 76 ];
-        %tmp.65 = getv %tmp.64 :FONT_TINY;
-        %tmp.66 = "N";
-        symbol [ Graphics %tmp.67 85 83 91 ];
-        %tmp.67 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.68 85 92 111 ];
-        %tmp.68 = getv %tmp.67 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.54 %tmp.55(%tmp.57, %tmp.63, %tmp.65, %tmp.66, %tmp.68);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 86 12 ]
-        %tmp.69 = lgetv %dc;
-        symbol [ dc %tmp.69 86 12 14 ];
-        symbol [ drawText %tmp.70 86 15 23 ];
-        %tmp.70 = getv function %tmp.69 :drawText;
-        symbol [ _centerX %tmp.72 86 24 32 ];
-        %tmp.72 = getv ? :_centerX;
-        symbol [ _centerY %tmp.74 86 34 42 ];
-        %tmp.74 = getv ? :_centerY;
-        %tmp.75 = lgetv %radius.3;
-        symbol [ radius %tmp.75 86 45 51 ];
-        %tmp.76 = add %tmp.74 %tmp.75;
-        %tmp.77 = 15;
-        %tmp.78 = sub %tmp.76 %tmp.77;
-        symbol [ Graphics %tmp.79 86 58 66 ];
-        %tmp.79 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.80 86 67 76 ];
-        %tmp.80 = getv %tmp.79 :FONT_TINY;
-        %tmp.81 = "S";
-        symbol [ Graphics %tmp.82 86 83 91 ];
-        %tmp.82 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.83 86 92 111 ];
-        %tmp.83 = getv %tmp.82 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.69 %tmp.70(%tmp.72, %tmp.78, %tmp.80, %tmp.81, %tmp.83);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 87 12 ]
-        %tmp.84 = lgetv %dc;
-        symbol [ dc %tmp.84 87 12 14 ];
-        symbol [ drawText %tmp.85 87 15 23 ];
-        %tmp.85 = getv function %tmp.84 :drawText;
-        symbol [ _centerX %tmp.87 87 24 32 ];
-        %tmp.87 = getv ? :_centerX;
-        %tmp.88 = lgetv %radius.3;
-        symbol [ radius %tmp.88 87 35 41 ];
-        %tmp.89 = sub %tmp.87 %tmp.88;
-        %tmp.90 = 15;
-        %tmp.91 = add %tmp.89 %tmp.90;
-        symbol [ _centerY %tmp.93 87 48 56 ];
-        %tmp.93 = getv ? :_centerY;
-        symbol [ Graphics %tmp.94 87 58 66 ];
-        %tmp.94 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.95 87 67 76 ];
-        %tmp.95 = getv %tmp.94 :FONT_TINY;
-        %tmp.96 = "W";
-        symbol [ Graphics %tmp.97 87 83 91 ];
-        %tmp.97 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.98 87 92 111 ];
-        %tmp.98 = getv %tmp.97 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.84 %tmp.85(%tmp.91, %tmp.93, %tmp.95, %tmp.96, %tmp.98);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 88 12 ]
-        %tmp.99 = lgetv %dc;
-        symbol [ dc %tmp.99 88 12 14 ];
-        symbol [ drawText %tmp.100 88 15 23 ];
-        %tmp.100 = getv function %tmp.99 :drawText;
-        symbol [ _centerX %tmp.102 88 24 32 ];
-        %tmp.102 = getv ? :_centerX;
-        %tmp.103 = lgetv %radius.3;
-        symbol [ radius %tmp.103 88 35 41 ];
-        %tmp.104 = add %tmp.102 %tmp.103;
-        %tmp.105 = 15;
-        %tmp.106 = sub %tmp.104 %tmp.105;
-        symbol [ _centerY %tmp.108 88 48 56 ];
-        %tmp.108 = getv ? :_centerY;
-        symbol [ Graphics %tmp.109 88 58 66 ];
-        %tmp.109 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.110 88 67 76 ];
-        %tmp.110 = getv %tmp.109 :FONT_TINY;
-        %tmp.111 = "E";
-        symbol [ Graphics %tmp.112 88 83 91 ];
-        %tmp.112 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.113 88 92 111 ];
-        %tmp.113 = getv %tmp.112 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.99 %tmp.100(%tmp.106, %tmp.108, %tmp.110, %tmp.111, %tmp.113);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 91 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_stop" ]
-        %arrowLength.4 = local;
-        symbol [ arrowLength %arrowLength.4 91 16 27 ];
-        %tmp.114 = lgetv %radius.3;
-        symbol [ radius %tmp.114 91 30 36 ];
-        %tmp.115 = 20;
-        %tmp.116 = sub %tmp.114 %tmp.115;
-        lputv %arrowLength.4 %tmp.116;
-        symbol [ arrowLength %arrowLength.4 91 16 27 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 92 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_stop" ]
-        %angle.5 = local;
-        symbol [ angle %angle.5 92 16 21 ];
-        %tmp.117 = lgetv %qiblaDirection.2;
-        symbol [ qiblaDirection %tmp.117 92 24 38 ];
-        symbol [ Math %tmp.119 92 41 45 ];
-        %tmp.119 = getv ? :Math;
-        symbol [ PI %tmp.120 92 46 48 ];
-        %tmp.120 = getv %tmp.119 :PI;
-        %tmp.121 = mul %tmp.117 %tmp.120;
-        %tmp.122 = 180.0;
-        %tmp.123 = div %tmp.121 %tmp.122;
-        lputv %angle.5 %tmp.123;
-        symbol [ angle %angle.5 92 16 21 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 93 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_stop" ]
-        %arrowX.6 = local;
-        symbol [ arrowX %arrowX.6 93 16 22 ];
-        symbol [ _centerX %tmp.125 93 25 33 ];
-        %tmp.125 = getv ? :_centerX;
-        %tmp.126 = lgetv %arrowLength.4;
-        symbol [ arrowLength %tmp.126 93 36 47 ];
-        symbol [ Math %tmp.128 93 50 54 ];
-        %tmp.128 = getv ? :Math;
-        symbol [ sin %tmp.129 93 55 58 ];
-        %tmp.129 = getv function %tmp.128 :sin;
-        %tmp.130 = lgetv %angle.5;
-        symbol [ angle %tmp.130 93 59 64 ];
-        %tmp.131 = invoke %tmp.128 %tmp.129(%tmp.130);
-        %tmp.132 = mul %tmp.126 %tmp.131;
-        %tmp.133 = add %tmp.125 %tmp.132;
-        lputv %arrowX.6 %tmp.133;
-        symbol [ arrowX %arrowX.6 93 16 22 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 94 12 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_stop" ]
-        %arrowY.7 = local;
-        symbol [ arrowY %arrowY.7 94 16 22 ];
-        symbol [ _centerY %tmp.135 94 25 33 ];
-        %tmp.135 = getv ? :_centerY;
-        %tmp.136 = lgetv %arrowLength.4;
-        symbol [ arrowLength %tmp.136 94 36 47 ];
-        symbol [ Math %tmp.138 94 50 54 ];
-        %tmp.138 = getv ? :Math;
-        symbol [ cos %tmp.139 94 55 58 ];
-        %tmp.139 = getv function %tmp.138 :cos;
-        %tmp.140 = lgetv %angle.5;
-        symbol [ angle %tmp.140 94 59 64 ];
-        %tmp.141 = invoke %tmp.138 %tmp.139(%tmp.140);
-        %tmp.142 = mul %tmp.136 %tmp.141;
-        %tmp.143 = sub %tmp.135 %tmp.142;
-        lputv %arrowY.7 %tmp.143;
-        symbol [ arrowY %arrowY.7 94 16 22 ];
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 96 12 ]
-        %tmp.144 = lgetv %dc;
-        symbol [ dc %tmp.144 96 12 14 ];
-        symbol [ setColor %tmp.145 96 15 23 ];
-        %tmp.145 = getv function %tmp.144 :setColor;
-        symbol [ Graphics %tmp.146 96 24 32 ];
-        %tmp.146 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.147 96 33 42 ];
-        %tmp.147 = getv %tmp.146 :COLOR_RED;
-        symbol [ Graphics %tmp.148 96 44 52 ];
-        %tmp.148 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.149 96 53 70 ];
-        %tmp.149 = getv %tmp.148 :COLOR_TRANSPARENT;
-        invoke %tmp.144 %tmp.145(%tmp.147, %tmp.149);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 97 12 ]
-        %tmp.150 = lgetv %dc;
-        symbol [ dc %tmp.150 97 12 14 ];
-        symbol [ setPenWidth %tmp.151 97 15 26 ];
-        %tmp.151 = getv function %tmp.150 :setPenWidth;
-        %tmp.152 = 3;
-        invoke %tmp.150 %tmp.151(%tmp.152);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 98 12 ]
-        %tmp.153 = lgetv %dc;
-        symbol [ dc %tmp.153 98 12 14 ];
-        symbol [ drawLine %tmp.154 98 15 23 ];
-        %tmp.154 = getv function %tmp.153 :drawLine;
-        symbol [ _centerX %tmp.156 98 24 32 ];
-        %tmp.156 = getv ? :_centerX;
-        symbol [ _centerY %tmp.158 98 34 42 ];
-        %tmp.158 = getv ? :_centerY;
-        %tmp.159 = lgetv %arrowX.6;
-        symbol [ arrowX %tmp.159 98 44 50 ];
-        %tmp.160 = lgetv %arrowY.7;
-        symbol [ arrowY %tmp.160 98 52 58 ];
-        invoke %tmp.153 %tmp.154(%tmp.156, %tmp.158, %tmp.159, %tmp.160);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 101 12 ]
-        %tmp.161 = lgetv %dc;
-        symbol [ dc %tmp.161 101 12 14 ];
-        symbol [ setColor %tmp.162 101 15 23 ];
-        %tmp.162 = getv function %tmp.161 :setColor;
-        symbol [ Graphics %tmp.163 101 24 32 ];
-        %tmp.163 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.164 101 33 44 ];
-        %tmp.164 = getv %tmp.163 :COLOR_WHITE;
-        symbol [ Graphics %tmp.165 101 46 54 ];
-        %tmp.165 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.166 101 55 72 ];
-        %tmp.166 = getv %tmp.165 :COLOR_TRANSPARENT;
-        invoke %tmp.161 %tmp.162(%tmp.164, %tmp.166);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 102 12 ]
-        %tmp.167 = lgetv %dc;
-        symbol [ dc %tmp.167 102 12 14 ];
-        symbol [ drawText %tmp.168 102 15 23 ];
-        %tmp.168 = getv function %tmp.167 :drawText;
-        symbol [ _centerX %tmp.170 102 24 32 ];
-        %tmp.170 = getv ? :_centerX;
-        symbol [ _centerY %tmp.172 102 34 42 ];
-        %tmp.172 = getv ? :_centerY;
-        %tmp.173 = lgetv %radius.3;
-        symbol [ radius %tmp.173 102 45 51 ];
-        %tmp.174 = add %tmp.172 %tmp.173;
-        %tmp.175 = 20;
-        %tmp.176 = add %tmp.174 %tmp.175;
-        symbol [ Graphics %tmp.177 102 58 66 ];
-        %tmp.177 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.178 102 67 77 ];
-        %tmp.178 = getv %tmp.177 :FONT_SMALL;
-        %tmp.179 = lgetv %qiblaDirection.2;
-        symbol [ qiblaDirection %tmp.179 103 23 37 ];
-        symbol [ format %tmp.180 103 38 44 ];
-        %tmp.180 = getv function %tmp.179 :format;
-        %tmp.181 = "%d";
-        %tmp.182 = invoke %tmp.179 %tmp.180(%tmp.181);
-        symbol [ WatchUi %tmp.183 103 53 60 ];
-        %tmp.183 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.184 103 61 73 ];
-        %tmp.184 = getv function %tmp.183 :loadResource;
-        symbol [ Rez %tmp.186 103 74 77 ];
-        %tmp.186 = getv ? :Rez;
-        symbol [ Strings %tmp.187 103 78 85 ];
-        %tmp.187 = getv %tmp.186 :Strings;
-        symbol [ degrees %tmp.188 103 86 93 ];
-        %tmp.188 = getv %tmp.187 :degrees;
-        %tmp.189 = invoke %tmp.183 %tmp.184(%tmp.188);
-        %tmp.190 = add %tmp.182 %tmp.189;
-        symbol [ Graphics %tmp.191 104 23 31 ];
-        %tmp.191 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.192 104 32 51 ];
-        %tmp.192 = getv %tmp.191 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.167 %tmp.168(%tmp.170, %tmp.176, %tmp.178, %tmp.190, %tmp.192);
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 106 12 ]
-        symbol [ System %tmp.193 106 12 18 ];
-        %tmp.193 = getm $.Toybox.System;
-        symbol [ println %tmp.194 106 19 26 ];
-        %tmp.194 = getv function %tmp.193 :println;
-        %tmp.195 = "DEBUG: Qibla compass drawn";
-        invoke %tmp.193 %tmp.194(%tmp.195);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_12_107_8_stop:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_endTry:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_finally;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_catch:
-        %tmp.196 = exception;
-        push %tmp.196;
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 107 10 ]
-        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_107_10_109_8_end" ]
-        %e.8 = local;
-        symbol [ e %e.8 107 17 18 ];
-        %tmp.197 = dup %tmp.196;
-        lputv %e.8 %tmp.197;
-        symbol [ e %e.8 107 17 18 ];
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_107_20_109_8_start:
-[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 108 12 ]
-        symbol [ System %tmp.198 108 12 18 ];
-        %tmp.198 = getm $.Toybox.System;
-        symbol [ println %tmp.199 108 19 26 ];
-        %tmp.199 = getv function %tmp.198 :println;
-        %tmp.200 = "DEBUG: Exception drawing qibla: ";
-        %tmp.201 = lgetv %e.8;
-        symbol [ e %tmp.201 108 64 65 ];
-        symbol [ getErrorMessage %tmp.202 108 66 81 ];
-        %tmp.202 = getv function %tmp.201 :getErrorMessage;
-        %tmp.203 = invoke %tmp.201 %tmp.202();
-        %tmp.204 = add %tmp.200 %tmp.203;
-        invoke %tmp.198 %tmp.199(%tmp.204);
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_107_20_109_8_stop:
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_finally;
+        symbol [ dc %tmp.39 54 12 14 ];
+        symbol [ setColor %tmp.40 54 15 23 ];
+        %tmp.40 = getv function %tmp.39 :setColor;
+        symbol [ Graphics %tmp.41 54 24 32 ];
+        %tmp.41 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.42 54 33 46 ];
+        %tmp.42 = getv %tmp.41 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.43 54 48 56 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.44 54 57 74 ];
+        %tmp.44 = getv %tmp.43 :COLOR_TRANSPARENT;
+        invoke %tmp.39 %tmp.40(%tmp.42, %tmp.44);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 55 12 ]
+        %tmp.45 = lgetv %dc;
+        symbol [ dc %tmp.45 55 12 14 ];
+        symbol [ drawText %tmp.46 55 15 23 ];
+        %tmp.46 = getv function %tmp.45 :drawText;
+        symbol [ _centerX %tmp.48 55 24 32 ];
+        %tmp.48 = getv ? :_centerX;
+        symbol [ _height %tmp.50 55 34 41 ];
+        %tmp.50 = getv ? :_height;
+        %tmp.51 = 30;
+        %tmp.52 = sub %tmp.50 %tmp.51;
+        symbol [ Graphics %tmp.53 55 48 56 ];
+        %tmp.53 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.54 55 57 66 ];
+        %tmp.54 = getv %tmp.53 :FONT_TINY;
+        %tmp.55 = "^ Prayer Times";
+        symbol [ Graphics %tmp.56 55 86 94 ];
+        %tmp.56 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.57 55 95 114 ];
+        %tmp.57 = getv %tmp.56 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.45 %tmp.46(%tmp.48, %tmp.52, %tmp.54, %tmp.55, %tmp.57);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_12_57_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_catch:
+        %tmp.58 = exception;
+        push %tmp.58;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 57 10 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_57_10_59_8_end" ]
+        %e.1 = local;
+        symbol [ e %e.1 57 17 18 ];
+        %tmp.59 = dup %tmp.58;
+        lputv %e.1 %tmp.59;
+        symbol [ e %e.1 57 17 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_57_20_59_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 58 12 ]
+        symbol [ TheAthanLogger %tmp.61 58 12 26 ];
+        %tmp.61 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.62 58 27 32 ];
+        %tmp.62 = getv function %tmp.61 :error;
+        %tmp.63 = "QiblaView";
+        %tmp.64 = "Exception in onUpdate: ";
+        %tmp.65 = lgetv %e.1;
+        symbol [ e %tmp.65 58 74 75 ];
+        symbol [ getErrorMessage %tmp.66 58 76 91 ];
+        %tmp.66 = getv function %tmp.65 :getErrorMessage;
+        %tmp.67 = invoke %tmp.65 %tmp.66();
+        %tmp.68 = add %tmp.64 %tmp.67;
+        invoke %tmp.61 %tmp.62(%tmp.63, %tmp.68);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_57_20_59_8_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_finally;
         pop;
-        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_end;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_107_10_109_8_end:
-        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_107_10_109_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_107_10_109_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_finally;
-        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_finally;
-        throw %tmp.196;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_finally:
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_57_10_59_8_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_57_10_59_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_57_10_59_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_finally;
+        throw %tmp.58;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_finally:
         jsrret;
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_71_8_109_8_end:
-_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_64_34_110_4_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_41_8_59_8_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_39_40_60_4_stop:
+    }
+    [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 63; @symbol_functiondef = [drawQiblaCompass,63,13,29]; @symbol_param<0> = [dc,63,30,32]; ]
+    function drawQiblaCompass(dc) {
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_63_34_109_4_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 64 8 ]
+        symbol [ TheAthanLogger %tmp.2 64 8 22 ];
+        %tmp.2 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.3 64 23 28 ];
+        %tmp.3 = getv function %tmp.2 :debug;
+        %tmp.4 = "QiblaView";
+        %tmp.5 = "drawQiblaCompass";
+        invoke %tmp.2 %tmp.3(%tmp.4, %tmp.5);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 65 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_63_34_109_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_63_34_109_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 65 12 15 ];
+        symbol [ Application %tmp.6 65 18 29 ];
+        %tmp.6 = getm $.Toybox.Application;
+        symbol [ getApp %tmp.7 65 30 36 ];
+        %tmp.7 = getv function %tmp.6 :getApp;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = as %tmp.8 TheAthanApp;
+        symbol [ TheAthanApp %tmp.9 65 42 53 ];
+        lputv %app.1 %tmp.9;
+        symbol [ app %app.1 65 12 15 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 66 8 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_63_34_109_4_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_63_34_109_4_stop" ]
+        %qiblaDirection.2 = local;
+        symbol [ qiblaDirection %qiblaDirection.2 66 12 26 ];
+        %tmp.10 = lgetv %app.1;
+        symbol [ app %tmp.10 66 29 32 ];
+        symbol [ getQiblaDirection %tmp.11 66 33 50 ];
+        %tmp.11 = getv function %tmp.10 :getQiblaDirection;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %qiblaDirection.2 %tmp.12;
+        symbol [ qiblaDirection %qiblaDirection.2 66 12 26 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 68 8 ]
+        symbol [ TheAthanLogger %tmp.14 68 8 22 ];
+        %tmp.14 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.15 68 23 28 ];
+        %tmp.15 = getv function %tmp.14 :debug;
+        %tmp.16 = "QiblaView";
+        %tmp.17 = "Qibla direction: ";
+        %tmp.18 = lgetv %qiblaDirection.2;
+        symbol [ qiblaDirection %tmp.18 68 64 78 ];
+        %tmp.19 = add %tmp.17 %tmp.18;
+        invoke %tmp.14 %tmp.15(%tmp.16, %tmp.19);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 70 8 ]
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_beginTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_endTry @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_finally;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_beginTry:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 72 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_stop" ]
+        %radius.3 = local;
+        symbol [ radius %radius.3 72 16 22 ];
+        symbol [ _width %tmp.21 72 25 31 ];
+        %tmp.21 = getv ? :_width;
+        %tmp.22 = 0.35;
+        %tmp.23 = mul %tmp.21 %tmp.22;
+        lputv %radius.3 %tmp.23;
+        symbol [ radius %radius.3 72 16 22 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 75 12 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 75 12 14 ];
+        symbol [ setColor %tmp.25 75 15 23 ];
+        %tmp.25 = getv function %tmp.24 :setColor;
+        symbol [ Graphics %tmp.26 75 24 32 ];
+        %tmp.26 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_BLUE %tmp.27 75 33 46 ];
+        %tmp.27 = getv %tmp.26 :COLOR_DK_BLUE;
+        symbol [ Graphics %tmp.28 75 48 56 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.29 75 57 68 ];
+        %tmp.29 = getv %tmp.28 :COLOR_BLACK;
+        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.29);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 76 12 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 76 12 14 ];
+        symbol [ fillCircle %tmp.31 76 15 25 ];
+        %tmp.31 = getv function %tmp.30 :fillCircle;
+        symbol [ _centerX %tmp.33 76 26 34 ];
+        %tmp.33 = getv ? :_centerX;
+        symbol [ _centerY %tmp.35 76 36 44 ];
+        %tmp.35 = getv ? :_centerY;
+        %tmp.36 = lgetv %radius.3;
+        symbol [ radius %tmp.36 76 46 52 ];
+        invoke %tmp.30 %tmp.31(%tmp.33, %tmp.35, %tmp.36);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 79 12 ]
+        %tmp.37 = lgetv %dc;
+        symbol [ dc %tmp.37 79 12 14 ];
+        symbol [ setColor %tmp.38 79 15 23 ];
+        %tmp.38 = getv function %tmp.37 :setColor;
+        symbol [ Graphics %tmp.39 79 24 32 ];
+        %tmp.39 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.40 79 33 44 ];
+        %tmp.40 = getv %tmp.39 :COLOR_BLACK;
+        symbol [ Graphics %tmp.41 79 46 54 ];
+        %tmp.41 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.42 79 55 66 ];
+        %tmp.42 = getv %tmp.41 :COLOR_BLACK;
+        invoke %tmp.37 %tmp.38(%tmp.40, %tmp.42);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 80 12 ]
+        %tmp.43 = lgetv %dc;
+        symbol [ dc %tmp.43 80 12 14 ];
+        symbol [ fillCircle %tmp.44 80 15 25 ];
+        %tmp.44 = getv function %tmp.43 :fillCircle;
+        symbol [ _centerX %tmp.46 80 26 34 ];
+        %tmp.46 = getv ? :_centerX;
+        symbol [ _centerY %tmp.48 80 36 44 ];
+        %tmp.48 = getv ? :_centerY;
+        %tmp.49 = lgetv %radius.3;
+        symbol [ radius %tmp.49 80 46 52 ];
+        %tmp.50 = 5;
+        %tmp.51 = sub %tmp.49 %tmp.50;
+        invoke %tmp.43 %tmp.44(%tmp.46, %tmp.48, %tmp.51);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 83 12 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 83 12 14 ];
+        symbol [ setColor %tmp.53 83 15 23 ];
+        %tmp.53 = getv function %tmp.52 :setColor;
+        symbol [ Graphics %tmp.54 83 24 32 ];
+        %tmp.54 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.55 83 33 44 ];
+        %tmp.55 = getv %tmp.54 :COLOR_WHITE;
+        symbol [ Graphics %tmp.56 83 46 54 ];
+        %tmp.56 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.57 83 55 72 ];
+        %tmp.57 = getv %tmp.56 :COLOR_TRANSPARENT;
+        invoke %tmp.52 %tmp.53(%tmp.55, %tmp.57);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 84 12 ]
+        %tmp.58 = lgetv %dc;
+        symbol [ dc %tmp.58 84 12 14 ];
+        symbol [ drawText %tmp.59 84 15 23 ];
+        %tmp.59 = getv function %tmp.58 :drawText;
+        symbol [ _centerX %tmp.61 84 24 32 ];
+        %tmp.61 = getv ? :_centerX;
+        symbol [ _centerY %tmp.63 84 34 42 ];
+        %tmp.63 = getv ? :_centerY;
+        %tmp.64 = lgetv %radius.3;
+        symbol [ radius %tmp.64 84 45 51 ];
+        %tmp.65 = sub %tmp.63 %tmp.64;
+        %tmp.66 = 15;
+        %tmp.67 = add %tmp.65 %tmp.66;
+        symbol [ Graphics %tmp.68 84 58 66 ];
+        %tmp.68 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.69 84 67 76 ];
+        %tmp.69 = getv %tmp.68 :FONT_TINY;
+        %tmp.70 = "N";
+        symbol [ Graphics %tmp.71 84 83 91 ];
+        %tmp.71 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.72 84 92 111 ];
+        %tmp.72 = getv %tmp.71 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.58 %tmp.59(%tmp.61, %tmp.67, %tmp.69, %tmp.70, %tmp.72);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 85 12 ]
+        %tmp.73 = lgetv %dc;
+        symbol [ dc %tmp.73 85 12 14 ];
+        symbol [ drawText %tmp.74 85 15 23 ];
+        %tmp.74 = getv function %tmp.73 :drawText;
+        symbol [ _centerX %tmp.76 85 24 32 ];
+        %tmp.76 = getv ? :_centerX;
+        symbol [ _centerY %tmp.78 85 34 42 ];
+        %tmp.78 = getv ? :_centerY;
+        %tmp.79 = lgetv %radius.3;
+        symbol [ radius %tmp.79 85 45 51 ];
+        %tmp.80 = add %tmp.78 %tmp.79;
+        %tmp.81 = 15;
+        %tmp.82 = sub %tmp.80 %tmp.81;
+        symbol [ Graphics %tmp.83 85 58 66 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.84 85 67 76 ];
+        %tmp.84 = getv %tmp.83 :FONT_TINY;
+        %tmp.85 = "S";
+        symbol [ Graphics %tmp.86 85 83 91 ];
+        %tmp.86 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.87 85 92 111 ];
+        %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.73 %tmp.74(%tmp.76, %tmp.82, %tmp.84, %tmp.85, %tmp.87);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 86 12 ]
+        %tmp.88 = lgetv %dc;
+        symbol [ dc %tmp.88 86 12 14 ];
+        symbol [ drawText %tmp.89 86 15 23 ];
+        %tmp.89 = getv function %tmp.88 :drawText;
+        symbol [ _centerX %tmp.91 86 24 32 ];
+        %tmp.91 = getv ? :_centerX;
+        %tmp.92 = lgetv %radius.3;
+        symbol [ radius %tmp.92 86 35 41 ];
+        %tmp.93 = sub %tmp.91 %tmp.92;
+        %tmp.94 = 15;
+        %tmp.95 = add %tmp.93 %tmp.94;
+        symbol [ _centerY %tmp.97 86 48 56 ];
+        %tmp.97 = getv ? :_centerY;
+        symbol [ Graphics %tmp.98 86 58 66 ];
+        %tmp.98 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.99 86 67 76 ];
+        %tmp.99 = getv %tmp.98 :FONT_TINY;
+        %tmp.100 = "W";
+        symbol [ Graphics %tmp.101 86 83 91 ];
+        %tmp.101 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.102 86 92 111 ];
+        %tmp.102 = getv %tmp.101 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.88 %tmp.89(%tmp.95, %tmp.97, %tmp.99, %tmp.100, %tmp.102);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 87 12 ]
+        %tmp.103 = lgetv %dc;
+        symbol [ dc %tmp.103 87 12 14 ];
+        symbol [ drawText %tmp.104 87 15 23 ];
+        %tmp.104 = getv function %tmp.103 :drawText;
+        symbol [ _centerX %tmp.106 87 24 32 ];
+        %tmp.106 = getv ? :_centerX;
+        %tmp.107 = lgetv %radius.3;
+        symbol [ radius %tmp.107 87 35 41 ];
+        %tmp.108 = add %tmp.106 %tmp.107;
+        %tmp.109 = 15;
+        %tmp.110 = sub %tmp.108 %tmp.109;
+        symbol [ _centerY %tmp.112 87 48 56 ];
+        %tmp.112 = getv ? :_centerY;
+        symbol [ Graphics %tmp.113 87 58 66 ];
+        %tmp.113 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.114 87 67 76 ];
+        %tmp.114 = getv %tmp.113 :FONT_TINY;
+        %tmp.115 = "E";
+        symbol [ Graphics %tmp.116 87 83 91 ];
+        %tmp.116 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.117 87 92 111 ];
+        %tmp.117 = getv %tmp.116 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.103 %tmp.104(%tmp.110, %tmp.112, %tmp.114, %tmp.115, %tmp.117);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 90 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_stop" ]
+        %arrowLength.4 = local;
+        symbol [ arrowLength %arrowLength.4 90 16 27 ];
+        %tmp.118 = lgetv %radius.3;
+        symbol [ radius %tmp.118 90 30 36 ];
+        %tmp.119 = 20;
+        %tmp.120 = sub %tmp.118 %tmp.119;
+        lputv %arrowLength.4 %tmp.120;
+        symbol [ arrowLength %arrowLength.4 90 16 27 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 91 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_stop" ]
+        %angle.5 = local;
+        symbol [ angle %angle.5 91 16 21 ];
+        %tmp.121 = lgetv %qiblaDirection.2;
+        symbol [ qiblaDirection %tmp.121 91 24 38 ];
+        symbol [ Math %tmp.123 91 41 45 ];
+        %tmp.123 = getv ? :Math;
+        symbol [ PI %tmp.124 91 46 48 ];
+        %tmp.124 = getv %tmp.123 :PI;
+        %tmp.125 = mul %tmp.121 %tmp.124;
+        %tmp.126 = 180.0;
+        %tmp.127 = div %tmp.125 %tmp.126;
+        lputv %angle.5 %tmp.127;
+        symbol [ angle %angle.5 91 16 21 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 92 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_stop" ]
+        %arrowX.6 = local;
+        symbol [ arrowX %arrowX.6 92 16 22 ];
+        symbol [ _centerX %tmp.129 92 25 33 ];
+        %tmp.129 = getv ? :_centerX;
+        %tmp.130 = lgetv %arrowLength.4;
+        symbol [ arrowLength %tmp.130 92 36 47 ];
+        symbol [ Math %tmp.132 92 50 54 ];
+        %tmp.132 = getv ? :Math;
+        symbol [ sin %tmp.133 92 55 58 ];
+        %tmp.133 = getv function %tmp.132 :sin;
+        %tmp.134 = lgetv %angle.5;
+        symbol [ angle %tmp.134 92 59 64 ];
+        %tmp.135 = invoke %tmp.132 %tmp.133(%tmp.134);
+        %tmp.136 = mul %tmp.130 %tmp.135;
+        %tmp.137 = add %tmp.129 %tmp.136;
+        lputv %arrowX.6 %tmp.137;
+        symbol [ arrowX %arrowX.6 92 16 22 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 93 12 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_start" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_stop" ]
+        %arrowY.7 = local;
+        symbol [ arrowY %arrowY.7 93 16 22 ];
+        symbol [ _centerY %tmp.139 93 25 33 ];
+        %tmp.139 = getv ? :_centerY;
+        %tmp.140 = lgetv %arrowLength.4;
+        symbol [ arrowLength %tmp.140 93 36 47 ];
+        symbol [ Math %tmp.142 93 50 54 ];
+        %tmp.142 = getv ? :Math;
+        symbol [ cos %tmp.143 93 55 58 ];
+        %tmp.143 = getv function %tmp.142 :cos;
+        %tmp.144 = lgetv %angle.5;
+        symbol [ angle %tmp.144 93 59 64 ];
+        %tmp.145 = invoke %tmp.142 %tmp.143(%tmp.144);
+        %tmp.146 = mul %tmp.140 %tmp.145;
+        %tmp.147 = sub %tmp.139 %tmp.146;
+        lputv %arrowY.7 %tmp.147;
+        symbol [ arrowY %arrowY.7 93 16 22 ];
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 95 12 ]
+        %tmp.148 = lgetv %dc;
+        symbol [ dc %tmp.148 95 12 14 ];
+        symbol [ setColor %tmp.149 95 15 23 ];
+        %tmp.149 = getv function %tmp.148 :setColor;
+        symbol [ Graphics %tmp.150 95 24 32 ];
+        %tmp.150 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.151 95 33 42 ];
+        %tmp.151 = getv %tmp.150 :COLOR_RED;
+        symbol [ Graphics %tmp.152 95 44 52 ];
+        %tmp.152 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.153 95 53 70 ];
+        %tmp.153 = getv %tmp.152 :COLOR_TRANSPARENT;
+        invoke %tmp.148 %tmp.149(%tmp.151, %tmp.153);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 96 12 ]
+        %tmp.154 = lgetv %dc;
+        symbol [ dc %tmp.154 96 12 14 ];
+        symbol [ setPenWidth %tmp.155 96 15 26 ];
+        %tmp.155 = getv function %tmp.154 :setPenWidth;
+        %tmp.156 = 3;
+        invoke %tmp.154 %tmp.155(%tmp.156);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 97 12 ]
+        %tmp.157 = lgetv %dc;
+        symbol [ dc %tmp.157 97 12 14 ];
+        symbol [ drawLine %tmp.158 97 15 23 ];
+        %tmp.158 = getv function %tmp.157 :drawLine;
+        symbol [ _centerX %tmp.160 97 24 32 ];
+        %tmp.160 = getv ? :_centerX;
+        symbol [ _centerY %tmp.162 97 34 42 ];
+        %tmp.162 = getv ? :_centerY;
+        %tmp.163 = lgetv %arrowX.6;
+        symbol [ arrowX %tmp.163 97 44 50 ];
+        %tmp.164 = lgetv %arrowY.7;
+        symbol [ arrowY %tmp.164 97 52 58 ];
+        invoke %tmp.157 %tmp.158(%tmp.160, %tmp.162, %tmp.163, %tmp.164);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 100 12 ]
+        %tmp.165 = lgetv %dc;
+        symbol [ dc %tmp.165 100 12 14 ];
+        symbol [ setColor %tmp.166 100 15 23 ];
+        %tmp.166 = getv function %tmp.165 :setColor;
+        symbol [ Graphics %tmp.167 100 24 32 ];
+        %tmp.167 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.168 100 33 44 ];
+        %tmp.168 = getv %tmp.167 :COLOR_WHITE;
+        symbol [ Graphics %tmp.169 100 46 54 ];
+        %tmp.169 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.170 100 55 72 ];
+        %tmp.170 = getv %tmp.169 :COLOR_TRANSPARENT;
+        invoke %tmp.165 %tmp.166(%tmp.168, %tmp.170);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 101 12 ]
+        %tmp.171 = lgetv %dc;
+        symbol [ dc %tmp.171 101 12 14 ];
+        symbol [ drawText %tmp.172 101 15 23 ];
+        %tmp.172 = getv function %tmp.171 :drawText;
+        symbol [ _centerX %tmp.174 101 24 32 ];
+        %tmp.174 = getv ? :_centerX;
+        symbol [ _centerY %tmp.176 101 34 42 ];
+        %tmp.176 = getv ? :_centerY;
+        %tmp.177 = lgetv %radius.3;
+        symbol [ radius %tmp.177 101 45 51 ];
+        %tmp.178 = add %tmp.176 %tmp.177;
+        %tmp.179 = 20;
+        %tmp.180 = add %tmp.178 %tmp.179;
+        symbol [ Graphics %tmp.181 101 58 66 ];
+        %tmp.181 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.182 101 67 77 ];
+        %tmp.182 = getv %tmp.181 :FONT_SMALL;
+        %tmp.183 = lgetv %qiblaDirection.2;
+        symbol [ qiblaDirection %tmp.183 102 23 37 ];
+        symbol [ format %tmp.184 102 38 44 ];
+        %tmp.184 = getv function %tmp.183 :format;
+        %tmp.185 = "%d";
+        %tmp.186 = invoke %tmp.183 %tmp.184(%tmp.185);
+        symbol [ WatchUi %tmp.187 102 53 60 ];
+        %tmp.187 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.188 102 61 73 ];
+        %tmp.188 = getv function %tmp.187 :loadResource;
+        symbol [ Rez %tmp.190 102 74 77 ];
+        %tmp.190 = getv ? :Rez;
+        symbol [ Strings %tmp.191 102 78 85 ];
+        %tmp.191 = getv %tmp.190 :Strings;
+        symbol [ degrees %tmp.192 102 86 93 ];
+        %tmp.192 = getv %tmp.191 :degrees;
+        %tmp.193 = invoke %tmp.187 %tmp.188(%tmp.192);
+        %tmp.194 = add %tmp.186 %tmp.193;
+        symbol [ Graphics %tmp.195 103 23 31 ];
+        %tmp.195 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.196 103 32 51 ];
+        %tmp.196 = getv %tmp.195 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.171 %tmp.172(%tmp.174, %tmp.180, %tmp.182, %tmp.194, %tmp.196);
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 105 12 ]
+        symbol [ TheAthanLogger %tmp.198 105 12 26 ];
+        %tmp.198 = getv ? :TheAthanLogger;
+        symbol [ debug %tmp.199 105 27 32 ];
+        %tmp.199 = getv function %tmp.198 :debug;
+        %tmp.200 = "QiblaView";
+        %tmp.201 = "Qibla compass drawn";
+        invoke %tmp.198 %tmp.199(%tmp.200, %tmp.201);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_12_106_8_stop:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_endTry:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_finally;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_catch:
+        %tmp.202 = exception;
+        push %tmp.202;
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 106 10 ]
+        [ "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_catch" "_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_106_10_108_8_end" ]
+        %e.8 = local;
+        symbol [ e %e.8 106 17 18 ];
+        %tmp.203 = dup %tmp.202;
+        lputv %e.8 %tmp.203;
+        symbol [ e %e.8 106 17 18 ];
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_106_20_108_8_start:
+[ "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc" 107 12 ]
+        symbol [ TheAthanLogger %tmp.205 107 12 26 ];
+        %tmp.205 = getv ? :TheAthanLogger;
+        symbol [ error %tmp.206 107 27 32 ];
+        %tmp.206 = getv function %tmp.205 :error;
+        %tmp.207 = "QiblaView";
+        %tmp.208 = "Exception drawing qibla: ";
+        %tmp.209 = lgetv %e.8;
+        symbol [ e %tmp.209 107 76 77 ];
+        symbol [ getErrorMessage %tmp.210 107 78 93 ];
+        %tmp.210 = getv function %tmp.209 :getErrorMessage;
+        %tmp.211 = invoke %tmp.209 %tmp.210();
+        %tmp.212 = add %tmp.208 %tmp.211;
+        invoke %tmp.205 %tmp.206(%tmp.207, %tmp.212);
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_106_20_108_8_stop:
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_finally;
+        pop;
+        goto @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_end;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_106_10_108_8_end:
+        try @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_catch @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_106_10_108_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_106_10_108_8_end @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_finally;
+        jsr @_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_finally;
+        throw %tmp.202;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_finally:
+        jsrret;
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_70_8_108_8_end:
+_home_zyzto_Code_Gathan_TheAthan_source_TheAthanQiblaView_mc_63_34_109_4_stop:
     }
 }
 [ @file = "/home/zyzto/Code/Gathan/TheAthan/source/TheAthanQiblaView.mc"; @line = 1; ]

@@ -2,12 +2,13 @@ import Toybox.Lang;
 import Toybox.Communications;
 import Toybox.Time;
 import Toybox.Time.Gregorian;
-import Toybox.System;
-import Toybox.WatchUi;
 
 class TheAthanAPIClient {
-    // Callback function to handle API response
     private var _callback;
+    private var _todayPrayerTimes = [];
+    private var _tomorrowPrayerTimes = [];
+    private var _todayReceived = false;
+    private var _tomorrowReceived = false;
     
     function initialize(callback) {
         _callback = callback;
@@ -15,261 +16,239 @@ class TheAthanAPIClient {
     
     // Fetch prayer times from API for today and tomorrow
     function fetchPrayerTimes(latitude, longitude) {
-        System.println("DEBUG: fetchPrayerTimes start");
         var options = {
             :method => Communications.HTTP_REQUEST_METHOD_GET,
             :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
         };
         
-        // Get current date
         var now = Time.now();
-        var info = Gregorian.info(now, Time.FORMAT_SHORT);
+        var tomorrow = now.add(new Time.Duration(86400)); // 86400 seconds = 1 day
         
-        // Today's date string
-        var todayDateString = Lang.format("$1$-$2$-$3$", [
-            info.year,
-            info.month.format("%02d"),
-            info.day.format("%02d")
-        ]);
-        System.println("DEBUG: Today's date string: " + todayDateString);
+        // Format dates for API requests
+        var todayDateString = formatDate(now);
+        var tomorrowDateString = formatDate(tomorrow);
         
-        // Calculate tomorrow's date (86400 seconds in a day)
-        var tomorrow = now.add(new Time.Duration(86400));
-        var tomorrowInfo = Gregorian.info(tomorrow, Time.FORMAT_SHORT);
+        // Create API URLs with UTC timezone
+        var baseUrl = "https://api.aladhan.com/v1/timings/$1$?latitude=$2$&longitude=$3$&method=2&timezone=GMT-3";
+        var todayUrl = Lang.format(baseUrl, [todayDateString, latitude, longitude]);
+        var tomorrowUrl = Lang.format(baseUrl, [tomorrowDateString, latitude, longitude]);
         
-        // Tomorrow's date string
-        var tomorrowDateString = Lang.format("$1$-$2$-$3$", [
-            tomorrowInfo.year,
-            tomorrowInfo.month.format("%02d"),
-            tomorrowInfo.day.format("%02d")
-        ]);
-        System.println("DEBUG: Tomorrow's date string: " + tomorrowDateString);
-        
-        // API URL for today with location and date
-        var todayUrl = Lang.format(
-            "https://api.aladhan.com/v1/timings/$1$?latitude=$2$&longitude=$3$&method=2",
-            [todayDateString, latitude, longitude]
-        );
-        System.println("DEBUG: Today's API URL: " + todayUrl);
+        TheAthanLogger.info("APIClient", "Using timezone: UTC");
         
         try {
-            // Fetch today's prayer times
+            // Log API requests
+            TheAthanLogger.info("APIClient", "Fetching today's prayer times: " + todayUrl);
+            TheAthanLogger.info("APIClient", "Fetching tomorrow's prayer times: " + tomorrowUrl);
+            
+            // Make both requests
             Communications.makeWebRequest(todayUrl, {}, options, method(:onReceiveTodayPrayerTimes));
-            System.println("DEBUG: makeWebRequest called for today");
-            
-            // API URL for tomorrow with location and date
-            var tomorrowUrl = Lang.format(
-                "https://api.aladhan.com/v1/timings/$1$?latitude=$2$&longitude=$3$&method=2",
-                [tomorrowDateString, latitude, longitude]
-            );
-            System.println("DEBUG: Tomorrow's API URL: " + tomorrowUrl);
-            
-            // Fetch tomorrow's prayer times
             Communications.makeWebRequest(tomorrowUrl, {}, options, method(:onReceiveTomorrowPrayerTimes));
-            System.println("DEBUG: makeWebRequest called for tomorrow");
         } catch (e) {
-            System.println("DEBUG: Exception in makeWebRequest: " + e.getErrorMessage());
+            TheAthanLogger.error("APIClient", "Error making API requests: " + e.getErrorMessage());
             _callback.invoke(null);
         }
     }
     
-    // Storage for today's and tomorrow's prayer times
-    private var _todayPrayerTimes = [];
-    private var _tomorrowPrayerTimes = [];
-    private var _todayReceived = false;
-    private var _tomorrowReceived = false;
+    // Format date as YYYY-MM-DD
+    function formatDate(moment) {
+        var info = Gregorian.info(moment, Time.FORMAT_SHORT);
+        return Lang.format("$1$-$2$-$3$", [
+            info.year,
+            info.month.format("%02d"),
+            info.day.format("%02d")
+        ]);
+    }
     
     // Handle today's prayer times API response
     function onReceiveTodayPrayerTimes(responseCode as Number, data as Dictionary or String or Null) as Void {
-        System.println("DEBUG: onReceiveTodayPrayerTimes - responseCode: " + responseCode);
+        TheAthanLogger.info("APIClient", "Received today's prayer times response. Code: " + responseCode);
+        if (responseCode != 200) {
+            TheAthanLogger.error("APIClient", "API error for today's prayer times. Code: " + responseCode);
+        }
         
         _todayPrayerTimes = parsePrayerTimes(responseCode, data, false);
+        TheAthanLogger.info("APIClient", "Parsed today's prayer times. Count: " + _todayPrayerTimes.size());
         _todayReceived = true;
-        
-        // If both today and tomorrow data received, combine and return
-        if (_todayReceived && _tomorrowReceived) {
-            combinePrayerTimesAndCallback();
-        }
+        checkAndCombinePrayerTimes();
     }
     
     // Handle tomorrow's prayer times API response
     function onReceiveTomorrowPrayerTimes(responseCode as Number, data as Dictionary or String or Null) as Void {
-        System.println("DEBUG: onReceiveTomorrowPrayerTimes - responseCode: " + responseCode);
+        TheAthanLogger.info("APIClient", "Received tomorrow's prayer times response. Code: " + responseCode);
+        if (responseCode != 200) {
+            TheAthanLogger.error("APIClient", "API error for tomorrow's prayer times. Code: " + responseCode);
+        }
         
         _tomorrowPrayerTimes = parsePrayerTimes(responseCode, data, true);
+        TheAthanLogger.info("APIClient", "Parsed tomorrow's prayer times. Count: " + _tomorrowPrayerTimes.size());
         _tomorrowReceived = true;
-        
-        // If both today and tomorrow data received, combine and return
-        if (_todayReceived && _tomorrowReceived) {
-            combinePrayerTimesAndCallback();
-        }
+        checkAndCombinePrayerTimes();
     }
     
-    // Combine today's and tomorrow's prayer times and call the callback
-    function combinePrayerTimesAndCallback() {
-        System.println("DEBUG: Combining prayer times");
-        var combinedPrayerTimes = [];
+    // Check if both responses received and combine if ready
+    function checkAndCombinePrayerTimes() {
+        TheAthanLogger.debug("APIClient", "Checking if both responses received: Today=" + _todayReceived + ", Tomorrow=" + _tomorrowReceived);
         
-        // Add today's prayer times
-        for (var i = 0; i < _todayPrayerTimes.size(); i++) {
-            combinedPrayerTimes.add(_todayPrayerTimes[i]);
+        if (_todayReceived && _tomorrowReceived) {
+            TheAthanLogger.info("APIClient", "Both responses received, combining prayer times");
+            var combinedPrayerTimes = [];
+            
+            // Add today's prayer times
+            TheAthanLogger.debug("APIClient", "Adding today's prayer times: " + _todayPrayerTimes.size() + " prayers");
+            for (var i = 0; i < _todayPrayerTimes.size(); i++) {
+                var prayerTime = _todayPrayerTimes[i] as TheAthanPrayerTime;
+                combinedPrayerTimes.add(prayerTime);
+            }
+            
+            // Add tomorrow's prayer times
+            TheAthanLogger.debug("APIClient", "Adding tomorrow's prayer times: " + _tomorrowPrayerTimes.size() + " prayers");
+            for (var i = 0; i < _tomorrowPrayerTimes.size(); i++) {
+                var prayerTime = _tomorrowPrayerTimes[i] as TheAthanPrayerTime;
+                combinedPrayerTimes.add(prayerTime);
+            }
+            
+            TheAthanLogger.debug("APIClient", "Sorting combined prayer times");
+            sortPrayerTimes(combinedPrayerTimes);
+            
+            TheAthanLogger.info("APIClient", "Invoking callback with " + combinedPrayerTimes.size() + " prayer times");
+            _callback.invoke(combinedPrayerTimes);
+            
+            // Reset flags for next fetch
+            _todayReceived = false;
+            _tomorrowReceived = false;
+            TheAthanLogger.debug("APIClient", "Reset received flags for next fetch");
+        } else {
+            TheAthanLogger.debug("APIClient", "Still waiting for responses");
         }
-        
-        // Add tomorrow's prayer times
-        for (var i = 0; i < _tomorrowPrayerTimes.size(); i++) {
-            combinedPrayerTimes.add(_tomorrowPrayerTimes[i]);
-        }
-        
-        // Sort all prayer times
-        sortPrayerTimes(combinedPrayerTimes);
-        
-        System.println("DEBUG: Final combined prayer times count: " + combinedPrayerTimes.size());
-        // Call the callback with the combined prayer times
-        _callback.invoke(combinedPrayerTimes);
-        
-        // Reset flags for next fetch
-        _todayReceived = false;
-        _tomorrowReceived = false;
     }
     
     // Parse prayer times from API response
     function parsePrayerTimes(responseCode as Number, data as Dictionary or String or Null, isTomorrow as Boolean) as Array {
-        System.println("DEBUG: parsePrayerTimes - " + (isTomorrow ? "tomorrow" : "today"));
-        
         var prayerTimes = [];
+        var dayType = isTomorrow ? "tomorrow" : "today";
+        
+        TheAthanLogger.debug("APIClient", "Parsing " + dayType + "'s prayer times. Response code: " + responseCode);
         
         if (responseCode == 200 && data instanceof Dictionary) {
-            System.println("DEBUG: Response is 200 and data is Dictionary");
             var dataDict = data as Dictionary;
-            
-            // Log all keys in the response for debugging
-            System.println("DEBUG: Response keys: " + dataDict.keys());
-            
-            if (dataDict.hasKey("code")) {
-                System.println("DEBUG: data has code: " + dataDict.get("code"));
-            } else {
-                System.println("DEBUG: data does not have code key");
-            }
+            TheAthanLogger.debug("APIClient", "Data is a valid dictionary");
             
             if (dataDict.hasKey("data")) {
-                System.println("DEBUG: data has data key");
                 var dataObj = dataDict.get("data");
+                TheAthanLogger.debug("APIClient", "Found 'data' key in response");
                 
                 if (dataObj instanceof Dictionary) {
-                    System.println("DEBUG: data object is a Dictionary");
                     var dataObjDict = dataObj as Dictionary;
-                    System.println("DEBUG: data object keys: " + dataObjDict.keys());
                     
                     if (dataObjDict.hasKey("timings")) {
-                        System.println("DEBUG: timings found");
                         var timings = dataObjDict.get("timings");
+                        TheAthanLogger.debug("APIClient", "Found 'timings' key in data object");
                         
                         if (timings instanceof Dictionary) {
                             var timingsDict = timings as Dictionary;
-                            System.println("DEBUG: timings keys: " + timingsDict.keys());
+                            TheAthanLogger.debug("APIClient", "Timings is a valid dictionary");
                             
-                            // Parse prayer times
-                            System.println("DEBUG: Adding prayer times for " + (isTomorrow ? "tomorrow" : "today"));
-                            addPrayerTime(prayerTimes, "fajr", timingsDict.get("Fajr") as String, isTomorrow);
-                            addPrayerTime(prayerTimes, "dhuhr", timingsDict.get("Dhuhr") as String, isTomorrow);
-                            addPrayerTime(prayerTimes, "asr", timingsDict.get("Asr") as String, isTomorrow);
-                            addPrayerTime(prayerTimes, "maghrib", timingsDict.get("Maghrib") as String, isTomorrow);
-                            addPrayerTime(prayerTimes, "isha", timingsDict.get("Isha") as String, isTomorrow);
+                            // Prayer names to process
+                            var prayerNames = {
+                                "fajr" => "Fajr",
+                                "dhuhr" => "Dhuhr",
+                                "asr" => "Asr",
+                                "maghrib" => "Maghrib",
+                                "isha" => "Isha"
+                            };
                             
-                            // Sort prayer times
+                            // Process each prayer
+                            var keys = prayerNames.keys();
+                            for (var i = 0; i < keys.size(); i++) {
+                                var name = keys[i] as String;
+                                var apiKey = prayerNames[name] as String;
+                                TheAthanLogger.debug("APIClient", "Processing prayer: " + name + " (" + apiKey + ")");
+                                addPrayerTime(prayerTimes, name, timingsDict.get(apiKey) as String, isTomorrow);
+                            }
+                            
                             sortPrayerTimes(prayerTimes);
+                            TheAthanLogger.debug("APIClient", "Successfully parsed and sorted " + prayerTimes.size() + " prayer times for " + dayType);
                         } else {
-                            System.println("DEBUG: timings is not a Dictionary");
+                            TheAthanLogger.error("APIClient", "Timings is not a dictionary");
                         }
                     } else {
-                        System.println("DEBUG: No timings key in data");
+                        TheAthanLogger.error("APIClient", "No 'timings' key found in data object");
                     }
                 } else {
-                    System.println("DEBUG: data object is not a Dictionary");
+                    TheAthanLogger.error("APIClient", "Data object is not a dictionary");
                 }
             } else {
-                System.println("DEBUG: data does not have data key");
+                TheAthanLogger.error("APIClient", "No 'data' key found in response");
             }
         } else {
-            System.println("DEBUG: Error fetching prayer times: " + responseCode);
-            if (data != null) {
-                System.println("DEBUG: Data is not null");
-                if (data instanceof Dictionary) {
-                    System.println("DEBUG: Data is Dictionary");
-                    var dataDict = data as Dictionary;
-                    System.println("DEBUG: Response keys: " + dataDict.keys());
-                } else if (data instanceof String) {
-                    System.println("DEBUG: Data is String: " + data);
-                } else {
-                    System.println("DEBUG: Data is unknown type");
-                }
-            } else {
-                System.println("DEBUG: Data is null");
-            }
+            TheAthanLogger.error("APIClient", "Invalid response: Code " + responseCode + " or data is not a dictionary");
         }
         
-        System.println("DEBUG: " + (isTomorrow ? "Tomorrow" : "Today") + " prayer times count: " + prayerTimes.size());
         return prayerTimes;
     }
     
     // Add a prayer time to the list
-    function addPrayerTime(prayerTimes, name, timeString, isTomorrow) {
-        System.println("DEBUG: addPrayerTime: " + name + " - " + timeString + (isTomorrow ? " (tomorrow)" : " (today)"));
-        if (timeString != null) {
-            try {
-                // Parse the time string (format: "HH:MM")
-                var hour = timeString.substring(0, 2).toNumber();
-                var minute = timeString.substring(3, 5).toNumber();
-                
-                var now = Time.now();
-                var info = Gregorian.info(now, Time.FORMAT_SHORT);
-                
-                // If it's for tomorrow, add one day
-                var day = info.day;
-                var month = info.month;
-                var year = info.year;
-                
-                if (isTomorrow) {
-                    // Calculate tomorrow's date
-                    var tomorrow = now.add(new Time.Duration(86400));
-                    var tomorrowInfo = Gregorian.info(tomorrow, Time.FORMAT_SHORT);
-                    day = tomorrowInfo.day;
-                    month = tomorrowInfo.month;
-                    year = tomorrowInfo.year;
-                }
-                
-                var prayerTime = Gregorian.moment({
-                    :year => year,
-                    :month => month,
-                    :day => day,
-                    :hour => hour,
-                    :minute => minute,
-                    :second => 0
-                });
-                
-                prayerTimes.add(new TheAthanPrayerTime(name, prayerTime));
-                System.println("DEBUG: Prayer time added: " + name + (isTomorrow ? " (tomorrow)" : " (today)"));
-            } catch (e) {
-                System.println("DEBUG: Exception in addPrayerTime: " + e.getErrorMessage());
-            }
-        } else {
-            System.println("DEBUG: timeString is null for " + name);
+    function addPrayerTime(prayerTimes as Array, name as String, timeString as String, isTomorrow as Boolean) {
+        if (timeString == null) {
+            TheAthanLogger.warn("APIClient", "Time string is null for prayer: " + name);
+            return;
+        }
+        
+        TheAthanLogger.debug("APIClient", "Adding prayer time: " + name + " at " + timeString + (isTomorrow ? " (tomorrow)" : " (today)"));
+        
+        try {
+            // Parse the time string (format: "HH:MM")
+            var hour = timeString.substring(0, 2).toNumber();
+            var minute = timeString.substring(3, 5).toNumber();
+            
+            TheAthanLogger.debug("APIClient", "Parsed time: " + hour + ":" + minute);
+            
+            // Get date info
+            var dateInfo = getDateInfo(isTomorrow);
+            
+            var prayerTime = Gregorian.moment({
+                :year => dateInfo["year"],
+                :month => dateInfo["month"],
+                :day => dateInfo["day"],
+                :hour => hour,
+                :minute => minute,
+                :second => 0
+            });
+            
+            prayerTimes.add(new TheAthanPrayerTime(name, prayerTime));
+            TheAthanLogger.debug("APIClient", "Successfully added " + name + " prayer time");
+        } catch (e) {
+            TheAthanLogger.error("APIClient", "Error adding prayer time " + name + ": " + e.getErrorMessage());
         }
     }
     
+    // Get date info for today or tomorrow
+    function getDateInfo(isTomorrow as Boolean) as Dictionary {
+        var now = Time.now();
+        var moment = isTomorrow ? now.add(new Time.Duration(86400)) : now;
+        var info = Gregorian.info(moment, Time.FORMAT_SHORT);
+        
+        return {
+            :year => info.year,
+            :month => info.month,
+            :day => info.day
+        };
+    }
+    
     // Sort prayer times by time
-    function sortPrayerTimes(prayerTimes) {
-        System.println("DEBUG: sortPrayerTimes");
+    function sortPrayerTimes(prayerTimes as Array) {
         // Simple bubble sort
         for (var i = 0; i < prayerTimes.size() - 1; i++) {
             for (var j = 0; j < prayerTimes.size() - i - 1; j++) {
-                if (prayerTimes[j].time.greaterThan(prayerTimes[j + 1].time)) {
-                    var temp = prayerTimes[j];
-                    prayerTimes[j] = prayerTimes[j + 1];
+                var prayer1 = prayerTimes[j] as TheAthanPrayerTime;
+                var prayer2 = prayerTimes[j + 1] as TheAthanPrayerTime;
+                
+                if (prayer1.time.greaterThan(prayer2.time)) {
+                    var temp = prayer1;
+                    prayerTimes[j] = prayer2;
                     prayerTimes[j + 1] = temp;
                 }
             }
         }
-        System.println("DEBUG: Prayer times sorted, count: " + prayerTimes.size());
     }
 }

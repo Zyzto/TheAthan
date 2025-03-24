@@ -1,7 +1,6 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
-import Toybox.System;
 import Toybox.Application;
 
 class TheAthanQiblaView extends WatchUi.View {
@@ -12,25 +11,25 @@ class TheAthanQiblaView extends WatchUi.View {
     private var _centerY;
     
     function initialize() {
-        System.println("DEBUG: QiblaView initialize");
+        TheAthanLogger.debug("QiblaView", "initialize");
         View.initialize();
     }
 
     // Load resources and set up the layout
     function onLayout(dc as Dc) as Void {
-        System.println("DEBUG: QiblaView onLayout");
+        TheAthanLogger.debug("QiblaView", "onLayout");
         // Get device dimensions
         _width = dc.getWidth();
         _height = dc.getHeight();
         _centerX = _width / 2;
         _centerY = _height / 2;
         
-        System.println("DEBUG: Device dimensions: " + _width + "x" + _height);
+        TheAthanLogger.debug("QiblaView", "Device dimensions: " + _width + "x" + _height);
     }
 
     // Called when this View is brought to the foreground
     function onShow() as Void {
-        System.println("DEBUG: QiblaView onShow");
+        TheAthanLogger.debug("QiblaView", "onShow");
         // Add this view to navigation history
         TheAthanConstants.addToHistory(TheAthanConstants.VIEW_QIBLA);
         WatchUi.requestUpdate();
@@ -38,7 +37,7 @@ class TheAthanQiblaView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        System.println("DEBUG: QiblaView onUpdate");
+        TheAthanLogger.debug("QiblaView", "onUpdate");
         try {
             // Clear the screen
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
@@ -56,17 +55,17 @@ class TheAthanQiblaView extends WatchUi.View {
             dc.drawText(_centerX, _height - 30, Graphics.FONT_TINY, "^ Prayer Times", Graphics.TEXT_JUSTIFY_CENTER);
             
         } catch (e) {
-            System.println("DEBUG: Exception in onUpdate: " + e.getErrorMessage());
+            TheAthanLogger.error("QiblaView", "Exception in onUpdate: " + e.getErrorMessage());
         }
     }
     
     // Draw qibla compass
     function drawQiblaCompass(dc) {
-        System.println("DEBUG: drawQiblaCompass");
+        TheAthanLogger.debug("QiblaView", "drawQiblaCompass");
         var app = Application.getApp() as TheAthanApp;
         var qiblaDirection = app.getQiblaDirection();
         
-        System.println("DEBUG: Qibla direction: " + qiblaDirection);
+        TheAthanLogger.debug("QiblaView", "Qibla direction: " + qiblaDirection);
         
         try {
             // Draw compass circle
@@ -103,9 +102,9 @@ class TheAthanQiblaView extends WatchUi.View {
                        qiblaDirection.format("%d") + WatchUi.loadResource(Rez.Strings.degrees),
                        Graphics.TEXT_JUSTIFY_CENTER);
             
-            System.println("DEBUG: Qibla compass drawn");
+            TheAthanLogger.debug("QiblaView", "Qibla compass drawn");
         } catch (e) {
-            System.println("DEBUG: Exception drawing qibla: " + e.getErrorMessage());
+            TheAthanLogger.error("QiblaView", "Exception drawing qibla: " + e.getErrorMessage());
         }
     }
 }

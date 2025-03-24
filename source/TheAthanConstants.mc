@@ -1,8 +1,8 @@
 import Toybox.Lang;
-import Toybox.System;
 
-// View states
+// View states and navigation
 module TheAthanConstants {
+    // View state constants
     enum {
         VIEW_NEXT_PRAYER = 0,
         VIEW_ALL_PRAYERS = 1,
@@ -10,53 +10,59 @@ module TheAthanConstants {
         VIEW_LOCATION = 3
     }
     
-    // Navigation history
-    var navigationHistory = [VIEW_NEXT_PRAYER]; // Initialize with default view
+    // Logging configuration
+    enum {
+        LOG_LEVEL_ERROR = 0,
+        LOG_LEVEL_WARN = 1,
+        LOG_LEVEL_INFO = 2,
+        LOG_LEVEL_DEBUG = 3
+    }
+    
+    // Set to LOG_LEVEL_INFO for production, LOG_LEVEL_DEBUG for development
+    var LOG_LEVEL = LOG_LEVEL_INFO;
+    
+    // Set to false to disable all logging
+    var LOGGING_ENABLED = true;
+    
+    // Seconds between identical log messages (throttling)
+    var LOG_THROTTLE_INTERVAL = 2;
+    
+    // Show timestamps in logs
+    var LOG_SHOW_TIMESTAMPS = true;
+    
+    // Navigation history with default view
+    var navigationHistory = [VIEW_NEXT_PRAYER];
+    const MAX_HISTORY_SIZE = 10;
     
     // Add a view to the navigation history
-    function addToHistory(viewState) {
-        // Only add to history if it's different from the current view
-        if (navigationHistory.size() == 0 || navigationHistory[navigationHistory.size() - 1] != viewState) {
-            System.println("DEBUG: Adding to history: " + viewState);
+    function addToHistory(viewState as Number) as Void {
+        // Only add if different from current view
+        if (navigationHistory.size() == 0 ||
+            (navigationHistory[navigationHistory.size() - 1] as Number) != viewState) {
+            
             navigationHistory.add(viewState);
             
-            // Print current history
-            var historyStr = "History: ";
-            for (var i = 0; i < navigationHistory.size(); i++) {
-                historyStr += navigationHistory[i] + " ";
-            }
-            System.println("DEBUG: " + historyStr);
-            
-            if (navigationHistory.size() > 10) {
-                // Limit history size
-                navigationHistory = navigationHistory.slice(navigationHistory.size() - 10, navigationHistory.size());
+            // Limit history size
+            if (navigationHistory.size() > MAX_HISTORY_SIZE) {
+                navigationHistory = navigationHistory.slice(
+                    navigationHistory.size() - MAX_HISTORY_SIZE,
+                    navigationHistory.size()
+                );
             }
         }
     }
     
     // Get the previous view from history
-    function getPreviousView() {
-        System.println("DEBUG: Getting previous view");
-        
-        // Print current history
-        var historyStr = "History: ";
-        for (var i = 0; i < navigationHistory.size(); i++) {
-            historyStr += navigationHistory[i] + " ";
-        }
-        System.println("DEBUG: " + historyStr);
-        
+    function getPreviousView() as Number {
         if (navigationHistory.size() > 1) {
             // Remove current view
             navigationHistory.remove(navigationHistory.size() - 1);
             
             // Return previous view
-            var previousView = navigationHistory[navigationHistory.size() - 1];
-            System.println("DEBUG: Previous view: " + previousView);
-            return previousView;
+            return navigationHistory[navigationHistory.size() - 1] as Number;
         }
         
         // Default to next prayer view if no history
-        System.println("DEBUG: No previous view, returning default");
         return VIEW_NEXT_PRAYER;
     }
 }

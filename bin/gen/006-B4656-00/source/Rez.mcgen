@@ -11,11 +11,11 @@ module Rez {
 
     module Layouts {
         function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_text_titleLabel = new WatchUi.Text({:identifier=>"titleLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>15, :text=>$.Rez.Strings.next_prayer, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SMALL});
+            var rez_cmp_local_text_titleLabel = new WatchUi.Text({:identifier=>"titleLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>10, :text=>$.Rez.Strings.next_prayer, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
 
-            var rez_cmp_local_text_prayerNameLabel = new WatchUi.Text({:identifier=>"prayerNameLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>40, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_MEDIUM});
+            var rez_cmp_local_text_prayerNameLabel = new WatchUi.Text({:identifier=>"prayerNameLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>30, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SMALL});
 
-            var rez_cmp_local_text_prayerTimeLabel = new WatchUi.Text({:identifier=>"prayerTimeLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>65, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SMALL});
+            var rez_cmp_local_text_prayerTimeLabel = new WatchUi.Text({:identifier=>"prayerTimeLabel", :color=>Graphics.COLOR_WHITE, :locX=>(390 * 0.5), :locY=>50, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_XTINY});
 
             return [rez_cmp_local_text_titleLabel, rez_cmp_local_text_prayerNameLabel, rez_cmp_local_text_prayerTimeLabel] as Array<WatchUi.Drawable>;
         }

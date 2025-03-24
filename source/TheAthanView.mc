@@ -1,7 +1,6 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
-import Toybox.System;
 import Toybox.Application;
 
 class TheAthanView extends WatchUi.View {
@@ -14,7 +13,7 @@ class TheAthanView extends WatchUi.View {
     private var _locationView;
     
     function initialize() {
-        System.println("DEBUG: MainView initialize");
+        TheAthanLogger.debug("MainView", "initialize");
         View.initialize();
         
         // Initialize sub-views
@@ -29,7 +28,7 @@ class TheAthanView extends WatchUi.View {
 
     // Load resources and set up the layout
     function onLayout(dc as Dc) as Void {
-        System.println("DEBUG: MainView onLayout");
+        TheAthanLogger.debug("MainView", "onLayout");
         
         // Layout all sub-views
         _nextPrayerView.onLayout(dc);
@@ -40,7 +39,7 @@ class TheAthanView extends WatchUi.View {
 
     // Called when this View is brought to the foreground
     function onShow() as Void {
-        System.println("DEBUG: MainView onShow");
+        TheAthanLogger.debug("MainView", "onShow");
         
         // Show the current view
         getCurrentSubView().onShow();
@@ -48,7 +47,7 @@ class TheAthanView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        System.println("DEBUG: MainView onUpdate - state: " + _viewState);
+        TheAthanLogger.debug("MainView", "onUpdate - state: " + _viewState);
         
         // Update the current sub-view
         getCurrentSubView().onUpdate(dc);
@@ -56,7 +55,7 @@ class TheAthanView extends WatchUi.View {
     
     // Set the view state
     function setViewState(state) {
-        System.println("DEBUG: MainView setViewState: " + state + " (current: " + _viewState + ")");
+        TheAthanLogger.debug("MainView", "setViewState: " + state + " (current: " + _viewState + ")");
         
         // Only update if the state is changing
         if (_viewState != state) {
@@ -96,9 +95,9 @@ class TheAthanView extends WatchUi.View {
     
     // Go back to the previous view
     function goBack() {
-        System.println("DEBUG: MainView goBack");
+        TheAthanLogger.debug("MainView", "goBack");
         var previousState = TheAthanConstants.getPreviousView();
-        System.println("DEBUG: Previous state: " + previousState);
+        TheAthanLogger.debug("MainView", "Previous state: " + previousState);
         setViewState(previousState);
     }
 }
