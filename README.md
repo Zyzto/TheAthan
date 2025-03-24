@@ -78,7 +78,7 @@ code .
 
 ## License
 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International  
-For more details [LICENSE](LICENSE)
+For more details [LICENSE](LICENSE.md)
 
 ## Support
 Report issues through:
