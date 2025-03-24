@@ -1,4 +1,5 @@
-# The Athan - Prayer Times & Qibla Direction
+# ![Logo](/resources/drawables/launcher_icon.svg) The Athan - Prayer Times & Qibla Direction 
+
 
 A Garmin Connect IQ app for Islamic prayer times and qibla direction.
 
